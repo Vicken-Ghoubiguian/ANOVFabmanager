@@ -12,17 +12,41 @@ Développement un système de gestion des clients, de contrôle des espaces et d
 
 4. [Commandes de base](#commandes_de_base)
 
-5. [Installation de ANOVFabmanager en version de développement](#installation_de_ANOVFabmanager_en_version_de_developpement)
+5. [Installation de ANOVFabmanager en version de développement ou de test](#installation_de_ANOVFabmanager_en_version_de_developpement_ou_de_test)
 
 <a name="#prerequis"></a>
 ## Prérequis
 
+Pour faire fonctionner ANOVFabmanager en version de développement ou de test, il est nécessaire d'installer le framework Django.
 
+Pour cela, lancez la commande suivante:
 
-<a name="#installation_de_ANOVFabmanager_en_version_de_developpement"></a>
-## Installation de ANOVFabmanager en version de développement
+```bash
+sudo pip3 install django
+```
 
-Pour installer ANOVFabmanager en version de développement, il suffit de suivre la procédure suivante.
+Si l'utilitaire pip n'est pas installé, lancez la commande suivante:
+
+```bash
+sudo apt install python3-pip
+```
+
+Pour mettre à jour Django, vous avez le choix entre les 2 commandes suivantes:
+
+```bash
+pip3 install django --upgrade
+```
+
+ou
+
+```bash
+pip3 install --upgrade django=(numéro de la nouvelle version; ex: 3.0.4)
+```
+
+<a name="#installation_de_ANOVFabmanager_en_version_de_developpement_ou_de_test"></a>
+## Installation de ANOVFabmanager en version de développement ou de test
+
+Pour installer ANOVFabmanager en version de développement ou de test, il suffit de suivre la procédure suivante.
 
 Tout d'abord si ce n'est pas déjà fait, clonez le dépôt git du projet à l'aide de la commande suivante:
 
