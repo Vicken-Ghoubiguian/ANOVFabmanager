@@ -1,3 +1,18 @@
+.admin {
+  margin-left: 35px; 
+  margin-top: 20px; 
+  margin-bottom: 20px; 
+  color: #ffffff; 
+  text-decoration: underline;
+}
+
+.common {
+  margin-left: 35px; 
+  margin-bottom: 20px; 
+  color: #ffffff; 
+  text-decoration: underline;
+}
+
 .sidenav {
   height: 100%; /* 100% Full-height */
   width: 0; /* 0 width - change this with JavaScript */
