@@ -54,8 +54,8 @@
 		<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
 		<div id="main">
 
-			{% if template_demandee == "index" %}
-				{% include "ovfabmanager/home.html" %}
+			{% if template_demandee == "accueil" %}
+				{% include "ovfabmanager/accueil.html" %}
 			{% elif template_demandee == "calendrier" %}
 				{% include "ovfabmanager/calendrier.html" %}
 			{% endif %}
