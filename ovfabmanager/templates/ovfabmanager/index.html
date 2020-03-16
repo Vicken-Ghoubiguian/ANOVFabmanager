@@ -53,8 +53,9 @@
 
 		<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
 		<div id="main">
-			<h1 style="color: blue;">Star Trek vs Foundation : Spock vs Daneel Olivaw</h1>
-			<span onclick="openNav()">open</span>
+
+			{% include "ovfabmanager/home.html" %}
+
 		</div>
 		<script src="{% static 'js/ovfabmanager.js' %}"></script>
 	</body>
