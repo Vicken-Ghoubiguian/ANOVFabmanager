@@ -43,6 +43,19 @@ ou
 pip3 install --upgrade django=(numéro de la nouvelle version; ex: 3.0.4)
 ```
 
+<a name="#commandes_de_base"></a>
+## Commandes de base
+
+Voici une liste des commandes de base pour l'administration de fabmanager:
+
+* Pour démarrer l'application web:
+
+```bash
+python3 manage.py runserver
+```
+
+__Petite note__: pour lancer cette commande, il est nécessaire d'être dans le même répertoire que le projet.
+
 <a name="#installation_de_ANOVFabmanager_en_version_de_developpement_ou_de_test"></a>
 ## Installation de ANOVFabmanager en version de développement ou de test
 
