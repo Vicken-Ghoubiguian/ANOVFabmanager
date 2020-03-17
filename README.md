@@ -54,6 +54,12 @@ Voici une liste des commandes de base pour l'administration de fabmanager:
 python3 manage.py runserver
 ```
 
+* Pour démarrer l'application web en mode non sécurisé (dans le cas où le mode débug est désactivé):
+
+```bash
+python3 manage.py runserver --insecure
+```
+
 __Petite note__: pour lancer cette commande, il est nécessaire d'être dans le même répertoire que le projet.
 
 <a name="#installation_de_ANOVFabmanager_en_version_de_developpement_ou_de_test"></a>
