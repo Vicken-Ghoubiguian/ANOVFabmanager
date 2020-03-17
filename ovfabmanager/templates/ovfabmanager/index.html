@@ -58,6 +58,18 @@
 				{% include "ovfabmanager/common/accueil.html" %}
 			{% elif template_demandee == "calendrier" %}
 				{% include "ovfabmanager/common/calendrier.html" %}
+			{% elif template_demandee == "reserver_une_machine" %}
+				{% include "ovfabmanager/common/reserver_une_machines.html" %}
+			{% elif template_demandee == "reserver_un_espace" %}
+				{% include "ovfabmanager/common/espaces.html" %}
+			{% elif template_demandee == "inscriptions_aux_formations" %}
+				{% include "ovfabmanager/common/inscriptions_aux_formations.html" %}
+			{% elif template_demandee == "inscriptions_aux_evenements" %}
+				{% include "ovfabmanager/common/inscriptions_aux_evenements.html" %}
+			{% elif template_demandee == "galerie_de_projets" %}
+				{% include "ovfabmanager/common/galerie_de_projets.html" %}
+			{% elif template_demandee == "tarifs_et_abonnements" %}
+				{% include "ovfabmanager/common/tarifs_et_abonnements.html" %}
 			{% endif %}
 
 		</div>
