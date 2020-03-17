@@ -63,3 +63,6 @@ def statistiques(request):
 
 def personnalisation(request):
     return render(request, 'ovfabmanager/index.html', {'template_demandee': 'personnalisation'})
+
+def error_404(request, exception):
+    return render(request, 'ovfabmanager/errors/404.html', {'template_demandee': 'personnalisation'})

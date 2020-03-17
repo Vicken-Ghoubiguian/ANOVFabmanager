@@ -20,3 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('ovfabmanager.urls')),
 ]
+
+handler404 = 'ovfabmanager.views.error_404'
