@@ -2,6 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 
+# For common
 def accueil(request):
     return render(request, 'ovfabmanager/index.html', {'template_demandee': 'accueil'})
 
@@ -26,6 +27,7 @@ def galerie_de_projets(request):
 def common_tarifs_et_abonnements(request):
     return render(request, 'ovfabmanager/index.html', {'template_demandee': 'common_tarifs_et_abonnements'})
 
+# For admin
 def gestion_des_paniers(request):
     return render(request, 'ovfabmanager/index.html', {'template_demandee': 'gestion_des_paniers'})
 

@@ -2,6 +2,8 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
+
+    # For common
     path('', views.accueil, name='accueil'),
     path('calendrier', views.calendrier, name='calendrier'),
     path('reserver_une_machine', views.reserver_une_machine, name='reserver_une_machine'),
@@ -10,7 +12,8 @@ urlpatterns = [
     path('inscriptions_aux_evenements', views.inscriptions_aux_evenements, name='inscriptions_aux_evenements'),
     path('galerie_de_projets', views.galerie_de_projets, name='galerie_de_projets'),
     path('common_tarifs_et_abonnements', views.common_tarifs_et_abonnements, name='common_tarifs_et_abonnements'),
-    
+
+    # For admin
     path('gestion_des_paniers', views.gestion_des_paniers, name='gestion_des_paniers'),
     path('gestion_des_stocks', views.gestion_des_stocks, name='gestion_des_stocks'),
     path('gerer_le_calendrier', views.gerer_le_calendrier, name='gerer_le_calendrier'),
