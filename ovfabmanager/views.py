@@ -23,5 +23,5 @@ def inscriptions_aux_evenements(request):
 def galerie_de_projets(request):
     return render(request, 'ovfabmanager/index.html', {'template_demandee': 'galerie_de_projets'})
 
-def tarifs_et_abonnements(request):
-    return render(request, 'ovfabmanager/index.html', {'template_demandee': 'tarifs_et_abonnements'})
+def common_tarifs_et_abonnements(request):
+    return render(request, 'ovfabmanager/index.html', {'template_demandee': 'common_tarifs_et_abonnements'})

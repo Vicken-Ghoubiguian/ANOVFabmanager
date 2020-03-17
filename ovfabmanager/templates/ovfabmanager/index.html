@@ -31,7 +31,7 @@
 			<a href="http://localhost:8000/inscriptions_aux_formations"><i class="fa fa-university"></i> Inscriptions aux formations</a>
 			<a href="http://localhost:8000/inscriptions_aux_evenements"><i class="fa fa-calendar-check"></i> Inscriptions aux évènements</a>
 			<a href="http://localhost:8000/galerie_de_projets"><i class="fa fa-book"></i> Galerie de projets</a>
-			<a href="http://localhost:8000/tarifs_et_abonnements"><i class="fa fa-credit-card"></i> Tarifs et abonnements</a>
+			<a href="http://localhost:8000/common_tarifs_et_abonnements"><i class="fa fa-credit-card"></i> Tarifs et abonnements</a>
 			<div class="admin">Admin</div>
 			<a href="#"><i class="fa fa-shopping-basket"></i> Gestion des paniers</a>
 			<a href="#"><i class="fa fa-barcode"></i> Gestion des stocks</a>
@@ -68,7 +68,7 @@
 				{% include "ovfabmanager/common/inscriptions_aux_evenements.html" %}
 			{% elif template_demandee == "galerie_de_projets" %}
 				{% include "ovfabmanager/common/galerie_de_projets.html" %}
-			{% elif template_demandee == "tarifs_et_abonnements" %}
+			{% elif template_demandee == "common_tarifs_et_abonnements" %}
 				{% include "ovfabmanager/common/tarifs_et_abonnements.html" %}
 			{% endif %}
 
