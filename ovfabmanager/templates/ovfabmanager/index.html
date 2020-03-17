@@ -36,7 +36,7 @@
 			<a href="#"><i class="fa fa-shopping-basket"></i> Gestion des paniers</a>
 			<a href="#"><i class="fa fa-barcode"></i> Gestion des stocks</a>
 			<a href="#"><i class="fa fa-calendar"></i> Gérer le calendrier</a>
-			<a href="#"><i class="fa fa-users"></i> Gérer les utillisateurs</a>
+			<a href="#"><i class="fa fa-users"></i> Gérer les utilisateurs</a>
 			<a href="#"><i class="fa fa-cogs"></i> Gérer les machines</a>
 			<a href="#"><i class="fa fa-file-invoice"></i> Gérer les factures</a>
 			<a href="#"><i class="fa fa-money-bill-wave"></i> Tarifs & Abonnements</a>
@@ -54,6 +54,7 @@
 		<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
 		<div id="main">
 
+			<!-- Common -->
 			{% if template_demandee == "accueil" %}
 				{% include "ovfabmanager/common/accueil.html" %}
 			{% elif template_demandee == "calendrier" %}
@@ -70,6 +71,33 @@
 				{% include "ovfabmanager/common/galerie_de_projets.html" %}
 			{% elif template_demandee == "common_tarifs_et_abonnements" %}
 				{% include "ovfabmanager/common/tarifs_et_abonnements.html" %}
+
+			<!-- Admin -->
+			{% elif template_demandee == "gestion_des_paniers" %}
+                                {% include "ovfabmanager/admin/gestion_des_paniers.html" %}
+                        {% elif template_demandee == "gestion_des_stocks" %}
+                                {% include "ovfabmanager/admin/gestion_des_stocks.html" %}
+                        {% elif template_demandee == "gerer_le_calendrier" %}
+                                {% include "ovfabmanager/admin/gerer_le_calendrier.html" %}
+                        {% elif template_demandee == "gerer_les_utilisateurs" %}
+                                {% include "ovfabmanager/admin/gerer_les_utilisateurs.html" %}
+                        {% elif template_demandee == "gerer_les_machines" %}
+                                {% include "ovfabmanager/admin/gerer_les_machines.html" %}
+                        {% elif template_demandee == "gerer_les_factures" %}
+                                {% include "ovfabmanager/admin/gerer_les_factures.html" %}
+                        {% elif template_demandee == "admin_tarifs_et_abonnements" %}
+                                {% include "ovfabmanager/admin/tarifs_et_abonnements.html" %}
+                        {% elif template_demandee == "gerer_les_espaces" %}
+                                {% include "ovfabmanager/common/gerer_les_espaces.html" %}
+			{% elif template_demandee == "suivi_des_formations" %}
+                                {% include "ovfabmanager/admin/suivi_des_formations.html" %}
+                        {% elif template_demandee == "gerer_les_evenements" %}
+                                {% include "ovfabmanager/admin/gerer_les_evenements.html" %}
+                        {% elif template_demandee == "statistiques" %}
+                                {% include "ovfabmanager/admin/statistiques.html" %}
+                        {% elif template_demandee == "personnalisation" %}
+                                {% include "ovfabmanager/admin/personnalisation.html" %}
+
 			{% endif %}
 
 		</div>
