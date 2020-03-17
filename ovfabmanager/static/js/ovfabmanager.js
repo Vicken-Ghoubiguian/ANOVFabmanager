@@ -1,10 +1,8 @@
 function openNav() {
-  document.getElementById("mySidenav").style.width = "350px";
-  document.getElementById("main").style.paddingLeft = "350px"
+	console.log("Ouverture de la porte des étoiles...");
 }
 
 /* Set the width of the side navigation to 0 */
 function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main").style.paddingLeft = "0px";
+	console.log("MAINTENANT FERMEZ L'IRIS...");
 }

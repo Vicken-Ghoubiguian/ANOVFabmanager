@@ -1,6 +1,5 @@
-.reduce_arrow {
-  margin-top: 20px; 
-  margin-bottom: 50px;
+.last_href {
+  margin-bottom: 40px;
 }
 
 .admin {
@@ -20,7 +19,6 @@
 
 .sidenav {
   height: 100%; /* 100% Full-height */
-  /*width: 0;*//* 0 width - change this with JavaScript */
   width: 355px;
   position: fixed; /* Stay in place */
   z-index: 1; /* Stay on top */
@@ -46,15 +44,6 @@
 .sidenav a:hover {
   color: #ffffff;
   background-color: #f8009b;
-}
-
-/* Position and style the close button (top right corner) */
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
 }
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
