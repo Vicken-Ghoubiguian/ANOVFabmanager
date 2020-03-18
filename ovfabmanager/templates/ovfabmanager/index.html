@@ -25,16 +25,30 @@
 	<head>
 	<body>
 
-		{% include "ovfabmanager/shared/navbar.html" %}
+		{% if not afficher_erreur or afficher_erreur and type_erreur != "500" %}
+			{% include "ovfabmanager/shared/navbar.html" %}
+		{% endif  %}
 
 		<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
 		<div id="main">
 
 			<!-- If an error is detected -->
 			{% if afficher_erreur %}
-				{% if type_erreur == "404" %}
-					{% include "ovfabmanager/errors/404.html" %}
-				{% endif %}
+				{% if type_erreur == "500" %}
+					{% include "ovfabmanager/errors/500.html" %}
+				{% elif type_erreur == "410" %}
+                                        {% include "ovfabmanager/errors/410.html" %}
+				{% elif type_erreur == "408" %}
+                                        {% include "ovfabmanager/errors/408.html" %}
+				{% elif type_erreur == "404" %}
+                                        {% include "ovfabmanager/errors/404.html" %}
+				{% elif type_erreur == "403" %}
+                                        {% include "ovfabmanager/errors/403.html" %}
+				{% elif type_erreur == "401" %}
+                                        {% include "ovfabmanager/errors/401.html" %}
+				{% elif type_erreur == "400" %}
+                                        {% include "ovfabmanager/errors/400.html" %}
+                                {% endif %}
 			{% else %}
 				<!-- Common -->
 				{% if template_demandee == "accueil" %}

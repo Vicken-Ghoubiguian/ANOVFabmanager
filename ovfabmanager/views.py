@@ -80,9 +80,6 @@ def error_404(request, exception):
 def error_403(request, exception):
     return render(request, 'ovfabmanager/index.html', {'afficher_erreur': True, 'type_erreur': '403', 'template_demandee': None})
 
-def error_402(request, exception):
-    return render(request, 'ovfabmanager/index.html', {'afficher_erreur': True, 'type_erreur': '402', 'template_demandee': None})
-
 def error_401(request, exception):
     return render(request, 'ovfabmanager/index.html', {'afficher_erreur': True, 'type_erreur': '401', 'template_demandee': None})
 
