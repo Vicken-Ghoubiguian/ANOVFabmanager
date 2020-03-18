@@ -27,6 +27,9 @@ DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
+STATICFILES_DIRS = [
+	"/anovfabmanager/ovfabmanager/static",
+]
 
 # Application definition
 
