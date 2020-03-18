@@ -1,3 +1,6 @@
+.fonctionnalite {
+  transform: translateY(110%);
+}
 .entete {
   background-color: #608da1;
   top: 0;
