@@ -1,9 +1,11 @@
 .error_title {
   color: red;
+  text-align: center;
 }
 
 .section_title {
   color: blue;
+  text-align: center;
 }
 
 .last_href {
