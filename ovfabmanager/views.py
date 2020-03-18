@@ -65,5 +65,26 @@ def personnalisation(request):
     return render(request, 'ovfabmanager/index.html', {'afficher_erreur': False, 'type_erreur': None, 'template_demandee': 'personnalisation'})
 
 #For errors
+def error_500(request):
+    return render(request, 'ovfabmanager/index.html', {'afficher_erreur': True, 'type_erreur': '404', 'template_demandee': None})
+
+def error_410(request, exception):
+    return render(request, 'ovfabmanager/index.html', {'afficher_erreur': True, 'type_erreur': '410', 'template_demandee': None})
+
+def error_408(request, exception):
+    return render(request, 'ovfabmanager/index.html', {'afficher_erreur': True, 'type_erreur': '408', 'template_demandee': None})
+
 def error_404(request, exception):
     return render(request, 'ovfabmanager/index.html', {'afficher_erreur': True, 'type_erreur': '404', 'template_demandee': None})
+
+def error_403(request, exception):
+    return render(request, 'ovfabmanager/index.html', {'afficher_erreur': True, 'type_erreur': '403', 'template_demandee': None})
+
+def error_402(request, exception):
+    return render(request, 'ovfabmanager/index.html', {'afficher_erreur': True, 'type_erreur': '402', 'template_demandee': None})
+
+def error_401(request, exception):
+    return render(request, 'ovfabmanager/index.html', {'afficher_erreur': True, 'type_erreur': '401', 'template_demandee': None})
+
+def error_400(request, exception):
+    return render(request, 'ovfabmanager/index.html', {'afficher_erreur': True, 'type_erreur': '400', 'template_demandee': None})
