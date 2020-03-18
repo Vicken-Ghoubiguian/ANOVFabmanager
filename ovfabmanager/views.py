@@ -66,4 +66,4 @@ def personnalisation(request):
 
 #For errors
 def error_404(request, exception):
-    return render(request, 'ovfabmanager/errors/404.html', {'afficher_erreur': True, 'type_erreur': '404', 'template_demandee': None})
+    return render(request, 'ovfabmanager/index.html', {'afficher_erreur': True, 'type_erreur': '404', 'template_demandee': None})
