@@ -1,3 +1,18 @@
+#premier {
+  float: left;
+  width: 50%;
+}
+
+#second {
+  float: right;
+  width: 32%;
+}
+
+#troisieme {
+  float: right;
+  width: 16%;
+}
+
 .connectbar_text_div {
   float: left; 
   margin-left: 15px; 
