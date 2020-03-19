@@ -1,16 +1,17 @@
 #premier {
-  float: left;
-  width: 35%;
+  left: 0;
+  width: 200px;
+  position: absolute;
 }
 
 #second {
-  float: right;
-  width: 33%;
+  width: 200px;
 }
 
 #troisieme {
-  float: right;
-  width: 32%;
+  position: absolute;
+  width: 200px;
+  right: 0;
 }
 
 .connectbar_text_div {
@@ -30,12 +31,20 @@
 }
 .entete {
   background-color: #608da1;
-  color: #ffffff;
   top: 0;
   margin-left: 347px;
   position: fixed;
-  min-width: 100%;
+  width: 1500px;
   z-index: 100;
+}
+
+.entete a {
+  color: #ffffff;
+}
+
+.entete a:hover {
+  color: #ffffff;
+  background-color: red;
 }
 
 .error_title {
