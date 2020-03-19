@@ -1,6 +1,6 @@
 #premier {
   float: left;
-  width: 50%;
+  width: 35%;
 }
 
 #second {
@@ -10,7 +10,7 @@
 
 #troisieme {
   float: right;
-  width: 16%;
+  width: 33%;
 }
 
 .connectbar_text_div {
