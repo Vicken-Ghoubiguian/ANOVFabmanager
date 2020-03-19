@@ -14,10 +14,6 @@
     		<link rel="shortcut icon" type="image/ico" href="">
 
 		<link rel="icon" href="{% static 'images/favicon.png'  %}" type="image/png" sizes="16x16"> 
-		<!--<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>-->
-		<!--<script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
-      		<script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>-->
 		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
@@ -31,10 +27,6 @@
   		<![endif]-->
 	<head>
 	<body>
-		<!--<header class="entete">
-			<p>Le premier menu</p>
-		</header>-->
-
 		{% if not afficher_erreur or afficher_erreur and type_erreur != "500" %}
 			{% include "ovfabmanager/shared/navbar.html" %}
 			{% include "ovfabmanager/shared/connectbar.html" %}
