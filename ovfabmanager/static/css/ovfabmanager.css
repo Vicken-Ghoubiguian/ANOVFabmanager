@@ -1,3 +1,15 @@
+.connectbar_text_div {
+  float: left; 
+  margin-left: 15px; 
+  width: 60%;
+}
+
+.connectbar_icon_element {
+  margin-left: 3px;
+  float: left;
+  text-align: center;
+}
+
 .fonctionnalite {
   transform: translateY(110%);
 }
