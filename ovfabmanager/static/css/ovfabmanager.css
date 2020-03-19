@@ -16,7 +16,7 @@
 
 .connectbar_text_div {
   float: left; 
-  margin-left: 15px; 
+  margin-left: 25px; 
   width: 60%;
 }
 
@@ -32,9 +32,9 @@
 .entete {
   background-color: #608da1;
   top: 0;
-  margin-left: 347px;
+  margin-left: 392px;
   position: fixed;
-  width: 1500px;
+  width: 1453px;
   z-index: 100;
 }
 
@@ -78,7 +78,7 @@
 
 .sidenav {
   height: 100%; /* 100% Full-height */
-  width: 355px;
+  width: 400px;
   position: fixed; /* Stay in place */
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
