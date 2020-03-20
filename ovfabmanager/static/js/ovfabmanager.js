@@ -6,10 +6,10 @@ $(document).ready(function(){
   });
 
   $("#second").click(function(){
-        console.log("22222.....");
+	$("#deuxieme_modal").dialog();
   });
 
   $("#troisieme").click(function(){
-	console.log("33333.....");
+	$("#troisieme_modal").dialog();
   });
 });
