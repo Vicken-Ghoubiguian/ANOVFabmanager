@@ -6,10 +6,24 @@ $(document).ready(function(){
   });
 
   $("#second").click(function(){
-	$("#deuxieme_modal").dialog();
+	$("#deuxieme_modal").dialog({
+		height: 400,
+                width: 350,
+                modal: true,
+                buttons: {
+                        "Inscrivez-vous": function(){ console.log("inscrit"); },
+                }
+	});
   });
 
   $("#troisieme").click(function(){
-	$("#troisieme_modal").dialog();
+	$("#troisieme_modal").dialog({
+		height: 400,
+		width: 350,
+		modal: true,
+		buttons: {
+			"Connectez-vous": function(){ console.log("Connecté"); },
+        	}
+       });
   });
 });
