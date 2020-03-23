@@ -39,6 +39,22 @@
                         	<label for="resaisir_votre_mot_de_passe">Retapez votre mot de passe *:</label>
                         	<input type="password" id="resaisir_votre_mot_de_passe" name="resaisir_votre_mot_de_passe" class="tooltip" title="Veuillez resaisir votre mot de passe" required><br><br>
 			</fieldset>
+			<fieldset>
+				<legend>Personnes morales</legend>
+				<label for="personne_morale">Je suis une personne morale :</label>
+                                <input type="checkbox" id="personne_morale" name="personne_morale" class="tooltip" title="Veuillez cocher cette case si vous êtes une personne morale (entreprise, école...)"><br><br>
+			</fieldset>
+			<fieldset>
+				<legend>Compléments indispensables</legend>
+				<label for="abonnement">Nom *:</label>
+                                <select id="abonnement" name="abonnement" class="tooltip" title="Veuillez saisir votre nom de famille" required>
+					<option value="">Sélectionnez votre abonnement</option>
+				</select><br><br>
+                                <label for="naissance">Date de naissance *:</label>
+                                <input type="text" id="naissance" name="naissance" class="tooltip" title="Veuillez saisir votre date de naissance" required><br><br>
+                                <label for="telephone">Numéro de téléphone :</label>
+                                <input type="phone" id="telephone" name="telephone" class="tooltip" title="Veuillez saisir votre numéro de téléphone"><br><br>
+			</fieldset>
                 </fieldset>
         </form>
 </div>
