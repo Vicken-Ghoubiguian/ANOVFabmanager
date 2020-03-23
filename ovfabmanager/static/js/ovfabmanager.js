@@ -21,8 +21,8 @@ $(document).ready(function(){
 
   $("#troisieme").click(function(){
 	$("#troisieme_modal").dialog({
-		height: 800,
-		width: 650,
+		height: 250,
+		width: 420,
 		resizable: false,
 		modal: true,
 		buttons: {
