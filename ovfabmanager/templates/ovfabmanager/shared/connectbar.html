@@ -18,6 +18,18 @@
                         <legend>Inscrivez-vous</legend>
 			<fieldset>
 				<legend>Généralités</legend>
+				<div title="Sélectionnez votre genre">
+					<p>Vous êtes *:
+                                		<input type="radio" id="homme" name="genre" value="homme" class="tooltip" checked>
+						<label for="homme">un homme</label>
+                                		<input type="radio" id="femme" name="genre" value="femme" class="tooltip">
+						<label for="femme">une femme</label>
+					</p>
+				</div><br>
+				<label for="nom">Nom *:</label>
+                        	<input type="text" id="nom" name="nom" class="tooltip" title="Veuillez saisir votre nom de famille" required><br><br>
+                        	<label for="prenom">Prénom *:</label>
+                        	<input type="text" id="prenom" name="prenom" class="tooltip" title="Veuillez saisir votre prénom" required><br><br>
 				<label for="identifiant">Identifiant *:</label>
                         	<input type="text" id="identifiant" name="identifiant" class="tooltip" title="Veuillez saisir votre identifiant" required><br><br>
                         	<label for="adresse_email">Adresse email *:</label>
