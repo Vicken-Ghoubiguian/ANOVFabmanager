@@ -7,9 +7,9 @@ $(document).ready(function(){
 
   $("#second").click(function(){
 	$("#deuxieme_modal").dialog({
-		height: 400,
+		height: 800,
 		resizable: false,
-                width: 350,
+                width: 650,
 		resizable: false,
                 modal: true,
                 buttons: {
@@ -21,8 +21,8 @@ $(document).ready(function(){
 
   $("#troisieme").click(function(){
 	$("#troisieme_modal").dialog({
-		height: 400,
-		width: 350,
+		height: 800,
+		width: 650,
 		resizable: false,
 		modal: true,
 		buttons: {
