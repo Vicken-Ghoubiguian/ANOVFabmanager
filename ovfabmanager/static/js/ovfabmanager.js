@@ -15,10 +15,6 @@ $(document).ready(function(){
                 buttons: {
                         "Inscrivez-vous": function(){ console.log("inscrit"); },
 			"Réinitialiser": function(){ console.log("réinitialisé"); },
-			/*"Réinitialiser": function(){
-				document.getElementById("identifiant").value = "";
-				document.getElementById("mot_de_passe").value = "";
-			 },*/
                 }
 	});
   });
@@ -35,7 +31,6 @@ $(document).ready(function(){
                                 document.getElementById("identifiant").value = "";
                                 document.getElementById("mot_de_passe").value = "";
                          },
-			//"Réinitialiser": function(){ console.log("réinitialisé"); },
         	}
        });
   });
