@@ -28,12 +28,9 @@ $(document).ready(function(){
 		resizable: false,
 		modal: true,
 		buttons: {
-			"Connectez-vous": function(){ console.log("Connecté"); },
-			"Réinitialiser": function(){
-                                document.getElementById("identifiant").value = "";
-                                document.getElementById("mot_de_passe").value = "";
-                         },
-        	}
+                        "Connectez-vous": function(){ console.log("Connecté"); },
+			"Réinitialiser": function(){ $("#idt").val(""); $("#mdp").val(""); },
+                }
        });
   });
 });
