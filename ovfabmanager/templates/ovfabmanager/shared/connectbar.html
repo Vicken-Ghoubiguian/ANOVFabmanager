@@ -58,10 +58,12 @@
 			</fieldset>
 			<fieldset>
 				<legend>Compléments indispensables</legend>
-				<label for="abonnement">Abonnement *:</label>
-                                <select id="abonnement" name="abonnement" class="tooltip" title="Veuillez saisir l'abonnement que vous voulez souscrire" required>
-					<option value="">Sélectionnez votre abonnement</option>
-				</select><br><br>
+				<div class="input-container">
+					<i class="fa fa-credit-card fa-2x icon"></i>
+                                	<select id="abonnement" name="abonnement" class="tooltip input-field" placeholder="Abonnement *" title="Veuillez saisir l'abonnement que vous voulez souscrire" required>
+						<option value="">Sélectionnez votre abonnement</option>
+					</select>
+				</div>
 				<div class="input-container">
 					<i class="fa fa-calendar fa-2x icon"></i>
                                 	<input type="text" id="naissance" name="naissance" class="tooltip input-field" placeholder="Date de naissance*" title="Veuillez saisir votre date de naissance" required>
