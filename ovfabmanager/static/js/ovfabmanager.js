@@ -1,7 +1,7 @@
 $(document).ready(function(){
   $( document ).tooltip();
 
-  $("#naissance").datepicker({ minDate: -36500, maxDate: -1825 });
+  $("#naissance").datepicker({ minDate: -36500, maxDate: -1825, changeMonth: true, changeYear: true });
 
   $("#premier").click(function(){
         console.log("11111.....");
