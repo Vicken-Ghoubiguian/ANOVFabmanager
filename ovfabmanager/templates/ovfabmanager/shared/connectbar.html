@@ -18,14 +18,13 @@
                         <legend>Inscrivez-vous</legend>
 			<fieldset>
 				<legend>Généralités</legend>
-				<div title="Sélectionnez votre genre">
-					<p>Vous êtes *:
-                                		<input type="radio" id="homme" name="genre" value="homme" class="tooltip" checked>
+				<fieldset class="radiobutton_group" title="Sélectionnez votre genre">
+					<legend>Vous êtes *:</legend>
+                                		<input type="radio" id="homme" name="genre" value="homme" class="customized_checkbox tooltip">
 						<label for="homme">un homme</label>
-                                		<input type="radio" id="femme" name="genre" value="femme" class="tooltip">
+                                		<input type="radio" id="femme" name="genre" value="femme" class="customized_checkbox tooltip">
 						<label for="femme">une femme</label>
-					</p>
-				</div><br>
+				</fieldset><br>
 				<div class="input-container">
 					<i class="fa fa-user-tie fa-2x icon"></i>
                         		<input type="text" id="nom" name="nom" placeholder="Nom*" class="tooltip input-field" title="Veuillez saisir votre nom de famille" required>

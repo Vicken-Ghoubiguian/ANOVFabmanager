@@ -1,5 +1,8 @@
 $(document).ready(function(){
+
   $( document ).tooltip();
+
+  $(".radiobutton_group").controlgroup();
 
   $(".customized_checkbox").checkboxradio();
 
