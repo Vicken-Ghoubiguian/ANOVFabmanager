@@ -29,7 +29,17 @@ $(document).ready(function(){
 		},
                 buttons: {
                         "Inscrivez-vous": function(){ console.log("inscrit"); },
-			"Réinitialiser": function(){ console.log("réinitialisé"); },
+			"Réinitialiser": function()
+			{
+				$("#nom").val("");
+				$("#prenom").val("");
+				$("#iscidt").val("");
+				$("#adresse_email").val("");
+				$("#mot_de_passe").val("");
+				$("#resaisir_mot_de_passe").val("");
+				$("#naissance").val("");
+				$("#telephone").val("");
+			},
                 }
 	});
   });
