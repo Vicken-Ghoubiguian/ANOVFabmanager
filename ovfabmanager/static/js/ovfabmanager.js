@@ -19,6 +19,14 @@ $(document).ready(function(){
                 width: 650,
 		resizable: false,
                 modal: true,
+		show: {
+			effect: "blind",
+			duration: 1000
+		},
+		hide: {
+			effect: "explode",
+			duration: 1000
+		},
                 buttons: {
                         "Inscrivez-vous": function(){ console.log("inscrit"); },
 			"Réinitialiser": function(){ console.log("réinitialisé"); },
@@ -32,6 +40,14 @@ $(document).ready(function(){
 		width: 420,
 		resizable: false,
 		modal: true,
+		show: {
+			effect: "blind",
+			duration: 1000
+		},
+		hide: {
+			effect: "explode",
+			duration: 1000
+		},
 		buttons: {
                         "Connectez-vous": function(){ console.log("Connecté"); },
 			"Réinitialiser": function(){ $("#idt").val(""); $("#mdp").val(""); },
