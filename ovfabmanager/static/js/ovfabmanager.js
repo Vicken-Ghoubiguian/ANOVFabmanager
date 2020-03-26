@@ -1,6 +1,8 @@
 $(document).ready(function(){
   $( document ).tooltip();
 
+  $(".customized_checkbox").checkboxradio();
+
   $("#naissance").datepicker({ minDate: -36500, maxDate: -1825, changeMonth: true, changeYear: true });
 
   $("#premier").click(function(){
