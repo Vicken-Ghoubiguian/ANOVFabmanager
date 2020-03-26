@@ -20,11 +20,11 @@ $(document).ready(function(){
 		resizable: false,
                 modal: true,
 		show: {
-			effect: "toggle",
+			effect: "size",
 			duration: 1000
 		},
 		hide: {
-			effect: "toggle",
+			effect: "size",
 			duration: 1000
 		},
                 buttons: {
@@ -41,11 +41,11 @@ $(document).ready(function(){
 		resizable: false,
 		modal: true,
 		show: {
-			effect: "toggle",
+			effect: "size",
 			duration: 1000
 		},
 		hide: {
-			effect: "toggle",
+			effect: "size",
 			duration: 1000
 		},
 		buttons: {
