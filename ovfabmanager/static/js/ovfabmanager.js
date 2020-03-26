@@ -20,7 +20,7 @@ $(document).ready(function(){
 		resizable: false,
                 modal: true,
 		show: {
-			effect: "blind",
+			effect: "explode",
 			duration: 1000
 		},
 		hide: {
@@ -41,7 +41,7 @@ $(document).ready(function(){
 		resizable: false,
 		modal: true,
 		show: {
-			effect: "blind",
+			effect: "explode",
 			duration: 1000
 		},
 		hide: {
