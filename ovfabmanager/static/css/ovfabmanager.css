@@ -133,6 +133,8 @@ body {
 
 #image_common {
   cursor: pointer;
+  opacity: 1;
+  transition: 1s;
 }
 
 #image_common:hover {
