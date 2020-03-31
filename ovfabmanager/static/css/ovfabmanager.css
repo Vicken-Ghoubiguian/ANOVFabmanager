@@ -83,9 +83,9 @@ body {
 .entete {
   background-color: #608da1;
   top: 0;
-  margin-left: 392px;
+  margin-left: 292px;
   position: fixed;
-  width: 1453px;
+  width: 1550px;
   z-index: 100;
   display: flex; 
   justify-content: space-around;
@@ -137,7 +137,7 @@ body {
 
 .sidenav {
   height: 100%; /* 100% Full-height */
-  width: 400px;
+  width: 300px;
   position: fixed; /* Stay in place */
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
