@@ -135,6 +135,12 @@ body {
   cursor: pointer;
 }
 
+#image_common:hover {
+  background-color: #f8009b;
+  opacity: 0.3;
+  transition: 1s;
+}
+
 .sidenav {
   height: 100%; /* 100% Full-height */
   width: 300px;
