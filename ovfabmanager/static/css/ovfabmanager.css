@@ -1,3 +1,7 @@
+body {
+  font-family: Arial;
+}
+
 .radiobutton_group {
   margin-bottom: 5px;
 }
