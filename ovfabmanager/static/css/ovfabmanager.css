@@ -125,6 +125,9 @@
   margin-bottom: 20px; 
   color: #ffffff; 
   text-decoration: underline;
+}
+
+#image_common {
   cursor: pointer;
 }
 
