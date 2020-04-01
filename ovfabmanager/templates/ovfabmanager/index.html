@@ -28,8 +28,8 @@
 	</head>
 	<body>
 		{% if not afficher_erreur or afficher_erreur and type_erreur != "500" %}
-			{% include "ovfabmanager/shared/navbar.html" %}
-			{% include "ovfabmanager/shared/connectbar.html" %}
+			{% include "ovfabmanager/shared/menus/navbar.html" %}
+			{% include "ovfabmanager/shared/menus/connectbar.html" %}
 		{% endif  %}
 
 		<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
