@@ -62,7 +62,17 @@ $(document).ready(function(){
 			duration: 1000
 		},
 		buttons: {
-                        "Connectez-vous": function(){ console.log("Connecté"); },
+                        "Connectez-vous": function(){
+				$.ajax({
+					url: "{% url 'calendrier'  %}",
+					type: "POST",
+					data: { form_name: "connexion_form" },
+					success: function(response){ console.log("YESSSS !!!!" + response); },
+					error: function(response){ console.log("NNNOOOO !!!!" + response); }
+				});
+
+				$( this ).dialog( "close" );
+			 },
 			"Réinitialiser": function(){ $("#idt").val(""); $("#mdp").val(""); },
                 }
        });
