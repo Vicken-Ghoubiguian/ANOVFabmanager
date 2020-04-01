@@ -71,6 +71,8 @@ $(document).ready(function(){
 					error: function(response){ console.log("NNNOOOO !!!!" + response); }
 				});
 
+				$("#idt").val("");
+				$("#mdp").val("");
 				$( this ).dialog( "close" );
 			 },
 			"Réinitialiser": function(){ $("#idt").val(""); $("#mdp").val(""); },
