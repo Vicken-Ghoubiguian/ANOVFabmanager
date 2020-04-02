@@ -6,8 +6,6 @@ $(document).ready(function(){
 
   $(".customized_checkbox").checkboxradio();
 
-  $("#naissance").datepicker({ minDate: -36500, maxDate: -1825, changeMonth: true, changeYear: true });
-
   $(".common").click(function(){ document.location.href = "http://127.0.0.1:8000/"; });
 
   $("#premier").click(function(){
