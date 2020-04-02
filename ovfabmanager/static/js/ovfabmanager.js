@@ -27,6 +27,16 @@ $(document).ready(function(){
 			effect: "size",
 			duration: 1000
 		},
+		close: function(event, ui){
+			$("#nom").val("");
+			$("#prenom").val("");
+			$("#iscidt").val("");
+			$("#adresse_email").val("");
+			$("#mot_de_passe").val("");
+			$("#resaisir_mot_de_passe").val("");
+			$("#naissance").val("");
+			$("#telephone").val("");
+		},
                 buttons: {
                         "Inscrivez-vous": function(){ console.log("inscrit"); },
 			"Réinitialiser": function()
@@ -39,7 +49,6 @@ $(document).ready(function(){
 				$("#resaisir_mot_de_passe").val("");
 				$("#naissance").val("");
 				$("#telephone").val("");
-				console.log("(" + $("input[name='genre']:checked").val() + ")");
 			},
                 }
 	});
@@ -59,6 +68,7 @@ $(document).ready(function(){
 			effect: "size",
 			duration: 1000
 		},
+		close: function(event, ui){ $("#idt").val(""); $("#mdp").val(""); },
 		buttons: {
                         "Connectez-vous": function(){
 				$.ajax({
