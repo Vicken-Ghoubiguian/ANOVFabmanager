@@ -6,6 +6,12 @@ def connexion(request):
     if request.method == "GET":
       print("GET method....\n")
 
+    elif request.method == "POST":
+      print("POST method....\n")
+
+    else:
+      print("Other method....\n")
+
     return render(request, 'ovfabmanager/index.html', {'afficher_erreur': False, 'type_erreur': None, 'template_demandee': 'accueil'})
 
 # For common
