@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.shortcuts import redirect
 
 # Create your views here.
 
@@ -12,7 +13,9 @@ def connexion(request):
     else:
       print("Other method....\n")
 
-    return render(request, 'ovfabmanager/index.html', {'afficher_erreur': False, 'type_erreur': None, 'template_demandee': 'accueil'})
+    redirection_response = redirect("/")
+
+    return redirection_response
 
 # For common
 def accueil(request):
