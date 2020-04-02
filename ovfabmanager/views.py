@@ -2,6 +2,9 @@ from django.shortcuts import render
 
 # Create your views here.
 
+def connexion(request):
+    return render(request, 'ovfabmanager/index.html', {'afficher_erreur': False, 'type_erreur': None, 'template_demandee': 'accueil'})
+
 # For common
 def accueil(request):
     return render(request, 'ovfabmanager/index.html', {'afficher_erreur': False, 'type_erreur': None, 'template_demandee': 'accueil'})

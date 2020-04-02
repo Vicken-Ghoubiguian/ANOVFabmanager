@@ -3,6 +3,9 @@ from . import views
 
 urlpatterns = [
 
+    # For treatments
+    path('connexion', views.connexion, name='connexion'),
+
     # For common
     path('', views.accueil, name='accueil'),
     path('calendrier', views.calendrier, name='calendrier'),
