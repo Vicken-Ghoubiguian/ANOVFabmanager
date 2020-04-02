@@ -70,19 +70,7 @@ $(document).ready(function(){
 		},
 		close: function(event, ui){ $("#idt").val(""); $("#mdp").val(""); },
 		buttons: {
-                        "Connectez-vous": function(){
-				$.ajax({
-					url: "{% url 'calendrier'  %}",
-					type: "POST",
-					data: { form_name: "connexion_form" },
-					success: function(response){ console.log("YESSSS !!!!" + response); },
-					error: function(response){ console.log("NNNOOOO !!!!" + response); }
-				});
-
-				$("#idt").val("");
-				$("#mdp").val("");
-				$( this ).dialog( "close" );
-			 },
+                        "Connectez-vous": function(){ $("#connexion_form").submit(); },
 			"Réinitialiser": function(){ $("#idt").val(""); $("#mdp").val(""); },
                 }
        });
