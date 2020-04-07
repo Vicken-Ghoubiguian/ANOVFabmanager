@@ -1,0 +1,114 @@
+Modélisation de la base de données
+
+Client
+-> Nom de famille,
+-> Prenom,
+-> Date de naissance
+-> Abonnement souscrit,
+-> Téléphone,
+-> Adresse email,
+-> Nom d'identification,
+-> Diplome,
+-> Type_de_client,
+-> Mot de passe.
+
+Type_de_client
+-> Libellé,
+-> Descriptif.
+
+Abonnement
+-> Prix,
+-> Type_de_client,
+-> Crédit_machine,
+-> Avantages.
+
+Machine
+-> Libellé,
+-> Description,
+-> Conditions d'utilisation,
+-> Prix d'utilisation,
+-> Fabricant,
+-> Date d'achat,
+-> Fournisseur,
+-> Prix d'achat,
+-> Modele,
+-> Materiel,
+-> Diplome requis,
+-> Type_machine.
+
+Espace
+-> Libellé,
+-> Description,
+-> diplome requis,
+-> Abonnement requis.
+
+Diplome
+-> Intitulé,
+-> nomenclature,
+-> Titulaire,
+-> Date de délivrance,
+-> Evenement,
+-> Durée de validité.
+
+Evenement
+-> Libellé,
+-> Description,
+-> Type_d_evenement,
+-> Machine,
+-> Espace,
+-> Date de début,
+-> Heure de début,
+-> Durée,
+-> Diplome.
+
+Type_d_evenement
+-> Libellé,
+-> Description.
+
+Type_machine
+-> Libellé,
+-> Description.
+
+Materiel
+-> Libellé,
+-> Descriptif,
+-> Fiche technique.
+
+Type_materiel
+-> Libellé,
+-> Description.
+
+Type_outil
+-> Libellé,
+-> Description.
+
+Projet
+-> Libellé,
+-> Descriptif,
+-> Fiche technique.
+-> Illustration.
+
+Type_d_article
+-> Libellé,
+-> Type_item,
+-> Descriptif,
+-> Fabricant,
+-> Date d'achat,
+-> Fournisseur,
+-> Date de péremption.
+
+Article
+-> Libellé,
+-> Code barre,
+-> Panier,
+-> Type_d_article.
+
+Panier
+-> Libellé,
+-> Client,
+-> Date de prêt,
+-> Heure de prêt,
+-> Date de retour,
+-> Heure de retour.
+
+Type_item: machine, outil, materiel...
