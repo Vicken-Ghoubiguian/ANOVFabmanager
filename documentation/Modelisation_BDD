@@ -74,11 +74,7 @@ Materiel
 -> Descriptif,
 -> Fiche technique.
 
-Type_materiel
--> Libellé,
--> Description.
-
-Type_outil
+outil
 -> Libellé,
 -> Description.
 
