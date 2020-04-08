@@ -1,7 +1,8 @@
 <div id="deuxieme_modal" title="S'inscrire..." hidden="true">
-	<form>
+	<form action="{% url 'connexion'  %}" id="inscription_form">
                 <fieldset>
                         <legend>Inscrivez-vous</legend>
+			<input id="form_type" name="form_type" type="hidden" value="inscription">
 			<fieldset>
 				<legend>Généralités</legend>
 				<div class="input-container">

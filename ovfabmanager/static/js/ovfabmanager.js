@@ -90,7 +90,7 @@ $(document).ready(function(){
 			$("#personne_morale_nom").val("");
 		},
                 buttons: {
-                        "Inscrivez-vous": function(){ console.log("inscrit."); },
+                        "Inscrivez-vous": function(){ $("#inscription_form").submit(); },
 			"Réinitialiser": function()
 			{
 				$("#nom").val("");
