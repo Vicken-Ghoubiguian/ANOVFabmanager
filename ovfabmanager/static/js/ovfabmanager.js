@@ -5,10 +5,14 @@ $(document).ready(function(){
   $("#personne_morale").click(function(){
 	if($("#personne_morale").prop(":checked")){
 		$("#personne_morale"). prop(":checked", false);
-		alert("Personne morale is Unchecked");
+		//alert("Personne morale is Unchecked");
+		$(".personne_moral_field").removeClass("input-container");
+		$(".personne_moral_field").addClass("hidden_div");
 	} else {
 		$("#personne_morale"). prop(":checked", true);
-		alert("Personne morale is Checked");
+		//alert("Personne morale is Checked");
+		$(".personne_moral_field").removeClass("hidden_div");
+                $(".personne_moral_field").addClass("input-container");
 	}
   });
 
