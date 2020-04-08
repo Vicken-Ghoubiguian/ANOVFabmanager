@@ -12,9 +12,15 @@ def connexion(request):
 
       data = request.POST.copy()
 
-      print("\n ----------Formulaire: " + data.get("form_type") + "----------\n")
-      print("\n Nom d'utilisateur = " + data.get("nom_d_utilisateur")  + "\n")
-      print("\n Mot de passe = " + data.get("mot_de_passe")  + "\n")
+      if data.get("form_type") == "connexion":
+
+          print("\n ----------Formulaire: " + data.get("form_type") + "----------\n")
+          print("\n Nom d'utilisateur = " + data.get("nom_d_utilisateur")  + "\n")
+          print("\n Mot de passe = " + data.get("mot_de_passe")  + "\n")
+
+      else:
+
+          print("Erreur....Erreur....Mauvais formulaire.\n")
 
     else:
       print("Other method....\n")

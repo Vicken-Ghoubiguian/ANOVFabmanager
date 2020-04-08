@@ -1,5 +1,6 @@
 <div id="deuxieme_modal" title="S'inscrire..." hidden="true">
-	<form action="{% url 'connexion'  %}" id="inscription_form">
+	<form method="post" action="{% url 'connexion'  %}" id="inscription_form">
+		{% csrf_token  %}
                 <fieldset>
                         <legend>Inscrivez-vous</legend>
 			<input id="form_type" name="form_type" type="hidden" value="inscription">
