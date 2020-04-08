@@ -39,9 +39,18 @@
 			</fieldset>
 			<fieldset>
 				<legend>Personnes morales</legend>
-				<br>
-				<label for="personne_morale">Je suis une personne morale</label>
-                                <input type="checkbox" id="personne_morale" name="personne_morale" class="customized_checkbox tooltip" title="Veuillez cocher cette case si vous êtes une personne morale (entreprise, école...)">
+				<div class="input-container">
+					<label for="personne_morale">Je suis une personne morale</label>
+					<input type="checkbox" id="personne_morale" name="personne_morale" class="customized_checkbox tooltip" title="Veuillez cocher cette case si vous êtes une personne morale (entreprise, école...)">
+				</div>
+				<div class="input-container">
+					<i class="fa fa-building fa-2x icon"></i>
+					<input type="text" id="personne_morale_nom" name="personne_morale_nom" placeholder="Nom de la structure*" class="tooltip input-field" title="Veuillez saisir le nom de votre structure" required>
+				</div>
+				<div class="input-container">
+					<i class="fa fa-road fa-2x icon"></i>
+					<input type="text" id="personne_morale_adresse_physique" name="personne_morale_adresse_physique" placeholder="Adresse physique*" class="tooltip input-field" title="Veuillez saisir l'adresse physique de votre structure" required>
+				</div>
 			</fieldset>
 			<!--<fieldset>
 				<legend>Compléments indispensables</legend>
