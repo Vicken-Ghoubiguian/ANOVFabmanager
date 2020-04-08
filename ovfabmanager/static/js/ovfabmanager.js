@@ -2,7 +2,10 @@ $(document).ready(function(){
 
   $( document ).tooltip();
 
-  $(".radiobutton_group").controlgroup();
+  $("#personne_morale").click(function(){
+
+
+  });
 
   $(".customized_checkbox").checkboxradio();
 

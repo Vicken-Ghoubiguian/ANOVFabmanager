@@ -2,10 +2,6 @@ body {
   font-family: Arial;
 }
 
-.radiobutton_group {
-  margin-bottom: 5px;
-}
-
 .input-container {
   display: -ms-flexbox; /* Pour IE10 */
   display: flex;
