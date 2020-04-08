@@ -3,14 +3,13 @@ $(document).ready(function(){
   $( document ).tooltip();
 
   $("#personne_morale").click(function(){
-	if ($("#personne_morale").prop( 
-                      ":checked")) { 
-                        alert("Check box in Checked");
-			$("#personne_morale"). prop(":checked", false);
-                    } else { 
-                        alert("Check box is Unchecked"); 
-			$("#personne_morale"). prop(":checked", true);
-                    } 
+	if($("#personne_morale").prop(":checked")){
+		$("#personne_morale"). prop(":checked", false);
+		alert("Check box in Unchecked");
+	} else {
+		$("#personne_morale"). prop(":checked", true);
+		alert("Check box is Checked");
+	}
   });
 
   $(".customized_checkbox").checkboxradio();
