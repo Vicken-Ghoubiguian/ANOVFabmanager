@@ -9,17 +9,18 @@ $(document).ready(function(){
 		$(".personne_moral_field").removeClass("input-container");
 		$(".personne_moral_field").addClass("hidden_div");
 
+		$(".personne_morale_input").removeAttr("required");
+
 		$("#personne_morale_adresse_physique").val("");
 		$("#personne_morale_nom").val("");
 
-		$(".personne_morale_input").prop("required",false);
 	} else {
 		$("#personne_morale"). prop(":checked", true);
 
 		$(".personne_moral_field").removeClass("hidden_div");
                 $(".personne_moral_field").addClass("input-container");
 
-		$(".personne_morale_input").prop("required",true);
+		$(".personne_morale_input").attr("required","required");
 	}
   });
 
@@ -89,7 +90,7 @@ $(document).ready(function(){
 			$("#personne_morale_nom").val("");
 		},
                 buttons: {
-                        "Inscrivez-vous": function(){ console.log("inscrit"); },
+                        "Inscrivez-vous": function(){ console.log("inscrit."); },
 			"Réinitialiser": function()
 			{
 				$("#nom").val("");
