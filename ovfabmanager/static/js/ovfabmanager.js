@@ -9,6 +9,9 @@ $(document).ready(function(){
 		$(".personne_moral_field").removeClass("input-container");
 		$(".personne_moral_field").addClass("hidden_div");
 
+		$("#personne_morale_adresse_physique").val("");
+		$("#personne_morale_nom").val("");
+
 		$(".personne_morale_input").prop("required",false);
 	} else {
 		$("#personne_morale"). prop(":checked", true);
@@ -82,6 +85,8 @@ $(document).ready(function(){
 			$("#resaisir_mot_de_passe").val("");
 			$("#naissance").val("");
 			$("#telephone").val("");
+			$("#personne_morale_adresse_physique").val("");
+			$("#personne_morale_nom").val("");
 		},
                 buttons: {
                         "Inscrivez-vous": function(){ console.log("inscrit"); },
@@ -95,6 +100,8 @@ $(document).ready(function(){
 				$("#resaisir_mot_de_passe").val("");
 				$("#naissance").val("");
 				$("#telephone").val("");
+				$("#personne_morale_adresse_physique").val("");
+                        	$("#personne_morale_nom").val("");
 			},
                 }
 	});
