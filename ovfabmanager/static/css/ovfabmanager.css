@@ -2,6 +2,10 @@ body {
   font-family: Arial;
 }
 
+.hidden_div {
+  display: none;
+}
+
 .input-container {
   display: -ms-flexbox; /* Pour IE10 */
   display: flex;
