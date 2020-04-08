@@ -3,8 +3,14 @@ $(document).ready(function(){
   $( document ).tooltip();
 
   $("#personne_morale").click(function(){
-
-
+	if ($("#personne_morale").prop( 
+                      ":checked")) { 
+                        alert("Check box in Checked");
+			$("#personne_morale"). prop(":checked", false);
+                    } else { 
+                        alert("Check box is Unchecked"); 
+			$("#personne_morale"). prop(":checked", true);
+                    } 
   });
 
   $(".customized_checkbox").checkboxradio();
