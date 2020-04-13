@@ -2,7 +2,7 @@ $(document).ready(function(){
 
   $( document ).tooltip();
 
-  $(":input").focus(function(){
+  $(":input.required-field").focus(function(){
 
 	$(this).css("border-color", "#ccc");
 
@@ -144,8 +144,7 @@ $(document).ready(function(){
 
 				if(nom_d_identification == "" || mot_de_passe == "")
 				{
-					$("#idt").css("border-color", "red");
-					$("#mdp").css("border-color", "red");
+					$(":input.required-field").css("border-color", "red");
 				}
 				else
 				{
