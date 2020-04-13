@@ -135,6 +135,8 @@ $(document).ready(function(){
 		{
 			$("#idt").val("");
 			$("#mdp").val("");
+
+			$(":input.required-field").css("border-color", "#ccc");
 		},
 		buttons: {
                         "Connectez-vous": function()
@@ -155,6 +157,8 @@ $(document).ready(function(){
 			{
 				$("#idt").val("");
 				$("#mdp").val("");
+
+				$(":input.required-field").css("border-color", "#ccc");
 			},
                 }
        });
