@@ -2,6 +2,12 @@ $(document).ready(function(){
 
   $( document ).tooltip();
 
+  $(":input").focus(function(){
+
+	$(this).css("border-color", "#ccc");
+
+  });
+
   $("#personne_morale").click(function(){
 	if($("#personne_morale").prop(":checked")){
 		$("#personne_morale"). prop(":checked", false);
@@ -138,8 +144,8 @@ $(document).ready(function(){
 
 				if(nom_d_identification == "" || mot_de_passe == "")
 				{
-					$("#idt").css("border-color","red");
-					$("#mdp").css("border-color","red");
+					$("#idt").css("border-color", "red");
+					$("#mdp").css("border-color", "red");
 				}
 				else
 				{
