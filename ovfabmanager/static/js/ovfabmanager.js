@@ -138,7 +138,8 @@ $(document).ready(function(){
 
 				if(nom_d_identification == "" || mot_de_passe == "")
 				{
-					console.log("Tout est faux...");
+					$("#idt").css("border-color","red");
+					$("#mdp").css("border-color","red");
 				}
 				else
 				{
