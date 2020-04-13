@@ -146,7 +146,7 @@ $(document).ready(function(){
 
 				if(nom_d_identification == "" || mot_de_passe == "")
 				{
-					$(":input.required-field").css("border-color", "red");
+					$(":input.required-field").css("border-color", "#f8009b");
 				}
 				else
 				{
