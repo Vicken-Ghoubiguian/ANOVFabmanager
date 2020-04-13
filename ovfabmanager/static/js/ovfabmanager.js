@@ -133,7 +133,17 @@ $(document).ready(function(){
 		buttons: {
                         "Connectez-vous": function()
 			{
-				$("#connexion_form").submit();
+				var nom_d_identification = $("#idt").val();
+				var mot_de_passe = $("#mdp").val();
+
+				if(nom_d_identification == "" || mot_de_passe == "")
+				{
+					console.log("Tout est faux...");
+				}
+				else
+				{
+					$("#connexion_form").submit();
+				}
 			},
 			"Réinitialiser": function()
 			{
