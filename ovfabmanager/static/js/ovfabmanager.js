@@ -90,7 +90,10 @@ $(document).ready(function(){
 			$("#personne_morale_nom").val("");
 		},
                 buttons: {
-                        "Inscrivez-vous": function(){ $("#inscription_form").submit(); },
+                        "Inscrivez-vous": function()
+			{
+				$("#inscription_form").submit();
+			},
 			"Réinitialiser": function()
 			{
 				$("#nom").val("");
@@ -122,10 +125,21 @@ $(document).ready(function(){
 			effect: "size",
 			duration: 1000
 		},
-		close: function(event, ui){ $("#idt").val(""); $("#mdp").val(""); },
+		close: function(event, ui)
+		{
+			$("#idt").val("");
+			$("#mdp").val("");
+		},
 		buttons: {
-                        "Connectez-vous": function(){ $("#connexion_form").submit(); },
-			"Réinitialiser": function(){ $("#idt").val(""); $("#mdp").val(""); },
+                        "Connectez-vous": function()
+			{
+				$("#connexion_form").submit();
+			},
+			"Réinitialiser": function()
+			{
+				$("#idt").val("");
+				$("#mdp").val("");
+			},
                 }
        });
   });
