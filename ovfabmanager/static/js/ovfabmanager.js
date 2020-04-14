@@ -141,14 +141,23 @@ $(document).ready(function(){
 		buttons: {
                         "Connectez-vous": function()
 			{
-				var nom_d_identification = $("#idt").val();
-				var mot_de_passe = $("#mdp").val();
+				var verif_var = true;
 
-				if(nom_d_identification == "" || mot_de_passe == "")
-				{
-					$(":input.required-field").css("border-color", "#f8009b");
-				}
-				else
+				$(":input.required-field").each(function(){
+					var input_value = $(this).val();
+
+					//Si le champs est vide....
+					if(input_value === "")
+                                	{
+                                        	$(this).css("border-color", "#f8009b");
+
+						console.log("Test: " + input_value);
+
+						verif_var = false;
+                                	}
+				});
+
+				if(verif_var)
 				{
 					$("#connexion_form").submit();
 				}
