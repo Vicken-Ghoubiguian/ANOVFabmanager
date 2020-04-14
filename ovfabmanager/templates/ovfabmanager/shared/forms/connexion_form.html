@@ -2,7 +2,7 @@
         <form method="post" action="{% url 'connexion'  %}" id="connexion_form">
 		{% csrf_token  %}
                 <fieldset>
-			<div class="ui-widget hidden_div" style="border-radius: 30px; margin-bottom: 15px;">
+			<div id="connexion_error_div" class="ui-widget hidden_div" style="border-radius: 30px; margin-bottom: 15px;">
 				<div class="ui-state-error" style="padding: 0.7em;">
 					<p>
 						<span class="ui-icon ui-icon-alert" style="float: left; margin-right: 0.3em;"></span>

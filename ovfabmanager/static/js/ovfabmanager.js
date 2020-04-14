@@ -137,6 +137,8 @@ $(document).ready(function(){
 			$("#mdp").val("");
 
 			$(":input.required-field").css("border-color", "#ccc");
+
+			$("#connexion_error_div").addClass("hidden_div");
 		},
 		buttons: {
                         "Connectez-vous": function()
@@ -151,7 +153,7 @@ $(document).ready(function(){
                                 	{
                                         	$(this).css("border-color", "#f8009b");
 
-						console.log("Test: " + input_value);
+						$("#connexion_error_div").removeClass("hidden_div");
 
 						verif_var = false;
                                 	}
@@ -168,6 +170,8 @@ $(document).ready(function(){
 				$("#mdp").val("");
 
 				$(":input.required-field").css("border-color", "#ccc");
+
+				$("#connexion_error_div").addClass("hidden_div");
 			},
                 }
        });
