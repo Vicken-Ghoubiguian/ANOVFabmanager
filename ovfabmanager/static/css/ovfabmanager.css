@@ -2,6 +2,11 @@ body {
   font-family: Arial;
 }
 
+.icone_d_erreur {
+  float: left; 
+  margin-right: 0.3em;
+}
+
 .hidden_div {
   display: none;
 }
