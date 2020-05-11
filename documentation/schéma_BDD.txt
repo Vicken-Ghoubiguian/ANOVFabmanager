@@ -10,8 +10,10 @@ class Client {
     Adresse email: Chaine de caractéres
     Identifiant: Chaine de caractéres
     Mot_de_passe: Chaine de caractéres
+    Credit_client_en_temps: Entier
     Type_de_client: Entier [FK]
     Abonnement: Entier [FK]
+    Prestation: Entier [FK]
 }
 
 class Type_de_client {
@@ -46,6 +48,13 @@ class Type_d_evenement {
     Descriptif: Chaine de caractéres
 }
 
+class Prestation {
+    Id: Entier [PK]
+    Libellé: Chaine de caractéres
+    Description: Chaine de caractéres
+    Coût_en_euros: Entier
+}
+
 class Machine {
     Id: Entier [PK]
     Libellé: Chaine de caractéres
@@ -58,6 +67,7 @@ class Machine {
     Modéle: Chaine de caractéres
     Diplome_requis: Entier [FK]
     Type_machine: Entier [FK]
+    Prestation: Entier [FK]
 }
 
 class Type_Machine {
@@ -124,11 +134,13 @@ class Posséde {
     Date_de_delivrance : Date
 }
 
-Client - Diplome
+Client --> Diplome
 (Client, Diplome) .. Posséde
 
 Machine --> Type_Machine : Correspond à
 Client --> Type_de_client : Correspond à
+Client --> Prestation : Souscrit
+Prestation --> Machine : Concerne
 Diplome --> Evenement : S'obtient après
 Evenement --> Type_d_evenement : Correspond à
 Evenement --> Espace : Se passe dans un
