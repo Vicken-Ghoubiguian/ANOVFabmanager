@@ -1,6 +1,6 @@
 @startuml
 
-scale 2000*700
+scale 2000*2000
 
 class Client {
     Id: Entier [PK]
@@ -53,6 +53,8 @@ class Prestation {
     Libellé: Chaine de caractéres
     Description: Chaine de caractéres
     Coût_en_euros: Entier
+    Date_de_livraison: Date
+    Fichier: Chaine de caractéres
 }
 
 class Machine {
