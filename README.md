@@ -48,7 +48,12 @@ Ensuite, créez votre environement virtuel à l'aide de la commande suivante:
 ```bash
 python3 -m venv votre_environement_virtuel
 ```
-Il ne reste plus qu'à l'activer à l'aide de cette dernière commande:
+Si l'utilitaire `venv` n'est pas installé, installez-le à l'aide de la commande suivante:
+
+```bash
+sudo apt install python3-venv
+```
+Maintenant il ne reste plus qu'à l'activer à l'aide de cette dernière commande:
 
 ```bash
 source votre_environement_virtuel/bin/activate
