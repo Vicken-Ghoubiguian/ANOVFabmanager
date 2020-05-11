@@ -1,0 +1,144 @@
+@startuml
+
+scale 2000*700
+
+class Client {
+    Id: Entier [PK]
+    Nom_de_famille: Chaine de caractéres
+    Prenom: Chaine de caractéres
+    Téléphone: Chaine de caractéres
+    Adresse email: Chaine de caractéres
+    Identifiant: Chaine de caractéres
+    Mot_de_passe: Chaine de caractéres
+    Type_de_client: Entier [FK]
+    Abonnement: Entier [FK]
+}
+
+class Type_de_client {
+    Id: Entier [PK]
+    Libellé: Chaine de caractéres
+    Descriptif: Chaine de caractéres
+}
+
+class Diplome {
+    Id: Entier [PK]
+    Intitulé: Chaine de caractéres
+    Nomenclature: Chaine de caractéres
+    Date_de_création: Date
+    Durée_de_validité: Entier
+    Evenement: Entier [FK]
+}
+
+class Evenement {
+    Id: Entier [PK]
+    Libellé: Chaine de caractéres
+    Description: Chaine de caractéres
+    Temps_de_debut: Entier
+    Durée: Entier
+    Type_d_evenement: Entier [FK]
+    Espace: Entier [FK]
+    Machine: Entier [FK]
+}
+
+class Type_d_evenement {
+    Id: Entier [PK]
+    Libellé: Chaine de caractéres
+    Descriptif: Chaine de caractéres
+}
+
+class Machine {
+    Id: Entier [PK]
+    Libellé: Chaine de caractéres
+    Description: Chaine de caractéres
+    Conditions_d_utilisation: Chaine de caractéres
+    Fabricant: Chaine de caractéres
+    Date_d_achat: Date
+    Fournisseur: Chaine de caractéres
+    Prix_d_achat: Entier
+    Modéle: Chaine de caractéres
+    Diplome_requis: Entier [FK]
+    Type_machine: Entier [FK]
+}
+
+class Type_Machine {
+    Id: Entier [PK]
+    Libellé: Chaine de caractéres
+    Description: Chaine de caractéres
+}
+
+Class Type_d_outil {
+    Id: Entier [PK]
+    Libellé: Chaine de caractéres
+    Type_item
+    Descriptif: Chaine de caractéres
+    Fabricant: Chaine de caractéres
+    Date d'achat: Date
+    Fournisseur: Chaine de caractéres
+    Date_de_péremption: Date
+}
+
+class Abonnement {
+    Id: Entier [PK]
+    Libellé: Chaine de caractéres
+    Description: Chaine de caractéres
+    Prix: Entier
+    Crédit_machine: Entier
+    Avantages: Chaines de caractéres
+    Type_de_client: Entier [FK]
+}
+
+class Espace {
+    Id: Entier [PK]
+    Libellé: Chaine de caractéres
+    Description: Chaine de caractéres
+    Diplome_requis: Entier [FK]
+    Abonnement_requis: Entier [FK]
+}
+
+Class Outil {
+    Id: Entier [PK]
+    Libellé: Chaine de caractéres
+    Description: Chaine de caractéres
+    Fiche technique: Chaine de caractéres
+    Machine: Entier [FK]
+    Type_d_outil: Entier [FK]
+}
+
+Class Article {
+    Id: Entier [PK]
+    Libellé: Chaine de caractéres
+    Outil: Entier [FK]
+    Panier: Entier [FK]
+}
+
+class Panier {
+    Id: Entier
+    Heure de prêt: Temps
+    Heure de retour: Temps
+    Client: Entier [FK]
+}
+
+class Posséde {
+    Titulaire : Entier [FK]
+    Diplome : Entier [FK]
+    Date_de_delivrance : Date
+}
+
+Client - Diplome
+(Client, Diplome) .. Posséde
+
+Machine --> Type_Machine : Correspond à
+Client --> Type_de_client : Correspond à
+Diplome --> Evenement : S'obtient après
+Evenement --> Type_d_evenement : Correspond à
+Evenement --> Espace : Se passe dans un
+Diplome --> Machine : Atteste qu'on maitrise
+Machine --> Outil : Utilise
+Espace --> Abonnement : Accéssible par
+Client --> Abonnement : Souscrit
+Article --> Outil : Correspond à
+Outil --> Type_d_outil : Correspond à
+Article --> Panier : Contenu dans
+Client --> Panier : Posséde
+
+@enduml
