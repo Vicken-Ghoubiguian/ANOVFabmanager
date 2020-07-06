@@ -65,6 +65,10 @@ Pour faire fonctionner ANOVFabmanager sur une machine quelconque (physique ou vi
 <a name="bootstrap"></a>
 * Bootstrap: `Bootstrap` est une collection d'outils pour la mise en place du design des pages web composant l'application `ANOVFabmanager`.
 
+Pour la bonne configuration de l'environnement de déploiement, il est nécessaire d'installer `django`, `Docker`, `Docker compose` et `pip`.
+
+Tout est expliqué en détail dans les parties [Installation de ANOVFabmanager sur une machine quelconque](#installation_de_ANOVFabmanager_sur_une_machine_quelconque) et [Installation de ANOVFabmanager grâce à Docker compose](#installation_de_ANOVFabmanager_grace_a_docker_compose).
+
 <!-- Pour faire fonctionner ANOVFabmanager en version de développement ou de test, il est nécessaire d'installer le framework Django.
 
 Avant toutes choses, il est nécessaire de vérifier que l'utilitaire pip3 est installé, grâce à la commande suivante:
