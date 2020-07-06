@@ -1,7 +1,5 @@
 # ANOVFabmanager
 
-Projet de développement d'un systéme de gestion des clients, des abonnements, de contrôle des espaces et des machines pour le futur atelier numérique Orles Valley.
-
 ##### Table des matières
 
 1. [Présentation du projet](#presentation_du_projet)
@@ -22,7 +20,9 @@ Projet de développement d'un systéme de gestion des clients, des abonnements, 
 
 	* [jQuery](https://jquery.com),
 
-	* [jQuery UI](https://jqueryui.com).
+	* [jQuery UI](https://jqueryui.com),
+ 
+	* [Bootstrap](https://getbootstrap.com).
 
 4. [Commandes de base](#commandes_de_base)
 
@@ -33,12 +33,13 @@ Projet de développement d'un systéme de gestion des clients, des abonnements, 
 <a name="presentation_du_projet"></a>
 ## Présentation du projet
 
-
+Ce projet consiste à développer un systéme de gestion des clients, des abonnements, de contrôle des espaces et des machines pour le futur atelier numérique Orles Valley.
+D'autres fonctionnalités peuvent être ajoutées à ce système logiciel à condition de faire le tour des spécificités techniques et de l'architecture de ce dernier.
 
 <a name="prerequis"></a>
 ## Prérequis
 
-Pour faire fonctionner ANOVFabmanager sur une machine quelconque (physique ou virtuelle), il faut impérativement installer les composants suivants:
+Pour faire fonctionner ANOVFabmanager sur une machine quelconque (physique ou virtuelle), l'application repose sur les composants suivants:
 
 <a name="django"></a>
 * Django: `Django` est un framework open source écrit en Python pour vous permettre de développer des applications web,
@@ -59,7 +60,10 @@ Pour faire fonctionner ANOVFabmanager sur une machine quelconque (physique ou vi
 * jQuery: `jQuery` est une bibliothèque JavaScript permettant la mise au point d'effets dans les pages web,
 
 <a name="jqueryui"></a>
-* jQuery UI: `jQuery UI` est une extension du framework `jQuery` présenté précédemment, permettant la mise au point d'effets pour les widgets de la page web.
+* jQuery UI: `jQuery UI` est une extension du framework `jQuery` présenté précédemment, permettant la mise au point d'effets pour les widgets de la page web,
+
+<a name="bootstrap"></a>
+* Bootstrap: `Bootstrap` est une collection d'outils pour la mise en place du design des pages web composant l'application `ANOVFabmanager`.
 
 <!-- Pour faire fonctionner ANOVFabmanager en version de développement ou de test, il est nécessaire d'installer le framework Django.
 
