@@ -16,13 +16,19 @@ Développement un système de gestion des clients, de contrôle des espaces et d
 
 	* [Docker compose](https://docs.docker.com/compose/),
 
+	* [virtualenv](https://python-guide-pt-br.readthedocs.io/fr/latest/dev/virtualenvs.html),
+
+	* [pip](https://pip.pypa.io/en/stable/),
+
 	* [jQuery](https://jquery.com),
 
 	* [jQuery UI](https://jqueryui.com).
 
 4. [Commandes de base](#commandes_de_base)
 
-5. [Installation de ANOVFabmanager en version de développement ou de test](#installation_de_ANOVFabmanager_en_version_de_developpement_ou_de_test)
+5. [Installation de ANOVFabmanager sur une machine quelconque](#installation_de_ANOVFabmanager_sur_une_machine_quelconque)
+
+6. [Installation de ANOVFabmanager grâce à Docker compose](#installation_de_ANOVFabmanager_grace_a_docker_compose)
 
 <a name="prerequis"></a>
 ## Prérequis
@@ -106,8 +112,8 @@ python3 manage.py runserver --insecure
 
 __Petite note__: pour lancer cette commande, il est nécessaire d'être dans le même répertoire que le projet.
 
-<a name="installation_de_ANOVFabmanager_en_version_de_developpement_ou_de_test"></a>
-## Installation de ANOVFabmanager en version de développement ou de test
+<a name="installation_de_ANOVFabmanager_sur_une_machine_quelconque"></a>
+## Installation de ANOVFabmanager sur une machine quelconque
 
 Pour installer ANOVFabmanager en version de développement ou de test, il suffit de suivre la procédure suivante.
 
@@ -128,3 +134,6 @@ Pour finir, lancez la commande suivante pour lancer l'application web:
 ```bash
 python3 manage.py runserver
 ```
+
+<a name="installation_de_ANOVFabmanager_grace_a_docker_compose"></a>
+## Installation de ANOVFabmanager grâce à Docker compose
