@@ -67,7 +67,33 @@ Pour faire fonctionner ANOVFabmanager sur une machine quelconque (physique ou vi
 
 Pour la bonne configuration de l'environnement de déploiement, il est nécessaire d'installer `django`, `Docker`, `Docker compose` et `pip`.
 
-Tout est expliqué en détail dans les parties [Installation de ANOVFabmanager sur une machine quelconque](#installation_de_ANOVFabmanager_sur_une_machine_quelconque) et [Installation de ANOVFabmanager grâce à Docker compose](#installation_de_ANOVFabmanager_grace_a_docker_compose).
+Tout est expliqué en détail dans les parties [Installation de ANOVFabmanager sur une machine quelconque](#installation_de_ANOVFabmanager_sur_une_machine_quelconque) et [Installation de ANOVFabmanager grâce à Docker compose](#installation_de_ANOVFabmanager_grace_a_docker_compose) ci-dessous.
+
+<a name="installation_de_ANOVFabmanager_sur_une_machine_quelconque"></a>
+## Installation de ANOVFabmanager sur une machine quelconque
+
+Pour installer ANOVFabmanager en version de développement ou de test, il suffit de suivre la procédure suivante.
+
+Tout d'abord si ce n'est pas déjà fait, clonez le dépôt git du projet à l'aide de la commande suivante:
+
+```bash
+git clone https://gitlab.imerir.com/orles-valley/anovfabmanager
+```
+
+Ensuite, rendez-vous dans le répertoire du projet cloné à l'aide de la commande suivante:
+
+```bash
+cd anovfabmanager
+```
+
+Pour finir, lancez la commande suivante pour lancer l'application web:
+
+```bash
+python3 manage.py runserver
+```
+
+<a name="installation_de_ANOVFabmanager_grace_a_docker_compose"></a>
+## Installation de ANOVFabmanager grâce à Docker compose
 
 <!-- Pour faire fonctionner ANOVFabmanager en version de développement ou de test, il est nécessaire d'installer le framework Django.
 
@@ -149,29 +175,3 @@ python3 manage.py runserver --insecure
 ```
 
 __Petite note__: pour lancer cette commande, il est nécessaire d'être dans le même répertoire que le projet.
-
-<a name="installation_de_ANOVFabmanager_sur_une_machine_quelconque"></a>
-## Installation de ANOVFabmanager sur une machine quelconque
-
-Pour installer ANOVFabmanager en version de développement ou de test, il suffit de suivre la procédure suivante.
-
-Tout d'abord si ce n'est pas déjà fait, clonez le dépôt git du projet à l'aide de la commande suivante:
-
-```bash
-git clone https://gitlab.imerir.com/orles-valley/anovfabmanager
-```
-
-Ensuite, rendez-vous dans le répertoire du projet cloné à l'aide de la commande suivante:
-
-```bash
-cd anovfabmanager
-```
-
-Pour finir, lancez la commande suivante pour lancer l'application web:
-
-```bash
-python3 manage.py runserver
-```
-
-<a name="installation_de_ANOVFabmanager_grace_a_docker_compose"></a>
-## Installation de ANOVFabmanager grâce à Docker compose
