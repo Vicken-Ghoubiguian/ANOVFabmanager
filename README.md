@@ -10,6 +10,10 @@ Développement un système de gestion des clients, de contrôle des espaces et d
 
 3. [Prérequis](#prerequis)
 
+	* [Django](https://www.djangoproject.com),
+
+	* [Docker](https://www.docker.com),
+
 4. [Commandes de base](#commandes_de_base)
 
 5. [Installation de ANOVFabmanager en version de développement ou de test](#installation_de_ANOVFabmanager_en_version_de_developpement_ou_de_test)
