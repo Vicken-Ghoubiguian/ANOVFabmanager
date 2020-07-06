@@ -10,19 +10,19 @@ Projet de développement d'un systéme de gestion des clients, des abonnements, 
 
 3. [Prérequis](#prerequis)
 
-	* [Django](#django),
+	* [Django](https://www.djangoproject.com),
 
-	* [Docker](#docker),
+	* [Docker](https://www.docker.com),
 
-	* [Docker compose](#docker_compose),
+	* [Docker compose](https://docs.docker.com/compose/),
 
-	* [pip](#pip),
+	* [pip](https://pip.pypa.io/en/stable/),
 
-	* [virtualenv](#virtualenv),
+	* [virtualenv](https://python-guide-pt-br.readthedocs.io/fr/latest/dev/virtualenvs.html),
 
-	* [jQuery](#jquery),
+	* [jQuery](https://jquery.com),
 
-	* [jQuery UI](#jqueryui).
+	* [jQuery UI](https://jqueryui.com).
 
 4. [Commandes de base](#commandes_de_base)
 
@@ -41,32 +41,25 @@ Projet de développement d'un systéme de gestion des clients, des abonnements, 
 Pour faire fonctionner ANOVFabmanager sur une machine quelconque (physique ou virtuelle), il faut impérativement installer les composants suivants:
 
 <a name="django"></a>
-* Django: `Django` est un framework open source écrit en Python pour vous permettre de développer des applications web.
-Pour en savoir plus cliquez [ici](https://www.djangoproject.com).
+* Django: `Django` est un framework open source écrit en Python pour vous permettre de développer des applications web,
 
 <a name="docker"></a>
-* Docker: `Docker` est un moteur logiciel permettant la génération, le déploiement et la gestion d'applications dans des conteneurs logiciels.
-Pour en savoir plus cliquez [ici](https://www.docker.com).
+* Docker: `Docker` est un moteur logiciel permettant la génération, le déploiement et la gestion d'applications dans des conteneurs logiciels,
 
 <a name="docker_compose"></a>
-* Docker compose: `Docker compose` est un outil logiciel permettant la génération, le déploiement et la gestion d'applications multi-containers avec Docker.
-Pour en savoir plus cliquez [ici](https://docs.docker.com/compose/).
+* Docker compose: `Docker compose` est un outil logiciel permettant la génération, le déploiement et la gestion d'applications multi-containers avec Docker,
 
 <a name="pip"></a>
-* pip: `pip` est un utilitaire pour l'installation et la gestion de packages python.
-Pour en savoir plus cliquez [ici](https://pip.pypa.io/en/stable/).
+* pip: `pip` est un utilitaire pour l'installation et la gestion de packages python,
 
 <a name="virtualenv"></a>
-* virtualenv: `virtualenv` est un utilitaire pour créer des environnements virtuels python isolés.
-Pour en savoir plus cliquez [ici](https://python-guide-pt-br.readthedocs.io/fr/latest/dev/virtualenvs.html).
+* virtualenv: `virtualenv` est un utilitaire pour créer des environnements virtuels python isolés,
 
 <a name="jquery"></a>
-* jQuery: `jQuery` est une bibliothèque JavaScript permettant la mise au point d'effets dans les pages web.
-Pour en savoir plus cliquez [ici](https://jquery.com).
+* jQuery: `jQuery` est une bibliothèque JavaScript permettant la mise au point d'effets dans les pages web,
 
 <a name="jqueryui"></a>
 * jQuery UI: `jQuery UI` est une extension du framework `jQuery` présenté précédemment, permettant la mise au point d'effets pour les widgets de la page web.
-Pour en savoir plus cliquez [ici](https://jqueryui.com).
 
 <!-- Pour faire fonctionner ANOVFabmanager en version de développement ou de test, il est nécessaire d'installer le framework Django.
 
