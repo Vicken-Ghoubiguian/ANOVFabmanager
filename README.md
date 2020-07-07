@@ -108,7 +108,7 @@ sudo pip3 install -r requirements.txt # Installation de tous les packages python
 Maintenant que tout est en place, il est maintenant temps de démarrer l'application web. Pour cela, exécutez la commande suivante:
 
 ```bash
-python3 manage.py runserver
+sudo python3 manage.py runserver
 ```
 Toutes mes félicitations: une fois cette commande exécutée, l'application fonctionne et est accessible [ici](http://127.0.0.1:8000).
 
