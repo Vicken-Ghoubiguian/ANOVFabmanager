@@ -94,31 +94,23 @@ Il faut ensuite également créer puis configurer l'environnement virtuel Python
 
 ```bash
 
+sudo apt install python3-pip # Installation de l'utilitaire pip3 (utilitaire pip pour la version 3 de python) pour installer tous les packages python nécessaires
 
+sudo apt install python3-venv # Installation de l'utilitaire python3-venv pour créer et configurer votre environement virtuel
+
+python3 -m venv votre_environnement_virtuel # Création de l'environnement virtuel
+
+source votre_environnement_virtuel/bin/activate # Activation de votre environement virtuel
+
+sudo pip3 install -r requirements.txt # Installation de tous les packages python contenus dans le fichier requirements.txt
 
 ```
-
-<!-- Pour installer ANOVFabmanager en version de développement ou de test, il suffit de suivre la procédure suivante.
-
-Tout d'abord si ce n'est pas déjà fait, clonez le dépôt git du projet à l'aide de la commande suivante:
-
-```bash
-git clone https://gitlab.imerir.com/orles-valley/anovfabmanager
-```
-
-Ensuite, rendez-vous dans le répertoire du projet cloné à l'aide de la commande suivante:
-
-```bash
-cd anovfabmanager
-```
-
-Pour finir, lancez la commande suivante pour lancer l'application web:
+Maintenant que tout est en place, il est maintenant temps de démarrer l'application web. Pour cela, exécutez la commande suivante:
 
 ```bash
 python3 manage.py runserver
 ```
-
--->
+Toutes mes félicitations: une fois cette commande exécutée, l'application fonctionne et est accessible [ici](http://127.0.0.1:8000).
 
 <a name="installation_de_ANOVFabmanager_grace_a_docker_compose"></a>
 ## Installation de ANOVFabmanager grâce à Docker compose
@@ -149,68 +141,6 @@ Une fois que tout est installé, exécutez la commande `sudo docker-compose up`.
 Une fois cette commande exécutée, l'application fonctionne et est accessible [ici](http://127.0.0.1:8000).
 
 Toutes mes félicitations...
-
-<!-- Pour faire fonctionner ANOVFabmanager en version de développement ou de test, il est nécessaire d'installer le framework Django.
-
-Avant toutes choses, il est nécessaire de vérifier que l'utilitaire pip3 est installé, grâce à la commande suivante:
-
-```bash
-sudo pip3 --version
-```
-ou encore celle-ci:
-
-```bash
-sudo pip3 -V
-```
-Si celui-ci n'est pas installé, lancez la commande suivante:
-
-```bash
-sudo apt install python3-pip
-```
-Il est maintenant temps de passer aux choses sérieuses.
-
-Tout d'abord, vous devez créer votre environnement virtuel dans le répertoire du projet.
-
-Positionnez-vous dans le répertoire du projet à l'aide de la commande suivante:
-
-```bash
-cd anovfabmanager
-```
-Ensuite, créez votre environement virtuel à l'aide de la commande suivante:
-
-```bash
-python3 -m venv votre_environement_virtuel
-```
-Si l'utilitaire `venv` n'est pas installé, installez-le à l'aide de la commande suivante:
-
-```bash
-sudo apt install python3-venv
-```
-Maintenant il ne reste plus qu'à l'activer à l'aide de cette dernière commande:
-
-```bash
-source votre_environement_virtuel/bin/activate
-```
-Il est maintenant temps d'installer Django, pour cela lancez la commande suivante:
-
-```bash
-pip3 install django
-```
-__petite précision__: la commande `sudo` n'est plus nécessaire une fois l'environement virtuel activé.
-
-Pour mettre à jour Django, vous avez le choix entre les 2 commandes suivantes:
-
-```bash
-pip3 install django --upgrade
-```
-ou
-
-```bash
-pip3 install --upgrade django=(numéro de la nouvelle version; ex: 3.0.4)
-```
-Pour le thème jquery UI ThemeRoller, voici le lien bref de celui utilisé: [Ici](https://jqueryui.com/themeroller/#!zThemeParams=5d00000100d805000000000000003d8888d844329a8dfe02723de3e5700bbb34ecf36cdef1e1654faa0015427bdb9eb45ebe89aaede0ec5f0d92417fcc6551ce804ff46bf543167700d2cf4e583f2515147aacb86ffa11c0e588dae72a13c98dc37478199f7eea536e99702e8babee264319b6fedc74243113955cb55c0a1f9a7c71478699d65953b77021eb6065294f9943cf01581477003638b2648a14140bd1364b8e574f4cbc4379b66b19ed3ca38a09d4d41cc5d47881ce86e441dbec79fc7e939a1dd6a718741b7a1c175423193b8b6b9df4ea3e248684b6e81b6c1d1f07593f4d884035cf3765453b971b41435eb448b3c44f5766aa0c97ae3cd31fd2f6373e6681c8a76476442a7f5b468583f684ce07cae1e36f845a51dd8908a0ea104852be2ea69bc1fb128173fea2ef429073f878b1eee2a442df26aeac6e85d0a784490072e15669e922a2ec3dcb38bd88a2dc97c16c8e0e615006af4faf8eccc5148c4978a2cd5acc0c22359967c3f3d290590fd208197456fd53f44e8cf62ce33821227876c3ebedaac7716382aca97ec04d8679ff990c6166)
-
--->
 
 <a name="commandes_de_base"></a>
 ## Commandes de base
