@@ -26,11 +26,11 @@
  
 	* [Bootstrap](https://getbootstrap.com).
 
-4. [Commandes de base](#commandes_de_base)
+4. [Installation de ANOVFabmanager sur une machine quelconque](#installation_de_ANOVFabmanager_sur_une_machine_quelconque)
 
-5. [Installation de ANOVFabmanager sur une machine quelconque](#installation_de_ANOVFabmanager_sur_une_machine_quelconque)
+5. [Installation de ANOVFabmanager grâce à Docker compose](#installation_de_ANOVFabmanager_grace_a_docker_compose)
 
-6. [Installation de ANOVFabmanager grâce à Docker compose](#installation_de_ANOVFabmanager_grace_a_docker_compose)
+6. [Commandes de base](#commandes_de_base)
 
 <a name="presentation_du_projet"></a>
 ## Présentation du projet
