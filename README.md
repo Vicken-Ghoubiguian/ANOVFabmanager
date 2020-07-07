@@ -88,7 +88,6 @@ sudo apt install git # Installe l'utilitaire git sur la machine
 git clone https://gitlab.imerir.com/orles-valley/anovfabmanager # Clone le projet ANOVFabmanager sur la machine
 
 ```
-
 Il faut ensuite également créer puis configurer l'environnement virtuel Python et y installer `Django` grâce aux commandes suivantes à exécuter dans l'ordre:
 
 ```bash
@@ -121,6 +120,33 @@ python3 manage.py runserver
 
 <a name="installation_de_ANOVFabmanager_grace_a_docker_compose"></a>
 ## Installation de ANOVFabmanager grâce à Docker compose
+
+Comme précédemment, cloner le projet depuis le dépôt officiel puis vous rendre dans le répertoire correspondant à l'aide des commandes suivantes à exécuter dans l'ordre:
+
+```bash
+
+sudo apt install git # Installe l'utilitaire git sur la machine
+
+git clone https://gitlab.imerir.com/orles-valley/anovfabmanager # Clone le projet ANOVFabmanager sur la machine
+
+cd anovfabmanager
+
+```
+Le déployement de ANOVFabmanager en production se fera grâce à `Docker` et `Docker compose`. Il est donc nécessaire de les installer d'abord avant toutes choses.
+Si vous voulez faire ça rapidement, exécutez les commandes suivantes:
+
+```bash
+sudo apt install docker.io # Installe Docker sur la machine
+
+sudo apt install docker-compose # Installe Docker compose sur la machine
+```
+Si vous voulez les installer proprement, rendez-vous sur [Installer Docker](https://docs.docker.com/engine/install/ubuntu/) et [Installer Docker compose](https://docs.docker.com/compose/install/).
+
+Une fois que tout est installé, exécutez la commande `docker-compose up`. Cette commande va construire et faire marcher les containers Docker de l'application web.
+
+Une fois cette commande exécutée, l'application fonctionne et est accessible [ici](http://127.0.0.1:8000).
+
+Toutes mes félicitations...
 
 <!-- Pour faire fonctionner ANOVFabmanager en version de développement ou de test, il est nécessaire d'installer le framework Django.
 
@@ -194,11 +220,9 @@ Voici une liste des commandes de base pour l'administration de fabmanager:
 ```bash
 python3 manage.py runserver
 ```
-
 * Pour démarrer l'application web en mode non sécurisé (dans le cas où le mode débug est désactivé):
 
 ```bash
 python3 manage.py runserver --insecure
 ```
-
 __Petite note__: pour lancer cette commande, il est nécessaire d'être dans le même répertoire que le projet.
