@@ -87,6 +87,8 @@ sudo apt install git # Installe l'utilitaire git sur la machine
 
 git clone https://gitlab.imerir.com/orles-valley/anovfabmanager # Clone le projet ANOVFabmanager sur la machine
 
+cd anovfabmanager # Change le répertoire courant pour celui du projet cloné anovfabmanager
+
 ```
 Il faut ensuite également créer puis configurer l'environnement virtuel Python et y installer `Django` grâce aux commandes suivantes à exécuter dans l'ordre:
 
