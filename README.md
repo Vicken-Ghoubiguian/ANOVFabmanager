@@ -144,7 +144,7 @@ sudo apt install docker-compose # Installe Docker compose sur la machine
 ```
 Si vous voulez les installer proprement, rendez-vous sur [Installer Docker](https://docs.docker.com/engine/install/ubuntu/) et [Installer Docker compose](https://docs.docker.com/compose/install/).
 
-Une fois que tout est installé, exécutez la commande `docker-compose up`. Cette commande va construire et faire marcher les containers Docker de l'application web.
+Une fois que tout est installé, exécutez la commande `sudo docker-compose up`. Cette commande va construire et faire marcher les containers Docker de l'application web.
 
 Une fois cette commande exécutée, l'application fonctionne et est accessible [ici](http://127.0.0.1:8000).
 
