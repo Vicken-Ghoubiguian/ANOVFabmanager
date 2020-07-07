@@ -121,7 +121,7 @@ python3 manage.py runserver
 <a name="installation_de_ANOVFabmanager_grace_a_docker_compose"></a>
 ## Installation de ANOVFabmanager grâce à Docker compose
 
-Comme précédemment, cloner le projet depuis le dépôt officiel puis vous rendre dans le répertoire correspondant à l'aide des commandes suivantes à exécuter dans l'ordre:
+Comme précédemment, clonez le projet depuis le dépôt officiel puis vous rendre dans le répertoire correspondant à l'aide des commandes suivantes à exécuter dans l'ordre:
 
 ```bash
 
