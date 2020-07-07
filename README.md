@@ -129,7 +129,7 @@ sudo apt install git # Installe l'utilitaire git sur la machine
 
 git clone https://gitlab.imerir.com/orles-valley/anovfabmanager # Clone le projet ANOVFabmanager sur la machine
 
-cd anovfabmanager
+cd anovfabmanager # Change le répertoire courant pour celui du projet cloné anovfabmanager
 
 ```
 Le déployement de ANOVFabmanager en production se fera grâce à `Docker` et `Docker compose`. Il est donc nécessaire de les installer d'abord avant toutes choses.
