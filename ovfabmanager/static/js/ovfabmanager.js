@@ -4,11 +4,11 @@ $(document).ready(function(){
 
   $("input[type=submit]").button();
 
-  $("#date_de_retour").datepicker();
+  $("#date_de_retour").datepicker( $.datepicker.regional["fr"] );
 
-  $("#naissance").datepicker();
+  $("#naissance").datepicker( $.datepicker.regional["fr"] );
 
-  $("#jqTabs").tabs();
+  $("#jqTabs").tabs({show: {effect: "clip", duration: "slow"}});
 
   $(":input.required-field").focus(function(){
 
