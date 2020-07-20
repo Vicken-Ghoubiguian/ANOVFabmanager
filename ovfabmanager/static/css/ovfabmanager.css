@@ -8,12 +8,10 @@ form.form-example {
 
 div.form-example {
   display: table-row;
-  margin-top: 60px;
 }
 
 label, input {
   display: table-cell;
-  /*margin-bottom: 10px;*/
 }
 
 label {
