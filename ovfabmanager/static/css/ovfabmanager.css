@@ -1,3 +1,15 @@
+legend {
+  background-color: #c5007b;
+  color: #ffffff;
+  padding: 3px 6px;
+  border-radius: 15px;
+}
+
+fieldset {
+  border-color: #c5007b;
+  border-radius: 15px;
+}
+
 body {
   font-family: Arial;
 }
