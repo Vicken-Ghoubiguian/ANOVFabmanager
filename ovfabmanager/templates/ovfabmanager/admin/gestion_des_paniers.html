@@ -14,7 +14,7 @@
 			<form action="" method="post">
 				<div class="input-container">
 					<i class="fa fa-user fa-2x icon"></i>
-					<select name="client" placeholder="Nom du client*" class="tooltip" id="client" title="Veuillez sélectionner le client concerné" required></select>
+					<select name="client_pret" placeholder="Nom du client*" class="tooltip" id="client" title="Veuillez sélectionner le client concerné" required></select>
 				</div>
 				<div class="input-container">
 					<i class="fa fa-calendar-plus fa-2x icon"></i>
@@ -22,7 +22,7 @@
 				</div>
 				<div class="input-container">
 					<i class="fa fa-box fa-5x icon"></i>
-					<textarea placeholder="Liste des articles*" class="tooltip input-field required-field" id="liste_des_articles" name="liste_des_articles" title="Veuillez compléter la liste des articles à retourner" required></textarea>
+					<textarea placeholder="Liste des articles*" class="tooltip input-field required-field" id="liste_des_articles_a_preter" name="liste_des_articles_a_preter" title="Veuillez compléter la liste des articles" required></textarea>
 				</div>
 				<div class="input-container">
 					<input type="submit" value="Valider">
@@ -30,6 +30,18 @@
 			</form>
 		</div>
 		<div id="enregistrement_d_un_retour">
-			<p>Enregistrer un retour...</p>
+			<form action="" method="post">
+				<div class="input-container">
+                                        <i class="fa fa-user fa-2x icon"></i>
+                                        <select name="client_retour" placeholder="Nom du client*" class="tooltip" id="client" title="Veuillez sélectionner le client concerné" required></select>
+                                </div>
+				<div class="input-container">
+					<i class="fa fa-box fa-5x icon"></i>
+					<textarea placeholder="Liste des articles à retourner*" class="tooltip input-field required-field" id="liste_des_articles_a_retourner" name="liste_des_articles_a_retourner" title="Veuillez compléter la liste des articles à retourner" required></textarea>
+				</div>
+				<div class="input-container">
+                                        <input type="submit" value="Valider">
+                                </div>
+			</form>
 		</div>
 	</div>
