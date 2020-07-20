@@ -2,6 +2,8 @@ $(document).ready(function(){
 
   $( document ).tooltip();
 
+  $("#jqTabs").tabs();
+
   $(":input.required-field").focus(function(){
 
 	$(this).css("border-color", "#ccc");
