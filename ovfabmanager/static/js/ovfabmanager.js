@@ -4,6 +4,8 @@ $(document).ready(function(){
 
   $("input[type=submit]").button();
 
+  $("input[type=reset]").button();
+
   $("#date_de_retour").datepicker( $.datepicker.regional["fr"] );
 
   $("#naissance").datepicker( $.datepicker.regional["fr"] );
