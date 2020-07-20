@@ -12,19 +12,19 @@
 		</div>
 		<div id="enregistrement_d_un_pret">
 			<form action="" method="post">
-				<div class="form-example">
-					<label for="client">Client: </label>
-					<select name="client" class="tooltip" id="client" title="Veuillez sélectionner le client concerné" required></select>
+				<div class="input-container">
+					<i class="fa fa-user fa-2x icon"></i>
+					<select name="client" placeholder="Nom du client*" class="tooltip" id="client" title="Veuillez sélectionner le client concerné" required></select>
 				</div>
-				<div class="form-example">
-					<label for="date_de_retour">Date de retour: </label>
-					<input type="date" name="date_de_retour" class="tooltip" id="date_de_retour" title="Veuillez renseigner la date de retour" required>
+				<div class="input-container">
+					<i class="fa fa-calendar-plus fa-2x icon"></i>
+					<input type="text" placeholder="Date de retour*" name="date_de_retour" class="tooltip" id="date_de_retour" title="Veuillez renseigner la date de retour" required>
 				</div>
-				<div class="form-example">
-					<label for="liste_des_articles">Liste des articles: </label>
-					<textarea for="liste_des_articles" class="tooltip" id="liste_des_articles" name="liste_des_articles" title="Veuillez compléter la liste des articles à retourner" required></textarea>
+				<div class="input-container">
+					<i class="fa fa-box fa-2x icon"></i>
+					<textarea placeholder="Liste des articles*" class="tooltip" id="liste_des_articles" name="liste_des_articles" title="Veuillez compléter la liste des articles à retourner" required></textarea>
 				</div>
-				<div class="form-example">
+				<div class="input-container">
 					<input type="submit" value="Valider">
 				</div>
 			</form>
