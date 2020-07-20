@@ -4,6 +4,10 @@ $(document).ready(function(){
 
   $("input[type=submit]").button();
 
+  $("#date_de_retour").datepicker();
+
+  $("#naissance").datepicker();
+
   $("#jqTabs").tabs();
 
   $(":input.required-field").focus(function(){
