@@ -14,15 +14,15 @@
 			<form action="" method="post">
 				<div class="form-example">
 					<label for="client">Client: </label>
-					<select name="client" id="client" required></select>
+					<select name="client" class="tooltip" id="client" title="Veuillez sélectionner le client concerné" required></select>
 				</div>
 				<div class="form-example">
 					<label for="date_de_retour">Date de retour: </label>
-					<input type="date" name="date_de_retour" id="date_de_retour" required>
+					<input type="date" name="date_de_retour" class="tooltip" id="date_de_retour" title="Veuillez renseigner la date de retour" required>
 				</div>
 				<div class="form-example">
 					<label for="liste_des_articles">Liste des articles: </label>
-					<textarea for="liste_des_articles" id="liste_des_articles" name="liste_des_articles" required></textarea>
+					<textarea for="liste_des_articles" class="tooltip" id="liste_des_articles" name="liste_des_articles" title="Veuillez compléter la liste des articles à retourner" required></textarea>
 				</div>
 				<div class="form-example">
 					<input type="submit" value="Valider">
