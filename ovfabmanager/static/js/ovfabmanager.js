@@ -2,6 +2,8 @@ $(document).ready(function(){
 
   $( document ).tooltip();
 
+  $("input[type=submit]").button();
+
   $("#jqTabs").tabs();
 
   $(":input.required-field").focus(function(){

@@ -2,6 +2,24 @@ body {
   font-family: Arial;
 }
 
+form.form-example {
+  display: table;
+}
+
+div.form-example {
+  display: table-row;
+  margin-top: 60px;
+}
+
+label, input {
+  display: table-cell;
+  /*margin-bottom: 10px;*/
+}
+
+label {
+  padding-right: 10px;
+}
+
 .icone_d_erreur {
   float: left; 
   margin-right: 0.3em;
