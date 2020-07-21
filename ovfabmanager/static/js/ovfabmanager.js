@@ -10,6 +10,10 @@ $(document).ready(function(){
 
   $("#naissance").datepicker( $.datepicker.regional["fr"] );
 
+  $("#date_d_achat").datepicker( $.datepicker.regional["fr"] );
+
+  $("#date_de_livraison").datepicker( $.datepicker.regional["fr"] );
+
   $("#jqTabs").tabs({show: {effect: "clip", duration: "slow"}});
 
   $(":input.required-field").focus(function(){

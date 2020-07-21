@@ -10,6 +10,26 @@
 		<p>Tableau de gestion des stocks...</p>
 	</div>
 	<div id="enregistrer_un_article_dans_les_stocks">
-		<p>Enregistrer un article dans les stocks...</p>
+		<form>
+			<fieldset>
+				<legend>Enregistrement dans le stock</legend>
+				<div class="input-container">
+					<i class="fa fa-barcode fa-2x icon"></i>
+					<input name="codebarre" placeholder="Code barre*" class="tooltip input-field required-field" id="codebarre" title="Veuillez renseignner le code barre" required>
+				</div>
+				<div class="input-container">
+					<i class="fa fa-calendar fa-2x icon"></i>
+					<input type="text" placeholder="Date d'achat*" name="date_d_achat" class="tooltip input-field required-field" id="date_d_achat" title="Veuillez renseigner la date d'achat" required>
+				</div>
+				<div class="input-container">
+					<i class="fa fa-spa fa-2x icon"></i>
+					<input type="text" placeholder="Durée de vie*" name="duree_de_vie" class="tooltip input-field required-field" id="duree_de_vie" title="Veuillez renseigner la durée de vie" required>
+				</div>
+				<div class="input-container">
+					<i class="fa fa-calendar fa-2x icon"></i>
+                                        <input type="text" placeholder="Date de livraison*" name="date_de_livraison" class="tooltip input-field required-field" id="date_de_livraison" title="Veuillez renseigner la date de livraison" required>
+				</div>
+			</fieldset>
+		</form>
 	</div>
 </div>
