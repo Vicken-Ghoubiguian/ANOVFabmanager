@@ -99,7 +99,13 @@ $(document).ready(function(){
                         $("#client_card").val("");
                 },
                 buttons: {
-                        "Valider": function(){ console.log("Carte du client pour prêt..."); },
+                        "Valider": function()
+			{
+
+				$("#client_pret").val($("#client_card").val());
+
+				$(this).dialog("close");
+			},
                         "Réinitialiser": function()
                         {
                                 $("#client_card").val("");
@@ -127,7 +133,12 @@ $(document).ready(function(){
 			$("#client_card").val("");
 		},
 		buttons: {
-			"Valider": function(){ console.log("Carte du client pour retour..."); },
+			"Valider": function()
+			{
+				$("#client_retour").val($("#client_card").val());
+
+				$(this).dialog("close");
+			},
 			"Réinitialiser": function()
 			{
 				$("#client_card").val("");
