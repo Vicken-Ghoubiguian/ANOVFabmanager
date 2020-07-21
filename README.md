@@ -114,7 +114,7 @@ sudo python3 manage.py runserver
 ```
 Toutes mes félicitations: une fois cette commande exécutée, l'application fonctionne et est accessible [ici](http://127.0.0.1:8000).
 
-<a name="NOVFabmanager_deja_installe_comment_le_developper"></a>
+<a name="ANOVFabmanager_deja_installe_comment_le_developper"></a>
 ## ANOVFabmanager déjà installé ? Comment le développer ?
 
 Dans le cas où ANOVFabmanager a été correctement installé et configuré selon les instructions données dans la section précédente (voir [ici](#installation_de_ANOVFabmanager_sur_une_machine_quelconque)), il vous faudra réactiver votre environnement virtuel Python pour développer l'application web.
