@@ -81,7 +81,31 @@ $(document).ready(function(){
   $(".common").click(function(){ document.location.href = "http://127.0.0.1:8000/"; });
 
   $("#client_pret_carte").click(function(){
-	console.log("Client prêt carte...");
+	$("#identification_client_par_carte").dialog({
+                height: 800,
+                resizable: false,
+                width: 650,
+                resizable: false,
+                modal: true,
+                show: {
+                        effect: "size",
+                        duration: 1000
+                },
+                hide: {
+                        effect: "size",
+                        duration: 1000
+                },
+                close: function(event, ui){
+                        $("#client_card").val("");
+                },
+                buttons: {
+                        "Valider": function(){ console.log("Carte du client pour prêt..."); },
+                        "Réinitialiser": function()
+                        {
+                                $("#client_card").val("");
+                        },
+                }
+        });
   });
 
   $("#client_retour_carte").click(function(){
@@ -103,7 +127,7 @@ $(document).ready(function(){
 			$("#client_card").val("");
 		},
 		buttons: {
-			"Valider": function(){},
+			"Valider": function(){ console.log("Carte du client pour retour..."); },
 			"Réinitialiser": function()
 			{
 				$("#client_card").val("");
