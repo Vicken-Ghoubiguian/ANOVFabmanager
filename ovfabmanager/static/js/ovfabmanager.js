@@ -85,7 +85,7 @@ $(document).ready(function(){
   });
 
   $("#client_retour_carte").click(function(){
-	console.log("Client retour carte...");
+	$("#itzi").dialog({});
   });
 
   $("#premier").click(function(){
