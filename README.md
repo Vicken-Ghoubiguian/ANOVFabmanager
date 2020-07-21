@@ -112,15 +112,8 @@ sudo python3 manage.py runserver
 ```
 Toutes mes félicitations: une fois cette commande exécutée, l'application fonctionne et est accessible [ici](http://127.0.0.1:8000).
 
-<div class="panel panel-info">
-**Note**
-{: .panel-heading}
-<div class="panel-body">
-
 Note description
-
-</div>
-</div>
+{: .alert .alert-info}
 
 <a name="installation_de_ANOVFabmanager_grace_a_docker_compose"></a>
 ## Installation de ANOVFabmanager grâce à Docker compose
