@@ -85,7 +85,7 @@ $(document).ready(function(){
   });
 
   $("#client_retour_carte").click(function(){
-	$("#itzi").dialog({
+	$("#identification_client_par_carte").dialog({
 		buttons: {
 			"Valider": function(){},
 			"Réinitialiser": function()
