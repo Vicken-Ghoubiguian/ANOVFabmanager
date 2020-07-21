@@ -1,3 +1,14 @@
+.element_au_pied {
+  display: inline-block; 
+  margin-left: 5px;
+}
+
+hr {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border: 3px dotted #c5007b;
+}
+
 legend {
   background-color: #c5007b;
   color: #ffffff;
