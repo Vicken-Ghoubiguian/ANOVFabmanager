@@ -1,4 +1,3 @@
-{::options parse_block_html="true" /}
 # ANOVFabmanager
 
 ##### Table des matières
@@ -29,9 +28,11 @@
 
 4. [Installation de ANOVFabmanager sur une machine quelconque](#installation_de_ANOVFabmanager_sur_une_machine_quelconque)
 
-5. [Installation de ANOVFabmanager grâce à Docker compose](#installation_de_ANOVFabmanager_grace_a_docker_compose)
+5. [ANOVFabmanager déjà installé ? Comment le développer ?](#ANOVFabmanager_deja_installe_comment_le_developper)
 
-6. [Commandes de base](#commandes_de_base)
+6. [Installation de ANOVFabmanager grâce à Docker compose](#installation_de_ANOVFabmanager_grace_a_docker_compose)
+
+7. [Commandes de base](#commandes_de_base)
 
 <a name="presentation_du_projet"></a>
 ## Présentation du projet
@@ -113,8 +114,22 @@ sudo python3 manage.py runserver
 ```
 Toutes mes félicitations: une fois cette commande exécutée, l'application fonctionne et est accessible [ici](http://127.0.0.1:8000).
 
-[!WARNING]
-Note description
+<a name="NOVFabmanager_deja_installe_comment_le_developper"></a>
+## ANOVFabmanager déjà installé ? Comment le développer ?
+
+Dans le cas où ANOVFabmanager a été correctement installé et configuré selon les instructions données dans la section précédente (voir [ici](#installation_de_ANOVFabmanager_sur_une_machine_quelconque)), il vous faudra réactiver votre environnement virtuel Python pour développer l'application web.
+
+Pour cela, suivez les commandes suivantes dans cet ordre:
+
+```bash
+
+cd anovfabmanager # Change le répertoire courant pour celui du projet cloné anovfabmanager
+
+source votre_environnement_virtuel/bin/activate # Activation de votre environement virtuel
+```
+Le prompt de votre terminal passera immédiatement de `$` à `(votre_environnement_virtuel)`.
+
+Toutes mes félicitations, c'est maintenant à vous de jouer.
 
 <a name="installation_de_ANOVFabmanager_grace_a_docker_compose"></a>
 ## Installation de ANOVFabmanager grâce à Docker compose
