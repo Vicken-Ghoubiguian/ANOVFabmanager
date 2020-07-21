@@ -85,7 +85,15 @@ $(document).ready(function(){
   });
 
   $("#client_retour_carte").click(function(){
-	$("#itzi").dialog({});
+	$("#itzi").dialog({
+		buttons: {
+			"Valider": function(){},
+			"Réinitialiser": function()
+			{
+				$("#client_card").val("");
+			},
+		}
+	});
   });
 
   $("#premier").click(function(){
