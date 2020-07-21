@@ -80,6 +80,14 @@ $(document).ready(function(){
 
   $(".common").click(function(){ document.location.href = "http://127.0.0.1:8000/"; });
 
+  $("#client_pret_carte").click(function(){
+	console.log("Client prêt carte...");
+  });
+
+  $("#client_retour_carte").click(function(){
+	console.log("Client retour carte...");
+  });
+
   $("#premier").click(function(){
         console.log("11111.....");
   });
