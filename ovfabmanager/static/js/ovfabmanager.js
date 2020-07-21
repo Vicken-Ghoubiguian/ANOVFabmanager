@@ -86,6 +86,22 @@ $(document).ready(function(){
 
   $("#client_retour_carte").click(function(){
 	$("#identification_client_par_carte").dialog({
+		height: 800,
+                resizable: false,
+                width: 650,
+                resizable: false,
+                modal: true,
+                show: {
+                        effect: "size",
+                        duration: 1000
+                },
+                hide: {
+                        effect: "size",
+                        duration: 1000
+                },
+		close: function(event, ui){
+			$("#client_card").val("");
+		},
 		buttons: {
 			"Valider": function(){},
 			"Réinitialiser": function()
