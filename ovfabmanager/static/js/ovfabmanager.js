@@ -2,6 +2,8 @@ $(document).ready(function(){
 
   $( document ).tooltip();
 
+  $(".bouton_au_pied").button();
+
   $("input[type=submit]").button();
 
   $("input[type=reset]").button();
