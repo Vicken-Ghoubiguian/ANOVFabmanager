@@ -104,13 +104,13 @@ python3 -m venv votre_environnement_virtuel # Création de l'environnement virtu
 
 source votre_environnement_virtuel/bin/activate # Activation de votre environement virtuel
 
-sudo pip3 install -r requirements.txt # Installation de tous les packages python contenus dans le fichier requirements.txt
+pip3 install -r requirements.txt # Installation de tous les packages python contenus dans le fichier requirements.txt
 
 ```
 Maintenant que tout est en place, il est maintenant temps de démarrer l'application web. Pour cela, exécutez la commande suivante:
 
 ```bash
-sudo python3 manage.py runserver
+python3 manage.py runserver
 ```
 Toutes mes félicitations: une fois cette commande exécutée, l'application fonctionne et est accessible [ici](http://127.0.0.1:8000).
 
@@ -128,6 +128,12 @@ cd anovfabmanager # Change le répertoire courant pour celui du projet cloné an
 source votre_environnement_virtuel/bin/activate # Activation de votre environement virtuel
 ```
 Le prompt de votre terminal passera immédiatement de `$` à `(votre_environnement_virtuel)`.
+
+Finalement pour activer l'application web, exécutez cette commande:
+
+```bash
+python3 manage.py runserver
+```
 
 Toutes mes félicitations, c'est maintenant à vous de jouer.
 
