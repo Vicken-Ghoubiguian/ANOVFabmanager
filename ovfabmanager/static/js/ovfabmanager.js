@@ -8,7 +8,11 @@ $(document).ready(function(){
 
   $("input[type=reset]").button();
 
-  $("#asDatatable").DataTable();
+  $("#asDatatable").DataTable({
+	"language": {
+		"url": "dataTables.french.lang"
+	}
+  });
   
   $.datepicker.regional['fr'] = {
 		
