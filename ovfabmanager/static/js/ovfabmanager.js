@@ -9,14 +9,10 @@ $(document).ready(function(){
   $("input[type=reset]").button();
   
   $.datepicker.regional['fr'] = {
-      
-		closeText: 'Fermer',
 		
 		prevText: '&#x3c;Préc',
 		
 		nextText: 'Suiv&#x3e;',
-		
-		currentText: 'Aujourd\'hui',
 		
 		monthNames: ['Janvier','Fevrier','Mars','Avril','Mai','Juin','Juillet','Aout','Septembre','Octobre','Novembre','Decembre'],
 		
@@ -40,13 +36,9 @@ $(document).ready(function(){
 		
 		yearSuffix: '',
 		
-		minDate: 0,
+		numberOfMonths: 1,
 		
-		maxDate: '+12M +0D',
-		
-		numberOfMonths: 2,
-		
-		showButtonPanel: true
+		showButtonPanel: false
   };
   
   $.datepicker.setDefaults($.datepicker.regional['fr']);
