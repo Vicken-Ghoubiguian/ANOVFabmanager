@@ -7,6 +7,8 @@ $(document).ready(function(){
   $("input[type=submit]").button();
 
   $("input[type=reset]").button();
+
+  $("#asDatatable").DataTable();
   
   $.datepicker.regional['fr'] = {
 		
