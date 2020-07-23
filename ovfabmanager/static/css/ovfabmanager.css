@@ -2,6 +2,18 @@ select {
   color: #c5007b;
 }
 
+#asDatatable_filter.dataTables_filter {
+  color: #f8009b;
+}
+
+#asDatatable_length.dataTables_length {
+  color: #f8009b;
+}
+
+#asDatatable_info.dataTables_info {
+  color: #f8009b;
+}
+
 td {
   text-align: center;
 }
