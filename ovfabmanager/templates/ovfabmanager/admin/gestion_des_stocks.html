@@ -50,7 +50,14 @@
 				</div>
 				<div class="input-container">
 					<i class="fa fa-box fa-2x icon"></i>
-					<input type="text" placeholder="Type d'objet*" name="type_d_objet" class="tooltip input-field required-field" title="Veuillez renseigner le type de l'objet" required>
+					<select name="type_d_objet" placeholder="Type d'objet*" class="tooltip input-field required-field" id="type_d_objet" title="Veuillez renseigner le type de l'objet" required>
+						<option value="0">Moi (prequel)</option>
+                                                <option value="1">Moi</option>
+                                                <option value="2">Moi 2 : la vengance de Guillaume</option>
+                                                <option value="3">Moi 3 : le siècle de l'espoir</option>
+                                                <option value="4">Moi 4 : le bout de mon nez</option>
+                                                <option value="5">Moi 5 : un cinquiéme opus ? Pour cette saga pourrie ?</option>
+					</select>
 				</div>
 				<div class="div_d_element_au_pied">
 					<input type="checkbox" id="nouveau_produit" name="nouveau_produit"><label for="nouveau_produit" class="element_au_pied">Nouveau produit ?</label>
