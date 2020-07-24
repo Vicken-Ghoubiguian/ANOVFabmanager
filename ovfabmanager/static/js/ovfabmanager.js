@@ -32,7 +32,7 @@ $(document).ready(function(){
 		
 		weekHeader: 'Sm',
 		
-		dateFormat: 'dd-mm-yy',
+		dateFormat: 'dd/mm/yy',
 		
 		firstDay: 1,
 		
