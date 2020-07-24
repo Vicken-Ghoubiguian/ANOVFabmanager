@@ -2,6 +2,22 @@ select {
   color: #c5007b;
 }
 
+a#asDatatable_next {
+  color: #f8009b;
+}
+
+a#asDatatable_previous.paginate_button.previous {
+  color: #f8009b;
+}
+
+.paginate_button.disabled {
+  color: #c5007b;
+}
+
+.paginate_button.disabled:hover {
+  color: #c5007b;
+}
+
 #asDatatable_filter.dataTables_filter {
   color: #f8009b;
 }

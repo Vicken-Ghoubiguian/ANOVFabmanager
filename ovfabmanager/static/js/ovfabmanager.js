@@ -10,7 +10,7 @@ $(document).ready(function(){
 
   $("#asDatatable").DataTable({
 	"language": {
-		"url": "dataTables.french.lang"
+		"url": "//cdn.datatables.net/plug-ins/1.10.21/i18n/French.json"
 	}
   });
   
