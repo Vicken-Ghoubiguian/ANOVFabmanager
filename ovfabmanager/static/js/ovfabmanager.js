@@ -13,11 +13,11 @@ $(document).ready(function(){
 	if(document.getElementById("nouveau_produit").checked == true)
 	{
 
-		$("#enregistrer_nouveau_produit").fadeOut("slow");
+		$("#enregistrer_nouveau_produit").fadeIn("slow");
 	}
 	else
 	{
-		$("#enregistrer_nouveau_produit").fadeIn("slow");
+		$("#enregistrer_nouveau_produit").fadeOut("slow");
 	}
   });
 
