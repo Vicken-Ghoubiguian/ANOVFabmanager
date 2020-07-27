@@ -1,3 +1,7 @@
+/*#enregistrer_nouveau_produit {
+  visibility: hidden;
+}*/
+
 input[type=search] {
   color: #f8009b;
 }
