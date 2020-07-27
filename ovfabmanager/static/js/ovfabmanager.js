@@ -12,11 +12,18 @@ $(document).ready(function(){
 
 	if(document.getElementById("nouveau_produit").checked == true)
 	{
+		$("#fabricant").prop("required", true)
+
+		$("#fournisseur").prop("required", true)
 
 		$("#enregistrer_nouveau_produit").fadeIn("slow");
 	}
 	else
 	{
+		$("#fabricant").prop("required", false)
+
+		$("#fournisseur").prop("required", true)
+
 		$("#enregistrer_nouveau_produit").fadeOut("slow");
 	}
   });
