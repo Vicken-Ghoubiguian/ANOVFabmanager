@@ -43,7 +43,7 @@ $(document).ready(function(){
 
 	$("#product_error_div").addClass("hidden_div");
 
-	$(":input.required-field").css("border-color","#ccc");
+	$(":input.required-field-enregistrement_produit").css("border-color","#ccc");
 
 	$("#codebarre").val("");
 
@@ -149,9 +149,15 @@ $(document).ready(function(){
 
   $("#jqTabs").tabs({show: {effect: "clip", duration: "slow"}});
 
-  $(":input.required-field").focus(function(){
+  $(":input.required-field-enregistrement_produit").focus(function(){
 
-	$(this).css("border-color", "#ccc");
+	$(this).css("border-color", "#0000FF");
+
+  });
+
+  $(":input.required-field-connexion").focus(function(){
+
+	$(this).css("border-color", "#0000FF");
 
   });
 
@@ -350,7 +356,7 @@ $(document).ready(function(){
 			$("#idt").val("");
 			$("#mdp").val("");
 
-			$(":input.required-field").css("border-color", "#ccc");
+			$(":input.required-field-connexion").css("border-color", "#ccc");
 
 			$("#connexion_error_div").addClass("hidden_div");
 		},
@@ -359,7 +365,7 @@ $(document).ready(function(){
 			{
 				var verif_var = true;
 
-				$(":input.required-field").each(function(){
+				$(":input.required-field-connexion").each(function(){
 					var input_value = $(this).val();
 
 					//Si le champs est vide....
@@ -383,7 +389,7 @@ $(document).ready(function(){
 				$("#idt").val("");
 				$("#mdp").val("");
 
-				$(":input.required-field").css("border-color", "#ccc");
+				$(":input.required-field-connexion").css("border-color", "#ccc");
 
 				$("#connexion_error_div").addClass("hidden_div");
 			},
