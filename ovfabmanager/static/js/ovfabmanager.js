@@ -151,13 +151,25 @@ $(document).ready(function(){
 
   $(":input.required-field-enregistrement_produit").focus(function(){
 
-	$(this).css("border-color", "#0000FF");
+	$(this).css("border-color", "#c5007b");
+
+  });
+
+  $(":input.required-field-enregistrement_produit").focusout(function(){
+
+	$(this).css("border-color", "#ccc");
 
   });
 
   $(":input.required-field-connexion").focus(function(){
 
-	$(this).css("border-color", "#0000FF");
+	$(this).css("border-color", "#c5007b");
+
+  });
+
+  $(":input.required-field-connexion").focusout(function(){
+
+	$(this).css("border-color", "#ccc");
 
   });
 
