@@ -30,7 +30,42 @@ $(document).ready(function(){
 			console.log("Moi 6 : la saga de merde continue...");
 		}
 	});
-  })
+  });
+
+  $("#reinitialisation_enregistrement_produit").click(function(){
+
+	$("#product_error_div").addClass("hidden_div");
+
+	$("#codebarre").val("");
+
+	$("#date_d_achat").val("");
+
+	$("#date_de_livraison").val("");
+
+	$("#type_d_objet").val(0);
+
+	document.getElementById("nouveau_produit").checked = false;
+
+	$("#fabricant").val("");
+
+        $("#adresse_email_fabricant").val("");
+
+        $("#adresse_postale_fabricant").val("");
+
+        $("#numero_telephone_fabricant").val("");
+
+        $("#site_web_fabricant").val("");
+
+	$("#fournisseur").val("");
+
+	$("#adresse_email_fournisseur").val("");
+
+	$("#adresse_postale_fournisseur").val("");
+
+	$("#numero_telephone_fournisseur").val("");
+
+	$("#site_web_fournisseur").val("");
+  });
 
   $("#nouveau_produit").change(function(){
 
