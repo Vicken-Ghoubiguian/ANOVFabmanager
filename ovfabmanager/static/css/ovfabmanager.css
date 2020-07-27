@@ -1,3 +1,7 @@
+input[type=search] {
+  color: #f8009b;
+}
+
 select {
   color: #c5007b;
 }

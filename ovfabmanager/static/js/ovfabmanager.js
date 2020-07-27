@@ -8,12 +8,30 @@ $(document).ready(function(){
 
   $("input[type=reset]").button();
 
+  $("#nouveau_produit").click(function(){
+
+	console.log("1 : " + document.getElementById("nouveau_produit").checked)
+
+	if(document.getElementById("nouveau_produit").checked == true)
+	{
+		document.getElementById("nouveau_produit").checked = false
+
+		console.log("Unchecked");
+	}
+	else
+	{
+		document.getElementById("nouveau_produit").checked = true
+
+		console.log("Checked");
+	}
+  });
+
   $("#asDatatable").DataTable({
 	"language": {
 		"url": "//cdn.datatables.net/plug-ins/1.10.21/i18n/French.json"
 	}
   });
-  
+
   $.datepicker.regional['fr'] = {
 		
 		prevText: '&#x3c;Préc',
