@@ -8,17 +8,13 @@ $(document).ready(function(){
 
   $("input[type=reset]").button();
 
-  $("#formulaire_enregistrement_stock").submit(function(){
+  $("#enregistrement_produit_validation").click(function(){
 
 	var verif_var = true;
-
-	console.log("1");
 
 	$(":input.required-field").each(function(){
 
 		var input_value = $(this).val();
-
-		console.log(input_value + " : " + "2")
 
 		if(input_value === "")
 		{
@@ -31,6 +27,10 @@ $(document).ready(function(){
 
 			verif_var = false;
 		}
+		else
+		{
+			console.log("Moi 6 : la sage de merde continue...");
+		}
 	});
   })
 
@@ -38,17 +38,19 @@ $(document).ready(function(){
 
 	if(document.getElementById("nouveau_produit").checked == true)
 	{
-		$("#fabricant").prop("required", true)
 
-		$("#fournisseur").prop("required", true)
+		$("#fabricant").addClass("required-field")
+
+                $("#fournisseur").addClass("required-field")
 
 		$("#enregistrer_nouveau_produit").fadeIn("slow");
 	}
 	else
 	{
-		$("#fabricant").prop("required", false)
 
-		$("#fournisseur").prop("required", true)
+		$("#fabricant").removeClass("required-field")
+
+		$("#fournisseur").removeClass("required-field")
 
 		$("#enregistrer_nouveau_produit").fadeOut("slow");
 	}
