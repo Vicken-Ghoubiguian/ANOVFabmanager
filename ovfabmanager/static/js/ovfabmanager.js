@@ -330,7 +330,29 @@ $(document).ready(function(){
                 buttons: {
                         "Inscrivez-vous": function()
 			{
-				$("#inscription_form").submit();
+				//$("#inscription_form").submit();
+				var verif_var = true;
+
+				$(":input.required-field-inscription").each(function(){
+
+					var input_value = $(this).val();
+
+					//Si le champ est vide...
+					if(input_value === "")
+					{
+						$(this).css("border-color", "#f8009b");
+
+						$("#inscription_error_div").removeClass("hidden_div");
+
+						verif_var = false;
+					}
+				});
+
+				if(verif_var)
+				{
+
+					$("#inscription_form").submit();
+				}
 			},
 			"Réinitialiser": function()
 			{

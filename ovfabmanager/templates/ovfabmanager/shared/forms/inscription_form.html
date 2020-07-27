@@ -6,25 +6,33 @@
 			<input id="form_type" name="form_type" type="hidden" value="inscription">
 			<fieldset>
 				<legend>Généralités</legend>
+				<div id="inscription_error_div" class="ui-widget hidden_div" style="margin-bottom: 15px;">
+                                        <div class="ui-state-error" style="padding: 0.7em; border-radius: 5px;">
+                                                <p>
+                                                        <span class="ui-icon ui-icon-alert icone-d-erreur"></span>
+                                                        Error occured, because of the Children of Infinity (CoI)
+                                                </p>
+                                        </div>
+                                </div>
 				<div class="input-container">
 					<i class="fa fa-user-tie fa-2x icon"></i>
-                        		<input type="text" id="nom" name="nom" placeholder="Nom*" class="tooltip input-field" title="Veuillez saisir votre nom de famille" required>
+                        		<input type="text" id="nom" name="nom" placeholder="Nom*" class="tooltip input-field required-field-inscription" title="Veuillez saisir votre nom de famille">
 				</div>
 				<div class="input-container">
 					<i class="fa fa-user fa-2x icon"></i>
-                        		<input type="text" id="prenom" name="prenom" placeholder="Prénom*" class="tooltip input-field" title="Veuillez saisir votre prénom" required>
+                        		<input type="text" id="prenom" name="prenom" placeholder="Prénom*" class="tooltip input-field required-field-inscription" title="Veuillez saisir votre prénom">
 				</div>
 				<div class="input-container">
 					<i class="fa fa-id-card fa-2x icon"></i>
-                        		<input type="text" id="iscidt" name="nom_d_utilisateur" placeholder="Nom d'utilisateur*" class="tooltip input-field" title="Veuillez saisir votre nom d'utilisateur" required>
+                        		<input type="text" id="iscidt" name="nom_d_utilisateur" placeholder="Nom d'utilisateur*" class="tooltip input-field required-field-inscription" title="Veuillez saisir votre nom d'utilisateur">
 				</div>
 				<div class="input-container">
 					<i class="fa fa-calendar fa-2x icon"></i>
-                                	<input type="text" id="naissance" name="naissance" class="tooltip input-field" placeholder="Date de naissance*" title="Veuillez saisir votre date de naissance" required>
+                                	<input type="text" id="naissance" name="naissance" class="tooltip input-field required-field-inscription" placeholder="Date de naissance*" title="Veuillez saisir votre date de naissance">
 				</div>
 				<div class="input-container">
 					<i class="fa fa-envelope fa-2x icon"></i>
-                        		<input type="email" id="adresse_email" name="adresse_email" placeholder="Adresse email*" class="tooltip input-field" title="Veuillez saisir votre adresse email" required>
+                        		<input type="email" id="adresse_email" name="adresse_email" placeholder="Adresse email*" class="tooltip input-field required-field-inscription" title="Veuillez saisir votre adresse email">
 				</div>
 				<div class="input-container">
 					<i class="fa fa-phone fa-2x icon"></i>
@@ -32,11 +40,11 @@
 				</div>
 				<div class="input-container">
 					<i class="fa fa-key fa-2x icon"></i>
-                        		<input type="password" id="mot_de_passe" name="mot_de_passe" placeholder="Mot de passe*" class="tooltip input-field" title="Veuillez saisir votre mot de passe" required>
+                        		<input type="password" id="mot_de_passe" name="mot_de_passe" placeholder="Mot de passe*" class="tooltip input-field required-field-inscription" title="Veuillez saisir votre mot de passe">
 				</div>
 				<div class="input-container">
 					<i class="fa fa-key fa-2x icon"></i>
-                        		<input type="password" id="resaisir_mot_de_passe" name="resaisir_mot_de_passe" placeholder="Retapez votre mot de passe*" class="tooltip input-field" title="Veuillez resaisir votre mot de passe" required>
+                        		<input type="password" id="resaisir_mot_de_passe" name="resaisir_mot_de_passe" placeholder="Retapez votre mot de passe*" class="tooltip input-field required-field-inscription" title="Veuillez resaisir votre mot de passe" required>
 				</div>
 			</fieldset>
 			<fieldset>
@@ -75,7 +83,7 @@
 		</div>
 		<div class="input-container">
 			<label for="acceptation_des_conditions">J'accepte les conditions d'utilisation *</label>
-			<input type="checkbox" id="acceptation_des_conditions" name="acceptation_des_conditions" class="customized_checkbox tooltip" title="Veuillez cocher cette case si vous acceptez les conditions d'utilisation" required>
+			<input type="checkbox" id="acceptation_des_conditions" name="acceptation_des_conditions" class="customized_checkbox tooltip required-field-inscription" title="Veuillez cocher cette case si vous acceptez les conditions d'utilisation">
 		</div>
         </form>
 </div>
