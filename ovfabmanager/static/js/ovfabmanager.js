@@ -19,8 +19,6 @@ $(document).ready(function(){
 		if(input_value === "")
 		{
 
-			console.log("3")
-
 			$(this).css("border-color", "#f8009b");
 
 			$("#product_error_div").removeClass("hidden_div");
@@ -29,7 +27,7 @@ $(document).ready(function(){
 		}
 		else
 		{
-			console.log("Moi 6 : la sage de merde continue...");
+			console.log("Moi 6 : la saga de merde continue...");
 		}
 	});
   })
