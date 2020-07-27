@@ -36,6 +36,8 @@ $(document).ready(function(){
 
 	$("#product_error_div").addClass("hidden_div");
 
+	$(":input.required-field").css("border-color","#ccc");
+
 	$("#codebarre").val("");
 
 	$("#date_d_achat").val("");
