@@ -12,7 +12,7 @@ $(document).ready(function(){
 
 	var verif_var = true;
 
-	$(":input.required-field").each(function(){
+	$(":input.required-field-enregistrement_produit").each(function(){
 
 		var input_value = $(this).val();
 
@@ -21,15 +21,22 @@ $(document).ready(function(){
 
 			$(this).css("border-color", "#f8009b");
 
+			console.log($(this))
+
 			$("#product_error_div").removeClass("hidden_div");
 
 			verif_var = false;
 		}
-		else
-		{
-			console.log("Moi 6 : la saga de merde continue...");
-		}
 	});
+
+	if(verif_var)
+	{
+		$("#product_error_div").addClass("hidden_div");
+
+		$(":input.required-field-enregistrement_produit").css("border-color","#ccc");
+
+		console.log("Moi 6 : la saga de merde continue...");
+	}
   });
 
   $("#reinitialisation_enregistrement_produit").click(function(){
@@ -74,18 +81,18 @@ $(document).ready(function(){
 	if(document.getElementById("nouveau_produit").checked == true)
 	{
 
-		$("#fabricant").addClass("required-field")
+		$("#fabricant").addClass("required-field-enregistrement_produit")
 
-                $("#fournisseur").addClass("required-field")
+                $("#fournisseur").addClass("required-field-enregistrement_produit")
 
 		$("#enregistrer_nouveau_produit").fadeIn("slow");
 	}
 	else
 	{
 
-		$("#fabricant").removeClass("required-field")
+		$("#fabricant").removeClass("required-field-enregistrement_produit")
 
-		$("#fournisseur").removeClass("required-field")
+		$("#fournisseur").removeClass("required-field-enregistrement_produit")
 
 		$("#enregistrer_nouveau_produit").fadeOut("slow");
 	}

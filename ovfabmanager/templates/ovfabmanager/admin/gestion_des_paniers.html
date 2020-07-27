@@ -30,12 +30,20 @@
 		</table>
 	</div>
 	<div id="enregistrement_d_un_pret">
-		<form action="" method="post">
+		<form id="formulaire_enregistrement_paniers">
 			<fieldset>
 				<legend>Enregistrement d'un prêt</legend>
+				<div id="product_error_div" class="ui-widget hidden_div" style="margin-bottom: 15px;">
+                                        <div class="ui-state-error" style="padding: 0.7em; border-radius: 5px;">
+                                                <p>
+                                                        <span class="ui-icon ui-icon-alert icone-d-erreur"></span>
+                                                        Error occured, because of the New Infinite Empire (NIE)
+                                                </p>
+                                        </div>
+                                </div>
 				<div class="input-container">
 					<i class="fa fa-user fa-2x icon"></i>
-					<select name="client_pret" placeholder="Nom du client*" class="tooltip input-field" id="client_pret" title="Veuillez sélectionner le client concerné" required>
+					<select name="client_pret" placeholder="Nom du client*" class="tooltip input-field required-field" id="client_pret" title="Veuillez sélectionner le client concerné" required>
 						<option value="0">Moi (prequel)</option>
                                                 <option value="1">Moi</option>
                                                 <option value="2">Moi 2 : la vengance de Guillaume</option>
@@ -49,7 +57,7 @@
                                 </div>
 				<div class="input-container">
 					<i class="fa fa-calendar fa-2x icon"></i>
-					<input type="text" placeholder="Date de retour*" name="date_de_retour" class="tooltip input-field required-field" id="date_de_retour" title="Veuillez renseigner la date de retour" required>
+					<input type="text" placeholder="Date de retour du prêt*" name="date_de_retour_du_pret" class="tooltip input-field required-field" id="date_de_retour_du_pret" title="Veuillez renseigner la date de retour" required>
 				</div>
 				<div class="input-container">
 					<i class="fa fa-box fa-5x icon"></i>
