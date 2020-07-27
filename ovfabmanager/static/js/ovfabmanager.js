@@ -12,19 +12,12 @@ $(document).ready(function(){
 
 	if(document.getElementById("nouveau_produit").checked == true)
 	{
-		document.getElementById("nouveau_produit").checked = false
 
-		console.log("Unchecked");
-
-		$("#enregistrer_nouveau_produit").fadeIn("slow");
+		$("#enregistrer_nouveau_produit").fadeOut("slow");
 	}
 	else
 	{
-		document.getElementById("nouveau_produit").checked = true
-
-		console.log("Checked");
-
-		$("#enregistrer_nouveau_produit").fadeOut("slow");
+		$("#enregistrer_nouveau_produit").fadeIn("slow");
 	}
   });
 
