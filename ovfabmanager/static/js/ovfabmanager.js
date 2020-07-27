@@ -8,6 +8,32 @@ $(document).ready(function(){
 
   $("input[type=reset]").button();
 
+  $("#formulaire_enregistrement_stock").submit(function(){
+
+	var verif_var = true;
+
+	console.log("1");
+
+	$(":input.required-field").each(function(){
+
+		var input_value = $(this).val();
+
+		console.log(input_value + " : " + "2")
+
+		if(input_value === "")
+		{
+
+			console.log("3")
+
+			$(this).css("border-color", "#f8009b");
+
+			$("#product_error_div").removeClass("hidden_div");
+
+			verif_var = false;
+		}
+	});
+  })
+
   $("#nouveau_produit").change(function(){
 
 	if(document.getElementById("nouveau_produit").checked == true)
