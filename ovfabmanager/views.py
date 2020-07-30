@@ -14,14 +14,18 @@ def form_treatments(request):
 
       print("POST method....\n")
 
+      redirection_response = redirect("/")
+
       data = request.POST.copy()
 
+      # Traitements pour le formulaire de connexion...
       if data.get("form_type") == "connexion":
 
           print("\n ----------Formulaire: " + data.get("form_type") + "----------\n")
           print("\n Nom d'utilisateur = " + data.get("nom_d_utilisateur")  + "\n")
           print("\n Mot de passe = " + data.get("mot_de_passe")  + "\n")
 
+      # Traitements pour le formulaire d'inscription...
       elif data.get("form_type") == "inscription":
 
           print("\n ----------Formulaire: " + data.get("form_type") + "----------\n")
@@ -29,16 +33,25 @@ def form_treatments(request):
           print("\n Mot de passe = " + data.get("prenom")  + "\n")
           print("\n Et les autres champs ? À venir bientôt... \n")
 
+      # Traitements pour le formulaire des enregistrements de paniers...
       elif data.get("form_type") == "enregistrement_panier":
 
           #
           print("Enregistrer un panier")
 
+          #
+          redirection_response = redirect("/gestion_des_paniers#enregistrement_d_un_pret")
+
+      # Traitements pour le formulaire des retours de paniers...
       elif data.get("form_type") == "retour_panier":
 
           #
           print("Retour d'un panier")
 
+          #
+          redirection_response = redirect("/gestion_des_paniers#enregistrement_d_un_retour")
+
+      # Traitements pour le formulaire d'enregistrement de produits...
       elif data.get("form_type") == "enregistrement_produit":
 
           #
@@ -67,6 +80,9 @@ def form_treatments(request):
             print("\n Numéro de téléphone du fournisseur = " + data.get("numero_telephone_fournisseur") + "\n")
             print("\n Site web du fournisseur = " + data.get("site_web_fournisseur") + "\n")
 
+          #
+          redirection_response = redirect("/gestion_des_stocks#enregistrer_un_article_dans_les_stocks")
+
       else:
 
           print("\n Formulaire non trouvé : désolé... \n")
@@ -75,7 +91,7 @@ def form_treatments(request):
 
       print("Other method....\n")
 
-    redirection_response = redirect("/")
+    #redirection_response = redirect("/")
 
     return redirection_response
 
