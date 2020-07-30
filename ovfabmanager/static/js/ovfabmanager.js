@@ -8,6 +8,26 @@ $(document).ready(function(){
 
   $("input[type=reset]").button();
 
+  $("#reinitialisation_creation_panier").click(function(){
+
+	$(":input.required-field-enregistrement-panier").css("border-color","#ccc");
+
+	$("#client_pret").val(0);
+
+	$("#date_de_retour_du_pret").val("");
+
+        $("#liste_des_articles_a_preter").val("");
+  });
+
+  $("#reinitialisation_retour_panier").click(function(){
+
+	$(":input.required-field-retour-panier").css("border-color","#ccc");
+
+	$("#client_retour").val(0);
+
+	$("#liste_des_articles_a_retourner").val("");
+  });
+
   $("#enregistrement_produit_validation").click(function(){
 
 	var verif_var = true;
