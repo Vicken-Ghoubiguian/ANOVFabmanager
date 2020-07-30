@@ -49,24 +49,26 @@ def enregistrer_produit(request):
       print("\n Code barre = " + data.get("codebarre") + "\n")
       print("\n Date d'achat = " + data.get("date_d_achat") + "\n")
       print("\n Date de livraison = " + data.get("date_de_livraison") + "\n")
-      print("\n Type d'objet = " + data.get("type_d_objet") + "\n")
+      print("\n Type d'objet (numéro) = " + data.get("type_d_objet") + "\n")
 
-      #
-      print("\n Nouveau produit ? = " + data.get("nouveau_produit") + "\n")
+      if data.get("nouveau_produit") == 'on':
 
-      #
-      print("\n Fabricant = " + data.get("fabricant") + "\n")
-      print("\n Adresse email du fabricant = " + data.get("adresse_email_fabricant") + "\n")
-      print("\n Adresse postale du fabricant = " + data.get("adresse_postale_fabricant") + "\n")
-      print("\n Numéro de téléphone du fabricant = " + data.get("numero_telephone_fabricant") + "\n")
-      print("\n Site web du fabricant = " + data.get("site_web_fabricant") + "\n")
+        #
+        print("\n Nouveau produit ? = " + data.get("nouveau_produit") + "\n")
 
-      #
-      print("\n Fournisseur = " + data.get("fournisseur") + "\n")
-      print("\n Adresse email du fournisseur = " + data.get("adresse_email_fournisseur") + "\n")
-      print("\n Adresse postale du fournisseur = " + data.get("adresse_postale_fournisseur") + "\n")
-      print("\n Numéro de téléphone du fournisseur = " + data.get("numero_telephone_fournisseur") + "\n")
-      print("\n Site web du fournisseur = " + data.get("site_web_fournisseur") + "\n")
+        #
+        print("\n Fabricant = " + data.get("fabricant") + "\n")
+        print("\n Adresse email du fabricant = " + data.get("adresse_email_fabricant") + "\n")
+        print("\n Adresse postale du fabricant = " + data.get("adresse_postale_fabricant") + "\n")
+        print("\n Numéro de téléphone du fabricant = " + data.get("numero_telephone_fabricant") + "\n")
+        print("\n Site web du fabricant = " + data.get("site_web_fabricant") + "\n")
+
+        #
+        print("\n Fournisseur = " + data.get("fournisseur") + "\n")
+        print("\n Adresse email du fournisseur = " + data.get("adresse_email_fournisseur") + "\n")
+        print("\n Adresse postale du fournisseur = " + data.get("adresse_postale_fournisseur") + "\n")
+        print("\n Numéro de téléphone du fournisseur = " + data.get("numero_telephone_fournisseur") + "\n")
+        print("\n Site web du fournisseur = " + data.get("site_web_fournisseur") + "\n")
 
     else:
 
