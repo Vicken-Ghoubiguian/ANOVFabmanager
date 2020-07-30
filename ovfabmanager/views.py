@@ -29,6 +29,16 @@ def form_treatments(request):
           print("\n Mot de passe = " + data.get("prenom")  + "\n")
           print("\n Et les autres champs ? À venir bientôt... \n")
 
+      elif data.get("form_type") == "enregistrement_panier":
+
+          #
+          print("Enregistrer un panier")
+
+      elif data.get("form_type") == "retour_panier":
+
+          #
+          print("Retour d'un panier")
+
       elif data.get("form_type") == "enregistrement_produit":
 
           #
@@ -66,18 +76,6 @@ def form_treatments(request):
       print("Other method....\n")
 
     redirection_response = redirect("/")
-
-    return redirection_response
-
-def enregistrer_panier(request):
-
-    redirection_response = redirect("/gestion_des_paniers")
-
-    return redirection_response
-
-def retourner_panier(request):
-
-    redirection_response = redirect("/gestion_des_paniers")
 
     return redirection_response
 
