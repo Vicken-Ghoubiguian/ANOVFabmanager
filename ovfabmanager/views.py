@@ -87,11 +87,11 @@ def form_treatments(request):
 
           print("\n Formulaire non trouvé : désolé... \n")
 
+          redirection_response = render(request, 'ovfabmanager/index.html', {'afficher_erreur': True, 'type_erreur': 'formulaire non trouvé', 'template_demandee': None})
+
     else:
 
       print("Other method....\n")
-
-    #redirection_response = redirect("/")
 
     return redirection_response
 
