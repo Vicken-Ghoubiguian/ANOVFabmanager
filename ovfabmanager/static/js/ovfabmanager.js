@@ -139,15 +139,7 @@ $(document).ready(function(){
   
   $.datepicker.setDefaults($.datepicker.regional['fr']);
 
-  $("#date_de_retour").datepicker( $.datepicker.regional["fr"] );
-
-  $("#naissance").datepicker( $.datepicker.regional["fr"] );
-
-  $("#date_d_achat").datepicker( $.datepicker.regional["fr"] );
-
-  $("#date_de_livraison").datepicker( $.datepicker.regional["fr"] );
-
-  $("#date_de_retour_du_pret").datepicker( $.datepicker.regional["fr"] );
+  $(".datepicker_amical").datepicker( $.datepicker.regional["fr"] );
 
   $("#jqTabs").tabs({show: {effect: "clip", duration: "slow"}});
 
