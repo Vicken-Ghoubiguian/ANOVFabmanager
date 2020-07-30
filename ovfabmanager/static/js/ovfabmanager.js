@@ -50,7 +50,7 @@ $(document).ready(function(){
 
                         $(this).css("border-color", "#f8009b");
 
-                        //$("#product_error_div").removeClass("hidden_div");
+                        $("#retour_pret_error").removeClass("hidden_div");
 
                         verif_var = false;
                 }
@@ -58,7 +58,7 @@ $(document).ready(function(){
 
         if(verif_var)
         {
-                //$("#product_error_div").addClass("hidden_div");
+                $("#retour_pret_error").addClass("hidden_div");
 
                 $(":input.required-field-retour-panier").css("border-color","#ccc");
 
@@ -80,6 +80,8 @@ $(document).ready(function(){
   });
 
   $("#reinitialisation_retour_panier").click(function(){
+
+	$("#retour_pret_error").addClass("hidden_div");
 
 	$(":input.required-field-retour-panier").css("border-color","#ccc");
 
