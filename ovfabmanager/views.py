@@ -14,7 +14,7 @@ def form_treatments(request):
 
       print("POST method....\n")
 
-      redirection_response = redirect("/")
+      redirection_response = render(request, 'ovfabmanager/index.html', {'afficher_erreur': True, 'type_erreur': 'formulaire non trouvé', 'template_demandee': None})
 
       data = request.POST.copy()
 
@@ -37,7 +37,10 @@ def form_treatments(request):
       elif data.get("form_type") == "enregistrement_panier":
 
           #
-          print("Enregistrer un panier")
+          print("\n ----------Formulaire: " + data.get("form_type") + "----------\n")
+
+          #
+          #print("Enregistrer un panier")
 
           #
           redirection_response = redirect("/gestion_des_paniers#enregistrement_d_un_pret")
@@ -46,7 +49,10 @@ def form_treatments(request):
       elif data.get("form_type") == "retour_panier":
 
           #
-          print("Retour d'un panier")
+          print("\n ----------Formulaire: " + data.get("form_type") + "----------\n")
+
+          #
+          #print("Retour d'un panier")
 
           #
           redirection_response = redirect("/gestion_des_paniers#enregistrement_d_un_retour")
