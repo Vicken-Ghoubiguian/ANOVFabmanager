@@ -4,6 +4,7 @@ from django.shortcuts import redirect
 # Create your views here.
 
 def connexion(request):
+
     if request.method == "GET":
       print("GET method....\n")
 
@@ -26,6 +27,7 @@ def connexion(request):
           print("\n Et les autres champs ? À venir bientôt... \n")
 
     else:
+
       print("Other method....\n")
 
     redirection_response = redirect("/")
@@ -34,7 +36,41 @@ def connexion(request):
 
 def enregistrer_produit(request):
 
-    print("This is the end of my only friend....")
+    if request.method == "GET":
+
+      print("GET method....\n")
+
+    elif request.method == "POST":
+
+      data = request.POST.copy()
+
+      #
+      print("\n ----------Formulaire: " + data.get("form_type") + "----------\n")
+      print("\n Code barre = " + data.get("codebarre") + "\n")
+      print("\n Date d'achat = " + data.get("date_d_achat") + "\n")
+      print("\n Date de livraison = " + data.get("date_de_livraison") + "\n")
+      print("\n Type d'objet = " + data.get("type_d_objet") + "\n")
+
+      #
+      print("\n Nouveau produit ? = " + data.get("nouveau_produit") + "\n")
+
+      #
+      print("\n Fabricant = " + data.get("fabricant") + "\n")
+      print("\n Adresse email du fabricant = " + data.get("adresse_email_fabricant") + "\n")
+      print("\n Adresse postale du fabricant = " + data.get("adresse_postale_fabricant") + "\n")
+      print("\n Numéro de téléphone du fabricant = " + data.get("numero_telephone_fabricant") + "\n")
+      print("\n Site web du fabricant = " + data.get("site_web_fabricant") + "\n")
+
+      #
+      print("\n Fournisseur = " + data.get("fournisseur") + "\n")
+      print("\n Adresse email du fournisseur = " + data.get("adresse_email_fournisseur") + "\n")
+      print("\n Adresse postale du fournisseur = " + data.get("adresse_postale_fournisseur") + "\n")
+      print("\n Numéro de téléphone du fournisseur = " + data.get("numero_telephone_fournisseur") + "\n")
+      print("\n Site web du fournisseur = " + data.get("site_web_fournisseur") + "\n")
+
+    else:
+
+      print("Other method....\n")
 
     redirection_response = redirect("/gestion_des_stocks")
 
