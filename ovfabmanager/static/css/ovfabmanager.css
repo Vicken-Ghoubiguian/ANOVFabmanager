@@ -1,3 +1,7 @@
+.jqTabs {
+  margin-top: 60px;
+}
+
 input[type=search] {
   color: #f8009b;
 }
@@ -6,11 +10,15 @@ select {
   color: #c5007b;
 }
 
-a#asDatatable_next {
+.dataTables_length {
   color: #f8009b;
 }
 
-a#asDatatable_previous.paginate_button.previous {
+a.asDatatable_next {
+  color: #f8009b;
+}
+
+a.asDatatable_previous.paginate_button.previous {
   color: #f8009b;
 }
 
@@ -22,15 +30,15 @@ a#asDatatable_previous.paginate_button.previous {
   color: #c5007b;
 }
 
-#asDatatable_filter.dataTables_filter {
+.asDatatable_filter.dataTables_filter {
   color: #f8009b;
 }
 
-#asDatatable_length.dataTables_length {
+.asDatatable_length.dataTables_length {
   color: #f8009b;
 }
 
-#asDatatable_info.dataTables_info {
+.asDatatable_info.dataTables_info {
   color: #f8009b;
 }
 

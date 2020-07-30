@@ -98,7 +98,7 @@ $(document).ready(function(){
 	}
   });
 
-  $("#asDatatable").DataTable({
+  $(".asDatatable").DataTable({
 	"language": {
 		"url": "//cdn.datatables.net/plug-ins/1.10.21/i18n/French.json"
 	}
@@ -141,7 +141,7 @@ $(document).ready(function(){
 
   $(".datepicker_amical").datepicker( $.datepicker.regional["fr"] );
 
-  $("#jqTabs").tabs({show: {effect: "clip", duration: "slow"}});
+  $(".jqTabs").tabs({show: {effect: "clip", duration: "slow"}});
 
   $(":input.required-field-enregistrement_produit").focus(function(){
 
