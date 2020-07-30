@@ -35,8 +35,6 @@ $(document).ready(function(){
 
 		$(":input.required-field-enregistrement_produit").css("border-color","#ccc");
 
-		//console.log("Moi 6 : la saga de merde continue...");
-
 		$("#formulaire_enregistrement_stock").submit();
 	}
   });
@@ -148,6 +146,8 @@ $(document).ready(function(){
   $("#date_d_achat").datepicker( $.datepicker.regional["fr"] );
 
   $("#date_de_livraison").datepicker( $.datepicker.regional["fr"] );
+
+  $("#date_de_retour_du_pret").datepicker( $.datepicker.regional["fr"] );
 
   $("#jqTabs").tabs({show: {effect: "clip", duration: "slow"}});
 
