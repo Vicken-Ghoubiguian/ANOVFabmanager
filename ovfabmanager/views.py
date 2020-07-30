@@ -3,7 +3,8 @@ from django.shortcuts import redirect
 
 # Create your views here.
 
-def connexion(request):
+# For forms treatments...
+def form_treatments(request):
 
     if request.method == "GET":
 
