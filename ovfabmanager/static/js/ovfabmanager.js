@@ -35,7 +35,9 @@ $(document).ready(function(){
 
 		$(":input.required-field-enregistrement_produit").css("border-color","#ccc");
 
-		console.log("Moi 6 : la saga de merde continue...");
+		//console.log("Moi 6 : la saga de merde continue...");
+
+		$("#formulaire_enregistrement_stock").submit();
 	}
   });
 

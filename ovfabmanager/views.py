@@ -32,6 +32,14 @@ def connexion(request):
 
     return redirection_response
 
+def enregistrer_produit(request):
+
+    print("This is the end of my only friend....")
+
+    redirection_response = redirect("/gestion_des_stocks")
+
+    return redirection_response
+
 # For common
 def accueil(request):
     return render(request, 'ovfabmanager/index.html', {'afficher_erreur': False, 'type_erreur': None, 'template_demandee': 'accueil'})

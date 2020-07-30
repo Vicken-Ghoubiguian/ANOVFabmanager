@@ -30,7 +30,8 @@
 		</table>
 	</div>
 	<div id="enregistrement_d_un_pret">
-		<form id="formulaire_enregistrement_paniers">
+		<form method="post" action="{% url 'enregistrer_panier' %}" id="formulaire_enregistrement_paniers">
+			{% csrf_token  %}
 			<fieldset>
 				<legend>Enregistrement d'un prêt</legend>
 				<div id="product_error_div" class="ui-widget hidden_div" style="margin-bottom: 15px;">
@@ -71,7 +72,7 @@
 		</form>
 	</div>
 	<div id="enregistrement_d_un_retour">
-		<form action="" method="post">
+		<form method="post" action="{% url 'retour_panier' %}" method="post">
 			<fieldset>
 				<legend>Enregistrement d'un retour</legend>
 				<div class="input-container">
