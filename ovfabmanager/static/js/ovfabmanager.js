@@ -21,7 +21,7 @@ $(document).ready(function(){
 
                         $(this).css("border-color", "#f8009b");
 
-                        //$("#product_error_div").removeClass("hidden_div");
+                        $("#pret_enregistrement_error").removeClass("hidden_div");
 
                         verif_var = false;
                 }
@@ -29,7 +29,7 @@ $(document).ready(function(){
 
 	if(verif_var)
         {
-                //$("#product_error_div").addClass("hidden_div");
+                $("#pret_enregistrement_error").addClass("hidden_div");
 
                 $(":input.required-field-enregistrement-panier").css("border-color","#ccc");
 
@@ -67,6 +67,8 @@ $(document).ready(function(){
   });
 
   $("#reinitialisation_creation_panier").click(function(){
+
+	$("#pret_enregistrement_error").addClass("hidden_div");
 
 	$(":input.required-field-enregistrement-panier").css("border-color","#ccc");
 
