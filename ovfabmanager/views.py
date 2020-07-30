@@ -34,6 +34,18 @@ def connexion(request):
 
     return redirection_response
 
+def enregistrer_panier(request):
+
+    redirection_response = redirect("/gestion_des_paniers")
+
+    return redirection_response
+
+def retourner_panier(request):
+
+    redirection_response = redirect("/gestion_des_paniers")
+
+    return redirection_response
+
 def enregistrer_produit(request):
 
     if request.method == "GET":

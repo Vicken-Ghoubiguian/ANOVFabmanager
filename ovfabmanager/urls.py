@@ -6,6 +6,8 @@ urlpatterns = [
     # For treatments
     path('connexion', views.connexion, name='connexion'),
     path('enregistrer_produit', views.enregistrer_produit, name='enregistrer_produit'),
+    path('enregistrer_panier', views.enregistrer_panier, name='enregistrer_panier'),
+    path('retourner_panier', views.retourner_panier, name='retourner_panier'),
 
     # For common
     path('', views.accueil, name='accueil'),

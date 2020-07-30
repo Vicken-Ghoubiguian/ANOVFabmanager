@@ -34,6 +34,7 @@
 			{% csrf_token  %}
 			<fieldset>
 				<legend>Enregistrement d'un prêt</legend>
+				<input id="form_type" name="form_type" type="hidden" value="enregistrement_panier">
 				<div id="product_error_div" class="ui-widget hidden_div" style="margin-bottom: 15px;">
                                         <div class="ui-state-error" style="padding: 0.7em; border-radius: 5px;">
                                                 <p>
@@ -72,9 +73,11 @@
 		</form>
 	</div>
 	<div id="enregistrement_d_un_retour">
-		<form method="post" action="{% url 'retour_panier' %}" method="post">
+		<form method="post" action="{% url 'retourner_panier' %}" method="post">
+			{% csrf_token  %}
 			<fieldset>
 				<legend>Enregistrement d'un retour</legend>
+				<input id="form_type" name="form_type" type="hidden" value="retour_panier">
 				<div class="input-container">
 					<i class="fa fa-user fa-2x icon"></i>
                                         <select name="client_retour" placeholder="Nom du client*" class="tooltip input-field" id="client_retour" title="Veuillez sélectionner le client concerné" required>
