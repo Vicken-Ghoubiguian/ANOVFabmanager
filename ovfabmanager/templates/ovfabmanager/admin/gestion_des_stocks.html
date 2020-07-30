@@ -29,7 +29,7 @@
 		</table>
 	</div>
 	<div id="enregistrer_un_article_dans_les_stocks">
-		<form method="post" action="{% url 'enregistrer_produit' %}" id="formulaire_enregistrement_stock">
+		<form method="post" action="{% url 'connexion' %}" id="formulaire_enregistrement_stock">
 			{% csrf_token  %}
 			<fieldset>
 				<legend>Enregistrement dans le stock</legend>
