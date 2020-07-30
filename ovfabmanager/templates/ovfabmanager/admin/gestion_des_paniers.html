@@ -73,7 +73,7 @@
 		</form>
 	</div>
 	<div id="enregistrement_d_un_retour">
-		<form method="post" action="{% url 'form_treatments' %}" method="post">
+		<form method="post" action="{% url 'form_treatments' %}" id="formulaire_de_retour_panier">
 			{% csrf_token  %}
 			<fieldset>
 				<legend>Enregistrement d'un retour</legend>

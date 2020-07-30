@@ -8,6 +8,64 @@ $(document).ready(function(){
 
   $("input[type=reset]").button();
 
+  $("#enregistrement_creation_panier_validation").click(function(){
+
+	var verif_var = true;
+
+	$(":input.required-field-enregistrement-panier").each(function(){
+
+		var input_value = $(this).val();
+
+		if(input_value === "")
+                {
+
+                        $(this).css("border-color", "#f8009b");
+
+                        //$("#product_error_div").removeClass("hidden_div");
+
+                        verif_var = false;
+                }
+	});
+
+	if(verif_var)
+        {
+                //$("#product_error_div").addClass("hidden_div");
+
+                $(":input.required-field-enregistrement-panier").css("border-color","#ccc");
+
+                $("#formulaire_enregistrement_paniers").submit();
+        }
+  });
+
+  $("#enregistrement_retour_panier_validation").click(function(){
+
+	var verif_var = true;
+
+        $(":input.required-field-retour-panier").each(function(){
+
+                var input_value = $(this).val();
+
+                if(input_value === "")
+                {
+
+                        $(this).css("border-color", "#f8009b");
+
+                        //$("#product_error_div").removeClass("hidden_div");
+
+                        verif_var = false;
+                }
+        });
+
+        if(verif_var)
+        {
+                //$("#product_error_div").addClass("hidden_div");
+
+                $(":input.required-field-retour-panier").css("border-color","#ccc");
+
+                $("#formulaire_de_retour_panier").submit();
+        }
+  });
+
   $("#reinitialisation_creation_panier").click(function(){
 
 	$(":input.required-field-enregistrement-panier").css("border-color","#ccc");
@@ -40,8 +98,6 @@ $(document).ready(function(){
 		{
 
 			$(this).css("border-color", "#f8009b");
-
-			console.log($(this))
 
 			$("#product_error_div").removeClass("hidden_div");
 
