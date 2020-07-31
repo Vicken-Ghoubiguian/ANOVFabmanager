@@ -25,6 +25,9 @@ def form_treatments(request):
           print("\n Nom d'utilisateur = " + data.get("nom_d_utilisateur")  + "\n")
           print("\n Mot de passe = " + data.get("mot_de_passe")  + "\n")
 
+          #
+          redirection_response = redirect("/")
+
       # Traitements pour le formulaire d'inscription...
       elif data.get("form_type") == "inscription":
 
@@ -32,6 +35,9 @@ def form_treatments(request):
           print("\n Nom d'utilisateur = " + data.get("nom")  + "\n")
           print("\n Mot de passe = " + data.get("prenom")  + "\n")
           print("\n Et les autres champs ? À venir bientôt... \n")
+
+          #
+          redirection_response = redirect("/")
 
       # Traitements pour le formulaire des enregistrements de paniers...
       elif data.get("form_type") == "enregistrement_panier":
