@@ -39,3 +39,9 @@ urlpatterns = [
 #######################################################################################################################
 
 handler404 = "ovfabmanager.views.error_404"
+handler500 = "ovfabmanager.views.error_500"
+handler408 = "ovfabmanager.views.error_408"
+handler403 = "ovfabmanager.views.error_403"
+handler410 = "ovfabmanager.views.error_410"
+handler401 = "ovfabmanager.views.error_401"
+handler400 = "ovfabmanager.views.error_400"
