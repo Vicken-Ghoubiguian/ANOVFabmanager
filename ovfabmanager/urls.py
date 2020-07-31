@@ -30,3 +30,5 @@ urlpatterns = [
     path('statistiques', views.statistiques, name='statistiques'),
     path('personnalisation', views.personnalisation, name='personnalisation'),
 ]
+
+handler404 = "ovfabmanager.views.error_404"
