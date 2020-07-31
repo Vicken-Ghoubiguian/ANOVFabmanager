@@ -31,4 +31,11 @@ urlpatterns = [
     path('personnalisation', views.personnalisation, name='personnalisation'),
 ]
 
+#######################################################################################################################
+# Définitions des handlers pour un traitement customisé des différents types d'erreurs (HTTP ou non) rencontrées...
+#
+# PS: pour activer ce dispositif en mode dév (développement de l'application), allez dans le fichier 'settings.py'
+# situé dans le répertoire ../ANOVFabmanager puis modifiez la valeur spécifiée pour 'DEBUG' de 'True' à 'False'.
+#######################################################################################################################
+
 handler404 = "ovfabmanager.views.error_404"
