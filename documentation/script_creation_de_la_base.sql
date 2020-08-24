@@ -119,17 +119,6 @@ CREATE TABLE IF NOT EXISTS Abonnement (
 	FOREIGN KEY (type_de_client) REFERENCES Type_de_client(id)
 );
 
--- TABLE  Panier --
-CREATE TABLE IF NOT EXISTS Panier (
-
-	id INTEGER NOT NULL AUTO_INCREMENT,
-	heure_de_pret TIME NOT NULL,
-	heure_de_retour TIME NOT NULL,
-	client INTEGER NOT NULL,
-	PRIMARY KEY(id),
-	FOREIGN KEY (client) REFERENCES Client(id)
-);
-
 -- TABLE Client --
 CREATE TABLE IF NOT EXISTS Client (
 
@@ -148,6 +137,17 @@ CREATE TABLE IF NOT EXISTS Client (
 	FOREIGN KEY (type_de_client) REFERENCES Type_de_client(id),
 	FOREIGN KEY (abonnement) REFERENCES Abonnement(id),
 	FOREIGN KEY (prestation) REFERENCES Prestation(id)
+);
+
+-- TABLE  Panier --
+CREATE TABLE IF NOT EXISTS Panier (
+
+	id INTEGER NOT NULL AUTO_INCREMENT,
+	heure_de_pret TIME NOT NULL,
+	heure_de_retour TIME NOT NULL,
+	client INTEGER NOT NULL,
+	PRIMARY KEY(id),
+	FOREIGN KEY (client) REFERENCES Client(id)
 );
 
 -- TABLE Outil --
