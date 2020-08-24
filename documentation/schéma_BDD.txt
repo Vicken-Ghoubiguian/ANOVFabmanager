@@ -38,8 +38,6 @@ class Evenement {
     Temps_de_debut: Entier
     Durée: Entier
     Type_d_evenement: Entier [FK]
-    Espace: Entier [FK]
-    Machine: Entier [FK]
 }
 
 class Type_d_evenement {
@@ -105,6 +103,7 @@ class Espace {
     Description: Chaine de caractéres
     Diplome_requis: Entier [FK]
     Abonnement_requis: Entier [FK]
+    Evenement: Entier [FK]
 }
 
 Class Outil {
