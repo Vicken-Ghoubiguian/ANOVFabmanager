@@ -159,6 +159,7 @@ CREATE TABLE IF NOT EXISTS Outil (
 	fiche_technique VARCHAR(500) NOT NULL,
 	machine INTEGER NOT NULL,
 	Type_d_outil INTEGER NOT NULL,
+	PRIMARY KEY(id),
 	FOREIGN KEY (machine) REFERENCES Machine(id),
         FOREIGN KEY (type_d_outil) REFERENCES Type_d_outil(id)
 );
@@ -170,6 +171,7 @@ CREATE TABLE IF NOT EXISTS Article (
 	libelle VARCHAR(100) NOT NULL,
 	outil INTEGER NOT NULL,
 	panier INTEGER NOT NULL,
+	PRIMARY KEY(id),
 	FOREIGN KEY (outil) REFERENCES Outil(id),
 	FOREIGN KEY (panier) REFERENCES Panier(id)
 );
@@ -183,6 +185,7 @@ CREATE TABLE IF NOT EXISTS Espace (
 	diplome_requis INTEGER NOT NULL,
 	abonnement_requis INTEGER NOT NULL,
 	evenement INTEGER NOT NULL,
+	PRIMARY KEY(id),
 	FOREIGN KEY (diplome_requis) REFERENCES Diplome(id),
 	FOREIGN KEY (abonnement_requis) REFERENCES Abonnement(id),
 	FOREIGN KEY (evenement) REFERENCES Evenement(id)
