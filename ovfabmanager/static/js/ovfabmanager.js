@@ -432,6 +432,10 @@ $(document).ready(function(){
 			document.getElementById("personne_morale").checked = false
 			activerPersonneMorale(false)
 
+			document.getElementById("autorisation_communication").checked = false
+			document.getElementById("autorisation_informations_depuis_fablab").checked = false
+			document.getElementById("acceptation_des_conditions").checked = false
+
 			$(":input.required-field-inscription").css("border-color", "#ccc");
 
 			$("#inscription_error_div").addClass("hidden_div");
@@ -456,7 +460,7 @@ $(document).ready(function(){
 					}
 				});
 
-				if(verif_var)
+				if(verif_var || document.getElementById("acceptation_des_conditions").checked == false)
 				{
 
 					$("#inscription_form").submit();
@@ -473,6 +477,10 @@ $(document).ready(function(){
 				$("#naissance").val("");
 				$("#telephone").val("");
                         	$("#personne_morale_nom").val("");
+
+				document.getElementById("autorisation_communication").checked = false
+				document.getElementById("autorisation_informations_depuis_fablab").checked = false
+				document.getElementById("acceptation_des_conditions").checked = false
 
 				$(":input.required-field-inscription").css("border-color", "#ccc");
 
