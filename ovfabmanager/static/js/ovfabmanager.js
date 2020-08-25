@@ -321,8 +321,6 @@ $(document).ready(function(){
         }
   });
 
-  $(".customized_checkbox").checkboxradio();
-
   $(".common").click(function(){ document.location.href = "http://127.0.0.1:8000/"; });
 
   $("#client_pret_carte").click(function(){
