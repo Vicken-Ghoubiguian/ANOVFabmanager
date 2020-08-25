@@ -290,32 +290,41 @@ $(document).ready(function(){
   });
 
   $("#autorisation_communication").click(function(){
+
         if($("#autorisation_communication").prop(":checked")){
+
                 $("#autorisation_communication"). prop(":checked", false);
-                alert("Autorisation communication is Unchecked");
+
         } else {
+
                 $("#autorisation_communication"). prop(":checked", true);
-                alert("Autorisation communication is Checked");
+
         }
   });
 
   $("#autorisation_informations_depuis_fablab").click(function(){
+
         if($("#autorisation_informations_depuis_fablab").prop(":checked")){
+
                 $("#autorisation_informations_depuis_fablab"). prop(":checked", false);
-                alert("Autorisation informations depuis fablab is Unchecked");
+
         } else {
+
                 $("#autorisation_informations_depuis_fablab"). prop(":checked", true);
-                alert("Autorisation informations depuis fablab is Checked");
+
         }
   });
 
   $("#acceptation_des_conditions").click(function(){
+
         if($("#acceptation_des_conditions").prop(":checked")){
+
                 $("#acceptation_des_conditions"). prop(":checked", false);
-                alert("Acceptation des conditions is Unchecked");
+
         } else {
+
                 $("#acceptation_des_conditions"). prop(":checked", true);
-                alert("Acceptation des conditions is Checked");
+
         }
   });
 
