@@ -33,17 +33,29 @@ CREATE TABLE IF NOT EXISTS Type_machine (
 	PRIMARY KEY(id)
 );
 
+-- TABLE Entreprise --
+CREATE TABLE IF NOT EXISTS Entreprise (
+
+	id INTEGER NOT NULL AUTO_INCREMENT,
+	nom VARCHAR(50) NOT NULL,
+	adresse_postale VARCHAR(50) NOT NULL,
+	adresse_email VARCHAR(50) NOT NULL,
+	PRIMARY KEY(id)
+);
+
 -- TABLE Type_d_outil --
 CREATE TABLE IF NOT EXISTS Type_d_outil (
 
 	id INTEGER NOT NULL AUTO_INCREMENT,
 	libelle VARCHAR(100) NOT NULL,
 	descriptif VARCHAR(500) NOT NULL,
-	fabricant VARCHAR(500) NOT NULL,
+	fabricant INTEGER NOT NULL,
 	date_d_achat DATE NOT NULL,
-	fournisseur VARCHAR(500) NOT NULL,
+	fournisseur INTEGER NOT NULL,
 	date_de_peremption DATE NOT NULL,
-	PRIMARY KEY(id)
+	PRIMARY KEY(id),
+	FOREIGN KEY (fabricant) REFERENCES Entreprise(id),
+	FOREIGN KEY (fournisseur) REFERENCES Entreprise(id)
 );
 
 -- TABLE Abonnement --
@@ -86,8 +98,8 @@ CREATE TABLE IF NOT EXISTS Evenement (
 	FOREIGN KEY (type_d_evenement) REFERENCES Type_d_evenement(id)
 );
 
--- TABLE Diplome --
-CREATE TABLE IF NOT EXISTS Diplome (
+-- TABLE Qualification --
+CREATE TABLE IF NOT EXISTS Qualification (
 
 	id INTEGER NOT NULL AUTO_INCREMENT,
 	Intitule VARCHAR(100) NOT NULL,
@@ -123,11 +135,11 @@ CREATE TABLE IF NOT EXISTS Machine (
 	fournisseur VARCHAR(100) NOT NULL,
 	prix_d_achat INTEGER NOT NULL,
 	modele VARCHAR(100) NOT NULL,
-	diplome_requis INTEGER NOT NULL,
+	qualification_requise INTEGER NOT NULL,
 	type_machine INTEGER NOT NULL,
 	prestation INTEGER NOT NULL,
 	PRIMARY KEY(id),
-	FOREIGN KEY (diplome_requis) REFERENCES Diplome(id),
+	FOREIGN KEY (qualification_requise) REFERENCES Qualification(id),
 	FOREIGN KEY (type_machine) REFERENCES Type_machine(id),
 	FOREIGN KEY (prestation) REFERENCES Prestation(id)
 );
@@ -193,8 +205,8 @@ CREATE TABLE IF NOT EXISTS Article (
 CREATE TABLE IF NOT EXISTS Possede (
 
 	client INTEGER NOT NULL,
-	diplome INTEGER NOT NULL,
+	qualification INTEGER NOT NULL,
 	date_de_delivrance DATE NOT NULL,
 	FOREIGN KEY (client) REFERENCES Client(id),
-	FOREIGN KEY (diplome) REFERENCES Diplome(id)
+	FOREIGN KEY (qualification) REFERENCES Qualification(id)
 );
