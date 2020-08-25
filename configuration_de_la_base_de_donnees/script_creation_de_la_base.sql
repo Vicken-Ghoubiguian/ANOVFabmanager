@@ -46,6 +46,31 @@ CREATE TABLE IF NOT EXISTS Type_d_outil (
 	PRIMARY KEY(id)
 );
 
+-- TABLE Abonnement --
+CREATE TABLE IF NOT EXISTS Abonnement (
+
+	id INTEGER NOT NULL AUTO_INCREMENT,
+	libelle VARCHAR(100) NOT NULL,
+	description VARCHAR(500) NOT NULL,
+	prix INTEGER NOT NULL,
+	credit_machine INTEGER NOT NULL,
+	avantages VARCHAR(800) NOT NULL,
+	type_de_client INTEGER NOT NULL,
+	PRIMARY KEY(id),
+	FOREIGN KEY (type_de_client) REFERENCES Type_de_client(id)
+);
+
+-- TABLE Espace --
+CREATE TABLE IF NOT EXISTS Espace (
+
+	id INTEGER NOT NULL AUTO_INCREMENT,
+	libelle VARCHAR(100) NOT NULL,
+	description VARCHAR(500) NOT NULL,
+	abonnement_requis INTEGER NOT NULL,
+	PRIMARY KEY(id),
+	FOREIGN KEY (abonnement_requis) REFERENCES Abonnement(id)
+);
+
 -- TABLE Evenement --
 CREATE TABLE IF NOT EXISTS Evenement (
 
@@ -54,9 +79,11 @@ CREATE TABLE IF NOT EXISTS Evenement (
 	descriptif VARCHAR(500) NOT NULL,
 	heure_de_debut TIME NOT NULL,
 	duree INTEGER NOT NULL,
+	espace INTEGER NOT NULL,
 	type_d_evenement INTEGER NOT NULL,
 	PRIMARY KEY(id),
-	FOREIGN KEY (Type_d_evenement) REFERENCES Type_d_evenement(id)
+	FOREIGN KEY (espace) REFERENCES Espace(id),
+	FOREIGN KEY (type_d_evenement) REFERENCES Type_d_evenement(id)
 );
 
 -- TABLE Diplome --
@@ -103,20 +130,6 @@ CREATE TABLE IF NOT EXISTS Machine (
 	FOREIGN KEY (diplome_requis) REFERENCES Diplome(id),
 	FOREIGN KEY (type_machine) REFERENCES Type_machine(id),
 	FOREIGN KEY (prestation) REFERENCES Prestation(id)
-);
-
--- TABLE Abonnement --
-CREATE TABLE IF NOT EXISTS Abonnement (
-
-	id INTEGER NOT NULL AUTO_INCREMENT,
-	libelle VARCHAR(100) NOT NULL,
-	description VARCHAR(500) NOT NULL,
-	prix INTEGER NOT NULL,
-	credit_machine INTEGER NOT NULL,
-	avantages VARCHAR(800) NOT NULL,
-	type_de_client INTEGER NOT NULL,
-	PRIMARY KEY(id),
-	FOREIGN KEY (type_de_client) REFERENCES Type_de_client(id)
 );
 
 -- TABLE Client --
@@ -176,27 +189,12 @@ CREATE TABLE IF NOT EXISTS Article (
 	FOREIGN KEY (panier) REFERENCES Panier(id)
 );
 
--- TABLE Espace --
-CREATE TABLE IF NOT EXISTS Espace (
-
-	id INTEGER NOT NULL AUTO_INCREMENT,
-	libelle VARCHAR(100) NOT NULL,
-	description VARCHAR(500) NOT NULL,
-	diplome_requis INTEGER NOT NULL,
-	abonnement_requis INTEGER NOT NULL,
-	evenement INTEGER NOT NULL,
-	PRIMARY KEY(id),
-	FOREIGN KEY (diplome_requis) REFERENCES Diplome(id),
-	FOREIGN KEY (abonnement_requis) REFERENCES Abonnement(id),
-	FOREIGN KEY (evenement) REFERENCES Evenement(id)
-);
-
 -- TABLE Possede --
 CREATE TABLE IF NOT EXISTS Possede (
 
-	titulaire INTEGER NOT NULL,
+	client INTEGER NOT NULL,
 	diplome INTEGER NOT NULL,
 	date_de_delivrance DATE NOT NULL,
-	FOREIGN KEY (titulaire) REFERENCES Client(id),
+	FOREIGN KEY (client) REFERENCES Client(id),
 	FOREIGN KEY (diplome) REFERENCES Diplome(id)
 );
