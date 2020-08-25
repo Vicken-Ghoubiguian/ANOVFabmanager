@@ -265,7 +265,6 @@ $(document).ready(function(){
 	{
 
 		$("#personne_morale_nom").addClass("required-field-inscription");
-		$("#personne_morale_adresse_physique").addClass("required-field-inscription");
 
 		$("#enregistrer_personne_morale").fadeIn("slow");
 	}
@@ -273,7 +272,6 @@ $(document).ready(function(){
 	{
 
 		$("#personne_morale_nom").removeClass("required-field-inscription");
-		$("#personne_morale_adresse_physique").removeClass("required-field-inscription");
 
 		$("#enregistrer_personne_morale").fadeOut("slow");
 	}
@@ -420,7 +418,6 @@ $(document).ready(function(){
 			$("#naissance").val("");
 			$("#telephone").val("");
 
-			$("#personne_morale_adresse_physique").val("");
                         $("#personne_morale_nom").val("");
 
 			document.getElementById("personne_morale").checked = false
@@ -466,7 +463,6 @@ $(document).ready(function(){
 				$("#resaisir_mot_de_passe").val("");
 				$("#naissance").val("");
 				$("#telephone").val("");
-				$("#personne_morale_adresse_physique").val("");
                         	$("#personne_morale_nom").val("");
 
 				$(":input.required-field-inscription").css("border-color", "#ccc");
