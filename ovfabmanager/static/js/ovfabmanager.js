@@ -247,6 +247,18 @@ $(document).ready(function(){
 
   });
 
+  $(":input.required-field-inscription").focus(function(){
+
+	$(this).css("border-color", "#c5007b");
+
+  });
+
+  $(":input.required-field-inscription").focusout(function(){
+
+	$(this).css("border-color", "#ccc");
+
+  });
+
   $("#personne_morale").click(function(){
 	if($("#personne_morale").prop(":checked")){
 		$("#personne_morale"). prop(":checked", false);
@@ -254,7 +266,7 @@ $(document).ready(function(){
 		$(".personne_moral_field").removeClass("input-container");
 		$(".personne_moral_field").addClass("hidden_div");
 
-		$(".personne_morale_input").removeAttr("required");
+		$(".personne_morale_input").removeClass("required-field-inscription")
 
 		$("#personne_morale_adresse_physique").val("");
 		$("#personne_morale_nom").val("");
@@ -265,7 +277,7 @@ $(document).ready(function(){
 		$(".personne_moral_field").removeClass("hidden_div");
                 $(".personne_moral_field").addClass("input-container");
 
-		$(".personne_morale_input").attr("required","required");
+		$(".personne_morale_input").addClass("required-field-inscription")
 	}
   });
 
