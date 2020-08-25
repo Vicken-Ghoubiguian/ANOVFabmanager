@@ -37,6 +37,7 @@ class Evenement {
     Description: Chaine de caractéres
     Temps_de_debut: Entier
     Durée: Entier
+    Espace: Entier [FK]
     Type_d_evenement: Entier [FK]
 }
 
@@ -103,7 +104,6 @@ class Espace {
     Description: Chaine de caractéres
     Diplome_requis: Entier [FK]
     Abonnement_requis: Entier [FK]
-    Evenement: Entier [FK]
 }
 
 Class Outil {
