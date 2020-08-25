@@ -77,15 +77,21 @@ class Type_Machine {
     Description: Chaine de caractéres
 }
 
+class Entreprise {
+    Id: Entier
+    Nom: Chaine de caractéres
+    Adresse postale: Chaine de caractéres
+    Adresse email: Chaine de caractéres
+    Site web: Chaine de caractéres
+}
+
 Class Type_d_outil {
     Id: Entier [PK]
     Libellé: Chaine de caractéres
     Type_item
     Descriptif: Chaine de caractéres
-    Fabricant: Chaine de caractéres
-    Date d'achat: Date
-    Fournisseur: Chaine de caractéres
-    Date_de_péremption: Date
+    Fabricant: Entier
+    Fournisseur: Entier
 }
 
 class Abonnement {
@@ -118,6 +124,8 @@ Class Outil {
 Class Article {
     Id: Entier [PK]
     Libellé: Chaine de caractéres
+    Date d'achat: Date
+    Date_de_péremption: Date
     Outil: Entier [FK]
     Panier: Entier [FK]
 }
@@ -153,5 +161,6 @@ Article --> Outil : Correspond à
 Outil --> Type_d_outil : Correspond à
 Article --> Panier : Contenu dans
 Client --> Panier : Posséde
+Type_d_outil --> Entreprise : Est produit et fournis par
 
 @enduml
