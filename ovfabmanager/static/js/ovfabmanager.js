@@ -259,7 +259,25 @@ $(document).ready(function(){
 
   });
 
-  $("#personne_morale").click(function(){
+  $("#personne_morale").change(function(){
+
+	if(document.getElementById("personne_morale").checked == true)
+	{
+		$("#personne_morale_nom").addClass("required-field-inscription");
+		$("#personne_morale_adresse_physique").addClass("required-field-inscription");
+
+		$("#enregistrer_personne_morale").fadeIn("slow");
+	}
+	else
+	{
+		$("#personne_morale_nom").removeClass("required-field-inscription");
+		$("#personne_morale_adresse_physique").removeClass("required-field-inscription");
+
+		$("#enregistrer_personne_morale").fadeOut("slow");
+	}
+  });
+
+  /*$("#personne_morale").click(function(){
 	if($("#personne_morale").prop(":checked")){
 		$("#personne_morale"). prop(":checked", false);
 
@@ -279,7 +297,7 @@ $(document).ready(function(){
 
 		$(".personne_morale_input").addClass("required-field-inscription")
 	}
-  });
+  });*/
 
   $("#autorisation_communication").click(function(){
         if($("#autorisation_communication").prop(":checked")){

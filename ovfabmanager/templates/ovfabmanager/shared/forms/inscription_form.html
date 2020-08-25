@@ -49,17 +49,18 @@
 			</fieldset>
 			<fieldset>
 				<legend>Personnes morales</legend>
-				<div class="input-container">
-					<label for="personne_morale">Je suis une personne morale</label>
-					<input type="checkbox" id="personne_morale" name="personne_morale" class="customized_checkbox tooltip" title="Veuillez cocher cette case si vous êtes une personne morale (entreprise, école...)">
+				<div class="div_d_element_au_pied">
+					<input type="checkbox" id="personne_morale" name="personne_morale" class="tooltip" title="Veuillez cocher cette case si vous êtes une personne morale (entreprise, école...)"><label for="personne_morale" class="element_au_pied">Je suis une personne morale</label>
 				</div>
-				<div class="personne_moral_field hidden_div">
-					<i class="fa fa-building fa-2x icon"></i>
-					<input type="text" id="personne_morale_nom" name="personne_morale_nom" placeholder="Nom de la structure*" class="personne_morale_input tooltip input-field" title="Veuillez saisir le nom de votre structure">
-				</div>
-				<div class="personne_moral_field hidden_div">
-					<i class="fa fa-road fa-2x icon"></i>
-					<input type="text" id="personne_morale_adresse_physique" name="personne_morale_adresse_physique" placeholder="Adresse physique*" class="personne_morale_input tooltip input-field" title="Veuillez saisir l'adresse physique de votre structure">
+				<div id="enregistrer_personne_morale" hidden>
+					<div class="input-container">
+						<i class="fa fa-building fa-2x icon"></i>
+						<input type="text" id="personne_morale_nom" name="personne_morale_nom" placeholder="Nom de la structure*" class="tooltip input-field" title="Veuillez saisir le nom de votre structure">
+					</div>
+					<div class="input-container">
+						<i class="fa fa-road fa-2x icon"></i>
+						<input type="text" id="personne_morale_adresse_physique" name="personne_morale_adresse_physique" placeholder="Adresse physique*" class="tooltip input-field" title="Veuillez saisir l'adresse physique de votre structure">
+					</div>
 				</div>
 			</fieldset>
 			<!--<fieldset>
