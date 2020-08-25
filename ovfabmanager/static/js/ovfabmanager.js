@@ -460,7 +460,7 @@ $(document).ready(function(){
 					}
 				});
 
-				if(verif_var || document.getElementById("acceptation_des_conditions").checked == false)
+				if(verif_var && (document.getElementById("acceptation_des_conditions").checked == true))
 				{
 
 					$("#inscription_form").submit();
