@@ -389,7 +389,8 @@ $(document).ready(function(){
 			effect: "size",
 			duration: 1000
 		},
-		close: function(event, ui){
+		close: function(event, ui)
+		{
 			$("#nom").val("");
 			$("#prenom").val("");
 			$("#iscidt").val("");
@@ -400,11 +401,14 @@ $(document).ready(function(){
 			$("#telephone").val("");
 			$("#personne_morale_adresse_physique").val("");
 			$("#personne_morale_nom").val("");
+
+			$(":input.required-field-inscription").css("border-color", "#ccc");
+
+			$("#inscription_error_div").addClass("hidden_div");
 		},
                 buttons: {
                         "Inscrivez-vous": function()
 			{
-				//$("#inscription_form").submit();
 				var verif_var = true;
 
 				$(":input.required-field-inscription").each(function(){
@@ -440,6 +444,10 @@ $(document).ready(function(){
 				$("#telephone").val("");
 				$("#personne_morale_adresse_physique").val("");
                         	$("#personne_morale_nom").val("");
+
+				$(":input.required-field-inscription").css("border-color", "#ccc");
+
+				$("#inscription_error_div").addClass("hidden_div");
 			},
                 }
 	});
