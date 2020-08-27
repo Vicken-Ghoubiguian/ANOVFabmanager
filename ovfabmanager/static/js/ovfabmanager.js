@@ -520,16 +520,27 @@ $(document).ready(function(){
 
 				$(":input.required-field-connexion").each(function(){
 					var input_value = $(this).val();
+					var field_name = "";
 
 					//Si le champs est vide....
 					if(input_value === "")
-                                	{
-                                        	$(this).css("border-color", "#f8009b");
+                    {
+                        $(this).css("border-color", "#f8009b");
+
+                        //Identifie le nom du champs concerné par l'erreur
+                       	var field_name = $(this).attr("placeholder");
+
+                       	//
+                       	field_name = field_name.charAt(0).toLowerCase() + field_name.slice(1);
+
+                        $("#inside_connexion_error_div").text("Erreur: " + field_name.slice(0,-1) + " invalide")
 
 						$("#connexion_error_div").removeClass("hidden_div");
 
 						verif_var = false;
-                                	}
+
+						return false;
+                    }
 				});
 
 				if(verif_var)
