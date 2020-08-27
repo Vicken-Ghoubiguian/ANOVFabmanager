@@ -101,6 +101,7 @@ a.ui-button:hover,
 a.ui-button:focus {
 	color: #f8009b;
 	background: #ffffff;
+	border-radius: 3px;
 	text-decoration: none;
 }
 
@@ -126,7 +127,9 @@ a.ui-button:active,
 .ui-state-active a,
 .ui-state-active a:link,
 .ui-state-active a:visited {
-	color: #ffffff;
+	color: #f8009b;
+	background: #ffffff;
+	border-radius: 3px;
 	text-decoration: none;
 }
 

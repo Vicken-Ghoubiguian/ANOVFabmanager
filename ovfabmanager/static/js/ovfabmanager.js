@@ -480,7 +480,7 @@ $(document).ready(function(){
 					return false;
 				}
 
-				if(document.getElementById("acceptation_des_conditions").checked != true)
+				if(verif_var && document.getElementById("acceptation_des_conditions").checked == false)
 				{
 					$("#inside_inscription_error_div").text("Erreur: veuillez accepter les conditions d'utilisation")
 
