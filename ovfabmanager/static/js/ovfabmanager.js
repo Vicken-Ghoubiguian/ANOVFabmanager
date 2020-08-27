@@ -455,6 +455,7 @@ $(document).ready(function(){
 					if(input_value === "")
 					{
 						$(this).css("border-color", "#f8009b");
+						$(this).css("::placeholder", "#f8009b");
 
 						field_name = $(this).attr("placeholder");
 
@@ -469,6 +470,24 @@ $(document).ready(function(){
 						return false;
 					}
 				});
+
+				if($("#mot_de_passe").val() != $("#resaisir_mot_de_passe").val())
+				{
+					$("#inside_inscription_error_div").text("Erreur: votre mot de passe et votre ressaisie ne correspondent pas")
+
+					$("#inscription_error_div").removeClass("hidden_div");
+
+					return false;
+				}
+
+				if(document.getElementById("acceptation_des_conditions").checked != true)
+				{
+					$("#inside_inscription_error_div").text("Erreur: veuillez accepter les conditions d'utilisation")
+
+					$("#inscription_error_div").removeClass("hidden_div");
+
+					return false;
+				}
 
 				if(verif_var && (document.getElementById("acceptation_des_conditions").checked == true))
 				{
@@ -536,6 +555,7 @@ $(document).ready(function(){
 					if(input_value === "")
                     {
                         $(this).css("border-color", "#f8009b");
+                        $(this).css("::placeholder", "#f8009b");
 
                        	var field_name = $(this).attr("placeholder");
 
