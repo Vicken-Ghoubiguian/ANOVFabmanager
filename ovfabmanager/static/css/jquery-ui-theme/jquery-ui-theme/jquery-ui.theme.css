@@ -60,10 +60,10 @@
 works properly when clicked or hovered */
 html .ui-button.ui-state-disabled:hover,
 html .ui-button.ui-state-disabled:active {
-	border: 1px solid #ffffff;
+	border: 1px solid #608da1;
 	background: #ffffff;
 	font-weight: normal;
-	color: #f8009b;
+	color: #ffffff;
 }
 .ui-state-default a,
 .ui-state-default a:link,
