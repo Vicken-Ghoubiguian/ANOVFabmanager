@@ -99,7 +99,8 @@ a:visited.ui-button,
 .ui-state-focus a:visited,
 a.ui-button:hover,
 a.ui-button:focus {
-	color: #ffffff;
+	color: #f8009b;
+	background: #ffffff;
 	text-decoration: none;
 }
 
