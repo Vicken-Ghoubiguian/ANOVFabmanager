@@ -486,10 +486,12 @@ $(document).ready(function(){
 
 					$("#inscription_error_div").removeClass("hidden_div");
 
+					verif_var = false;
+
 					return false;
 				}
 
-				if(verif_var && (document.getElementById("acceptation_des_conditions").checked == true))
+				if(verif_var)
 				{
 
 					$("#inscription_form").submit();
