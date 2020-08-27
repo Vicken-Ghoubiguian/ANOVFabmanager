@@ -97,15 +97,25 @@ $(document).ready(function(){
 	$(":input.required-field-enregistrement_produit").each(function(){
 
 		var input_value = $(this).val();
+		var field_name = "";
 
 		if(input_value === "")
 		{
 
 			$(this).css("border-color", "#f8009b");
+			$(this).css("::placeholder", "#f8009b");
+
+			field_name = $(this).attr("placeholder");
+
+			field_name = field_name.charAt(0).toLowerCase() + field_name.slice(1);
+
+			$("#inside_product_error_div").text("Erreur: " + field_name.slice(0,-1) + " invalide")
 
 			$("#product_error_div").removeClass("hidden_div");
 
 			verif_var = false;
+
+			return false;
 		}
 	});
 
