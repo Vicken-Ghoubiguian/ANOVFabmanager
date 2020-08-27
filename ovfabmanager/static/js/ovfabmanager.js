@@ -444,19 +444,29 @@ $(document).ready(function(){
                         "Inscrivez-vous": function()
 			{
 				var verif_var = true;
+				var field_name = "";
 
 				$(":input.required-field-inscription").each(function(){
 
 					var input_value = $(this).val();
+					var field_name = "";
 
 					//Si le champ est vide...
 					if(input_value === "")
 					{
 						$(this).css("border-color", "#f8009b");
 
+						field_name = $(this).attr("placeholder");
+
+						field_name = field_name.charAt(0).toLowerCase() + field_name.slice(1);
+
+                        $("#inside_inscription_error_div").text("Erreur: " + field_name.slice(0,-1) + " invalide")
+
 						$("#inscription_error_div").removeClass("hidden_div");
 
 						verif_var = false;
+
+						return false;
 					}
 				});
 
@@ -527,10 +537,8 @@ $(document).ready(function(){
                     {
                         $(this).css("border-color", "#f8009b");
 
-                        //Identifie le nom du champs concerné par l'erreur
                        	var field_name = $(this).attr("placeholder");
 
-                       	//
                        	field_name = field_name.charAt(0).toLowerCase() + field_name.slice(1);
 
                         $("#inside_connexion_error_div").text("Erreur: " + field_name.slice(0,-1) + " invalide")
