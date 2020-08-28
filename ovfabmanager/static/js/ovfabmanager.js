@@ -15,15 +15,25 @@ $(document).ready(function(){
 	$(":input.required-field-enregistrement-panier").each(function(){
 
 		var input_value = $(this).val();
+		var field_name = "";
 
 		if(input_value === "")
                 {
 
                         $(this).css("border-color", "#f8009b");
+                        $(this).css("::placeholder", "#f8009b");
+
+                        field_name = $(this).attr("placeholder");
+
+						field_name = field_name.charAt(0).toLowerCase() + field_name.slice(1);
+
+						$("#inside_pret_enregistrement_error").text("Erreur: " + field_name.slice(0,-1) + " invalide");
 
                         $("#pret_enregistrement_error").removeClass("hidden_div");
 
                         verif_var = false;
+
+                        return false;
                 }
 	});
 
@@ -44,15 +54,25 @@ $(document).ready(function(){
         $(":input.required-field-retour-panier").each(function(){
 
                 var input_value = $(this).val();
+                var field_name = "";
 
                 if(input_value === "")
                 {
 
                         $(this).css("border-color", "#f8009b");
+                        $(this).css("::placeholder", "#f8009b");
+
+                        field_name = $(this).attr("placeholder");
+
+						field_name = field_name.charAt(0).toLowerCase() + field_name.slice(1);
+
+						$("#inside_retour_pret_error").text("Erreur: " + field_name.slice(0,-1) + " invalide");
 
                         $("#retour_pret_error").removeClass("hidden_div");
 
                         verif_var = false;
+
+                        return false;
                 }
         });
 
@@ -291,11 +311,11 @@ $(document).ready(function(){
 
 	if(document.getElementById("personne_morale").checked == true)
 	{
-		activerPersonneMorale(true)
+		activerPersonneMorale(true);
 	}
 	else
 	{
-		activerPersonneMorale(false)
+		activerPersonneMorale(false);
 	}
   });
 
