@@ -1,8 +1,9 @@
 -- CREATION DE L'UTILISATEUR ovfablab_admin --
 CREATE USER 'ovfablab_admin'@'localhost' IDENTIFIED BY 'mot_de_passe_de_l_admin_du_fablab';
 
--- ACCORD DE TOUS LES PRIVILEGES A L'UTILISATEUR ovfablab_admin SUR LA BASE ovfablab_database --
+-- ACCORD DE TOUS LES PRIVILEGES A L'UTILISATEUR ovfablab_admin SUR LES BASES ovfablab_database (DONNEES DU FABLAB) ET ovfablab_configuration (CONFIGURATION DE L'APPLICATION WEB) --
 GRANT ALL PRIVILEGES ON ovfablab_database.* TO 'ovfablab_admin'@'localhost';
+GRANT ALL PRIVILEGES ON ovfablab_configuration.* TO 'ovfablab_admin'@'localhost';
 
 -- CREATION DE TOUTES LES TABLES DU MODELE --
 
