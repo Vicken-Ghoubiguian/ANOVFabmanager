@@ -97,13 +97,29 @@ git clone https://gitlab.imerir.com/orles-valley/anovfabmanager # Clone le proje
 cd anovfabmanager # Change le répertoire courant pour celui du projet cloné anovfabmanager
 
 ```
-Il est ensuite nécessaire d'installer le serveur MySQL et son client respectif, grâce aux commandes suivantes à exécuter dans l'ordre:
+Il est ensuite nécessaire d'installer le serveur MySQL et son client respectif ainsi que de créer , grâce aux commandes suivantes à exécuter dans l'ordre:
 
 ```bash
+
+cd configuration_de_la_base_de_donnees # Change le répertoire courant pour celui de la configuration de la base de données
 
 sudo apt install mysql-server # Installation du serveur MySQL
 
 sudo apt install mysql-client # Installation du client MySQL
+
+sudo mysql -u root # Ouverture de l'interface de commandes MySQL pour l'utilisateur `root` (le super-utilisateur)
+
+CREATE DATABASE ovfabmanager_database;
+
+CREATE DATABASE ovfabmanager_configuration;
+
+USE ovfabmanager_database;
+
+SOURCE script_creation_de_la_base.sql;
+
+quit; # Fermeture de l'interface de commandes MySQL
+
+cd .. # Retour dans le répertoire racine du projet
 
 ```
 
