@@ -97,6 +97,16 @@ git clone https://gitlab.imerir.com/orles-valley/anovfabmanager # Clone le proje
 cd anovfabmanager # Change le répertoire courant pour celui du projet cloné anovfabmanager
 
 ```
+Il est ensuite nécessaire d'installer le serveur MySQL et son client respectif, grâce aux commandes suivantes à exécuter dans l'ordre:
+
+```bash
+
+sudo apt install mysql-server # Installation du serveur MySQL
+
+sudo apt install mysql-client # Installation du client MySQL
+
+```
+
 Il faut ensuite également créer puis configurer l'environnement virtuel Python et y installer `Django` grâce aux commandes suivantes à exécuter dans l'ordre:
 
 ```bash
