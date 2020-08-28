@@ -16,6 +16,8 @@
 
 	* [pip](https://pip.pypa.io/en/stable/),
 
+	* [MySQL](https://www.mysql.com/fr/),
+
 	* [virtualenv](https://python-guide-pt-br.readthedocs.io/fr/latest/dev/virtualenvs.html),
 
 	* [jQuery](https://jquery.com),
@@ -53,6 +55,9 @@ Pour faire fonctionner ANOVFabmanager sur une machine quelconque (physique ou vi
 
 <a name="docker_compose"></a>
 * Docker compose: `Docker compose` est un outil logiciel permettant la génération, le déploiement et la gestion d'applications multi-containers avec Docker,
+
+<a name="mysql"></a>
+* MySQL: `MySQL` est un moteur de gestion de bases de données permettant le stockage et la gestion des données relatives au bon fonctionnement du fablab,
 
 <a name="pip"></a>
 * pip: `pip` est un utilitaire pour l'installation et la gestion de packages python,
