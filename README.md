@@ -131,12 +131,15 @@ sudo apt install python3-pip # Installation de l'utilitaire pip3 (utilitaire pip
 
 sudo apt install python3-venv # Installation de l'utilitaire python3-venv pour créer et configurer votre environement virtuel
 
+sudo apt install python3-dev default-libmysqlclient-dev build-essential # Installation de tous les composants nécessaires pour le bon fonctionnement de mysqlclient
+
 python3 -m venv votre_environnement_virtuel # Création de l'environnement virtuel
 
 source votre_environnement_virtuel/bin/activate # Activation de votre environement virtuel
 
 pip3 install -r requirements.txt # Installation de tous les packages python contenus dans le fichier requirements.txt
 
+python3 manage.py migrate # Création de toutes les tables de base de données nécessaires pour le bon fonctionnement de l'application web
 ```
 Maintenant que tout est en place, il est maintenant temps de démarrer l'application web. Pour cela, exécutez la commande suivante:
 
