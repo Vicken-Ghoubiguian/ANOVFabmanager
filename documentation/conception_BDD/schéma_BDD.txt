@@ -6,6 +6,7 @@ class Client {
     Id: Entier [PK]
     Nom_de_famille: Chaine de caractéres
     Prenom: Chaine de caractéres
+    Numero_de_carte: Entier
     Téléphone: Chaine de caractéres
     Adresse email: Chaine de caractéres
     Identifiant: Chaine de caractéres
