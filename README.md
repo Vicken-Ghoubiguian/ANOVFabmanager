@@ -214,7 +214,7 @@ python3 manage.py runserver --insecure
 ```
 __Petite note__: pour lancer cette commande, il est nécessaire d'être dans le même répertoire que le projet.
 
-<a name="enregistrement_de_migrations">
+<a name="enregistrement_de_migrations"></a>
 ## Enregistrement de migrations
 
 Dans le développement d'ovationner, il sera nécessaire de modifier la structure de la base de données en supprimant ou en ajoutant de nouvelles tables au modèle, les migrations sont faites pour ça. Pour enregistrer ces modifications dans le dêpot GitLab du projet, la procédure est très simple.
