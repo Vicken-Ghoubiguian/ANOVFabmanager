@@ -24,8 +24,6 @@ class Type_d_outil(models.Model):
 	date_de_peremption = models.DateField()
 	fabricant = models.CharField(max_length=100)
 	fournisseur = models.CharField(max_length=100)
-	#fabricant = models.ForeignKey(Entreprise, on_delete=models.CASCADE)
-	#fournisseur = models.ForeignKey(Entreprise, on_delete=models.CASCADE)
 
 class Abonnement(models.Model):
 	libelle = models.CharField(max_length=100)
