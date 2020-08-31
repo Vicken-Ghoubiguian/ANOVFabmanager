@@ -217,7 +217,7 @@ __Petite note__: pour lancer cette commande, il est nécessaire d'être dans le 
 <a name="enregistrement_de_migrations"></a>
 ## Enregistrement de migrations
 
-Dans le développement d'ovationner, il sera nécessaire de modifier la structure de la base de données en supprimant ou en ajoutant de nouvelles tables au modèle, les migrations sont faites pour ça. Pour enregistrer ces modifications dans le dêpot GitLab du projet, la procédure est très simple.
+Dans le développement d'ovfabmanager, il sera nécessaire de modifier la structure de la base de données en supprimant ou en ajoutant de nouvelles tables au modèle, les migrations sont faites pour ça. Pour enregistrer ces modifications dans le dêpot GitLab du projet, la procédure est très simple.
 Dans le répertoire racine du projet, exécutez les commandes suivantes dans l'ordre:
 
 ```bash
