@@ -36,6 +36,8 @@
 
 7. [Commandes de base](#commandes_de_base)
 
+8. [Enregistrement de migrations](#enregistrement_de_migrations)
+
 <a name="presentation_du_projet"></a>
 ## Présentation du projet
 
@@ -211,3 +213,19 @@ python3 manage.py runserver
 python3 manage.py runserver --insecure
 ```
 __Petite note__: pour lancer cette commande, il est nécessaire d'être dans le même répertoire que le projet.
+
+<a name="enregistrement_de_migrations">
+## Enregistrement de migrations
+
+Dans le développement d'ovationner, il sera nécessaire de modifier la structure de la base de données en supprimant ou en ajoutant de nouvelles tables au modèle, les migrations sont faites pour ça. Pour enregistrer ces modifications dans le dêpot GitLab du projet, la procédure est très simple.
+Dans le répertoire racine du projet, exécutez les commandes suivantes dans l'ordre:
+
+```bash
+python3 manage.py makemigrations ovfabmanager # Crée des migrations pour le modèle de l'application web
+
+python3 manage.py migrate # Applique les modifications dans la base de données
+```
+
+Pour enregistrer vos modifications dans le dépôt GitLab du projet, ajoutez le fichier nouvellement créé dans le répertoire `migrations` dans le répertoire `ovfabmanager` dans l'index Git local du projet.
+
+Et voilà le travail !
