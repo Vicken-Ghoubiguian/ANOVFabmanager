@@ -101,8 +101,6 @@ Il est ensuite nécessaire d'installer le serveur MySQL et son client respectif 
 
 ```bash
 
-cd configuration_de_la_base_de_donnees # Change le répertoire courant pour celui de la configuration de la base de données
-
 sudo apt install mysql-server # Installation du serveur MySQL
 
 sudo apt install mysql-client # Installation du client MySQL
@@ -111,16 +109,9 @@ sudo mysql -u root # Ouverture de l'interface de commandes MySQL pour l'utilisat
 
 CREATE DATABASE ovfabmanager_database;
 
-CREATE DATABASE ovfabmanager_configuration;
-
 USE ovfabmanager_database;
 
-SOURCE script_creation_de_la_base.sql;
-
 quit; # Fermeture de l'interface de commandes MySQL
-
-cd .. # Retour dans le répertoire racine du projet
-
 ```
 
 Il faut ensuite également créer puis configurer l'environnement virtuel Python et y installer `Django` grâce aux commandes suivantes à exécuter dans l'ordre:

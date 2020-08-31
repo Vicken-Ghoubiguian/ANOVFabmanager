@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'ANOVFabManager.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ovfablab_configuration',
+        'NAME': 'ovfablab_database',
         'USER': 'ovfablab_admin',
         'PASSWORD': 'mot_de_passe_de_l_admin_du_fablab',
         'HOST': 'localhost',
