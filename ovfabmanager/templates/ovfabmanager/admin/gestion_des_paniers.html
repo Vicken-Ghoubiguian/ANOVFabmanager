@@ -54,12 +54,9 @@
 				<div class="input-container">
 					<i class="fa fa-user fa-2x icon"></i>
 					<select name="client_pret" placeholder="Nom du client*" class="tooltip input-field required-field-enregistrement-panier" id="client_pret" title="Veuillez sélectionner le client concerné">
-						<option value="0">Moi (prequel)</option>
-                                                <option value="1">Moi</option>
-                                                <option value="2">Moi 2 : la vengance de Guillaume</option>
-                                                <option value="3">Moi 3 : le siècle de l'espoir</option>
-                                                <option value="4">Moi 4 : le bout de mon nez</option>
-                                                <option value="5">Moi 5 : un cinquiéme opus ? Pour cette saga pourrie ?</option>
+						{% for client in allClients %}
+							<option value="0">{{ client.nom_de_famille }} {{ client.prenom }}</option>
+						{% endfor %}
 					</select>
 				</div>
 				<div class="div_d_element_au_pied">
@@ -97,12 +94,9 @@
 				<div class="input-container">
 					<i class="fa fa-user fa-2x icon"></i>
                                         <select name="client_retour" placeholder="Nom du client*" class="tooltip input-field" id="client_retour" title="Veuillez sélectionner le client concerné">
-						<option value="0">Moi (prequel)</option>
-						<option value="1">Moi</option>
-						<option value="2">Moi 2 : la vengance de Guillaume</option>
-						<option value="3">Moi 3 : le siècle de l'espoir</option>
-						<option value="4">Moi 4 : le bout de mon nez</option>
-						<option value="5">Moi 5 : un cinquiéme opus ? Pour cette saga pourrie ?</option>
+						{% for client in allClients %}
+							<option value="{{ client.numero_de_client }}">{{ client.nom_de_famille }} {{ client.prenom }}</option>
+						{% endfor %}
 					</select>
                                 </div>
 				<div class="div_d_element_au_pied">

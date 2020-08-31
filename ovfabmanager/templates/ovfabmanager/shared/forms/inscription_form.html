@@ -64,7 +64,7 @@
 						<option value="">Sélectionnez votre abonnement</option>
 
 						{% for abonnement in allAbonnements %}
-						<option value="0">{{ abonnement.libelle }}</option>
+						<option value="{{ abonnement.libelle }}">{{ abonnement.libelle }}</option>
 						{% endfor %}
 
 					</select>

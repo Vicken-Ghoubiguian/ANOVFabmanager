@@ -76,6 +76,7 @@ class Machine(models.Model):
 class Client(models.Model):
 	nom_de_famille = models.CharField(max_length=100)
 	prenom = models.CharField(max_length=30)
+	numero_de_carte = models.IntegerField()
 	telephone = models.CharField(max_length=20)
 	adresse_email = models.CharField(max_length=50)
 	identifiant = models.CharField(max_length=50)

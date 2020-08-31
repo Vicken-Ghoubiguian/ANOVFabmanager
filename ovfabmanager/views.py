@@ -2,8 +2,9 @@ from django.shortcuts import render
 from django.shortcuts import redirect
 
 from .models import Abonnement
-from .models import Panier
+from .models import Client
 
+allClients = Client.objects.all()
 allAbonnements = Abonnement.objects.all()
 
 # For forms treatments...
@@ -136,7 +137,7 @@ def common_tarifs_et_abonnements(request):
 
 # For admin
 def gestion_des_paniers(request):
-    return render(request, 'ovfabmanager/index.html', {'afficher_erreur': False, 'type_erreur': None, 'template_demandee': 'gestion_des_paniers', 'allAbonnements': allAbonnements})
+    return render(request, 'ovfabmanager/index.html', {'afficher_erreur': False, 'type_erreur': None, 'template_demandee': 'gestion_des_paniers', 'allAbonnements': allAbonnements, 'allClients': allClients})
 
 def gestion_des_stocks(request):
     return render(request, 'ovfabmanager/index.html', {'afficher_erreur': False, 'type_erreur': None, 'template_demandee': 'gestion_des_stocks', 'allAbonnements': allAbonnements})
