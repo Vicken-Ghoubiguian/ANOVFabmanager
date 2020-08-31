@@ -115,6 +115,7 @@ GRANT ALL PRIVILEGES ON ovfablab_database.* TO 'ovfablab_admin'@'localhost'; # A
 
 quit; # Fermeture de l'interface de commandes MySQL
 ```
+__Petite note__: vous pouvez très bien modifier le nom de l'administateur de la base et son mot de passe si vous le souhaitez. Pour cela, il vous faut modifier les champs `USER` et `PASSWORD` de `DATABASES` dans le fichier [settings.py](https://gitlab.imerir.com/orles-valley/anovfabmanager/blob/master/ANOVFabManager/settings.py).
 
 Il faut ensuite également créer puis configurer l'environnement virtuel Python et y installer `Django` grâce aux commandes suivantes à exécuter dans l'ordre:
 
