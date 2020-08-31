@@ -55,16 +55,21 @@
 					</div>
 				</div>
 			</fieldset>
-			<!--<fieldset>
+			<fieldset>
 				<legend>Compléments indispensables</legend>
 				<br>
 				<div class="input-container">
 					<i class="fa fa-credit-card fa-2x icon"></i>
-                                	<select id="abonnement" name="abonnement" class="tooltip input-field" placeholder="Abonnement *" title="Veuillez saisir l'abonnement que vous voulez souscrire" required>
+                                	<select id="abonnement" name="abonnement" class="tooltip input-field required-field-inscription" placeholder="Abonnement *" title="Veuillez saisir l'abonnement que vous voulez souscrire" required>
 						<option value="">Sélectionnez votre abonnement</option>
+
+						{% for abonnement in allAbonnements %}
+						<option value="0">{{ abonnement.libelle }}</option>
+						{% endfor %}
+
 					</select>
 				</div>
-			</fieldset>-->
+			</fieldset>
                 </fieldset>
 		<div class="input-container div_d_element_au_pied" style="margin-top: 20px;">
 			<input type="checkbox" id="autorisation_communication" name="autorisation_communication" class="tooltip" title="Veuillez cocher cette case si vous acceptez des utilisateurs du fablab à vous contacter"><label for="autorisation_communication" class="element_au_pied">J'autorise les utilisateurs du fablab à me contacter</label>

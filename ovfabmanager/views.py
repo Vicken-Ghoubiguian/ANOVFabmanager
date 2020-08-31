@@ -1,7 +1,10 @@
 from django.shortcuts import render
 from django.shortcuts import redirect
 
-# Create your views here.
+from .models import Abonnement
+from .models import Panier
+
+allAbonnements = Abonnement.objects.all()
 
 # For forms treatments...
 def form_treatments(request):
@@ -108,7 +111,7 @@ def form_treatments(request):
 
 # For common
 def accueil(request):
-    return render(request, 'ovfabmanager/index.html', {'afficher_erreur': False, 'type_erreur': None, 'template_demandee': 'accueil'})
+    return render(request, 'ovfabmanager/index.html', {'afficher_erreur': False, 'type_erreur': None, 'template_demandee': 'accueil', 'allAbonnements': allAbonnements})
 
 def calendrier(request):
     return render(request, 'ovfabmanager/index.html', {'afficher_erreur': False, 'type_erreur': None, 'template_demandee': 'calendrier'})
