@@ -226,6 +226,6 @@ python3 manage.py makemigrations ovfabmanager # Crée des migrations pour le mod
 python3 manage.py migrate # Applique les modifications dans la base de données
 ```
 
-Pour enregistrer vos modifications dans le dépôt GitLab du projet, ajoutez le fichier nouvellement créé dans le répertoire `migrations` dans le répertoire `ovfabmanager` dans l'index Git local du projet.
+Pour enregistrer vos modifications dans le dépôt GitLab du projet, comitez puis pushez le fichier nouvellement créé (situé dans le répertoire `migrations` dans le répertoire `ovfabmanager`) sur le dêpot GitLab du projet.
 
 Et voilà le travail !
