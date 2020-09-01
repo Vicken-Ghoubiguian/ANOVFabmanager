@@ -6,7 +6,6 @@ class Client {
     Id: Entier [PK]
     Nom_de_famille: Chaine de caractéres
     Prenom: Chaine de caractéres
-    Numero_de_carte: Entier
     Téléphone: Chaine de caractéres
     Adresse email: Chaine de caractéres
     Identifiant: Chaine de caractéres
@@ -15,6 +14,12 @@ class Client {
     Type_de_client: Entier [FK]
     Abonnement: Entier [FK]
     Prestation: Entier [FK]
+    Carte: Entier [FK]
+}
+
+class Carte {
+    Id: Entier [PK]
+    Numéro_de_carte: Chaine de caractéres
 }
 
 class Type_de_client {
@@ -149,6 +154,7 @@ Client --> Qualification
 Machine --> Type_Machine : Correspond à
 Client --> Type_de_client : Correspond à
 Client --> Prestation : Souscrit
+Client --> Carte : Possède une
 Prestation --> Machine : Concerne
 Qualification --> Evenement : S'obtient après
 Evenement --> Type_d_evenement : Correspond à
