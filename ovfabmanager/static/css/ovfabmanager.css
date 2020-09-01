@@ -7,15 +7,15 @@ input[type=search] {
 }
 
 select {
-  color: #c5007b;
+  color: #fe93d6;
 }
 
 td {
   text-align: center;
 }
 
-.select_placeholder {
-  color: #f8009b;
+select:invalid {
+  color: #ff62c4;
 }
 
 .div_d_element_au_pied {
