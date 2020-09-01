@@ -4,6 +4,9 @@ class Type_de_client(models.Model):
 	libelle = models.CharField(max_length=100)
 	descriptif = models.CharField(max_length=500)
 
+class Carte(models.Model):
+	numero_de_carte = models.CharField(max_length=50)
+
 class Type_d_evenement(models.Model):
 	libelle = models.CharField(max_length=100)
 	descriptif = models.CharField(max_length=500)
@@ -76,12 +79,12 @@ class Machine(models.Model):
 class Client(models.Model):
 	nom_de_famille = models.CharField(max_length=100)
 	prenom = models.CharField(max_length=30)
-	numero_de_carte = models.IntegerField()
 	telephone = models.CharField(max_length=20)
 	adresse_email = models.CharField(max_length=50)
 	identifiant = models.CharField(max_length=50)
 	mot_de_passe = models.CharField(max_length=50)
 	credit_client_en_temps = models.IntegerField()
+	carte = models.ForeignKey(Carte, on_delete=models.CASCADE)
 	type_de_client = models.ForeignKey(Type_de_client, on_delete=models.CASCADE)
 	abonnement = models.ForeignKey(Abonnement, on_delete=models.CASCADE)
 	prestation = models.ForeignKey(Prestation, on_delete=models.CASCADE)
