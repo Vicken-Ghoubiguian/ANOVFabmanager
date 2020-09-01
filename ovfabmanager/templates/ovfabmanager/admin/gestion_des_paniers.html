@@ -53,8 +53,8 @@
                                 </div>
 				<div class="input-container">
 					<i class="fa fa-user fa-2x icon"></i>
-					<select name="client_pret" placeholder="Nom du client*" class="tooltip input-field required-field-enregistrement-panier" id="client_pret" title="Veuillez sélectionner le client concerné">
-						<option value="" disabled selected hidden class="select_placeholder">-- Sélectionnez le client --</option>
+					<select name="client_pret" placeholder="Nom du client*" class="tooltip input-field required-field-enregistrement-panier" id="client_pret" title="Veuillez sélectionner le client concerné" required>
+						<option value="" disabled selected hidden class="select_placeholder">Sélectionnez le client*</option>
 						{% for client in allClients %}
 							<option value="0">{{ client.nom_de_famille }} {{ client.prenom }}</option>
 						{% endfor %}
@@ -94,8 +94,8 @@
                                 </div>
 				<div class="input-container">
 					<i class="fa fa-user fa-2x icon"></i>
-                                        <select name="client_retour" placeholder="Nom du client*" class="tooltip input-field" id="client_retour" title="Veuillez sélectionner le client concerné">
-                        <option value="" disabled selected hidden class="select_placeholder">-- Sélectionnez le client --</option>
+                                        <select name="client_retour" placeholder="Nom du client*" class="tooltip input-field" id="client_retour" title="Veuillez sélectionner le client concerné" required>
+                        <option value="" disabled selected hidden class="select_placeholder">Sélectionnez le client*</option>
 						{% for client in allClients %}
 							<option value="{{ client.numero_de_client }}">{{ client.nom_de_famille }} {{ client.prenom }}</option>
 						{% endfor %}
