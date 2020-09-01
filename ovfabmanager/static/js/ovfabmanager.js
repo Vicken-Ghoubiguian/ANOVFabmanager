@@ -478,6 +478,7 @@ $(document).ready(function(){
 
 				$(":input.required-field-inscription").each(function(){
 
+					console.log($(this).attr('name'));
 					var input_value = $(this).val();
 					var field_name = "";
 
