@@ -110,7 +110,9 @@ $(document).ready(function(){
 
 	$(":input.required-field-enregistrement-panier").css("border-color","#ccc");
 
-	$("#client_pret").val(0);
+	$("#client_pret").css("border-color","#ccc");
+
+	document.getElementById("client_pret").selectedIndex = 0
 
 	$("#date_de_retour_du_pret").val("");
 
