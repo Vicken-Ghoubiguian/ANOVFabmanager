@@ -12,6 +12,8 @@ $(document).ready(function(){
 
 	var verif_var = true;
 
+	$(":input.required-field-enregistrement-panier").css("border-color","#ccc");
+
 	$(":input.required-field-enregistrement-panier").each(function(){
 
 		var input_value = $(this).val();
@@ -50,6 +52,8 @@ $(document).ready(function(){
   $("#enregistrement_retour_panier_validation").click(function(){
 
 	var verif_var = true;
+
+	$(":input.required-field-retour-panier").css("border-color","#ccc");
 
         $(":input.required-field-retour-panier").each(function(){
 
