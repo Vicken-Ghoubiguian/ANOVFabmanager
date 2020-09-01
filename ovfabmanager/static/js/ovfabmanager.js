@@ -459,6 +459,8 @@ $(document).ready(function(){
 
                         $("#personne_morale_nom").val("");
 
+			document.getElementById("abonnement").selectedIndex = 0;
+
 			document.getElementById("personne_morale").checked = false
 			activerPersonneMorale(false)
 
@@ -478,7 +480,6 @@ $(document).ready(function(){
 
 				$(":input.required-field-inscription").each(function(){
 
-					console.log($(this).attr('name'));
 					var input_value = $(this).val();
 					var field_name = "";
 
@@ -505,6 +506,15 @@ $(document).ready(function(){
 				if($("#mot_de_passe").val() != $("#resaisir_mot_de_passe").val())
 				{
 					$("#inside_inscription_error_div").text("Erreur: votre mot de passe et votre ressaisie ne correspondent pas")
+
+					$("#inscription_error_div").removeClass("hidden_div");
+
+					return false;
+				}
+
+				if(document.getElementById("abonnement").selectedIndex === 0)
+				{
+					$("#inside_inscription_error_div").text("Erreur: veuillez sélectionner un abonnement")
 
 					$("#inscription_error_div").removeClass("hidden_div");
 
@@ -539,6 +549,8 @@ $(document).ready(function(){
 				$("#naissance").val("");
 				$("#telephone").val("");
                         	$("#personne_morale_nom").val("");
+
+				document.getElementById("abonnement").selectedIndex = 0;
 
 				document.getElementById("autorisation_communication").checked = false
 				document.getElementById("autorisation_informations_depuis_fablab").checked = false
