@@ -493,7 +493,7 @@ $(document).ready(function(){
 
 						field_name = field_name.charAt(0).toLowerCase() + field_name.slice(1);
 
-                        $("#inside_inscription_error_div").text("Erreur: " + field_name.slice(0,-1) + " invalide")
+                        $("#inside_inscription_error_div").text("Erreur: " + field_name.slice(0,-1) + " invalide");
 
 						$("#inscription_error_div").removeClass("hidden_div");
 
@@ -505,7 +505,7 @@ $(document).ready(function(){
 
 				if($("#mot_de_passe").val() != $("#resaisir_mot_de_passe").val())
 				{
-					$("#inside_inscription_error_div").text("Erreur: votre mot de passe et votre ressaisie ne correspondent pas")
+					$("#inside_inscription_error_div").text("Erreur: votre mot de passe et votre ressaisie ne correspondent pas");
 
 					$("#inscription_error_div").removeClass("hidden_div");
 
@@ -514,7 +514,10 @@ $(document).ready(function(){
 
 				if(document.getElementById("abonnement").selectedIndex === 0)
 				{
-					$("#inside_inscription_error_div").text("Erreur: veuillez sélectionner un abonnement")
+					$("#abonnement").css("border-color", "#f8009b");
+					$("#abonnement").css("::placeholder", "#f8009b");
+
+					$("#inside_inscription_error_div").text("Erreur: veuillez sélectionner un abonnement");
 
 					$("#inscription_error_div").removeClass("hidden_div");
 
@@ -523,7 +526,7 @@ $(document).ready(function(){
 
 				if(verif_var && document.getElementById("acceptation_des_conditions").checked == false)
 				{
-					$("#inside_inscription_error_div").text("Erreur: veuillez accepter les conditions d'utilisation")
+					$("#inside_inscription_error_div").text("Erreur: veuillez accepter les conditions d'utilisation");
 
 					$("#inscription_error_div").removeClass("hidden_div");
 
@@ -552,9 +555,9 @@ $(document).ready(function(){
 
 				document.getElementById("abonnement").selectedIndex = 0;
 
-				document.getElementById("autorisation_communication").checked = false
-				document.getElementById("autorisation_informations_depuis_fablab").checked = false
-				document.getElementById("acceptation_des_conditions").checked = false
+				document.getElementById("autorisation_communication").checked = false;
+				document.getElementById("autorisation_informations_depuis_fablab").checked = false;
+				document.getElementById("acceptation_des_conditions").checked = false;
 
 				$(":input.required-field-inscription").css("border-color", "#ccc");
 
