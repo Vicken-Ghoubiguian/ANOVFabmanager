@@ -14,6 +14,10 @@ td {
   text-align: center;
 }
 
+.select_placeholder {
+  color: #f8009b;
+}
+
 .div_d_element_au_pied {
   margin-top: 1px;
   margin-bottom: 15px;

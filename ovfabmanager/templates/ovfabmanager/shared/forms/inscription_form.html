@@ -61,7 +61,7 @@
 				<div class="input-container">
 					<i class="fa fa-credit-card fa-2x icon"></i>
                                 	<select id="abonnement" name="abonnement" class="tooltip input-field required-field-inscription" placeholder="Abonnement *" title="Veuillez saisir l'abonnement que vous voulez souscrire" required>
-						<option value="">Sélectionnez votre abonnement</option>
+						<option value="" disabled selected hidden class="select_placeholder">-- Sélectionnez votre abonnement --</option>
 
 						{% for abonnement in allAbonnements %}
 						<option value="{{ abonnement.libelle }}">{{ abonnement.libelle }}</option>
