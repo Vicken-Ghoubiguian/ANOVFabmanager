@@ -463,7 +463,7 @@ $(document).ready(function(){
 
                         $("#personne_morale_nom").val("");
 
-			document.getElementById("abonnement").selectedIndex = 0;
+			//document.getElementById("abonnement").selectedIndex = 0;
 
 			document.getElementById("personne_morale").checked = false
 			activerPersonneMorale(false)
@@ -516,7 +516,7 @@ $(document).ready(function(){
 					return false;
 				}
 
-				if(document.getElementById("abonnement").selectedIndex === 0)
+				/*if(document.getElementById("abonnement").selectedIndex === 0)
 				{
 					$("#abonnement").css("border-color", "#f8009b");
 					$("#abonnement").css("::placeholder", "#f8009b");
@@ -526,7 +526,7 @@ $(document).ready(function(){
 					$("#inscription_error_div").removeClass("hidden_div");
 
 					return false;
-				}
+				}*/
 
 				if(verif_var && document.getElementById("acceptation_des_conditions").checked == false)
 				{
@@ -557,7 +557,7 @@ $(document).ready(function(){
 				$("#telephone").val("");
                         	$("#personne_morale_nom").val("");
 
-				document.getElementById("abonnement").selectedIndex = 0;
+				//document.getElementById("abonnement").selectedIndex = 0;
 
 				document.getElementById("autorisation_communication").checked = false;
 				document.getElementById("autorisation_informations_depuis_fablab").checked = false;
