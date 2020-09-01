@@ -19,6 +19,20 @@ $(document).ready(function(){
 		var input_value = $(this).val();
 		var field_name = "";
 
+		if(document.getElementById("client_pret").selectedIndex === 0)
+		{
+
+			$("#client_pret").css("border-color", "#f8009b");
+
+			$("#inside_pret_enregistrement_error").text("Erreur: veuillez sélectionner le client");
+
+			$("#pret_enregistrement_error").removeClass("hidden_div");
+
+			verif_var = false;
+
+			return false;
+		}
+
 		if(input_value === "")
                 {
 
