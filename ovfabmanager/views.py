@@ -3,6 +3,10 @@ from django.shortcuts import redirect
 
 from .models import Abonnement
 from .models import Client
+from .models import Carte
+from .models import Type_de_client
+from .models import Abonnement
+from .models import Prestation
 
 allClients = Client.objects.all()
 allAbonnements = Abonnement.objects.all()
@@ -39,6 +43,12 @@ def form_treatments(request):
           print("\n Nom d'utilisateur = " + data.get("nom")  + "\n")
           print("\n Mot de passe = " + data.get("prenom")  + "\n")
           print("\n Et les autres champs ? À venir bientôt... \n")
+
+          #
+          nouveauClient = Client(nom_de_famille = data.get("nom"), prenom = data.get("prenom"), telephone = data.get("telephone"), adresse_email = data.get("adresse_email"), identifiant = data.get("nom_d_utilisateur"), mot_de_passe = data.get("mot_de_passe"), credit_client_en_temps = 0, carte = Carte.objects.get(id = 1), type_de_client = Type_de_client.objects.get(id = 1), abonnement = Abonnement.objects.get(id = 1), prestation = Prestation.objects.get(id = 1))
+
+          #
+          nouveauClient.save()
 
           #
           redirection_response = redirect("/")
