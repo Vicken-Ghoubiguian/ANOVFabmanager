@@ -45,7 +45,7 @@ def form_treatments(request):
           print("\n Et les autres champs ? À venir bientôt... \n")
 
           #
-          nouveauClient = Client(nom_de_famille = data.get("nom"), prenom = data.get("prenom"), telephone = data.get("telephone"), adresse_email = data.get("adresse_email"), identifiant = data.get("nom_d_utilisateur"), mot_de_passe = data.get("mot_de_passe"), credit_client_en_temps = 0, carte = Carte.objects.get(id = 1), type_de_client = Type_de_client.objects.get(id = 1), abonnement = Abonnement.objects.get(id = 1), prestation = Prestation.objects.get(id = 1))
+          nouveauClient = Client(nom_de_famille = data.get("nom"), prenom = data.get("prenom"), telephone = data.get("telephone"), adresse_email = data.get("adresse_email"), identifiant = data.get("nom_d_utilisateur"), mot_de_passe = data.get("mot_de_passe"), credit_client_en_temps = 0)
 
           #
           nouveauClient.save()

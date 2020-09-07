@@ -84,10 +84,10 @@ class Client(models.Model):
 	identifiant = models.CharField(max_length=50)
 	mot_de_passe = models.CharField(max_length=50)
 	credit_client_en_temps = models.IntegerField()
-	carte = models.ForeignKey(Carte, on_delete=models.CASCADE)
-	type_de_client = models.ForeignKey(Type_de_client, on_delete=models.CASCADE)
-	abonnement = models.ForeignKey(Abonnement, on_delete=models.CASCADE)
-	prestation = models.ForeignKey(Prestation, on_delete=models.CASCADE)
+	carte = models.ForeignKey(Carte, blank=True, null=True, on_delete=models.CASCADE)
+	type_de_client = models.ForeignKey(Type_de_client, blank=True, null=True, on_delete=models.CASCADE)
+	abonnement = models.ForeignKey(Abonnement, blank=True, null=True, on_delete=models.CASCADE)
+	prestation = models.ForeignKey(Prestation, blank=True, null=True, on_delete=models.CASCADE)
 
 class Panier(models.Model):
 	heure_de_pret = models.TimeField()
