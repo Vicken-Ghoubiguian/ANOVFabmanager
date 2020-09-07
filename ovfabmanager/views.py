@@ -9,7 +9,7 @@ from .models import Carte
 from .models import Type_de_client
 from .models import Prestation
 
-import hashlib
+import html, hashlib
 
 allClients = Client.objects.all()
 allAbonnements = Abonnement.objects.all()
