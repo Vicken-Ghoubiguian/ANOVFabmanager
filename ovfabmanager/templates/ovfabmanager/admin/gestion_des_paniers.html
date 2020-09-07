@@ -18,15 +18,17 @@
 				<th>Statut</th>
 			</thead>
 			<tbody>
-				<tr>
-					<td>1</td>
-					<td>2</td>
-					<td>3</td>
-					<td>4</td>
-					<td>5</td>
-                                       <td>6</td>
-				</tr>
-			</body>
+				{% for panier in allPaniers %}
+					<tr>
+						<td>{{ panier.id }}</td>
+						<td>{{ panier.client.nom }} {{ panier.client.prenom }}</td>
+						<td>3</td>
+						<td>{{ panier.heure_de_pret }}</td>
+						<td>{{ panier.heure_de_retour }}</td>
+                                       		<td>6</td>
+					</tr>
+				{% endfor %}
+			</tbody>
 		</table>
 	</div>
 	<div id="enregistrement_d_un_pret">

@@ -2,14 +2,15 @@ from django.shortcuts import render
 from django.shortcuts import redirect
 
 from .models import Abonnement
+from .models import Panier
 from .models import Client
 from .models import Carte
 from .models import Type_de_client
-from .models import Abonnement
 from .models import Prestation
 
 allClients = Client.objects.all()
 allAbonnements = Abonnement.objects.all()
+allPaniers = Panier.objects.all()
 
 # For forms treatments...
 def form_treatments(request):
