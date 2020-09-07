@@ -56,7 +56,9 @@
 					<select name="client_pret" placeholder="Nom du client*" class="tooltip input-field required-field-enregistrement-panier" id="client_pret" title="Veuillez sélectionner le client concerné" required>
 						<option value="" disabled selected hidden class="select_placeholder">Sélectionnez le client*</option>
 						{% for client in allClients %}
-							<option value="0">{{ client.nom_de_famille }} {{ client.prenom }}</option>
+							{% if client.carte != Null %}
+								<option value="{{ client.carte.numero_de_carte }}">{{ client.nom_de_famille }} {{ client.prenom }}</option>
+							{% endif %}
 						{% endfor %}
 					</select>
 				</div>
@@ -97,7 +99,9 @@
                                         <select name="client_retour" placeholder="Nom du client*" class="tooltip input-field" id="client_retour" title="Veuillez sélectionner le client concerné" required>
                         <option value="" disabled selected hidden class="select_placeholder">Sélectionnez le client*</option>
 						{% for client in allClients %}
-							<option value="{{ client.numero_de_client }}">{{ client.nom_de_famille }} {{ client.prenom }}</option>
+							{% if client.carte != Null %}
+								<option value="{{ client.carte.numero_de_carte }}">{{ client.nom_de_famille }} {{ client.prenom }}</option>
+							{% endif %}
 						{% endfor %}
 					</select>
                                 </div>
