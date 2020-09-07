@@ -9,6 +9,8 @@ from .models import Carte
 from .models import Type_de_client
 from .models import Prestation
 
+import hashlib
+
 allClients = Client.objects.all()
 allAbonnements = Abonnement.objects.all()
 allPaniers = Panier.objects.all()
@@ -43,7 +45,10 @@ def form_treatments(request):
       elif data.get("form_type") == "inscription":
 
           #
-          nouveauClient = Client(nom_de_famille = data.get("nom").upper(), prenom = data.get("prenom"), telephone = data.get("telephone"), adresse_email = data.get("adresse_email"), identifiant = data.get("nom_d_utilisateur"), mot_de_passe = data.get("mot_de_passe"), credit_client_en_temps = 0)
+          motDePasse = hashlib.md5(str.encode(data.get("mot_de_passe")))
+
+          #
+          nouveauClient = Client(nom_de_famille = data.get("nom").upper(), prenom = data.get("prenom"), telephone = data.get("telephone"), adresse_email = data.get("adresse_email"), identifiant = data.get("nom_d_utilisateur"), mot_de_passe = motDePasse.hexdigest(), credit_client_en_temps = 0)
 
           #
           nouveauClient.save()
