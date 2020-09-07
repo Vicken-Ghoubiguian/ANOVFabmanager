@@ -42,13 +42,8 @@ def form_treatments(request):
       # Traitements pour le formulaire d'inscription...
       elif data.get("form_type") == "inscription":
 
-          print("\n ----------Formulaire: " + data.get("form_type") + "----------\n")
-          print("\n Nom d'utilisateur = " + data.get("nom")  + "\n")
-          print("\n Mot de passe = " + data.get("prenom")  + "\n")
-          print("\n Et les autres champs ? À venir bientôt... \n")
-
           #
-          nouveauClient = Client(nom_de_famille = data.get("nom"), prenom = data.get("prenom"), telephone = data.get("telephone"), adresse_email = data.get("adresse_email"), identifiant = data.get("nom_d_utilisateur"), mot_de_passe = data.get("mot_de_passe"), credit_client_en_temps = 0)
+          nouveauClient = Client(nom_de_famille = data.get("nom").upper(), prenom = data.get("prenom"), telephone = data.get("telephone"), adresse_email = data.get("adresse_email"), identifiant = data.get("nom_d_utilisateur"), mot_de_passe = data.get("mot_de_passe"), credit_client_en_temps = 0)
 
           #
           nouveauClient.save()
