@@ -57,7 +57,7 @@ class Qualification(models.Model):
 	evenement = models.ForeignKey(Evenement, on_delete=models.CASCADE)
 
 class Prestation(models.Model):
-	libele = models.CharField(max_length=100)
+	libelle = models.CharField(max_length=100)
 	descriptif = models.CharField(max_length=500)
 	cout_en_euros = models.IntegerField()
 	date_de_livraison = models.DateField()
