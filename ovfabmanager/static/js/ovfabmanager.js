@@ -208,6 +208,10 @@ $(document).ready(function(){
 
 	document.getElementById("nouveau_produit").checked = false;
 
+	$("#outil").val("");
+
+	$("#description_outil").val("");
+
 	$("#fabricant").val("");
 
         $("#adresse_email_fabricant").val("");

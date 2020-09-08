@@ -89,7 +89,7 @@ def form_treatments(request):
           if data.get("nouveau_produit") == 'on':
 
               #
-              nouvelOutil = Outil(libelle = "outil", description = "description", fabricant = data.get("fabricant"), fournisseur = data.get("fournisseur"))
+              nouvelOutil = Outil(libelle = data.get("outil"), description = data.get("description_outil"), fabricant = data.get("fabricant"), fournisseur = data.get("fournisseur"))
 
               #
               nouvelOutil.save()
