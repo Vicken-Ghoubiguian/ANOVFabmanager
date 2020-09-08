@@ -8,6 +8,7 @@ from .models import Client
 from .models import Carte
 from .models import Type_de_client
 from .models import Prestation
+from .models import Outil
 
 import hashlib
 
@@ -15,6 +16,7 @@ allClients = Client.objects.all()
 allAbonnements = Abonnement.objects.all()
 allPaniers = Panier.objects.all()
 allArticles = Article.objects.all()
+allOutils = Outil.objects.all()
 
 # For forms treatments...
 def form_treatments(request):
@@ -153,7 +155,7 @@ def gestion_des_paniers(request):
     return render(request, 'ovfabmanager/index.html', {'afficher_erreur': False, 'type_erreur': None, 'template_demandee': 'gestion_des_paniers', 'allAbonnements': allAbonnements, 'allClients': allClients, 'allPaniers': allPaniers, 'allArticles': allArticles})
 
 def gestion_des_stocks(request):
-    return render(request, 'ovfabmanager/index.html', {'afficher_erreur': False, 'type_erreur': None, 'template_demandee': 'gestion_des_stocks', 'allAbonnements': allAbonnements, 'allArticles': allArticles})
+    return render(request, 'ovfabmanager/index.html', {'afficher_erreur': False, 'type_erreur': None, 'template_demandee': 'gestion_des_stocks', 'allAbonnements': allAbonnements, 'allArticles': allArticles, 'allOutils': allOutils})
 
 def gerer_le_calendrier(request):
     return render(request, 'ovfabmanager/index.html', {'afficher_erreur': False, 'type_erreur': None, 'template_demandee': 'gerer_le_calendrier', 'allAbonnements': allAbonnements})

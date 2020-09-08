@@ -211,18 +211,26 @@ $(document).ready(function(){
 	if(document.getElementById("nouveau_produit").checked == true)
 	{
 
-		$("#fabricant").addClass("required-field-enregistrement_produit")
+		$("#fabricant").addClass("required-field-enregistrement_produit");
 
-                $("#fournisseur").addClass("required-field-enregistrement_produit")
+                $("#fournisseur").addClass("required-field-enregistrement_produit");
+
+		$("#type_d_objet").removeClass("required-field-enregistrement_produit");
+
+		document.getElementById("type_d_objet").disabled = true;
 
 		$("#enregistrer_nouveau_produit").fadeIn("slow");
 	}
 	else
 	{
 
-		$("#fabricant").removeClass("required-field-enregistrement_produit")
+		$("#fabricant").removeClass("required-field-enregistrement_produit");
 
-		$("#fournisseur").removeClass("required-field-enregistrement_produit")
+		$("#fournisseur").removeClass("required-field-enregistrement_produit");
+
+		$("#type_d_objet").addClass("required-field-enregistrement_produit");
+
+		document.getElementById("type_d_objet").disabled = false;
 
 		$("#enregistrer_nouveau_produit").fadeOut("slow");
 	}
