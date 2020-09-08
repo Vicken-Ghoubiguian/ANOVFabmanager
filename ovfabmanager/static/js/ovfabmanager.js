@@ -132,7 +132,8 @@ $(document).ready(function(){
 
   $("#enregistrement_produit_validation").click(function(){
 
-	var verif_var = true;
+	var verif_var_1 = true;
+	var verif_var_2 = true;
 
 	$(":input.required-field-enregistrement_produit").each(function(){
 
@@ -153,38 +154,41 @@ $(document).ready(function(){
 
 			$("#product_error_div").removeClass("hidden_div");
 
-			verif_var = false;
+			verif_var_1 = false;
 
 			return false;
 		}
 	});
 
-	if(document.getElementById("nouveau_produit").checked === false && document.getElementById("type_d_objet").value === "")
+	if(verif_var_1)
 	{
+		if(document.getElementById("nouveau_produit").checked === false && document.getElementById("type_d_objet").value === "")
+		{
 
-		$("#type_d_objet").css("border-color", "#f8009b");
-		$("#type_d_objet").css("::placeholder", "#f8009b");
+			$("#type_d_objet").css("border-color", "#f8009b");
+			$("#type_d_objet").css("::placeholder", "#f8009b");
 
-		field_name = $("#type_d_objet").attr("placeholder");
+			field_name = $("#type_d_objet").attr("placeholder");
 
-		field_name = field_name.charAt(0).toLowerCase() + field_name.slice(1);
+			field_name = field_name.charAt(0).toLowerCase() + field_name.slice(1);
 
-		$("#inside_product_error_div").text("Erreur: " + field_name.slice(0,-1) + " invalide");
+			$("#inside_product_error_div").text("Erreur: " + field_name.slice(0,-1) + " invalide");
 
-		$("#product_error_div").removeClass("hidden_div");
+			$("#product_error_div").removeClass("hidden_div");
 
-		verif_var = false;
+			verif_var_2 = false;
 
-		return false;
-	}
+			return false;
+		}
 
-	if(verif_var)
-	{
-		$("#product_error_div").addClass("hidden_div");
+		if(verif_var_2)
+		{
+			$("#product_error_div").addClass("hidden_div");
 
-		$(":input.required-field-enregistrement_produit").css("border-color","#ccc");
+			$(":input.required-field-enregistrement_produit").css("border-color","#ccc");
 
-		$("#formulaire_enregistrement_stock").submit();
+			$("#formulaire_enregistrement_stock").submit();
+		}
 	}
   });
 
