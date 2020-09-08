@@ -17,8 +17,10 @@ class Type_machine(models.Model):
 
 class Entreprise(models.Model):
 	nom = models.CharField(max_length=50)
-	adresse_postale = models.CharField(max_length=50)
-	adresse_email = models.CharField(max_length=50)
+	adresse_postale = models.CharField(blank=True, null=True, max_length=50)
+	adresse_email = models.CharField(blank=True, null=True, max_length=50)
+	telephone = models.CharField(blank=True, null=True, max_length=20)
+	site_web = models.CharField(blank=True, null=True, max_length=100)
 
 class Type_d_outil(models.Model):
 	libelle = models.CharField(max_length=100)
