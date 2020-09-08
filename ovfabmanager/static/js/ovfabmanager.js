@@ -137,6 +137,13 @@ $(document).ready(function(){
 
 	$(":input.required-field-enregistrement_produit").each(function(){
 
+		$(this).css("border-color", "#CCCCCC");
+		$(this).css("::placeholder", "#CCCCCC");
+
+	});
+
+	$(":input.required-field-enregistrement_produit").each(function(){
+
 		var input_value = $(this).val();
 		var field_name = "";
 
