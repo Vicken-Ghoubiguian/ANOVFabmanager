@@ -107,10 +107,14 @@ def form_treatments(request):
           else:
           
               #
+              outilCorrespondant = Outil.objects.get(pk = data.get("type_d_objet"))
               
+              #
+              date_d_achat = datetime.datetime.strptime(data.get("date_d_achat"), '%d/%m/%Y').strftime("%Y-%m-%d")
+              date_de_livraison = datetime.datetime.strptime(data.get("date_de_livraison"), '%d/%m/%Y').strftime("%Y-%m-%d")
 
               #
-              nouvelArticle = Article(code_barre = data.get("codebarre"), libelle = "libelle", date_d_achat = data.get("date_d_achat"), date_de_livraison = data.get("date_de_livraison"), outil = data.get("type_d_objet"))
+              nouvelArticle = Article(code_barre = data.get("codebarre"), libelle = "libelle", date_d_achat = date_d_achat, date_de_livraison = date_de_livraison, outil = outilCorrespondant)
 
               #
               nouvelArticle.save()
