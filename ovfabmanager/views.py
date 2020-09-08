@@ -89,7 +89,7 @@ def form_treatments(request):
           print("\n Code barre = " + data.get("codebarre") + "\n")
           print("\n Date d'achat = " + data.get("date_d_achat") + "\n")
           print("\n Date de livraison = " + data.get("date_de_livraison") + "\n")
-          print("\n Type d'objet (numéro) = " + data.get("type_d_objet") + "\n")
+          #print("\n Type d'objet (numéro) = " + data.get("type_d_objet") + "\n")
 
           if data.get("nouveau_produit") == 'on':
 
