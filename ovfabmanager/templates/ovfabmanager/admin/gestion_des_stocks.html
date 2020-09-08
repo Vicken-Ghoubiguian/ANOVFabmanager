@@ -57,7 +57,7 @@
                                         <input type="text" placeholder="Date de livraison*" name="date_de_livraison" class="datepicker_amical tooltip input-field required-field-enregistrement_produit" id="date_de_livraison" title="Veuillez renseigner la date de livraison">
 				</div>
 				<div class="input-container">
-					<i class="fa fa-box fa-2x icon"></i>
+					<i class="fa fa-box fa-2x icon" id="icone_type_d_objet"></i>
 					<select name="type_d_objet" placeholder="Type d'objet*" class="tooltip input-field required-field-enregistrement_produit" id="type_d_objet" title="Veuillez renseigner le type de l'objet">
 						<option value="" disabled selected hidden class="select_placeholder">Sélectionnez l'outil*</option>
 							{% for outil in allOutils %}

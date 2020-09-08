@@ -217,6 +217,10 @@ $(document).ready(function(){
 
 		$("#type_d_objet").removeClass("required-field-enregistrement_produit");
 
+		$("#type_d_objet").addClass("disabled_element");
+
+		$("#icone_type_d_objet").addClass("disabled_element");
+
 		document.getElementById("type_d_objet").disabled = true;
 
 		$("#enregistrer_nouveau_produit").fadeIn("slow");
@@ -229,6 +233,10 @@ $(document).ready(function(){
 		$("#fournisseur").removeClass("required-field-enregistrement_produit");
 
 		$("#type_d_objet").addClass("required-field-enregistrement_produit");
+
+		$("#type_d_objet").removeClass("disabled_element");
+
+		$("#icone_type_d_objet").removeClass("disabled_element");
 
 		document.getElementById("type_d_objet").disabled = false;
 

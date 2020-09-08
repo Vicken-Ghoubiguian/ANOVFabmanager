@@ -1,3 +1,7 @@
+.disabled_element {
+	filter: grayscale(60%);
+}
+
 .jqTabs {
   margin-top: 60px;
 }
