@@ -149,7 +149,7 @@ $(document).ready(function(){
 
 			field_name = field_name.charAt(0).toLowerCase() + field_name.slice(1);
 
-			$("#inside_product_error_div").text("Erreur: " + field_name.slice(0,-1) + " invalide")
+			$("#inside_product_error_div").text("Erreur: " + field_name.slice(0,-1) + " invalide");
 
 			$("#product_error_div").removeClass("hidden_div");
 
@@ -158,6 +158,25 @@ $(document).ready(function(){
 			return false;
 		}
 	});
+
+	if(document.getElementById("nouveau_produit").checked === false && document.getElementById("type_d_objet").value === "")
+	{
+
+		$("#type_d_objet").css("border-color", "#f8009b");
+		$("#type_d_objet").css("::placeholder", "#f8009b");
+
+		field_name = $("#type_d_objet").attr("placeholder");
+
+		field_name = field_name.charAt(0).toLowerCase() + field_name.slice(1);
+
+		$("#inside_product_error_div").text("Erreur: " + field_name.slice(0,-1) + " invalide");
+
+		$("#product_error_div").removeClass("hidden_div");
+
+		verif_var = false;
+
+		return false;
+	}
 
 	if(verif_var)
 	{
