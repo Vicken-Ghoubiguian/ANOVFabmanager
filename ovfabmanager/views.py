@@ -98,7 +98,7 @@ def form_treatments(request):
               date_de_livraison = datetime.datetime.strptime(data.get("date_de_livraison"), '%d/%m/%Y').strftime("%Y-%m-%d")
 
               #
-              nouvelArticle = Article(code_barre = data.get("codebarre"), libelle = "libelle", date_d_achat = date_d_achat, date_de_livraison = date_de_livraison, outil = nouvelOutil)
+              nouvelArticle = Article(code_barre = data.get("codebarre"), libelle = data.get("libelle"), date_d_achat = date_d_achat, date_de_livraison = date_de_livraison, outil = nouvelOutil)
 
               #
               nouvelArticle.save()
@@ -114,7 +114,7 @@ def form_treatments(request):
               date_de_livraison = datetime.datetime.strptime(data.get("date_de_livraison"), '%d/%m/%Y').strftime("%Y-%m-%d")
 
               #
-              nouvelArticle = Article(code_barre = data.get("codebarre"), libelle = "libelle", date_d_achat = date_d_achat, date_de_livraison = date_de_livraison, outil = outilCorrespondant)
+              nouvelArticle = Article(code_barre = data.get("codebarre"), libelle = data.get("libelle"), date_d_achat = date_d_achat, date_de_livraison = date_de_livraison, outil = outilCorrespondant)
 
               #
               nouvelArticle.save()
