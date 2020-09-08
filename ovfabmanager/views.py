@@ -10,7 +10,7 @@ from .models import Type_de_client
 from .models import Prestation
 from .models import Outil
 
-import hashlib
+import hashlib, datetime
 
 allClients = Client.objects.all()
 allAbonnements = Abonnement.objects.all()
@@ -85,30 +85,61 @@ def form_treatments(request):
       elif data.get("form_type") == "enregistrement_produit":
 
           #
-          print("\n ----------Formulaire: " + data.get("form_type") + "----------\n")
-          print("\n Code barre = " + data.get("codebarre") + "\n")
-          print("\n Date d'achat = " + data.get("date_d_achat") + "\n")
-          print("\n Date de livraison = " + data.get("date_de_livraison") + "\n")
-          #print("\n Type d'objet (numéro) = " + data.get("type_d_objet") + "\n")
-
           if data.get("nouveau_produit") == 'on':
 
-            #
-            print("\n Nouveau produit ? = " + data.get("nouveau_produit") + "\n")
+              #
+              nouvelOutil = Outil(libelle = "outil", description = "description", fabricant = data.get("fabricant"), fournisseur = data.get("fournisseur"))
+
+              #
+              nouvelOutil.save()
+              
+              #
+              date_d_achat = datetime.datetime.strptime(data.get("date_d_achat"), '%d/%m/%Y').strftime("%Y-%m-%d")
+              date_de_livraison = datetime.datetime.strptime(data.get("date_de_livraison"), '%d/%m/%Y').strftime("%Y-%m-%d")
+
+              #
+              nouvelArticle = Article(code_barre = data.get("codebarre"), libelle = "libelle", date_d_achat = date_d_achat, date_de_livraison = date_de_livraison, outil = nouvelOutil)
+
+              #
+              nouvelArticle.save()
+
+          #
+          else:
+          
+              #
+              
+
+              #
+              nouvelArticle = Article(code_barre = data.get("codebarre"), libelle = "libelle", date_d_achat = data.get("date_d_achat"), date_de_livraison = data.get("date_de_livraison"), outil = data.get("type_d_objet"))
+
+              #
+              nouvelArticle.save()
+
+          #
+          #print("\n ----------Formulaire: " + data.get("form_type") + "----------\n")
+          #print("\n Code barre = " + data.get("codebarre") + "\n")
+          #print("\n Date d'achat = " + data.get("date_d_achat") + "\n")
+          #print("\n Date de livraison = " + data.get("date_de_livraison") + "\n")
+          #print("\n Type d'objet (numéro) = " + data.get("type_d_objet") + "\n")
+
+          #if data.get("nouveau_produit") == 'on':
 
             #
-            print("\n Fabricant = " + data.get("fabricant") + "\n")
-            print("\n Adresse email du fabricant = " + data.get("adresse_email_fabricant") + "\n")
-            print("\n Adresse postale du fabricant = " + data.get("adresse_postale_fabricant") + "\n")
-            print("\n Numéro de téléphone du fabricant = " + data.get("numero_telephone_fabricant") + "\n")
-            print("\n Site web du fabricant = " + data.get("site_web_fabricant") + "\n")
+            #print("\n Nouveau produit ? = " + data.get("nouveau_produit") + "\n")
 
             #
-            print("\n Fournisseur = " + data.get("fournisseur") + "\n")
-            print("\n Adresse email du fournisseur = " + data.get("adresse_email_fournisseur") + "\n")
-            print("\n Adresse postale du fournisseur = " + data.get("adresse_postale_fournisseur") + "\n")
-            print("\n Numéro de téléphone du fournisseur = " + data.get("numero_telephone_fournisseur") + "\n")
-            print("\n Site web du fournisseur = " + data.get("site_web_fournisseur") + "\n")
+            #print("\n Fabricant = " + data.get("fabricant") + "\n")
+            #print("\n Adresse email du fabricant = " + data.get("adresse_email_fabricant") + "\n")
+            #print("\n Adresse postale du fabricant = " + data.get("adresse_postale_fabricant") + "\n")
+            #print("\n Numéro de téléphone du fabricant = " + data.get("numero_telephone_fabricant") + "\n")
+            #print("\n Site web du fabricant = " + data.get("site_web_fabricant") + "\n")
+
+            #
+            #print("\n Fournisseur = " + data.get("fournisseur") + "\n")
+            #print("\n Adresse email du fournisseur = " + data.get("adresse_email_fournisseur") + "\n")
+            #print("\n Adresse postale du fournisseur = " + data.get("adresse_postale_fournisseur") + "\n")
+            #print("\n Numéro de téléphone du fournisseur = " + data.get("numero_telephone_fournisseur") + "\n")
+            #print("\n Site web du fournisseur = " + data.get("site_web_fournisseur") + "\n")
 
           #
           redirection_response = redirect("/gestion_des_stocks#enregistrer_un_article_dans_les_stocks")
