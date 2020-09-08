@@ -20,11 +20,16 @@
 				{% for article in allArticles %}
 					<tr>
 						<td>{{ article.libelle }}</td>
-						<td>{{ article.outil.type_d_outil.libelle }}</td>
-						<td>{{ article.outil.type_d_outil.fabricant }}</td>
-						<td>{{ article.outil.type_d_outil.fournisseur }}</td>
-						<td>{{ article.outil.type_d_outil.date_d_achat }}</td>
-                                      		<td>6</td>
+						<td>{{ article.outil.libelle }}</td>
+						<td>{{ article.outil.fabricant }}</td>
+						<td>{{ article.outil.fournisseur }}</td>
+						<td>{{ article.date_d_achat }}</td>
+
+						{% if article.etat is None %}
+                                      			<td>Non renseigné</td>
+						{% else %}
+							<td>{{ article.etat }}</td>
+						{% endif %}
 					</tr>
 				{% endfor %}
 			</tbody>
@@ -75,6 +80,15 @@
 				<div id="enregistrer_nouveau_produit" hidden>
                                         <fieldset>
                                                 <legend>Enregistrement d'un nouveau produit</legend>
+						<div class="input-container">
+							<i class="fa fa-toolbox fa-2x icon"></i>
+							<input type="text" placeholder="Outil*" name="outil" id="outil" class="tooltip input-field" title="Renseigner le libellé de l'outil">
+						</div>
+						<div class="input-container">
+							<i class="fa fa-file fa-2x icon"></i>
+							<input type="text" placeholder="Déscription*" name="description_outil" id="description_outil" class="tooltip input-field" title="Renseigner la déscription de l'outil">
+						</div>
+						<hr>
 						<div class="input-container">
 							<i class="fa fa-industry fa-2x icon"></i>
 							<input type="text" placeholder="Fabricant*" name="fabricant" id="fabricant" class="tooltip input-field" title="Renseigner le fabricant">

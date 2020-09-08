@@ -9,6 +9,7 @@ from .models import Carte
 from .models import Type_de_client
 from .models import Prestation
 from .models import Outil
+from .models import Etat
 
 import hashlib, datetime
 

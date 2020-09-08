@@ -234,6 +234,10 @@ $(document).ready(function(){
 	if(document.getElementById("nouveau_produit").checked == true)
 	{
 
+		$("#outil").addClass("required-field-enregistrement_produit");
+
+		$("#description_outil").addClass("required-field-enregistrement_produit");
+
 		$("#fabricant").addClass("required-field-enregistrement_produit");
 
                 $("#fournisseur").addClass("required-field-enregistrement_produit");
@@ -250,6 +254,10 @@ $(document).ready(function(){
 	}
 	else
 	{
+
+		$("#outil").removeClass("required-field-enregistrement_produit");
+
+		$("#description_outil").removeClass("required-field-enregistrement_produit");
 
 		$("#fabricant").removeClass("required-field-enregistrement_produit");
 

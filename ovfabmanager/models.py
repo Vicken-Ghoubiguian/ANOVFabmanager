@@ -15,6 +15,9 @@ class Type_machine(models.Model):
 	libelle = models.CharField(max_length=100)
 	descriptif = models.CharField(max_length=500)
 
+class Etat(models.Model):
+	libelle = models.CharField(max_length=50)
+
 class Entreprise(models.Model):
 	nom = models.CharField(max_length=50)
 	adresse_postale = models.CharField(blank=True, null=True, max_length=50)
@@ -90,10 +93,9 @@ class Panier(models.Model):
 
 class Outil(models.Model):
 	libelle = models.CharField(max_length=100)
-	description = models.CharField(max_length=500)
+	description = models.CharField(max_length=100)
 	fiche_technique = models.CharField(blank=True, null=True, max_length=500)
 	machine = models.ForeignKey(Machine, blank=True, null=True, on_delete=models.CASCADE)
-	date_d_achat = models.DateField(blank=True, null=True)
 	date_de_peremption = models.DateField(blank=True, null=True)
 	fabricant = models.CharField(max_length=100)
 	fournisseur = models.CharField(max_length=100)
@@ -105,6 +107,7 @@ class Article(models.Model):
 	date_de_livraison = models.DateField(blank=True, null=True)
 	outil = models.ForeignKey(Outil, on_delete=models.CASCADE)
 	panier = models.ForeignKey(Panier, blank=True, null=True, on_delete=models.CASCADE)
+	etat = models.ForeignKey(Etat, blank=True, null=True, on_delete=models.CASCADE)
 
 class Possede(models.Model):
 	client = models.ForeignKey(Client, on_delete=models.CASCADE)
