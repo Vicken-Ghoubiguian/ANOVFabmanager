@@ -530,13 +530,17 @@ $(document).ready(function(){
 				{
 					if(allSerializedArticles[index]["fields"]["code_barre"] === $("#code_barre_de_l_article").val() && allSerializedArticles[index]["fields"]["panier"] === null)
 					{
-						console.log("Victoire....");
+						//console.log("Victoire....");
+
+						var liste = $("#liste_des_articles_a_preter").val();
+
+						liste = liste + allSerializedArticles[index]["fields"]["libelle"] + " " + "(" + allSerializedArticles[index]["fields"]["code_barre"] + ")<br>";
+
+						$("#liste_des_articles_a_preter").val(liste);
 
 						$(this).dialog("close");
 					}
 				}
-
-				
                         },
                         "Réinitialiser": function()
                         {
