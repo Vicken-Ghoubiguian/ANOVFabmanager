@@ -532,7 +532,6 @@ $(document).ready(function(){
                 buttons: {
                         "Valider": function()
                         {
-				var verif = false
 				var numeroElement = -1
 
 				for(var index = 0; index < allSerializedArticles.length; index++)
@@ -542,12 +541,10 @@ $(document).ready(function(){
 						var liste = $("#liste_des_articles_a_preter").val();
 
 						numeroElement = index
-
-						verif = true;
 					}
 				}
 
-				if(verif)
+				if(numeroElement >= 0)
 				{
 					liste = liste + allSerializedArticles[numeroElement]["fields"]["libelle"] + " " + "(" + allSerializedArticles[numeroElement]["fields"]["code_barre"] + ")," + "\n";
 
