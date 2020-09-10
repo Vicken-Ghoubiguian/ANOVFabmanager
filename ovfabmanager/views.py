@@ -15,6 +15,7 @@ from .models import Etat
 import hashlib, datetime
 
 allClients = Client.objects.all()
+allCartes = Carte.objects.all()
 allAbonnements = Abonnement.objects.all()
 allPaniers = Panier.objects.all()
 allArticles = Article.objects.all()
@@ -22,10 +23,11 @@ allOutils = Outil.objects.all()
 
 allSerializedArticles = serializers.serialize('json', allArticles)
 allSerializedClients = serializers.serialize('json', allClients)
+allSerializedCartes = serializers.serialize('json', allCartes)
 
 #
 def contextFunction(afficher_erreur, type_erreur, template_demandee):
-    return {'afficher_erreur': afficher_erreur, 'type_erreur': type_erreur, 'template_demandee': template_demandee, 'allAbonnements': allAbonnements, 'allSerializedArticles': allSerializedArticles, 'allSerializedClients': allSerializedClients, 'allClients': allClients, 'allPaniers': allPaniers, 'allArticles': allArticles, 'allOutils': allOutils}
+    return {'afficher_erreur': afficher_erreur, 'type_erreur': type_erreur, 'template_demandee': template_demandee, 'allAbonnements': allAbonnements, 'allSerializedArticles': allSerializedArticles, 'allSerializedClients': allSerializedClients, 'allSerializedCartes': allSerializedCartes, 'allClients': allClients, 'allCartes': allCartes, 'allPaniers': allPaniers, 'allArticles': allArticles, 'allOutils': allOutils}
 
 # For forms treatments...
 def form_treatments(request):

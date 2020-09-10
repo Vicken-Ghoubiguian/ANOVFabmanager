@@ -114,8 +114,14 @@
 			var allSerializedArticles = "{{allSerializedArticles}}";
 			allSerializedArticles = JSON.parse(allSerializedArticles.replace(/&quot;/g,'"'));
 
-			var allSerializedClients = "{{allSerializedArticles}}";
+			var allSerializedClients = "{{allSerializedClients}}";
 			allSerializedClients = JSON.parse(allSerializedClients.replace(/&quot;/g,'"'));
+
+			var allSerializedCartes = "{{allSerializedCartes}}";
+			allSerializedCartes = JSON.parse(allSerializedCartes.replace(/&quot;/g,'"'));
+
+			console.log(allSerializedClients[0]["fields"]);
+			console.log(allSerializedCartes[0]["fields"]);
 		</script>
 		<script src="{% static 'js/ovfabmanager.js' %}"></script>
 	</body>

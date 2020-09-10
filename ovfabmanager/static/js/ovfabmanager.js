@@ -489,10 +489,18 @@ $(document).ready(function(){
                 },
 		close: function(event, ui){
 			$("#client_card").val("");
+
+			$("#client_carte_erreur_div").addClass("hidden_div");
+
+			$("#inside_client_carte_erreur_div").text("");
+
+			$("#client_card").css("border-color", "#ccc");
 		},
 		buttons: {
 			"Valider": function()
 			{
+				var numeroElement = -1
+
 				$("#client_retour").val($("#client_card").val());
 
 				$(this).dialog("close");
@@ -500,6 +508,12 @@ $(document).ready(function(){
 			"Réinitialiser": function()
 			{
 				$("#client_card").val("");
+
+				$("#client_carte_erreur_div").addClass("hidden_div");
+
+				$("#inside_client_carte_erreur_div").text("");
+
+				$("#client_card").css("border-color", "#ccc");
 			},
 		}
 	});
@@ -693,18 +707,6 @@ $(document).ready(function(){
 					return false;
 				}
 
-				/*if(document.getElementById("abonnement").selectedIndex === 0)
-				{
-					$("#abonnement").css("border-color", "#f8009b");
-					$("#abonnement").css("::placeholder", "#f8009b");
-
-					$("#inside_inscription_error_div").text("Erreur: veuillez sélectionner un abonnement");
-
-					$("#inscription_error_div").removeClass("hidden_div");
-
-					return false;
-				}*/
-
 				if(verif_var && document.getElementById("acceptation_des_conditions").checked == false)
 				{
 					$("#inside_inscription_error_div").text("Erreur: veuillez accepter les conditions d'utilisation");
@@ -733,8 +735,6 @@ $(document).ready(function(){
 				$("#naissance").val("");
 				$("#telephone").val("");
                         	$("#personne_morale_nom").val("");
-
-				//document.getElementById("abonnement").selectedIndex = 0;
 
 				document.getElementById("autorisation_communication").checked = false;
 				document.getElementById("autorisation_informations_depuis_fablab").checked = false;
