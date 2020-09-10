@@ -522,27 +522,54 @@ $(document).ready(function(){
                 },
                 close: function(event, ui){
                         $("#code_barre_de_l_article").val("");
+
+			$("#code_barre_erreur_div").addClass("hidden_div");
+
+			$("#inside_code_barre_erreur_div").text("");
+
+			$("#code_barre_de_l_article").css("border-color", "#ccc");
                 },
                 buttons: {
                         "Valider": function()
                         {
+				var verif = false
+
 				for(var index = 0; index < allSerializedArticles.length; index++)
 				{
 					if(allSerializedArticles[index]["fields"]["code_barre"] === $("#code_barre_de_l_article").val() && allSerializedArticles[index]["fields"]["panier"] === null)
 					{
 						var liste = $("#liste_des_articles_a_preter").val();
 
-						liste = liste + allSerializedArticles[index]["fields"]["libelle"] + " " + "(" + allSerializedArticles[index]["fields"]["code_barre"] + ")," + "\n";
-
-						$("#liste_des_articles_a_preter").val(liste);
-
-						$(this).dialog("close");
+						verif = true;
 					}
+				}
+
+				if(verif)
+				{
+					liste = liste + allSerializedArticles[index]["fields"]["libelle"] + " " + "(" + allSerializedArticles[index]["fields"]["code_barre"] + ")," + "\n";
+
+					$("#liste_des_articles_a_preter").val(liste);
+
+					$(this).dialog("close");
+				}
+				else
+				{
+					$("#code_barre_erreur_div").removeClass("hidden_div");
+
+					$("#inside_code_barre_erreur_div").text("Erreur: article non trouvé");
+
+					$("#code_barre_de_l_article").css("border-color", "#f8009b");
 				}
                         },
                         "Réinitialiser": function()
                         {
                                 $("#code_barre_de_l_article").val("");
+
+				$("#code_barre_erreur_div").addClass("hidden_div");
+
+				$("#inside_code_barre_erreur_div").text("");
+
+				$("#code_barre_de_l_article").css("border-color", "#ccc");
                         },
                 }
         });
