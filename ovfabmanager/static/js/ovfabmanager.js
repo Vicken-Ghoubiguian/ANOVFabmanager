@@ -504,6 +504,72 @@ $(document).ready(function(){
 		}
 	});
   });
+  
+  $("#code_barre_de_l_article_pour_emprunt").click(function(){
+        $("#identification_code_barre_article").dialog({
+                height: 800,
+                resizable: false,
+                width: 650,
+                resizable: false,
+                modal: true,
+                show: {
+                        effect: "size",
+                        duration: 1000
+                },
+                hide: {
+                        effect: "size",
+                        duration: 1000
+                },
+                close: function(event, ui){
+                        $("#code_barre_de_l_article").val("");
+                },
+                buttons: {
+                        "Valider": function()
+                        {
+                                //$("#").val($("#client_card").val());
+
+                                $(this).dialog("close");
+                        },
+                        "Réinitialiser": function()
+                        {
+                                $("#code_barre_de_l_article").val("");
+                        },
+                }
+        });
+  });
+
+  $("#code_barre_de_l_article_pour_retour").click(function(){
+        $("#identification_code_barre_article").dialog({
+                height: 800,
+                resizable: false,
+                width: 650,
+                resizable: false,
+                modal: true,
+                show: {
+                        effect: "size",
+                        duration: 1000
+                },
+                hide: {
+                        effect: "size",
+                        duration: 1000
+                },
+                close: function(event, ui){
+                        $("#code_barre_de_l_article").val("");
+                },
+                buttons: {
+                        "Valider": function()
+                        {
+                                //$("#").val($("#client_card").val());
+
+                                $(this).dialog("close");
+                        },
+                        "Réinitialiser": function()
+                        {
+                                $("#code_barre_de_l_article").val("");
+                        },
+                }
+        });
+  });
 
   $("#premier").click(function(){
         console.log("11111.....");
