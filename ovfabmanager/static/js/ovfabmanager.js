@@ -534,7 +534,7 @@ $(document).ready(function(){
 
 						var liste = $("#liste_des_articles_a_preter").val();
 
-						liste = liste + allSerializedArticles[index]["fields"]["libelle"] + " " + "(" + allSerializedArticles[index]["fields"]["code_barre"] + ")<br>";
+						liste = liste + allSerializedArticles[index]["fields"]["libelle"] + " " + "(" + allSerializedArticles[index]["fields"]["code_barre"] + ")" + "\n";
 
 						$("#liste_des_articles_a_preter").val(liste);
 
