@@ -504,7 +504,7 @@ $(document).ready(function(){
 		}
 	});
   });
-  
+
   $("#code_barre_de_l_article_pour_emprunt").click(function(){
         $("#identification_code_barre_article").dialog({
                 height: 800,
@@ -526,7 +526,7 @@ $(document).ready(function(){
                 buttons: {
                         "Valider": function()
                         {
-                                //$("#").val($("#client_card").val());
+				console.log(allSerializedArticles);
 
                                 $(this).dialog("close");
                         },
@@ -559,7 +559,7 @@ $(document).ready(function(){
                 buttons: {
                         "Valider": function()
                         {
-                                //$("#").val($("#client_card").val());
+                                console.log(allSerializedArticles);
 
                                 $(this).dialog("close");
                         },

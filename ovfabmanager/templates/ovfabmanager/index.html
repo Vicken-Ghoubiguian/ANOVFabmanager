@@ -110,6 +110,13 @@
 		{% include "ovfabmanager/shared/forms/client_carte_form.html" %}
 		{% include "ovfabmanager/shared/forms/code_barre_article_form.html" %}
 
+		<script>
+			var allSerializedArticles = "{{allSerializedArticles}}";
+			allSerializedArticles = JSON.parse(allSerializedArticles.replace(/&quot;/g,'"'));
+			console.log(allSerializedArticles[0]);
+			console.log(allSerializedArticles[0]["fields"]);
+			console.log(allSerializedArticles[0]["fields"]["code_barre"])
+		</script>
 		<script src="{% static 'js/ovfabmanager.js' %}"></script>
 	</body>
 </html>

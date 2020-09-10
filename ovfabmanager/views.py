@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.shortcuts import redirect
+from django.core import serializers
 
 from .models import Abonnement
 from .models import Article
@@ -18,6 +19,8 @@ allAbonnements = Abonnement.objects.all()
 allPaniers = Panier.objects.all()
 allArticles = Article.objects.all()
 allOutils = Outil.objects.all()
+
+allSerializedArticles = serializers.serialize('json', allArticles)
 
 # For forms treatments...
 def form_treatments(request):
@@ -137,7 +140,7 @@ def form_treatments(request):
 
 # For common
 def accueil(request):
-    return render(request, 'ovfabmanager/index.html', {'afficher_erreur': False, 'type_erreur': None, 'template_demandee': 'accueil', 'allAbonnements': allAbonnements})
+    return render(request, 'ovfabmanager/index.html', {'afficher_erreur': False, 'type_erreur': None, 'template_demandee': 'accueil', 'allAbonnements': allAbonnements, 'allSerializedArticles': allSerializedArticles})
 
 def calendrier(request):
     return render(request, 'ovfabmanager/index.html', {'afficher_erreur': False, 'type_erreur': None, 'template_demandee': 'calendrier', 'allAbonnements': allAbonnements})
@@ -162,7 +165,7 @@ def common_tarifs_et_abonnements(request):
 
 # For admin
 def gestion_des_paniers(request):
-    return render(request, 'ovfabmanager/index.html', {'afficher_erreur': False, 'type_erreur': None, 'template_demandee': 'gestion_des_paniers', 'allAbonnements': allAbonnements, 'allClients': allClients, 'allPaniers': allPaniers, 'allArticles': allArticles})
+    return render(request, 'ovfabmanager/index.html', {'afficher_erreur': False, 'type_erreur': None, 'template_demandee': 'gestion_des_paniers', 'allAbonnements': allAbonnements, 'allClients': allClients, 'allPaniers': allPaniers, 'allArticles': allArticles, 'allSerializedArticles': allSerializedArticles})
 
 def gestion_des_stocks(request):
     return render(request, 'ovfabmanager/index.html', {'afficher_erreur': False, 'type_erreur': None, 'template_demandee': 'gestion_des_stocks', 'allAbonnements': allAbonnements, 'allArticles': allArticles, 'allOutils': allOutils})
