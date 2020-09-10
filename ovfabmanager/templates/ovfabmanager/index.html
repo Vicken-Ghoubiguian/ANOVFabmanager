@@ -113,6 +113,9 @@
 		<script>
 			var allSerializedArticles = "{{allSerializedArticles}}";
 			allSerializedArticles = JSON.parse(allSerializedArticles.replace(/&quot;/g,'"'));
+
+			var allSerializedClients = "{{allSerializedArticles}}";
+			allSerializedClients = JSON.parse(allSerializedClients.replace(/&quot;/g,'"'));
 		</script>
 		<script src="{% static 'js/ovfabmanager.js' %}"></script>
 	</body>

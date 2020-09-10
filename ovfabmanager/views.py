@@ -21,10 +21,11 @@ allArticles = Article.objects.all()
 allOutils = Outil.objects.all()
 
 allSerializedArticles = serializers.serialize('json', allArticles)
+allSerializedClients = serializers.serialize('json', allClients)
 
 #
 def contextFunction(afficher_erreur, type_erreur, template_demandee):
-    return {'afficher_erreur': afficher_erreur, 'type_erreur': type_erreur, 'template_demandee': template_demandee, 'allAbonnements': allAbonnements, 'allSerializedArticles': allSerializedArticles, 'allClients': allClients, 'allPaniers': allPaniers, 'allArticles': allArticles, 'allOutils': allOutils}
+    return {'afficher_erreur': afficher_erreur, 'type_erreur': type_erreur, 'template_demandee': template_demandee, 'allAbonnements': allAbonnements, 'allSerializedArticles': allSerializedArticles, 'allSerializedClients': allSerializedClients, 'allClients': allClients, 'allPaniers': allPaniers, 'allArticles': allArticles, 'allOutils': allOutils}
 
 # For forms treatments...
 def form_treatments(request):
@@ -37,7 +38,6 @@ def form_treatments(request):
 
       print("POST method....\n")
 
-      #redirection_response = render(request, 'ovfabmanager/index.html', {'afficher_erreur': True, 'type_erreur': 'formulaire non trouvé', 'template_demandee': None})
       redirection_response = render(request, 'ovfabmanager/index.html', contextFunction(True, 'formulaire non trouvé', None))
 
       data = request.POST.copy()
@@ -135,7 +135,6 @@ def form_treatments(request):
 
           print("\n Formulaire non trouvé : désolé... \n")
 
-          #redirection_response = render(request, 'ovfabmanager/index.html', {'afficher_erreur': True, 'type_erreur': 'formulaire non trouvé', 'template_demandee': None, 'allAbonnements': allAbonnements})
           redirection_response = render(request, 'ovfabmanager/index.html', contextFunction(True, 'formulaire non trouvé', None))
 
     else:
@@ -226,5 +225,4 @@ def error_401(request, exception):
     return render(request, 'ovfabmanager/index.html', contextFunction(True, '401', None))
 
 def error_400(request, exception):
-    #return render(request, 'ovfabmanager/index.html', {'afficher_erreur': True, 'type_erreur': '400', 'template_demandee': None, 'allAbonnements': allAbonnements})
     return render(request, 'ovfabmanager/index.html', contextFunction(True, '400', None))
