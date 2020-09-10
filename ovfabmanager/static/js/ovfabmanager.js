@@ -533,6 +533,7 @@ $(document).ready(function(){
                         "Valider": function()
                         {
 				var verif = false
+				var numeroElement = -1
 
 				for(var index = 0; index < allSerializedArticles.length; index++)
 				{
@@ -540,13 +541,15 @@ $(document).ready(function(){
 					{
 						var liste = $("#liste_des_articles_a_preter").val();
 
+						numeroElement = index
+
 						verif = true;
 					}
 				}
 
 				if(verif)
 				{
-					liste = liste + allSerializedArticles[index]["fields"]["libelle"] + " " + "(" + allSerializedArticles[index]["fields"]["code_barre"] + ")," + "\n";
+					liste = liste + allSerializedArticles[numeroElement]["fields"]["libelle"] + " " + "(" + allSerializedArticles[numeroElement]["fields"]["code_barre"] + ")," + "\n";
 
 					$("#liste_des_articles_a_preter").val(liste);
 

@@ -22,6 +22,10 @@ allOutils = Outil.objects.all()
 
 allSerializedArticles = serializers.serialize('json', allArticles)
 
+#
+def contextFunction(afficher_erreur, type_erreur, template_demandee):
+    return {'afficher_erreur': afficher_erreur, 'type_erreur': type_erreur, 'template_demandee': template_demandee, 'allAbonnements': allAbonnements, 'allSerializedArticles': allSerializedArticles, 'allClients': allClients, 'allPaniers': allPaniers, 'allArticles': allArticles, 'allOutils': allOutils}
+
 # For forms treatments...
 def form_treatments(request):
 
@@ -33,7 +37,8 @@ def form_treatments(request):
 
       print("POST method....\n")
 
-      redirection_response = render(request, 'ovfabmanager/index.html', {'afficher_erreur': True, 'type_erreur': 'formulaire non trouvé', 'template_demandee': None})
+      #redirection_response = render(request, 'ovfabmanager/index.html', {'afficher_erreur': True, 'type_erreur': 'formulaire non trouvé', 'template_demandee': None})
+      redirection_response = render(request, 'ovfabmanager/index.html', contextFunction(True, 'formulaire non trouvé', None))
 
       data = request.POST.copy()
 
@@ -130,7 +135,8 @@ def form_treatments(request):
 
           print("\n Formulaire non trouvé : désolé... \n")
 
-          redirection_response = render(request, 'ovfabmanager/index.html', {'afficher_erreur': True, 'type_erreur': 'formulaire non trouvé', 'template_demandee': None, 'allAbonnements': allAbonnements})
+          #redirection_response = render(request, 'ovfabmanager/index.html', {'afficher_erreur': True, 'type_erreur': 'formulaire non trouvé', 'template_demandee': None, 'allAbonnements': allAbonnements})
+          redirection_response = render(request, 'ovfabmanager/index.html', contextFunction(True, 'formulaire non trouvé', None))
 
     else:
 
@@ -140,84 +146,85 @@ def form_treatments(request):
 
 # For common
 def accueil(request):
-    return render(request, 'ovfabmanager/index.html', {'afficher_erreur': False, 'type_erreur': None, 'template_demandee': 'accueil', 'allAbonnements': allAbonnements, 'allSerializedArticles': allSerializedArticles})
+    return render(request, 'ovfabmanager/index.html', contextFunction(False, None, 'accueil'))
 
 def calendrier(request):
-    return render(request, 'ovfabmanager/index.html', {'afficher_erreur': False, 'type_erreur': None, 'template_demandee': 'calendrier', 'allAbonnements': allAbonnements})
+    return render(request, 'ovfabmanager/index.html', contextFunction(False, None, 'calendrier'))
 
 def reserver_une_machine(request):
-    return render(request, 'ovfabmanager/index.html', {'afficher_erreur': False, 'type_erreur': None, 'template_demandee': 'reserver_une_machine', 'allAbonnements': allAbonnements})
+    return render(request, 'ovfabmanager/index.html', contextFunction(False, None, 'reserver_une_machine'))
 
 def reserver_un_espace(request):
-    return render(request, 'ovfabmanager/index.html', {'afficher_erreur': False, 'type_erreur': None, 'template_demandee': 'reserver_un_espace', 'allAbonnements': allAbonnements})
+    return render(request, 'ovfabmanager/index.html', contextFunction(False, None, 'reserver_un_espace'))
 
 def inscriptions_aux_formations(request):
-    return render(request, 'ovfabmanager/index.html', {'afficher_erreur': False, 'type_erreur': None, 'template_demandee': 'inscriptions_aux_formations', 'allAbonnements': allAbonnements})
+    return render(request, 'ovfabmanager/index.html', contextFunction(False, None, 'inscriptions_aux_formations'))
 
 def inscriptions_aux_evenements(request):
-    return render(request, 'ovfabmanager/index.html', {'afficher_erreur': False, 'type_erreur': None, 'template_demandee': 'inscriptions_aux_evenements', 'allAbonnements': allAbonnements})
+    return render(request, 'ovfabmanager/index.html', contextFunction(False, None, 'inscriptions_aux_evenements'))
 
 def galerie_de_projets(request):
-    return render(request, 'ovfabmanager/index.html', {'afficher_erreur': False, 'type_erreur': None, 'template_demandee': 'galerie_de_projets', 'allAbonnements': allAbonnements})
+    return render(request, 'ovfabmanager/index.html', contextFunction(False, None, 'galerie_de_projets'))
 
 def common_tarifs_et_abonnements(request):
-    return render(request, 'ovfabmanager/index.html', {'afficher_erreur': False, 'type_erreur': None, 'template_demandee': 'common_tarifs_et_abonnements', 'allAbonnements': allAbonnements})
+    return render(request, 'ovfabmanager/index.html', contextFunction(False, None, 'common_tarifs_et_abonnements'))
 
 # For admin
 def gestion_des_paniers(request):
-    return render(request, 'ovfabmanager/index.html', {'afficher_erreur': False, 'type_erreur': None, 'template_demandee': 'gestion_des_paniers', 'allAbonnements': allAbonnements, 'allClients': allClients, 'allPaniers': allPaniers, 'allArticles': allArticles, 'allSerializedArticles': allSerializedArticles})
+    return render(request, 'ovfabmanager/index.html', contextFunction(False, None, 'gestion_des_paniers'))
 
 def gestion_des_stocks(request):
-    return render(request, 'ovfabmanager/index.html', {'afficher_erreur': False, 'type_erreur': None, 'template_demandee': 'gestion_des_stocks', 'allAbonnements': allAbonnements, 'allArticles': allArticles, 'allOutils': allOutils})
+    return render(request, 'ovfabmanager/index.html', contextFunction(False, None, 'gestion_des_stocks'))
 
 def gerer_le_calendrier(request):
-    return render(request, 'ovfabmanager/index.html', {'afficher_erreur': False, 'type_erreur': None, 'template_demandee': 'gerer_le_calendrier', 'allAbonnements': allAbonnements})
+    return render(request, 'ovfabmanager/index.html', contextFunction(False, None, 'gerer_le_calendrier'))
 
 def gerer_les_utilisateurs(request):
-    return render(request, 'ovfabmanager/index.html', {'afficher_erreur': False, 'type_erreur': None, 'template_demandee': 'gerer_les_utilisateurs', 'allAbonnements': allAbonnements})
+    return render(request, 'ovfabmanager/index.html', contextFunction(False, None, 'gerer_les_utilisateurs'))
 
 def gerer_les_machines(request):
-    return render(request, 'ovfabmanager/index.html', {'afficher_erreur': False, 'type_erreur': None, 'template_demandee': 'gerer_les_machines', 'allAbonnements': allAbonnements})
+    return render(request, 'ovfabmanager/index.html', contextFunction(False, None, 'gerer_les_machines'))
 
 def gerer_les_factures(request):
-    return render(request, 'ovfabmanager/index.html', {'afficher_erreur': False, 'type_erreur': None, 'template_demandee': 'gerer_les_factures', 'allAbonnements': allAbonnements})
+    return render(request, 'ovfabmanager/index.html', contextFunction(False, None, 'gerer_les_factures'))
 
 def admin_tarifs_et_abonnements(request):
-    return render(request, 'ovfabmanager/index.html', {'afficher_erreur': False, 'type_erreur': None, 'template_demandee': 'admin_tarifs_et_abonnements', 'allAbonnements': allAbonnements})
+    return render(request, 'ovfabmanager/index.html', contextFunction(False, None, 'admin_tarifs_et_abonnements'))
 
 def gerer_les_espaces(request):
-    return render(request, 'ovfabmanager/index.html', {'afficher_erreur': False, 'type_erreur': None, 'template_demandee': 'gerer_les_espaces', 'allAbonnements': allAbonnements})
+    return render(request, 'ovfabmanager/index.html', contextFunction(False, None, 'gerer_les_espaces'))
 
 def suivi_des_formations(request):
-    return render(request, 'ovfabmanager/index.html', {'afficher_erreur': False, 'type_erreur': None, 'template_demandee': 'suivi_des_formations', 'allAbonnements': allAbonnements})
+    return render(request, 'ovfabmanager/index.html', contextFunction(False, None, 'suivi_des_formations'))
 
 def gerer_les_evenements(request):
-    return render(request, 'ovfabmanager/index.html', {'afficher_erreur': False, 'type_erreur': None, 'template_demandee': 'gerer_les_evenements', 'allAbonnements': allAbonnements})
+    return render(request, 'ovfabmanager/index.html', contextFunction(False, None, 'gerer_les_evenements'))
 
 def statistiques(request):
-    return render(request, 'ovfabmanager/index.html', {'afficher_erreur': False, 'type_erreur': None, 'template_demandee': 'statistiques', 'allAbonnements': allAbonnements})
+    return render(request, 'ovfabmanager/index.html', contextFunction(False, None, 'statistiques'))
 
 def personnalisation(request):
-    return render(request, 'ovfabmanager/index.html', {'afficher_erreur': False, 'type_erreur': None, 'template_demandee': 'personnalisation', 'allAbonnements': allAbonnements})
+    return render(request, 'ovfabmanager/index.html', contextFunction(False, None, 'personnalisation'))
 
 #For errors
 def error_500(request):
-    return render(request, 'ovfabmanager/index.html', {'afficher_erreur': True, 'type_erreur': '404', 'template_demandee': None, 'allAbonnements': allAbonnements})
+    return render(request, 'ovfabmanager/index.html', contextFunction(True, '500', None))
 
 def error_410(request, exception):
-    return render(request, 'ovfabmanager/index.html', {'afficher_erreur': True, 'type_erreur': '410', 'template_demandee': None, 'allAbonnements': allAbonnements})
+    return render(request, 'ovfabmanager/index.html', contextFunction(True, '410', None))
 
 def error_408(request, exception):
-    return render(request, 'ovfabmanager/index.html', {'afficher_erreur': True, 'type_erreur': '408', 'template_demandee': None, 'allAbonnements': allAbonnements})
+    return render(request, 'ovfabmanager/index.html', contextFunction(True, '408', None))
 
 def error_404(request, exception):
-    return render(request, 'ovfabmanager/index.html', {'afficher_erreur': True, 'type_erreur': '404', 'template_demandee': None, 'allAbonnements': allAbonnements})
+    return render(request, 'ovfabmanager/index.html', contextFunction(True, '404', None))
 
 def error_403(request, exception):
-    return render(request, 'ovfabmanager/index.html', {'afficher_erreur': True, 'type_erreur': '403', 'template_demandee': None, 'allAbonnements': allAbonnements})
+    return render(request, 'ovfabmanager/index.html', contextFunction(True, '403', None))
 
 def error_401(request, exception):
-    return render(request, 'ovfabmanager/index.html', {'afficher_erreur': True, 'type_erreur': '401', 'template_demandee': None, 'allAbonnements': allAbonnements})
+    return render(request, 'ovfabmanager/index.html', contextFunction(True, '401', None))
 
 def error_400(request, exception):
-    return render(request, 'ovfabmanager/index.html', {'afficher_erreur': True, 'type_erreur': '400', 'template_demandee': None, 'allAbonnements': allAbonnements})
+    #return render(request, 'ovfabmanager/index.html', {'afficher_erreur': True, 'type_erreur': '400', 'template_demandee': None, 'allAbonnements': allAbonnements})
+    return render(request, 'ovfabmanager/index.html', contextFunction(True, '400', None))
