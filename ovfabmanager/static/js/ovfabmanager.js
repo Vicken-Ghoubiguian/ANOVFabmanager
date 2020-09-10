@@ -526,9 +526,32 @@ $(document).ready(function(){
                 buttons: {
                         "Valider": function()
                         {
-				console.log(allSerializedArticles);
+				for(var index = 0; index < allSerializedArticles.length; index++)
+				{
+					console.log(allSerializedArticles[index]["fields"]);
+					console.log("-------------------------------------");
+					console.log(allSerializedArticles[index]["fields"]["code_barre"]);
+				}
 
-                                $(this).dialog("close");
+				/*for (article in allSerializedArticles)
+				{
+					articleCourant = `${allSerializedArticles[article]}`
+
+					console.log(articleCourant);
+
+					/*if(article["fields"]["code_barre"] === $("#code_barre_de_l_article").val() && article["fields"]["panier"] === null)
+					{
+						console.log("Victoire....");
+
+						$(this).dialog("close");
+					}*/
+				//}*/
+
+				//console.log("FAUX de FAUX...");
+
+				//console.log(allSerializedArticles);
+
+                                //$(this).dialog("close");
                         },
                         "Réinitialiser": function()
                         {
