@@ -467,15 +467,19 @@ $(document).ready(function(){
                 buttons: {
                         "Valider": function()
 			{
-				var numDeCarte = $("#client_pret").val();
+				var numDeCarte = $("#client_card").val();
 				var indexCarte = 0;
 				var existeCarte = false;
 				var existeClient = false;
 
 				for(var index = 0; index < allSerializedCartes.length; index++)
 				{
+					console.log(numDeCarte + " : " + allSerializedCartes[index]["fields"]["numero_de_carte"]);
+					
 					if(numDeCarte === allSerializedCartes[index]["fields"]["numero_de_carte"])
 					{
+					
+						console.log(numDeCarte + " : " + allSerializedCartes[index]["fields"]["numero_de_carte"]);
 						existeCarte = true
 						indexCarte = index + 1;
 					}
@@ -558,11 +562,60 @@ $(document).ready(function(){
 		buttons: {
 			"Valider": function()
 			{
-				var numeroElement = -1
+				var numDeCarte = $("#client_card").val();
+				var indexCarte = 0;
+				var existeCarte = false;
+				var existeClient = false;
+
+				for(var index = 0; index < allSerializedCartes.length; index++)
+				{
+					if(numDeCarte === allSerializedCartes[index]["fields"]["numero_de_carte"])
+					{
+						existeCarte = true
+						indexCarte = index + 1;
+					}
+				}
+
+				if(existeCarte)
+				{
+					for(var index = 0; index < allSerializedClients.length; index++)
+					{
+						if(indexCarte === allSerializedClients[index]["fields"]["carte"])
+						{
+							existeClient = true;
+							indexClient = index + 1;
+						}
+					}
+
+					if(existeClient)
+					{
+						$("#client_retour").val($("#client_card").val());
+
+						$(this).dialog("close");
+					}
+					else
+					{
+						$("#inside_client_carte_erreur_div").text("Erreur: client inconnu");
+
+						$("#client_carte_erreur_div").removeClass("hidden_div");
+
+						$("#client_card").css("border-color", "#f8009b");
+					}
+				}
+				else
+				{
+					$("#inside_client_carte_erreur_div").text("Erreur: client inconnu");
+
+					$("#client_carte_erreur_div").removeClass("hidden_div");
+
+					$("#client_card").css("border-color", "#f8009b");
+				}
+			
+				/*var numeroElement = -1
 
 				$("#client_retour").val($("#client_card").val());
 
-				$(this).dialog("close");
+				$(this).dialog("close");*/
 			},
 			"Réinitialiser": function()
 			{
@@ -681,7 +734,7 @@ $(document).ready(function(){
                 buttons: {
                         "Valider": function()
                         {
-                                var index_de_la_carte = -1;
+                               var index_de_la_carte = -1;
 				var index_du_client = -1;
 				var index_du_panier_1 = -1;
 				var index_du_panier_2 = -1;
