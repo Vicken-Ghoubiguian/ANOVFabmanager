@@ -633,8 +633,6 @@ $(document).ready(function(){
 				var numero_de_carte_du_client = $("#client_retour").val();
 				var code_barre_de_l_article_pour_retour = $("#code_barre_article_pour_retour").val();
 
-				console.log("N° de carte du client: " + numero_de_carte_du_client);
-
 				for(var index = 0; index < allSerializedCartes.length; index++)
 				{
 					if(numero_de_carte_du_client === allSerializedCartes[index]["fields"]["numero_de_carte"])
@@ -642,8 +640,6 @@ $(document).ready(function(){
 						index_de_la_carte = index + 1;
 					}
 				}
-
-				console.log("Index carte: " + index_de_la_carte);
 
 				for(var index = 0; index < allSerializedClients.length; index++)
 				{
@@ -653,8 +649,6 @@ $(document).ready(function(){
 					}
 				}
 
-				console.log("Index client: " + index_du_client);
-
 				for(var index = 0; index < allSerializedPaniers.length; index++)
 				{
 					if(index_du_client === allSerializedPaniers[index]["fields"]["client"])
@@ -663,29 +657,47 @@ $(document).ready(function(){
 					}
 				}
 
-				console.log("Index du panier 1: " + index_du_panier_1);
-
-				for(var index = 0; index < allSerializedArticles.length; index++)
+				if(index_du_panier_1 > -1)
 				{
-					if($("#code_barre_article_pour_retour").val() === allSerializedArticles[index]["fields"]["code_barre"])
+
+					for(var index = 0; index < allSerializedArticles.length; index++)
 					{
-						index_de_l_article = index + 1;
+						if($("#code_barre_article_pour_retour").val() === allSerializedArticles[index]["fields"]["code_barre"])
+						{
+							index_de_l_article = index + 1;
+						}
+					}
+
+					if(index_de_l_article > -1)
+					{
+
+						for(var index = 0; index < allSerializedPaniers.length; index++)
+						{
+							if(allSerializedArticles[index_de_l_article - 1]["fields"]["panier"] === index_du_panier_1)
+							{
+								index_du_panier_2 = index + 1;
+							}
+						}
+
+						$(this).dialog("close");
+					}
+					else
+					{
+						$("#inside_code_barre_pour_retour_erreur_div").text("Erreur: cet article ne fait pas parti du panier du client");
+
+						$("#code_barre_pour_retour_erreur_div").removeClass("hidden_div");
+
+						$("#code_barre_article_pour_retour").css("border-color", "#f8009b");
 					}
 				}
-
-				console.log("Index de l'article: " + index_de_l_article);
-
-				for(var index = 0; index < allSerializedPaniers.length; index++)
+				else
 				{
-					if(allSerializedArticles[index_de_l_article - 1]["fields"]["panier"] === index_du_panier_1)
-					{
-						index_du_panier_2 = index + 1;
-					}
+					$("#inside_code_barre_pour_retour_erreur_div").text("Erreur: ce client ne posséde pas de panier");
+
+					$("#code_barre_pour_retour_erreur_div").removeClass("hidden_div");
+
+					$("#code_barre_article_pour_retour").css("border-color", "#f8009b");
 				}
-
-				console.log("Index du panier 2: " + index_du_panier_2);
-
-                                $(this).dialog("close");
                         },
                         "Réinitialiser": function()
                         {
