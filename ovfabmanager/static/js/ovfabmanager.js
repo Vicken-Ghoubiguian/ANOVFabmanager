@@ -595,7 +595,7 @@ $(document).ready(function(){
   });
 
   $("#code_barre_de_l_article_pour_retour").click(function(){
-        $("#identification_code_barre_article").dialog({
+        $("#identification_code_barre_article_pour_retour").dialog({
                 height: 800,
                 resizable: false,
                 width: 650,
@@ -621,7 +621,13 @@ $(document).ready(function(){
                         },
                         "Réinitialiser": function()
                         {
-                                $("#code_barre_de_l_article").val("");
+                                $("#code_barre_de_l_article_pour_retour").val("");
+
+				$("#code_barre_pour_retour_erreur_div").addClass("hidden_div");
+
+				$("#inside_code_barre_pour_retour_erreur_div").text("");
+
+				$("#code_barre_de_l_article_pour_retour").css("border-color", "#ccc");
                         },
                 }
         });
@@ -658,8 +664,6 @@ $(document).ready(function(){
 			$("#telephone").val("");
 
                         $("#personne_morale_nom").val("");
-
-			//document.getElementById("abonnement").selectedIndex = 0;
 
 			document.getElementById("personne_morale").checked = false
 			activerPersonneMorale(false)

@@ -109,6 +109,7 @@
 		{% include "ovfabmanager/shared/forms/inscription_form.html" %}
 		{% include "ovfabmanager/shared/forms/client_carte_form.html" %}
 		{% include "ovfabmanager/shared/forms/code_barre_article_form.html" %}
+		{% include "ovfabmanager/shared/forms/code_barre_article_form_pour_retour.html" %}
 
 		<script>
 			var allSerializedArticles = "{{allSerializedArticles}}";
@@ -120,8 +121,12 @@
 			var allSerializedCartes = "{{allSerializedCartes}}";
 			allSerializedCartes = JSON.parse(allSerializedCartes.replace(/&quot;/g,'"'));
 
+			var allSerializedPaniers = "{{allSerializedPaniers}}";
+			allSerializedPaniers = JSON.parse(allSerializedPaniers.replace(/&quot;/g,'"'));
+
 			console.log(allSerializedClients[0]["fields"]);
 			console.log(allSerializedCartes[0]["fields"]);
+			console.log(allSerializedPaniers[0]["fields"]);
 		</script>
 		<script src="{% static 'js/ovfabmanager.js' %}"></script>
 	</body>
