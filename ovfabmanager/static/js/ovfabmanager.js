@@ -683,7 +683,7 @@ $(document).ready(function(){
 					}
 					else
 					{
-						$("#inside_code_barre_pour_retour_erreur_div").text("Erreur: cet article ne fait pas parti du panier du client");
+						$("#inside_code_barre_pour_retour_erreur_div").text("Erreur: cet article ne fait pas parti du panier du client, ou n'existe tout simplement pas");
 
 						$("#code_barre_pour_retour_erreur_div").removeClass("hidden_div");
 
