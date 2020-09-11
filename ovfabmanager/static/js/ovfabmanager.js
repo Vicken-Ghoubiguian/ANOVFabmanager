@@ -610,12 +610,6 @@ $(document).ready(function(){
 
 					$("#client_card").css("border-color", "#f8009b");
 				}
-			
-				/*var numeroElement = -1
-
-				$("#client_retour").val($("#client_card").val());
-
-				$(this).dialog("close");*/
 			},
 			"Réinitialiser": function()
 			{
