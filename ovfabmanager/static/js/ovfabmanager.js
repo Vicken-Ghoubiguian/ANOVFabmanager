@@ -454,19 +454,78 @@ $(document).ready(function(){
                         duration: 1000
                 },
                 close: function(event, ui){
+
                         $("#client_card").val("");
+
+			$("#client_carte_erreur_div").addClass("hidden_div");
+
+			$("#inside_client_carte_erreur_div").text("");
+
+			$("#client_card").css("border-color", "#ccc");
+
                 },
                 buttons: {
                         "Valider": function()
 			{
+				var numDeCarte = $("#client_pret").val();
+				var indexCarte = 0;
+				var existeCarte = false;
+				var existeClient = false;
 
-				$("#client_pret").val($("#client_card").val());
+				for(var index = 0; index < allSerializedCartes.length; index++)
+				{
+					if(numDeCarte === allSerializedCartes[index]["fields"]["numero_de_carte"])
+					{
+						existeCarte = true
+						indexCarte = index + 1;
+					}
+				}
 
-				$(this).dialog("close");
+				if(existeCarte)
+				{
+					for(var index = 0; index < allSerializedClients.length; index++)
+					{
+						if(indexCarte === allSerializedClients[index]["fields"]["carte"])
+						{
+							existeClient = true;
+							indexClient = index + 1;
+						}
+					}
+
+					if(existeClient)
+					{
+						$("#client_pret").val($("#client_card").val());
+
+						$(this).dialog("close");
+					}
+					else
+					{
+						$("#inside_client_carte_erreur_div").text("Erreur: client inconnu");
+
+						$("#client_carte_erreur_div").removeClass("hidden_div");
+
+						$("#client_card").css("border-color", "#f8009b");
+					}
+				}
+				else
+				{
+					$("#inside_client_carte_erreur_div").text("Erreur: client inconnu");
+
+					$("#client_carte_erreur_div").removeClass("hidden_div");
+
+					$("#client_card").css("border-color", "#f8009b");
+				}
 			},
                         "Réinitialiser": function()
                         {
                                 $("#client_card").val("");
+
+				$("#inside_client_carte_erreur_div").text("");
+
+				$("#client_carte_erreur_div").addClass("hidden_div");
+
+				$("#client_card").css("border-color", "#ccc");
+
                         },
                 }
         });
