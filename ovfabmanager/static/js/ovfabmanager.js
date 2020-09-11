@@ -546,7 +546,8 @@ $(document).ready(function(){
                 buttons: {
                         "Valider": function()
                         {
-				var numeroElement = -1
+				var numeroElement = -1;
+				var messageDErreur = "article non trouvé";
 
 				for(var index = 0; index < allSerializedArticles.length; index++)
 				{
@@ -556,23 +557,27 @@ $(document).ready(function(){
 
 						numeroElement = index
 					}
+					else if(allSerializedArticles[index]["fields"]["code_barre"] === $("#code_barre_de_l_article").val() && allSerializedArticles[index]["fields"]["panier"] != null)
+					{
+						messageDErreur = "article déjà emprunté"
+					}
 				}
 
-				if(numeroElement >= 0)
+				if(numeroElement < 0)
 				{
-					liste = liste + allSerializedArticles[numeroElement]["fields"]["libelle"] + " " + "(" + allSerializedArticles[numeroElement]["fields"]["code_barre"] + ")," + "\n";
+                                        $("#code_barre_erreur_div").removeClass("hidden_div");
 
-					$("#liste_des_articles_a_preter").val(liste);
+                                        $("#inside_code_barre_erreur_div").text("Erreur: " + messageDErreur);
 
-					$(this).dialog("close");
+                                        $("#code_barre_de_l_article").css("border-color", "#f8009b");
 				}
 				else
 				{
-					$("#code_barre_erreur_div").removeClass("hidden_div");
+					liste = liste + allSerializedArticles[numeroElement]["fields"]["libelle"] + " " + "(" + allSerializedArticles[numeroElement]["fields"]["code_barre"] + ")," + "\n";
 
-					$("#inside_code_barre_erreur_div").text("Erreur: article non trouvé");
+                                        $("#liste_des_articles_a_preter").val(liste);
 
-					$("#code_barre_de_l_article").css("border-color", "#f8009b");
+                                        $(this).dialog("close");
 				}
                         },
                         "Réinitialiser": function()
