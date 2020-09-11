@@ -610,24 +610,92 @@ $(document).ready(function(){
                         duration: 1000
                 },
                 close: function(event, ui){
-                        $("#code_barre_de_l_article").val("");
+
+                        $("#code_barre_article_pour_retour").val("");
+
+			$("#code_barre_pour_retour_erreur_div").addClass("hidden_div");
+
+			$("#inside_code_barre_pour_retour_erreur_div").text("");
+
+			$("#code_barre_article_pour_retour").css("border-color", "#ccc");
                 },
                 buttons: {
                         "Valider": function()
                         {
-                                console.log(allSerializedArticles);
+                                var index_de_la_carte = -1;
+				var index_du_client = -1;
+				var index_du_panier_1 = -1;
+				var index_du_panier_2 = -1;
+				var index_de_l_article = -1;
+
+				var messageDErreur = "";
+
+				var numero_de_carte_du_client = $("#client_retour").val();
+				var code_barre_de_l_article_pour_retour = $("#code_barre_article_pour_retour").val();
+
+				console.log("N° de carte du client: " + numero_de_carte_du_client);
+
+				for(var index = 0; index < allSerializedCartes.length; index++)
+				{
+					if(numero_de_carte_du_client === allSerializedCartes[index]["fields"]["numero_de_carte"])
+					{
+						index_de_la_carte = index + 1;
+					}
+				}
+
+				console.log("Index carte: " + index_de_la_carte);
+
+				for(var index = 0; index < allSerializedClients.length; index++)
+				{
+					if(index_de_la_carte === allSerializedClients[index]["fields"]["carte"])
+					{
+						index_du_client = index + 1;
+					}
+				}
+
+				console.log("Index client: " + index_du_client);
+
+				for(var index = 0; index < allSerializedPaniers.length; index++)
+				{
+					if(index_du_client === allSerializedPaniers[index]["fields"]["client"])
+					{
+						index_du_panier_1 = index + 1;
+					}
+				}
+
+				console.log("Index du panier 1: " + index_du_panier_1);
+
+				for(var index = 0; index < allSerializedArticles.length; index++)
+				{
+					if($("#code_barre_article_pour_retour").val() === allSerializedArticles[index]["fields"]["code_barre"])
+					{
+						index_de_l_article = index + 1;
+					}
+				}
+
+				console.log("Index de l'article: " + index_de_l_article);
+
+				for(var index = 0; index < allSerializedPaniers.length; index++)
+				{
+					if(allSerializedArticles[index_de_l_article - 1]["fields"]["panier"] === index_du_panier_1)
+					{
+						index_du_panier_2 = index + 1;
+					}
+				}
+
+				console.log("Index du panier 2: " + index_du_panier_2);
 
                                 $(this).dialog("close");
                         },
                         "Réinitialiser": function()
                         {
-                                $("#code_barre_de_l_article_pour_retour").val("");
+                                $("#code_barre_article_pour_retour").val("");
 
 				$("#code_barre_pour_retour_erreur_div").addClass("hidden_div");
 
 				$("#inside_code_barre_pour_retour_erreur_div").text("");
 
-				$("#code_barre_de_l_article_pour_retour").css("border-color", "#ccc");
+				$("#code_barre_article_pour_retour").css("border-color", "#ccc");
                         },
                 }
         });
