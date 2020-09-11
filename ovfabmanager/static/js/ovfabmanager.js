@@ -627,6 +627,7 @@ $(document).ready(function(){
 				var index_du_panier_1 = -1;
 				var index_du_panier_2 = -1;
 				var index_de_l_article = -1;
+				var numeroElement = -1;
 
 				var messageDErreur = "";
 
@@ -676,8 +677,16 @@ $(document).ready(function(){
 							if(allSerializedArticles[index_de_l_article - 1]["fields"]["panier"] === index_du_panier_1)
 							{
 								index_du_panier_2 = index + 1;
+
+								numeroElement = index_de_l_article - 1;
 							}
 						}
+
+						var liste = $("#liste_des_articles_a_retourner").val();
+
+						liste = liste + allSerializedArticles[numeroElement]["fields"]["libelle"] + " " + "(" + allSerializedArticles[numeroElement]["fields"]["code_barre"] + ")," + "\n";
+
+						$("#liste_des_articles_a_retourner").val(liste);
 
 						$(this).dialog("close");
 					}
