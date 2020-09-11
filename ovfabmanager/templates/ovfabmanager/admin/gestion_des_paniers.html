@@ -15,17 +15,23 @@
 				<th>Liste des articles</th>
 				<th>Date et heure d'emprunt</th>
 				<th>Date de retour</th>
-				<th>Statut</th>
 			</thead>
 			<tbody>
 				{% for panier in allPaniers %}
 					<tr>
 						<td>{{ panier.id }}</td>
 						<td>{{ panier.client.nom_de_famille }} {{ panier.client.prenom }}</td>
-						<td>3</td>
+
+						<td>
+						{% for article in allArticles %}
+							{% if article.panier.id == panier.id %}
+								{{ article.libelle }}({{ article.code_barre }}),
+							{% endif %}
+						{% endfor %}
+						</td>
+
 						<td>{{ panier.heure_de_pret }}</td>
 						<td>{{ panier.heure_de_retour }}</td>
-                                       		<td>6</td>
 					</tr>
 				{% endfor %}
 			</tbody>
