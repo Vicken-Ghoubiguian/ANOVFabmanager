@@ -8,6 +8,8 @@ $(document).ready(function(){
 
   $("input[type=reset]").button();
 
+  document.getElementById("date_et_heure_d_emprunt").value = new Date();
+
   $("#enregistrement_creation_panier_validation").click(function(){
 
 	var verif_var = true;

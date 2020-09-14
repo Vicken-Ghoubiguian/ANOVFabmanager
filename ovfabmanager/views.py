@@ -76,6 +76,7 @@ def form_treatments(request):
           #
           print("\n ----------Formulaire: " + data.get("form_type") + "----------\n")
           print("\n Client (numéro) = " + data.get("client_pret") + "\n")
+          print("\n Date de prêt = " + data.get("date_et_heure_d_emprunt") + "\n")
           print("\n Date de retour = " + data.get("date_de_retour_du_pret") + "\n")
           print("\n Liste des articles = " + data.get("liste_des_articles_a_preter") + "\n")
 
