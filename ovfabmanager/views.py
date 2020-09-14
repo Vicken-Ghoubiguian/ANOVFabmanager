@@ -108,14 +108,24 @@ def form_treatments(request):
           #
           for article in listeDesArticlesARetourner:
 
+                print(article)
+
                 #
                 articleCommeListe = article.split(" ")
 
-                #
-                nombreFinal = len(articleCommeListe[len(articleCommeListe) - 1]) - 1
+                print(articleCommeListe)
+
+                codeBarreBrut = articleCommeListe[len(articleCommeListe) - 1]
+
+                print("Test 2: " + codeBarreBrut)
 
                 #
-                listeDesArticlesARetournerParCodeBarre.append(articleCommeListe[1][1:nombreFinal])
+                nombreFinal = len(codeBarreBrut) - 1
+
+                #
+                listeDesArticlesARetournerParCodeBarre.append(codeBarreBrut[1:nombreFinal])
+
+                print(codeBarreBrut[1:nombreFinal])
 
           #
           carteDuClientConcerne = Carte.objects.get(numero_de_carte = numeroCarteClient)
@@ -138,8 +148,8 @@ def form_treatments(request):
                       #
                       article.save()
 
-          #print("Panier id = " + str(panierConcerne.id) + "\n")
-          #print(listeDesArticlesARetournerParCodeBarre)
+          print("Panier id = " + str(panierConcerne.id) + "\n")
+          print(listeDesArticlesARetournerParCodeBarre)
 
           #
           redirection_response = redirect("/gestion_des_paniers#enregistrement_d_un_retour")
