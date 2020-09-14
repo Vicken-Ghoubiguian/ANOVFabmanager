@@ -728,6 +728,7 @@ $(document).ready(function(){
                 buttons: {
                         "Valider": function()
                         {
+				// Définition des variables
                                var index_de_la_carte = -1;
 				var index_du_client = -1;
 				var index_du_panier_1 = -1;
@@ -740,14 +741,17 @@ $(document).ready(function(){
 				var numero_de_carte_du_client = $("#client_retour").val();
 				var code_barre_de_l_article_pour_retour = $("#code_barre_article_pour_retour").val();
 
+				// Recherche de l'index de la carte du client dans le tableau allSerializedCartes
 				for(var index = 0; index < allSerializedCartes.length; index++)
 				{
 					if(numero_de_carte_du_client === allSerializedCartes[index]["fields"]["numero_de_carte"])
 					{
+
 						index_de_la_carte = index + 1;
 					}
 				}
 
+				// Recherche de l'index du client dans le tableau allSerializedClients
 				for(var index = 0; index < allSerializedClients.length; index++)
 				{
 					if(index_de_la_carte === allSerializedClients[index]["fields"]["carte"])
@@ -756,6 +760,7 @@ $(document).ready(function(){
 					}
 				}
 
+				// Recherche de l'index du panier du client dans le tableau allSerializedPanier
 				for(var index = 0; index < allSerializedPaniers.length; index++)
 				{
 					if(index_du_client === allSerializedPaniers[index]["fields"]["client"])
@@ -769,9 +774,14 @@ $(document).ready(function(){
 
 					for(var index = 0; index < allSerializedArticles.length; index++)
 					{
+						// L'article correspondant au code barre renseigné a été trouvé
 						if($("#code_barre_article_pour_retour").val() === allSerializedArticles[index]["fields"]["code_barre"])
 						{
-							index_de_l_article = index + 1;
+							// L'article fait partie du panier du client
+							if(allSerializedArticles[index]["fields"]["panier"] == index_du_panier_1)
+							{
+								index_de_l_article = index + 1;
+							}
 						}
 					}
 
