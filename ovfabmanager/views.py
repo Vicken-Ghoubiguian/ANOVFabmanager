@@ -86,9 +86,60 @@ def form_treatments(request):
       elif data.get("form_type") == "retour_panier":
 
           #
-          print("\n ----------Formulaire: " + data.get("form_type") + "----------\n")
-          print("\n Client (numéro) = " + data.get("client_retour") + "\n")
-          print("\n Liste des articles = " + data.get("liste_des_articles_a_retourner") + "\n")
+          #print("\n ----------Formulaire: " + data.get("form_type") + "----------\n")
+          #print("\n Client (numéro) = " + data.get("client_retour") + "\n")
+          #print("\n Liste des articles = " + data.get("liste_des_articles_a_retourner") + "\n")
+
+          #
+          numeroCarteClient = data.get("client_retour")
+
+          #
+          listeDesArticlesARetourner = data.get("liste_des_articles_a_retourner")
+
+          #
+          listeDesArticlesARetourner = listeDesArticlesARetourner.split(",\r\n")
+
+          #
+          listeDesArticlesARetourner.pop()
+
+          #
+          listeDesArticlesARetournerParCodeBarre = []
+
+          #
+          for article in listeDesArticlesARetourner:
+
+                #
+                articleCommeListe = article.split(" ")
+
+                #
+                nombreFinal = len(articleCommeListe[len(articleCommeListe) - 1]) - 1
+
+                #
+                listeDesArticlesARetournerParCodeBarre.append(articleCommeListe[1][1:nombreFinal])
+
+          #
+          carteDuClientConcerne = Carte.objects.get(numero_de_carte = numeroCarteClient)
+
+          #
+          clientConcerne = Client.objects.get(carte = carteDuClientConcerne)
+
+          #
+          panierConcerne = Panier.objects.get(client = clientConcerne)
+
+          #
+          for article in Article.objects.filter(panier = panierConcerne):
+
+                #
+                if article.code_barre in listeDesArticlesARetournerParCodeBarre:
+
+                      #
+                      article.panier = None
+
+                      #
+                      article.save()
+
+          #print("Panier id = " + str(panierConcerne.id) + "\n")
+          #print(listeDesArticlesARetournerParCodeBarre)
 
           #
           redirection_response = redirect("/gestion_des_paniers#enregistrement_d_un_retour")
