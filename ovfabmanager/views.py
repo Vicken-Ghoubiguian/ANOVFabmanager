@@ -86,11 +86,6 @@ def form_treatments(request):
       elif data.get("form_type") == "retour_panier":
 
           #
-          #print("\n ----------Formulaire: " + data.get("form_type") + "----------\n")
-          #print("\n Client (numéro) = " + data.get("client_retour") + "\n")
-          #print("\n Liste des articles = " + data.get("liste_des_articles_a_retourner") + "\n")
-
-          #
           numeroCarteClient = data.get("client_retour")
 
           #
@@ -108,24 +103,16 @@ def form_treatments(request):
           #
           for article in listeDesArticlesARetourner:
 
-                print(article)
-
                 #
                 articleCommeListe = article.split(" ")
 
-                print(articleCommeListe)
-
                 codeBarreBrut = articleCommeListe[len(articleCommeListe) - 1]
-
-                print("Test 2: " + codeBarreBrut)
 
                 #
                 nombreFinal = len(codeBarreBrut) - 1
 
                 #
                 listeDesArticlesARetournerParCodeBarre.append(codeBarreBrut[1:nombreFinal])
-
-                print(codeBarreBrut[1:nombreFinal])
 
           #
           carteDuClientConcerne = Carte.objects.get(numero_de_carte = numeroCarteClient)
