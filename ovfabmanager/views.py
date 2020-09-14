@@ -74,11 +74,65 @@ def form_treatments(request):
       elif data.get("form_type") == "enregistrement_panier":
 
           #
-          print("\n ----------Formulaire: " + data.get("form_type") + "----------\n")
-          print("\n Client (numéro) = " + data.get("client_pret") + "\n")
-          print("\n Date de prêt = " + data.get("date_et_heure_d_emprunt") + "\n")
-          print("\n Date de retour = " + data.get("date_de_retour_du_pret") + "\n")
-          print("\n Liste des articles = " + data.get("liste_des_articles_a_preter") + "\n")
+          #print("\n ----------Formulaire: " + data.get("form_type") + "----------\n")
+          #print("\n Client (numéro) = " + data.get("client_pret") + "\n")
+          #print("\n Date de prêt = " + data.get("date_et_heure_d_emprunt") + "\n")
+          #print("\n Date de retour = " + data.get("date_de_retour_du_pret") + "\n")
+          #print("\n Liste des articles = " + data.get("liste_des_articles_a_preter") + "\n")
+
+          #
+          numeroCarteClient = data.get("client_pret")
+
+          #
+          listeDesArticlesAEmprunter = data.get("liste_des_articles_a_preter")
+
+          #
+          listeDesArticlesAEmprunter = listeDesArticlesAEmprunter.split(",\r\n")
+
+          #
+          listeDesArticlesAEmprunter.pop()
+
+          #
+          listeDesArticlesAEmprunterParCodeBarre = []
+
+          #
+          carteDuClientConcerne = Carte.objects.get(numero_de_carte = numeroCarteClient)
+
+          #
+          clientConcerne = Client.objects.get(carte = carteDuClientConcerne)
+
+          #
+          for article in listeDesArticlesAEmprunter:
+
+                #
+                articleCommeListe = article.split(" ")
+
+                #
+                codeBarreBrut = articleCommeListe[len(articleCommeListe) - 1]
+
+                #
+                nombreFinal = len(codeBarreBrut) - 1
+
+                #
+                listeDesArticlesAEmprunterParCodeBarre.append(codeBarreBrut[1:nombreFinal])
+
+          #
+          nouveauPanier = Panier(heure_de_pret = data.get("date_et_heure_d_emprunt"), heure_de_retour = "13:57:45", client = clientConcerne)
+
+          #
+          nouveauPanier.save()
+
+          #
+          for article in Article.objects.filter(panier = None):
+
+                #
+                if article.code_barre in listeDesArticlesAEmprunterParCodeBarre:
+
+                     #
+                     article.panier = nouveauPanier
+
+                     #
+                     article.save()
 
           #
           redirection_response = redirect("/gestion_des_paniers#enregistrement_d_un_pret")
@@ -107,6 +161,7 @@ def form_treatments(request):
                 #
                 articleCommeListe = article.split(" ")
 
+                #
                 codeBarreBrut = articleCommeListe[len(articleCommeListe) - 1]
 
                 #
