@@ -135,9 +135,6 @@ def form_treatments(request):
                       #
                       article.save()
 
-          print("Panier id = " + str(panierConcerne.id) + "\n")
-          print(listeDesArticlesARetournerParCodeBarre)
-
           #
           redirection_response = redirect("/gestion_des_paniers#enregistrement_d_un_retour")
 
