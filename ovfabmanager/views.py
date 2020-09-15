@@ -18,6 +18,7 @@ allClients = Client.objects.all()
 allCartes = Carte.objects.all()
 allAbonnements = Abonnement.objects.all()
 allPaniers = Panier.objects.all()
+allPaniersAvecClients = Panier.objects.values_list('client', flat=True)
 allArticles = Article.objects.all()
 allOutils = Outil.objects.all()
 
@@ -28,7 +29,7 @@ allSerializedPaniers = serializers.serialize('json', allPaniers)
 
 #
 def contextFunction(afficher_erreur, type_erreur, template_demandee):
-    return {'afficher_erreur': afficher_erreur, 'type_erreur': type_erreur, 'template_demandee': template_demandee, 'allAbonnements': allAbonnements, 'allSerializedArticles': allSerializedArticles, 'allSerializedClients': allSerializedClients, 'allSerializedCartes': allSerializedCartes, 'allSerializedPaniers': allSerializedPaniers, 'allClients': allClients, 'allCartes': allCartes, 'allPaniers': allPaniers, 'allArticles': allArticles, 'allOutils': allOutils}
+    return {'afficher_erreur': afficher_erreur, 'type_erreur': type_erreur, 'template_demandee': template_demandee, 'allAbonnements': allAbonnements, 'allSerializedArticles': allSerializedArticles, 'allSerializedClients': allSerializedClients, 'allSerializedCartes': allSerializedCartes, 'allSerializedPaniers': allSerializedPaniers, 'allClients': allClients, 'allCartes': allCartes, 'allPaniers': allPaniers, 'allPaniersAvecClients': allPaniersAvecClients, 'allArticles': allArticles, 'allOutils': allOutils}
 
 # For forms treatments...
 def form_treatments(request):
