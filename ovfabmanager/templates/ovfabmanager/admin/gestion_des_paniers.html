@@ -116,7 +116,11 @@
                         <option value="" disabled selected hidden class="select_placeholder">Sélectionnez le client*</option>
 						{% for client in allClients %}
 							{% if client.carte != Null %}
-								<option value="{{ client.carte.numero_de_carte }}">{{ client.nom_de_famille }} {{ client.prenom }} ({{ client.carte.numero_de_carte }})</option>
+								{% if client.id in allPaniersAvecClients %}
+									<option value="{{ client.carte.numero_de_carte }}">{{ client.nom_de_famille }} {{ client.prenom }} ({{ client.carte.numero_de_carte }})</option>
+								{% else %}
+									<option disabled value="{{ client.carte.numero_de_carte }}">{{ client.nom_de_famille }} {{ client.prenom }} ({{ client.carte.numero_de_carte }})</option>
+								{% endif %}
 							{% endif %}
 						{% endfor %}
 					</select>
