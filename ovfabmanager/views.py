@@ -26,6 +26,7 @@ allSerializedArticles = serializers.serialize('json', allArticles)
 allSerializedClients = serializers.serialize('json', allClients)
 allSerializedCartes = serializers.serialize('json', allCartes)
 allSerializedPaniers = serializers.serialize('json', allPaniers)
+#allSerializedPaniersAvecClients = serializers.serialize('json', allPaniersAvecClients)
 
 #
 def contextFunction(afficher_erreur, type_erreur, template_demandee):

@@ -474,15 +474,14 @@ $(document).ready(function(){
 				var indexCarte = 0;
 				var existeCarte = false;
 				var existeClient = false;
+				var possedePanier = false;
 
 				for(var index = 0; index < allSerializedCartes.length; index++)
 				{
-					console.log(numDeCarte + " : " + allSerializedCartes[index]["fields"]["numero_de_carte"]);
 					
 					if(numDeCarte === allSerializedCartes[index]["fields"]["numero_de_carte"])
 					{
 					
-						console.log(numDeCarte + " : " + allSerializedCartes[index]["fields"]["numero_de_carte"]);
 						existeCarte = true
 						indexCarte = index + 1;
 					}
@@ -501,9 +500,28 @@ $(document).ready(function(){
 
 					if(existeClient)
 					{
-						$("#client_pret").val($("#client_card").val());
+						for(var index = 0; index < allSerializedPaniers.length; index++)
+                                		{
+                                        		if(indexClient === allSerializedPaniers[index]["fields"]["client"])
+                                        		{
+                                                		possedePanier = true;
+                                        		}
+                                		}
 
-						$(this).dialog("close");
+						if(possedePanier === false)
+						{
+							$("#client_pret").val($("#client_card").val());
+
+							$(this).dialog("close");
+						}
+						else
+						{
+							$("#inside_client_carte_erreur_div").text("Erreur: client posséde déjà panier");
+
+							$("#client_carte_erreur_div").removeClass("hidden_div");
+
+							$("#client_card").css("border-color", "#f8009b");
+						}
 					}
 					else
 					{
