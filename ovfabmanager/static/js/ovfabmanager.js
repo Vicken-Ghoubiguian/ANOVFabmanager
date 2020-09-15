@@ -587,6 +587,7 @@ $(document).ready(function(){
 				var indexCarte = 0;
 				var existeCarte = false;
 				var existeClient = false;
+				var possedePanier = true;
 
 				for(var index = 0; index < allSerializedCartes.length; index++)
 				{
@@ -610,9 +611,37 @@ $(document).ready(function(){
 
 					if(existeClient)
 					{
-						$("#client_retour").val($("#client_card").val());
+						
+						if(allSerializedPaniers.length == 0)
+						{
+							possedePanier = false;
+						}
+						else
+						{
+							for(var index = 0; index < allSerializedPaniers.length; index++)
+							{
+								
+                                                              if(indexClient === allSerializedPaniers[index])
+								{
+									possedePanier = false;
+								}
+							}
+						}
 
-						$(this).dialog("close");
+						if(possedePanier === true)
+						{
+							$("#client_retour").val($("#client_card").val());
+
+							$(this).dialog("close");
+						}
+						else
+						{
+							$("#inside_client_carte_erreur_div").text("Erreur: client ne posséde pas de panier");
+
+							$("#client_carte_erreur_div").removeClass("hidden_div");
+
+							$("#client_card").css("border-color", "#f8009b");
+						}
 					}
 					else
 					{
