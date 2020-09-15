@@ -135,6 +135,9 @@ def form_treatments(request):
       elif data.get("form_type") == "retour_panier":
 
           #
+          suppressionDuPanier = False
+
+          #
           numeroCarteClient = data.get("client_retour")
 
           #
@@ -174,6 +177,12 @@ def form_treatments(request):
           panierConcerne = Panier.objects.get(client = clientConcerne)
 
           #
+          if len(listeDesArticlesARetourner) == Article.objects.filter(panier = panierConcerne).count():
+
+                #
+                suppressionDuPanier = True
+
+          #
           for article in Article.objects.filter(panier = panierConcerne):
 
                 #
@@ -184,6 +193,12 @@ def form_treatments(request):
 
                       #
                       article.save()
+
+          #
+          if suppressionDuPanier == True:
+
+                      #
+                      panierConcerne.delete()
 
           #
           redirection_response = redirect("/gestion_des_paniers#enregistrement_d_un_retour")

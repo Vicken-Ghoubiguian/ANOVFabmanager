@@ -798,6 +798,9 @@ $(document).ready(function(){
 						// L'article correspondant au code barre renseigné a été trouvé
 						if($("#code_barre_article_pour_retour").val() === allSerializedArticles[index]["fields"]["code_barre"])
 						{
+							console.log(allSerializedArticles[index]["fields"]["panier"] + " = " + index_du_panier_1);
+							console.log(allSerializedArticles[index]["fields"]["code_barre"] + " = " + $("#code_barre_article_pour_retour").val())
+
 							// L'article fait partie du panier du client
 							if(allSerializedArticles[index]["fields"]["panier"] == index_du_panier_1)
 							{
