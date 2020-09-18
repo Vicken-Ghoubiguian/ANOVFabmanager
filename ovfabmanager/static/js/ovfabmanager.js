@@ -781,8 +781,7 @@ $(document).ready(function(){
 				// Définition des variables
                                var index_de_la_carte = -1;
 				var index_du_client = -1;
-				var index_du_panier_1 = -1;
-				var index_du_panier_2 = -1;
+				var index_du_panier = -1;
 				var index_de_l_article = -1;
 				var numeroElement = -1;
 
@@ -797,7 +796,7 @@ $(document).ready(function(){
 					if(numero_de_carte_du_client === allSerializedCartes[index]["fields"]["numero_de_carte"])
 					{
 
-						index_de_la_carte = index + 1;
+						index_de_la_carte = allSerializedCartes[index]["pk"];
 					}
 				}
 
@@ -806,7 +805,7 @@ $(document).ready(function(){
 				{
 					if(index_de_la_carte === allSerializedClients[index]["fields"]["carte"])
 					{
-						index_du_client = index + 1;
+						index_du_client = allSerializedClients[index]["pk"];
 					}
 				}
 
@@ -815,11 +814,11 @@ $(document).ready(function(){
 				{
 					if(index_du_client === allSerializedPaniers[index]["fields"]["client"])
 					{
-						index_du_panier_1 = index + 1;
+						index_du_panier = allSerializedPaniers[index]["pk"];
 					}
 				}
 
-				if(index_du_panier_1 > -1)
+				if(index_du_panier > -1)
 				{
 
 					for(var index = 0; index < allSerializedArticles.length; index++)
@@ -827,29 +826,18 @@ $(document).ready(function(){
 						// L'article correspondant au code barre renseigné a été trouvé
 						if($("#code_barre_article_pour_retour").val() === allSerializedArticles[index]["fields"]["code_barre"])
 						{
-							console.log(allSerializedArticles[index]["fields"]["panier"] + " = " + index_du_panier_1);
-							console.log(allSerializedArticles[index]["fields"]["code_barre"] + " = " + $("#code_barre_article_pour_retour").val())
-
 							// L'article fait partie du panier du client
-							if(allSerializedArticles[index]["fields"]["panier"] == index_du_panier_1)
+							if(allSerializedArticles[index]["fields"]["panier"] == index_du_panier)
 							{
-								index_de_l_article = index + 1;
+								index_de_l_article = allSerializedArticles[index]["pk"];
+
+								numeroElement = index;
 							}
 						}
 					}
 
 					if(index_de_l_article > -1)
 					{
-
-						for(var index = 0; index < allSerializedPaniers.length; index++)
-						{
-							if(allSerializedArticles[index_de_l_article - 1]["fields"]["panier"] === index_du_panier_1)
-							{
-								index_du_panier_2 = index + 1;
-
-								numeroElement = index_de_l_article - 1;
-							}
-						}
 
 						var liste = $("#liste_des_articles_a_retourner").val();
 
