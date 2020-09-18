@@ -10,7 +10,7 @@ $(document).ready(function(){
 
   $("#client_pret").change(function(){
 
-	$("#date_de_retour_du_pret").val("");
+	$("#heure_de_retour_du_pret").val("");
 	$("#liste_des_articles_a_preter").val("");
   });
 
