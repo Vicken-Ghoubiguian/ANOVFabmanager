@@ -43,7 +43,7 @@
 			<fieldset>
 				<legend>Enregistrement d'un prêt</legend>
 				<input id="form_type" name="form_type" type="hidden" value="enregistrement_panier">
-				<input id="date_et_heure_d_emprunt" name="date_et_heure_d_emprunt" type="hidden" value="">
+				<input id="heure_d_emprunt" name="heure_d_emprunt" type="hidden" value="">
 				<div id="pret_enregistrement_error" class="ui-widget hidden_div" style="margin-bottom: 15px;">
 					<div class="ui-state-error" style="padding: 0.7em; border-radius: 5px;">
 						<p>
@@ -80,7 +80,7 @@
                                 </div>
 				<div class="input-container">
 					<i class="fa fa-calendar fa-2x icon"></i>
-					<input type="text" placeholder="Date de retour du prêt*" name="date_de_retour_du_pret" class="datepicker_amical tooltip input-field required-field-enregistrement-panier" id="date_de_retour_du_pret" title="Veuillez renseigner la date de retour">
+					<input type="time" placeholder="heure de retour du prêt*" name="heure_de_retour_du_pret" class="tooltip input-field required-field-enregistrement-panier" id="date_de_retour_du_pret" title="Veuillez renseigner la date de retour">
 				</div>
 				<div class="div_d_element_au_pied">
 					<a id="code_barre_de_l_article_pour_emprunt" class="bouton_au_pied tooltip" title="Sélectionnez l'article grâce à son code barre">Code barre de l'article ?</a>

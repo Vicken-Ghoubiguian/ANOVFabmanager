@@ -11,7 +11,7 @@ $(document).ready(function(){
   $("#enregistrement_creation_panier_validation").click(function(){
 
         empruntHeure = new Date();
-        document.getElementById("date_et_heure_d_emprunt").value = empruntHeure.getHours() + ":" + empruntHeure.getMinutes() + ":" + empruntHeure.getSeconds();
+        document.getElementById("heure_d_emprunt").value = empruntHeure.getHours() + ":" + empruntHeure.getMinutes() + ":" + empruntHeure.getSeconds();
 
 	var verif_var = true;
 
@@ -117,7 +117,7 @@ $(document).ready(function(){
 
 	document.getElementById("client_pret").selectedIndex = 0
 
-	$("#date_de_retour_du_pret").val("");
+	$("#heure_de_retour_du_pret").val("");
 
         $("#liste_des_articles_a_preter").val("");
   });

@@ -111,7 +111,7 @@ def form_treatments(request):
                 listeDesArticlesAEmprunterParCodeBarre.append(codeBarreBrut[1:nombreFinal])
 
           #
-          nouveauPanier = Panier(heure_de_pret = data.get("date_et_heure_d_emprunt"), heure_de_retour = "13:57:45", client = clientConcerne)
+          nouveauPanier = Panier(heure_de_pret = data.get("heure_d_emprunt"), heure_de_retour = data.get("heure_de_retour_du_pret") + ":00", client = clientConcerne)
 
           #
           nouveauPanier.save()
