@@ -8,6 +8,17 @@ $(document).ready(function(){
 
   $("input[type=reset]").button();
 
+  $("#client_pret").change(function(){
+
+	$("#date_de_retour_du_pret").val("");
+	$("#liste_des_articles_a_preter").val("");
+  });
+
+  $("#client_retour").change(function(){
+
+	$("#liste_des_articles_a_retourner").val("");
+  });
+
   $("#enregistrement_creation_panier_validation").click(function(){
 
         empruntHeure = new Date();
