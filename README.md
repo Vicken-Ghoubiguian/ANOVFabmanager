@@ -109,7 +109,7 @@ sudo apt install mysql-client # Installation du client MySQL
 
 sudo mysql -u root # Ouverture de l'interface de commandes MySQL pour l'utilisateur `root` (le super-utilisateur)
 
-CREATE DATABASE ovfabmanager_database; # Création de la base de données ovfablab_database qui sera utilisée par l'application web
+CREATE DATABASE ovfablab_database; # Création de la base de données ovfablab_database qui sera utilisée par l'application web
 
 CREATE USER 'ovfablab_admin'@'localhost' IDENTIFIED BY 'mot_de_passe_de_l_admin_du_fablab'; # Création de l'utilisateur ovfablab_admin qui permettra à l'application web d'utiliser la base de données fraichement créée ci-dessus
 
