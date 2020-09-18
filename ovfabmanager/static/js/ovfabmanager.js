@@ -751,7 +751,7 @@ $(document).ready(function(){
   });
 
   $("#code_barre_de_l_article_pour_retour").click(function(){
-        $("#identification_code_barre_article_pour_retour").dialog({
+        $("#identification_code_barre_article").dialog({
                 height: 800,
                 resizable: false,
                 width: 650,
@@ -767,13 +767,13 @@ $(document).ready(function(){
                 },
                 close: function(event, ui){
 
-                        $("#code_barre_article_pour_retour").val("");
+                        $("#code_barre_de_l_article").val("");
 
-			$("#code_barre_pour_retour_erreur_div").addClass("hidden_div");
+			$("#code_barre_erreur_div").addClass("hidden_div");
 
-			$("#inside_code_barre_pour_retour_erreur_div").text("");
+			$("#inside_code_barre_pour_erreur_div").text("");
 
-			$("#code_barre_article_pour_retour").css("border-color", "#ccc");
+			$("#code_barre_de_l_article").css("border-color", "#ccc");
                 },
                 buttons: {
                         "Valider": function()
@@ -788,7 +788,7 @@ $(document).ready(function(){
 				var messageDErreur = "";
 
 				var numero_de_carte_du_client = $("#client_retour").val();
-				var code_barre_de_l_article_pour_retour = $("#code_barre_article_pour_retour").val();
+				var code_barre_de_l_article_pour_retour = $("#code_barre_de_l_article").val();
 
 				// Recherche de l'index de la carte du client dans le tableau allSerializedCartes
 				for(var index = 0; index < allSerializedCartes.length; index++)
@@ -824,7 +824,7 @@ $(document).ready(function(){
 					for(var index = 0; index < allSerializedArticles.length; index++)
 					{
 						// L'article correspondant au code barre renseigné a été trouvé
-						if($("#code_barre_article_pour_retour").val() === allSerializedArticles[index]["fields"]["code_barre"])
+						if($("#code_barre_de_l_article").val() === allSerializedArticles[index]["fields"]["code_barre"])
 						{
 							// L'article fait partie du panier du client
 							if(allSerializedArticles[index]["fields"]["panier"] == index_du_panier)
@@ -849,31 +849,31 @@ $(document).ready(function(){
 					}
 					else
 					{
-						$("#inside_code_barre_pour_retour_erreur_div").text("Erreur: cet article ne fait pas parti du panier du client, ou n'existe tout simplement pas");
+						$("#inside_code_barre_erreur_div").text("Erreur: cet article ne fait pas parti du panier du client, ou n'existe tout simplement pas");
 
-						$("#code_barre_pour_retour_erreur_div").removeClass("hidden_div");
+						$("#code_barre_erreur_div").removeClass("hidden_div");
 
-						$("#code_barre_article_pour_retour").css("border-color", "#f8009b");
+						$("#code_barre_de_l_article").css("border-color", "#f8009b");
 					}
 				}
 				else
 				{
-					$("#inside_code_barre_pour_retour_erreur_div").text("Erreur: ce client ne posséde pas de panier");
+					$("#inside_code_barre_erreur_div").text("Erreur: ce client ne posséde pas de panier");
 
-					$("#code_barre_pour_retour_erreur_div").removeClass("hidden_div");
+					$("#code_barre_erreur_div").removeClass("hidden_div");
 
-					$("#code_barre_article_pour_retour").css("border-color", "#f8009b");
+					$("#code_barre_de_l_article").css("border-color", "#f8009b");
 				}
                         },
                         "Réinitialiser": function()
                         {
-                                $("#code_barre_article_pour_retour").val("");
+                                $("#code_barre_de_l_article").val("");
 
-				$("#code_barre_pour_retour_erreur_div").addClass("hidden_div");
+				$("#code_barre_erreur_div").addClass("hidden_div");
 
-				$("#inside_code_barre_pour_retour_erreur_div").text("");
+				$("#inside_code_barre_erreur_div").text("");
 
-				$("#code_barre_article_pour_retour").css("border-color", "#ccc");
+				$("#code_barre_de_l_article").css("border-color", "#ccc");
                         },
                 }
         });
