@@ -1,0 +1,248 @@
+.disabled_element {
+	filter: grayscale(60%);
+}
+
+.jqTabs {
+  margin-top: 60px;
+}
+
+input[type=search] {
+  color: #f8009b;
+}
+
+select {
+  color: #fe93d6;
+}
+
+td {
+  text-align: center;
+}
+
+select:invalid {
+  color: #ff62c4;
+}
+
+.div_d_element_au_pied {
+  margin-top: 1px;
+  margin-bottom: 15px;
+}
+
+.element_au_pied {
+  display: inline-block; 
+  margin-left: 5px;
+}
+
+hr {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border: 3px dotted #c5007b;
+}
+
+legend {
+  background-color: #c5007b;
+  color: #ffffff;
+  padding: 3px 6px;
+  border-radius: 15px;
+}
+
+fieldset {
+  border-color: #c5007b;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+body {
+  font-family: Arial;
+}
+
+label, input {
+  display: table-cell;
+}
+
+label {
+  padding-right: 10px;
+}
+
+.icone_d_erreur {
+  float: left; 
+  margin-right: 0.3em;
+}
+
+.hidden_div {
+  display: none;
+}
+
+.input-container {
+  display: -ms-flexbox; /* Pour IE10 */
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.icon {
+  padding: 10px;
+  border-radius: 4px;
+  background: #608da1;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+
+.input-field {
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #c5007b;
+  background-color: white;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  /*padding: 12px 20px 12px 40px;*/
+}
+
+.ui-dialog {
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.ui-dialog .ui-dialog-content {
+  flex: 1;
+}
+.ui-dialog .ui-dialog-buttonpane {
+  background:white;
+}
+
+#premier {
+  left: 0;
+  width: 200px;
+  position: absolute;
+}
+
+#second {
+  width: 200px;
+}
+
+#troisieme {
+  position: absolute;
+  width: 200px;
+  right: 0;
+}
+
+.connectbar_text_div {
+  float: left; 
+  margin-left: 25px; 
+  width: 60%;
+}
+
+.connectbar_icon_element {
+  margin-left: 3px;
+  float: left;
+  text-align: center;
+}
+
+.fonctionnalite {
+  transform: translateY(110%);
+}
+
+.entete {
+  background-color: #608da1;
+  top: 0;
+  margin-left: 292px;
+  position: fixed;
+  width: 83%;
+  z-index: 100;
+  display: flex; 
+  justify-content: space-around;
+}
+
+.entete a {
+  color: #ffffff;
+}
+
+.entete a:hover {
+  color: #ffffff;
+  background-color: #80a4b4;
+}
+
+.error_title {
+  color: #c5007b;
+  text-align: center;
+  transform: translateY(110%);
+}
+
+.section_title {
+  color: #608da1;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.last_href {
+  margin-bottom: 40px;
+}
+
+.admin {
+  margin-left: 35px; 
+  margin-top: 20px; 
+  margin-bottom: 20px; 
+  color: #ffffff; 
+  text-decoration: underline;
+}
+
+.common {
+  margin-left: 35px;
+  margin-top: 3px;
+  margin-bottom: 20px; 
+  color: #ffffff; 
+  text-decoration: underline;
+}
+
+#image_common {
+  cursor: pointer;
+  opacity: 1;
+  transition: 1s;
+}
+
+#image_common:hover {
+  background-color: #f8009b;
+  opacity: 0.3;
+  transition: 1s;
+}
+
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 300px;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #c5007b; /* Primary color*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 35px; /* Place content 35px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #ffffff;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #ffffff;
+  background-color: #f8009b;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: padding-left .5s;
+  padding: 0px;
+  padding-left: 347px;
+}
