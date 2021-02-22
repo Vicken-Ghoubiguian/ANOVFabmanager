@@ -152,7 +152,7 @@ label {
   top: 0;
   margin-left: 292px;
   position: fixed;
-  width: 1550px;
+  width: 81%;
   z-index: 100;
   display: flex; 
   justify-content: space-around;
