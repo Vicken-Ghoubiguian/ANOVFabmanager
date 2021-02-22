@@ -146,6 +146,7 @@ label {
 .fonctionnalite {
   transform: translateY(110%);
 }
+
 .entete {
   background-color: #608da1;
   top: 0;
@@ -245,11 +246,3 @@ label {
   padding: 0px;
   padding-left: 347px;
 }
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-  .entete {padding-right: 15px; width: 180px;}
-  .entete a {font-size: 18px;}
-} 
