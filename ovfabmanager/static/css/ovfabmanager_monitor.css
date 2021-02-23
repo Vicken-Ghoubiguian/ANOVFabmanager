@@ -202,12 +202,16 @@ label {
 #image_common {
   cursor: pointer;
   opacity: 1;
+  width: 135px;
+  height: 135px;
   transition: 1s;
 }
 
 #image_common:hover {
   background-color: #f8009b;
   opacity: 0.3;
+  width: 135px;
+  height: 135px;
   transition: 1s;
 }
 
@@ -228,7 +232,7 @@ label {
 .sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 17px;
   color: #ffffff;
   display: block;
   transition: 0.3s;

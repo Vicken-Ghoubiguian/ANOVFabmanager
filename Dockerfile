@@ -20,4 +20,4 @@ ADD . /anovfabmanager
 RUN pip3 install -r /anovfabmanager/requirements.txt
 
 # Exécution de la commande "python3 manage py réserver' pour lancer fabmanager
-#CMD ["python3", "manage.py", "runserver", "0.0.0.0:8000"]
+ENTRYPOINT ["python3", "manage.py", "runserver", "0.0.0.0:8000"]
