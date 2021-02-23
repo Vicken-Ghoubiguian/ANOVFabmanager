@@ -455,7 +455,6 @@ $(document).ready(function(){
   $("#client_pret_carte").click(function(){
 	$("#identification_client_par_carte").dialog({
                 height: 800,
-                resizable: false,
                 width: 650,
                 resizable: false,
                 modal: true,
@@ -569,8 +568,7 @@ $(document).ready(function(){
 
   $("#client_retour_carte").click(function(){
 	$("#identification_client_par_carte").dialog({
-		height: 800,
-                resizable: false,
+				height: 800,
                 width: 650,
                 resizable: false,
                 modal: true,
@@ -689,7 +687,6 @@ $(document).ready(function(){
   $("#code_barre_de_l_article_pour_emprunt").click(function(){
         $("#identification_code_barre_article").dialog({
                 height: 800,
-                resizable: false,
                 width: 650,
                 resizable: false,
                 modal: true,
@@ -764,7 +761,6 @@ $(document).ready(function(){
   $("#code_barre_de_l_article_pour_retour").click(function(){
         $("#identification_code_barre_article").dialog({
                 height: 800,
-                resizable: false,
                 width: 650,
                 resizable: false,
                 modal: true,
@@ -896,10 +892,9 @@ $(document).ready(function(){
 
   $("#second").click(function(){
 	$("#deuxieme_modal").dialog({
-		height: 800,
-		resizable: false,
+				height: 800,
                 width: 650,
-		resizable: false,
+				resizable: false,
                 modal: true,
 		show: {
 			effect: "size",
