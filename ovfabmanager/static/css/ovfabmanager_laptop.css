@@ -150,9 +150,9 @@ label {
 .entete {
   background-color: #608da1;
   top: 0;
-  margin-left: 292px;
+  margin-left: 217px;
   position: fixed;
-  width: 81%;
+  width: 86%;
   z-index: 100;
   display: flex; 
   justify-content: space-around;
@@ -217,7 +217,7 @@ label {
 
 .sidenav {
   height: 100%; /* 100% Full-height */
-  width: 300px;
+  width: 225px;
   position: fixed; /* Stay in place */
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
