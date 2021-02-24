@@ -4,6 +4,7 @@
 
 .jqTabs {
   margin-top: 60px;
+  margin-right: 150px;
 }
 
 input[type=search] {
@@ -177,6 +178,7 @@ label {
   color: #608da1;
   text-align: center;
   margin-top: 60px;
+  margin-right: 150px;
 }
 
 .last_href {
