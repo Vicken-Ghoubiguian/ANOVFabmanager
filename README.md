@@ -26,7 +26,9 @@
 	 
 	* [git](https://git-scm.com),
  
-	* [Bootstrap](https://getbootstrap.com).
+	* [Bootstrap](https://getbootstrap.com),
+
+	* [Font Awesome](https://fontawesome.com/)
 
 4. [Installation de ANOVFabmanager sur une machine quelconque](#installation_de_ANOVFabmanager_sur_une_machine_quelconque)
 
@@ -78,6 +80,9 @@ Pour faire fonctionner ANOVFabmanager sur une machine quelconque (physique ou vi
 
 <a name="bootstrap"></a>
 * Bootstrap: `Bootstrap` est une collection d'outils pour la mise en place du design des pages web composant l'application `ANOVFabmanager`.
+
+<a name="fontawesome"></a>
+* Font Awesome: `Font Awesome` est une police d'écriture et (surtout) une boîte à icônes basées sur CSS, LESS et SASS 
 
 Pour la bonne configuration de l'environnement de déploiement, il est nécessaire d'installer `Django`, `Git`, `Docker`, `Docker compose`, `virtualenv` et `pip`.
 
