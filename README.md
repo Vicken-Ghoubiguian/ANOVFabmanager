@@ -1,4 +1,4 @@
-# ANOVFabmanager
+# ANOVManager
 
 ##### Table des matières
 
@@ -30,11 +30,11 @@
 
 	* [Font Awesome](https://fontawesome.com/)
 
-4. [Installation de ANOVFabmanager sur une machine quelconque](#installation_de_ANOVFabmanager_sur_une_machine_quelconque)
+4. [Installation de ANOVManager sur une machine quelconque](#installation_de_ANOVManager_sur_une_machine_quelconque)
 
-5. [ANOVFabmanager déjà installé ? Comment le développer ?](#ANOVFabmanager_deja_installe_comment_le_developper)
+5. [ANOVManager déjà installé ? Comment le développer ?](#ANOVManager_deja_installe_comment_le_developper)
 
-6. [Installation de ANOVFabmanager grâce à Docker compose](#installation_de_ANOVFabmanager_grace_a_docker_compose)
+6. [Installation de ANOVManager grâce à Docker compose](#installation_de_ANOVManager_grace_a_docker_compose)
 
 7. [Commandes de base](#commandes_de_base)
 
@@ -49,7 +49,7 @@ D'autres fonctionnalités peuvent être ajoutées à ce système logiciel à con
 <a name="prerequis"></a>
 ## Prérequis
 
-Pour faire fonctionner ANOVFabmanager sur une machine quelconque (physique ou virtuelle), l'application repose sur les composants suivants:
+Pour faire fonctionner ANOVManager sur une machine quelconque (physique ou virtuelle), l'application repose sur les composants suivants:
 
 <a name="django"></a>
 * Django: `Django` est un framework open source écrit en Python pour vous permettre de développer des applications web,
@@ -76,22 +76,22 @@ Pour faire fonctionner ANOVFabmanager sur une machine quelconque (physique ou vi
 * jQuery UI: `jQuery UI` est une extension du framework `jQuery` présenté précédemment, permettant la mise au point d'effets pour les widgets de la page web,
 
 <a name="git"></a> 
-* git: `git` est l'utilitaire de gestion de versions utilisé par le projet de développement de l'application `ANOVFabmanager`,
+* git: `git` est l'utilitaire de gestion de versions utilisé par le projet de développement de l'application `ANOVManager`,
 
 <a name="bootstrap"></a>
-* Bootstrap: `Bootstrap` est une collection d'outils pour la mise en place du design des pages web composant l'application `ANOVFabmanager`.
+* Bootstrap: `Bootstrap` est une collection d'outils pour la mise en place du design des pages web composant l'application `ANOVManager`.
 
 <a name="fontawesome"></a>
 * Font Awesome: `Font Awesome` est une police d'écriture et (surtout) une boîte à icônes basées sur CSS, LESS et SASS 
 
 Pour la bonne configuration de l'environnement de déploiement, il est nécessaire d'installer `Django`, `Git`, `Docker`, `Docker compose`, `virtualenv` et `pip`.
 
-Tout est expliqué en détail dans les parties [Installation de ANOVFabmanager sur une machine quelconque](#installation_de_ANOVFabmanager_sur_une_machine_quelconque) et [Installation de ANOVFabmanager grâce à Docker compose](#installation_de_ANOVFabmanager_grace_a_docker_compose) ci-dessous.
+Tout est expliqué en détail dans les parties [Installation de ANOVManager sur une machine quelconque](#installation_de_ANOVManager_sur_une_machine_quelconque) et [Installation de ANOVManager grâce à Docker compose](#installation_de_ANOVManager_grace_a_docker_compose) ci-dessous.
 
-<a name="installation_de_ANOVFabmanager_sur_une_machine_quelconque"></a>
-## Installation de ANOVFabmanager sur une machine quelconque
+<a name="installation_de_ANOVManager_sur_une_machine_quelconque"></a>
+## Installation de ANOVManager sur une machine quelconque
 
-Pour faire fonctionner ANOVFabmanager, il est d'abord important d'installer les composants suivants: `Django`, `Git`, `virtualenv` et `pip`.
+Pour faire fonctionner ANOVManager, il est d'abord important d'installer les composants suivants: `Django`, `Git`, `virtualenv` et `pip`.
 
 Il est d'abord important de cloner le projet depuis le dépôt officiel. Pour cela, exécutez les commandes suivantes dans l'ordre:
 
@@ -99,9 +99,9 @@ Il est d'abord important de cloner le projet depuis le dépôt officiel. Pour ce
 
 sudo apt install git # Installe l'utilitaire git sur la machine
 
-git clone https://gitlab.imerir.com/orles-valley/anovfabmanager # Clone le projet ANOVFabmanager sur la machine
+git clone https://gitlab.imerir.com/orles-valley/ANOVManager # Clone le projet ANOVManager sur la machine
 
-cd anovfabmanager # Change le répertoire courant pour celui du projet cloné anovfabmanager
+cd ANOVManager # Change le répertoire courant pour celui du projet cloné ANOVManager
 
 ```
 Il est ensuite nécessaire d'installer le serveur MySQL et son client respectif ainsi que de créer , grâce aux commandes suivantes à exécuter dans l'ordre:
@@ -122,7 +122,7 @@ GRANT ALL PRIVILEGES ON ovfablab_database.* TO 'ovfablab_admin'@'localhost'; # A
 
 quit; # Fermeture de l'interface de commandes MySQL
 ```
-__Petite note__: vous pouvez très bien modifier le nom de l'administateur de la base et son mot de passe si vous le souhaitez. Pour cela, il vous faut modifier les champs `USER` et `PASSWORD` de `DATABASES` dans le fichier [settings.py](https://gitlab.imerir.com/orles-valley/anovfabmanager/blob/master/ANOVFabManager/settings.py), à partir de la ligne 80.
+__Petite note__: vous pouvez très bien modifier le nom de l'administateur de la base et son mot de passe si vous le souhaitez. Pour cela, il vous faut modifier les champs `USER` et `PASSWORD` de `DATABASES` dans le fichier [settings.py](https://gitlab.imerir.com/orles-valley/ANOVManager/blob/master/ANOVManager/settings.py), à partir de la ligne 80.
 
 Il faut ensuite également créer puis configurer l'environnement virtuel Python et y installer `Django` grâce aux commandes suivantes à exécuter dans l'ordre:
 
@@ -149,16 +149,16 @@ python3 manage.py runserver
 ```
 Toutes mes félicitations: une fois cette commande exécutée, l'application fonctionne et est accessible [ici](http://127.0.0.1:8000).
 
-<a name="ANOVFabmanager_deja_installe_comment_le_developper"></a>
-## ANOVFabmanager déjà installé ? Comment le développer ?
+<a name="ANOVManager_deja_installe_comment_le_developper"></a>
+## ANOVManager déjà installé ? Comment le développer ?
 
-Dans le cas où ANOVFabmanager a été correctement installé et configuré selon les instructions données dans la section précédente (voir [ici](#installation_de_ANOVFabmanager_sur_une_machine_quelconque)), il vous faudra réactiver votre environnement virtuel Python pour développer l'application web.
+Dans le cas où ANOVManager a été correctement installé et configuré selon les instructions données dans la section précédente (voir [ici](#installation_de_ANOVManager_sur_une_machine_quelconque)), il vous faudra réactiver votre environnement virtuel Python pour développer l'application web.
 
 Pour cela, suivez les commandes suivantes dans cet ordre:
 
 ```bash
 
-cd anovfabmanager # Change le répertoire courant pour celui du projet cloné anovfabmanager
+cd ANOVManager # Change le répertoire courant pour celui du projet cloné ANOVManager
 
 source votre_environnement_virtuel/bin/activate # Activation de votre environement virtuel
 ```
@@ -172,8 +172,8 @@ python3 manage.py runserver
 
 Toutes mes félicitations, c'est maintenant à vous de jouer.
 
-<a name="installation_de_ANOVFabmanager_grace_a_docker_compose"></a>
-## Installation de ANOVFabmanager grâce à Docker compose
+<a name="installation_de_ANOVManager_grace_a_docker_compose"></a>
+## Installation de ANOVManager grâce à Docker compose
 
 Comme précédemment, clonez le projet depuis le dépôt officiel puis vous rendre dans le répertoire correspondant à l'aide des commandes suivantes à exécuter dans l'ordre:
 
@@ -181,12 +181,12 @@ Comme précédemment, clonez le projet depuis le dépôt officiel puis vous rend
 
 sudo apt install git # Installe l'utilitaire git sur la machine
 
-git clone https://gitlab.imerir.com/orles-valley/anovfabmanager # Clone le projet ANOVFabmanager sur la machine
+git clone https://gitlab.imerir.com/orles-valley/ANOVManager # Clone le projet ANOVManager sur la machine
 
-cd anovfabmanager # Change le répertoire courant pour celui du projet cloné anovfabmanager
+cd ANOVManager # Change le répertoire courant pour celui du projet cloné ANOVManager
 
 ```
-Le déployement de ANOVFabmanager en production se fera grâce à `Docker` et `Docker compose`. Il est donc nécessaire de les installer d'abord avant toutes choses.
+Le déployement de ANOVManager en production se fera grâce à `Docker` et `Docker compose`. Il est donc nécessaire de les installer d'abord avant toutes choses.
 Si vous voulez faire ça rapidement, exécutez les commandes suivantes:
 
 ```bash
