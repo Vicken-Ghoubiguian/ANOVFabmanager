@@ -99,7 +99,7 @@ Il est d'abord important de cloner le projet depuis le dépôt officiel. Pour ce
 
 sudo apt install git # Installe l'utilitaire git sur la machine
 
-git clone https://gitlab.imerir.com/orles-valley/ANOVManager # Clone le projet ANOVManager sur la machine
+git clone https://github.com/Vicken-Ghoubiguian/ANOVManager # Clone le projet ANOVManager sur la machine
 
 cd ANOVManager # Change le répertoire courant pour celui du projet cloné ANOVManager
 
@@ -122,7 +122,7 @@ GRANT ALL PRIVILEGES ON ovfablab_database.* TO 'ovfablab_admin'@'localhost'; # A
 
 quit; # Fermeture de l'interface de commandes MySQL
 ```
-__Petite note__: vous pouvez très bien modifier le nom de l'administateur de la base et son mot de passe si vous le souhaitez. Pour cela, il vous faut modifier les champs `USER` et `PASSWORD` de `DATABASES` dans le fichier [settings.py](https://gitlab.imerir.com/orles-valley/ANOVManager/blob/master/ANOVManager/settings.py), à partir de la ligne 80.
+__Petite note__: vous pouvez très bien modifier le nom de l'administateur de la base et son mot de passe si vous le souhaitez. Pour cela, il vous faut modifier les champs `USER` et `PASSWORD` de `DATABASES` dans le fichier [settings.py](https://github.com/Vicken-Ghoubiguian/ANOVManager/blob/master/ANOVManager/settings.py), à partir de la ligne 80.
 
 Il faut ensuite également créer puis configurer l'environnement virtuel Python et y installer `Django` grâce aux commandes suivantes à exécuter dans l'ordre:
 
@@ -181,7 +181,7 @@ Comme précédemment, clonez le projet depuis le dépôt officiel puis vous rend
 
 sudo apt install git # Installe l'utilitaire git sur la machine
 
-git clone https://gitlab.imerir.com/orles-valley/ANOVManager # Clone le projet ANOVManager sur la machine
+git clone https://github.com/Vicken-Ghoubiguian/ANOVManager # Clone le projet ANOVManager sur la machine
 
 cd ANOVManager # Change le répertoire courant pour celui du projet cloné ANOVManager
 
