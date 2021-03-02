@@ -684,6 +684,10 @@ $(document).ready(function(){
 	});
   });
 
+  $("#modifier_abonnement_client").click(function(){});
+
+  $("#configurer_abonnement_client").click(function(){});
+
   $("#modifier_carte_client").click(function(){
   	$("#configuration_carte_client").dialog({
   		height: 800,
