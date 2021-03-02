@@ -684,12 +684,22 @@ $(document).ready(function(){
 	});
   });
 
-  $("#modifier_abonnement_client").click(function(){
-  	console.log("Will come soon...");
+  $("#modifier_carte_client").click(function(){
+  	$("#configuration_carte_client").dialog({
+  		height: 800,
+		width: 650,
+		resizable: false,
+		modal: true,
+  	});
   });
 
-  $("#configurer_abonnement_client").click(function(){
-  	console.log("Will come soon...");
+  $("#configurer_carte_client").click(function(){
+  	$("#configuration_carte_client").dialog({
+  		height: 800,
+		width: 650,
+		resizable: false,
+		modal: true,
+  	});
   });
 
   $("#code_barre_de_l_article_pour_emprunt").click(function(){
