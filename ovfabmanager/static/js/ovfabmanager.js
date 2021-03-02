@@ -693,7 +693,7 @@ $(document).ready(function(){
   		height: 800,
 		width: 650,
 		resizable: false,
-		modal: true,
+		modal: true
   	});
   });
 
@@ -702,7 +702,7 @@ $(document).ready(function(){
   		height: 800,
 		width: 650,
 		resizable: false,
-		modal: true,
+		modal: true
   	});
   });
 
