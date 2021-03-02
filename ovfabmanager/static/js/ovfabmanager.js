@@ -684,6 +684,14 @@ $(document).ready(function(){
 	});
   });
 
+  $("#modifier_abonnement_client").click(function(){
+  	console.log("Will come soon...");
+  });
+
+  $("#configurer_abonnement_client").click(function(){
+  	console.log("Will come soon...");
+  });
+
   $("#code_barre_de_l_article_pour_emprunt").click(function(){
         $("#identification_code_barre_article").dialog({
                 height: 800,
