@@ -33,13 +33,13 @@
 							<td>
 								{{ client.abonnement.libelle }}
 								&nbsp;
-								<button class="configurer_abonnement ui-button ui-corner-all ui-widget" type="button">Modifier abonnement</button>
+								<a id="modifier_abonnement_client" class="bouton_au_pied tooltip" title="Modifiez l'abonnement du client">Nouvel abonnement du client...</a>
 							</td>
 						{% else %}
 							<td>
 								Aucun
 								&nbsp;
-								<button class="configurer_abonnement ui-button ui-corner-all ui-widget" type="button">Ajouter abonnement</button>
+								<a id="configurer_abonnement_client" class="bouton_au_pied tooltip" title="Configurez l'abonnement du client">Nouvel abonnement du client...</a>
 							</td>
 						{% endif %}
 
@@ -47,13 +47,13 @@
 							<td>
 								{{ client.carte.numero_de_carte }}
 								&nbsp;
-								<button class="configurer_carte ui-button ui-corner-all ui-widget" type="button">Modifier carte</button>
+								<a id="modifier_carte_client" class="bouton_au_pied tooltip" title="Modifier la carte du client">Nouvelle carte du client...</a>
 							</td>
 						{% else %}
 							<td>
 								Aucune
 								&nbsp;
-								<button class="configurer_carte ui-button ui-corner-all ui-widget" type="button">Ajouter carte</button>
+								<a id="configurer_carte_client" class="bouton_au_pied tooltip" title="Configurer la carte du client">Nouvelle carte du client...</a>
 							</td>
 						{% endif %}
 
