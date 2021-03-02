@@ -32,17 +32,33 @@
 						<td>{{ client.credit_client_en_temps }}</td>
 
 						{% if client.abonnement != Null %}
-							<td>{{ client.abonnement.libelle }}</td>
+							<td>
+								{{ client.abonnement.libelle }}
+								&nbsp;
+								<button class="configurer_abonnement ui-button ui-corner-all ui-widget" type="button">Modifier abonnement</button>
+							</td>
 						{% else %}
-							<td>Aucun</td>
+							<td>
+								Aucun
+								&nbsp;
+								<button class="configurer_abonnement ui-button ui-corner-all ui-widget" type="button">Ajouter abonnement</button>
+							</td>
 						{% endif %}
 
 						{% if client.carte != Null %}
-							<td>{{ client.carte.numero_de_carte }}</td>
+							<td>
+								{{ client.carte.numero_de_carte }}
+								&nbsp;
+								<button class="configurer_carte ui-button ui-corner-all ui-widget" type="button">Modifier carte</button>
+							</td>
 						{% else %}
-							<td>Aucune</td>
+							<td>
+								Aucune
+								&nbsp;
+								<button class="configurer_carte ui-button ui-corner-all ui-widget" type="button">Ajouter carte</button>
+							</td>
 						{% endif %}
-						
+
 					</tr>
 				{% endfor %}
 			</tbody>
