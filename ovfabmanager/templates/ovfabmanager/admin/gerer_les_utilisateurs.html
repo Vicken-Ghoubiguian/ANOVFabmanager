@@ -19,8 +19,31 @@
 				<th>Abonnement souscrit</th>
 				<th>N° de carte</th>
 			</thead>
-			<body>
-			</body>
+			<tbody>
+				{% for client in allClients %}
+					<tr>
+						<td>{{ client.nom_de_famille }}</td>
+						<td>{{ client.prenom }}</td>
+						<td>{{ client.identifiant }}</td>
+						<td>{{ client.adresse_email }}</td>
+						<td>{{ client.telephone }}</td>
+						<td>{{ client.credit_client_en_temps }}</td>
+
+						{% if client.abonnement != Null %}
+							<td>{{ client.abonnement.libelle }}</td>
+						{% else %}
+							<td>Aucun</td>
+						{% endif %}
+
+						{% if client.carte != Null %}
+							<td>{{ client.carte.numero_de_carte }}</td>
+						{% else %}
+							<td>Aucune</td>
+						{% endif %}
+						
+					</tr>
+				{% endfor %}
+			</tbody>
 		</table>
 	</div>
 	<div id="enregistrement_d_un_utilisateur">
