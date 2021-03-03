@@ -715,7 +715,16 @@ $(document).ready(function(){
 		buttons: {
 
 				"Valider": function(){},
-				"Réinitialiser": function(){}
+				"Réinitialiser": function(){
+
+					$("#nouvelle_carte_du_client").val("");
+
+					$("#carte_client_erreur_div").addClass("hidden_div");
+
+					$("#inside_carte_client_erreur_div").text("");
+
+					$("#nouvelle_carte_du_client").css("border-color", "#ccc");
+				}
 		}
   	});
   });
@@ -747,7 +756,16 @@ $(document).ready(function(){
 		buttons: {
 
 				"Valider": function(){},
-				"Réinitialiser": function(){}
+				"Réinitialiser": function(){
+
+					$("#nouvelle_carte_du_client").val("");
+
+					$("#carte_client_erreur_div").addClass("hidden_div");
+
+					$("#inside_carte_client_erreur_div").text("");
+
+					$("#nouvelle_carte_du_client").css("border-color", "#ccc");
+				}
 		}
   	});
   });
