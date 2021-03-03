@@ -8,7 +8,7 @@
 		<li><a href="#suppression_d_un_utilisateur">Suppression d'un utilisateur</a></li>
 	</ul>
 	<div id="liste_des_utilisateurs">
-		<a id="configurer_carte_client" class="bouton_au_pied tooltip" title="Configurer la carte du client">Nouvelle carte du client...</a>
+		<a id="configurer_carte_client" class="bouton_au_pied tooltip" title="Configurez la carte du client">Première carte</a>
 		<table class="asDatatable">
 			<thead>
 				<th>Nom</th>
@@ -34,13 +34,13 @@
 							<td>
 								{{ client.abonnement.libelle }}
 								&nbsp;
-								<a id="modifier_abonnement_client" class="bouton_au_pied tooltip" title="Modifiez l'abonnement du client">Nouvel abonnement du client...</a>
+								<a id="modifier_abonnement_client" class="bouton_au_pied tooltip" title="Modifiez l'abonnement du client">Nouvel abonnement</a>
 							</td>
 						{% else %}
 							<td>
 								Aucun
 								&nbsp;
-								<a id="configurer_abonnement_client" class="bouton_au_pied tooltip" title="Configurez l'abonnement du client">Nouvel abonnement du client...</a>
+								<a id="configurer_abonnement_client" class="bouton_au_pied tooltip" title="Configurez l'abonnement du client">Premier abonnement</a>
 							</td>
 						{% endif %}
 
@@ -48,13 +48,13 @@
 							<td>
 								{{ client.carte.numero_de_carte }}
 								&nbsp;
-								<a id="modifier_carte_client" class="bouton_au_pied tooltip" title="Modifier la carte du client">Nouvelle carte du client...</a>
+								<a id="modifier_carte_client" class="bouton_au_pied tooltip" title="Modifiez la carte du client">Nouvelle carte</a>
 							</td>
 						{% else %}
 							<td>
 								Aucune
 								&nbsp;
-								<a id="configurer_carte_client" class="bouton_au_pied tooltip" title="Configurer la carte du client">Nouvelle carte du client...</a>
+								<a id="configurer_carte_client" class="bouton_au_pied tooltip" title="Configurez la carte du client">Première carte</a>
 							</td>
 						{% endif %}
 
