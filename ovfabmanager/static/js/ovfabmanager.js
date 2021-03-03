@@ -684,9 +684,23 @@ $(document).ready(function(){
 	});
   });
 
-  $("#modifier_abonnement_client").click(function(){});
+  $("#modifier_abonnement_client").click(function(){
+  	$("#modifier_abonnement_client").dialog({
+  		height: 800,
+		width: 650,
+		resizable: false,
+		modal: true
+  	});
+  });
 
-  $("#configurer_abonnement_client").click(function(){});
+  $("#configurer_abonnement_client").click(function(){
+  	$("#configurer_abonnement_client").dialog({
+  		height: 800,
+		width: 650,
+		resizable: false,
+		modal: true
+  	});
+  });
 
   $("#modifier_carte_client").click(function(){
   	$("#modification_carte_client").dialog({
