@@ -689,7 +689,27 @@ $(document).ready(function(){
   		height: 800,
 		width: 650,
 		resizable: false,
-		modal: true
+		modal: true,
+		show: {
+				effect: "size",
+				duration: 1000
+		},
+		hide: {
+				effect: "size",
+				duration: 1000
+		},
+		close: function(event, ui){},
+		buttons: {
+
+			"Valider": function(){
+
+					
+			},
+
+			"Réinitialiser": function(){
+
+			}
+		}
   	});
   });
 
@@ -698,7 +718,27 @@ $(document).ready(function(){
   		height: 800,
 		width: 650,
 		resizable: false,
-		modal: true
+		modal: true,
+		show: {
+				effect: "size",
+				duration: 1000
+		},
+		hide: {
+				effect: "size",
+				duration: 1000
+		},
+		close: function(event, ui){},
+		buttons: {
+
+			"Valider": function(){
+
+					
+			},
+
+			"Réinitialiser": function(){
+
+			}
+		}
   	});
   });
 
