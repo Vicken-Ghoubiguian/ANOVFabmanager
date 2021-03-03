@@ -714,7 +714,10 @@ $(document).ready(function(){
 		},
 		buttons: {
 
-				"Valider": function(){},
+				"Valider": function(){
+
+					
+				},
 				"Réinitialiser": function(){
 
 					$("#nouvelle_carte_du_client").val("");
@@ -755,7 +758,10 @@ $(document).ready(function(){
 		},
 		buttons: {
 
-				"Valider": function(){},
+				"Valider": function(){
+
+
+				},
 				"Réinitialiser": function(){
 
 					$("#nouvelle_carte_du_client").val("");
