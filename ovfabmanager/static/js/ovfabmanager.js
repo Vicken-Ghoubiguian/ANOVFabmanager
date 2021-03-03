@@ -704,13 +704,17 @@ $(document).ready(function(){
 		},
 		close: function(event, ui){
 
-			//$("#nouvelle_carte_du_client").val("");
+			$("#modification_ancienne_carte_du_client").val("");
+
+			$("#modification_nouvelle_carte_du_client").val("");
 
 			$("#modification_carte_client_erreur_div").addClass("hidden_div");
 
 			$("#inside_modification_carte_client_erreur_div").text("");
 
-			//$("#nouvelle_carte_du_client").css("border-color", "#ccc");
+			$("#modification_ancienne_carte_du_client").css("border-color", "#ccc");
+
+			$("#modification_nouvelle_carte_du_client").css("border-color", "#ccc");
 		},
 		buttons: {
 
@@ -720,13 +724,17 @@ $(document).ready(function(){
 				},
 				"Réinitialiser": function(){
 
-					//$("#nouvelle_carte_du_client").val("");
+					$("#modification_ancienne_carte_du_client").val("");
+
+					$("#modification_nouvelle_carte_du_client").val("");
 
 					$("#modification_carte_client_erreur_div").addClass("hidden_div");
 
 					$("#inside_modification_carte_client_erreur_div").text("");
 
-					//$("#nouvelle_carte_du_client").css("border-color", "#ccc");
+					$("#modification_ancienne_carte_du_client").css("border-color", "#ccc");
+
+					$("#modification_nouvelle_carte_du_client").css("border-color", "#ccc");
 				}
 		}
   	});
