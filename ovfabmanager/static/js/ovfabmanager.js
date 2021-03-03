@@ -704,6 +704,13 @@ $(document).ready(function(){
 		},
 		close: function(event, ui){
 
+			$("#nouvelle_carte_du_client").val("");
+
+			$("#carte_client_erreur_div").addClass("hidden_div");
+
+			$("#inside_carte_client_erreur_div").text("");
+
+			$("#nouvelle_carte_du_client").css("border-color", "#ccc");
 		},
 		buttons: {
 
@@ -729,6 +736,13 @@ $(document).ready(function(){
 		},
 		close: function(event, ui){
 
+			$("#nouvelle_carte_du_client").val("");
+
+			$("#carte_client_erreur_div").addClass("hidden_div");
+
+			$("#inside_carte_client_erreur_div").text("");
+
+			$("#nouvelle_carte_du_client").css("border-color", "#ccc");
 		},
 		buttons: {
 
