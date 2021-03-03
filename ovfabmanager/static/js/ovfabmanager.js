@@ -689,7 +689,7 @@ $(document).ready(function(){
   $("#configurer_abonnement_client").click(function(){});
 
   $("#modifier_carte_client").click(function(){
-  	$("#configuration_carte_client").dialog({
+  	$("#modification_carte_client").dialog({
   		height: 800,
 		width: 650,
 		resizable: false,
@@ -748,13 +748,13 @@ $(document).ready(function(){
 		},
 		close: function(event, ui){
 
-			$("#nouvelle_carte_du_client").val("");
+			$("#premiere_carte_du_client").val("");
 
-			$("#carte_client_erreur_div").addClass("hidden_div");
+			$("#premiere_carte_client_erreur_div").addClass("hidden_div");
 
-			$("#inside_carte_client_erreur_div").text("");
+			$("#inside_premiere_carte_client_erreur_div").text("");
 
-			$("#nouvelle_carte_du_client").css("border-color", "#ccc");
+			$("#premiere_carte_du_client").css("border-color", "#ccc");
 		},
 		buttons: {
 
@@ -764,13 +764,13 @@ $(document).ready(function(){
 				},
 				"Réinitialiser": function(){
 
-					$("#nouvelle_carte_du_client").val("");
+					$("#premiere_carte_du_client").val("");
 
-					$("#carte_client_erreur_div").addClass("hidden_div");
+					$("#premiere_carte_client_erreur_div").addClass("hidden_div");
 
-					$("#inside_carte_client_erreur_div").text("");
+					$("#inside_premiere_carte_client_erreur_div").text("");
 
-					$("#nouvelle_carte_du_client").css("border-color", "#ccc");
+					$("#premiere_carte_du_client").css("border-color", "#ccc");
 				}
 		}
   	});
