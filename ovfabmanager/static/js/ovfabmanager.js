@@ -701,6 +701,14 @@ $(document).ready(function(){
 		hide: {
 				effect: "size",
 				duration: 1000
+		},
+		close: function(event, ui){
+
+		},
+		buttons: {
+
+				"Valider": function(){},
+				"Réinitialiser": function(){}
 		}
   	});
   });
@@ -718,6 +726,14 @@ $(document).ready(function(){
 		hide: {
 				effect: "size",
 				duration: 1000
+		},
+		close: function(event, ui){
+
+		},
+		buttons: {
+
+				"Valider": function(){},
+				"Réinitialiser": function(){}
 		}
   	});
   });
