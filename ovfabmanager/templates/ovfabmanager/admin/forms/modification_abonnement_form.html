@@ -8,12 +8,24 @@
 			</div>
 		</div>
 		<div class="input-container">
-			<i class="far fa-id-card fa-2x icon"></i>
-			<input type="text" id="modification_ancien_abonnement_du_client" name="modification_ancien_abonnement_du_client" placeholder="Ancien abonnement du client" class="tooltip input-field required-field" title="Veuillez renseigner l'ancien abonnement du client">
+			<i class="far fa-ticket-alt fa-2x icon"></i>
+			<select id="modification_ancien_abonnement_du_client" name="modification_ancien_abonnement_du_client" placeholder="Ancien abonnement du client" class="tooltip input-field required-field" title="Veuillez renseigner l'ancien abonnement du client">
+
+				{% for abonnement in allAbonnements %}
+					<option value="{{ abonnement.libelle }}">{{ abonnement.libelle }}</option>
+				{% endfor %}
+
+			</select>
 		</div>
 		<div class="input-container">
-			<i class="fas fa-id-card fa-2x icon"></i>
-			<input type="text" id="modification_nouvel_abonnement_du_client" name="modification_nouvel_abonnement_du_client" placeholder="Nouvel abonnement du client" class="tooltip input-field required-field" title="Veuillez renseigner le nouvel abonnement du client">
+			<i class="fas fa-ticket-alt fa-2x icon"></i>
+			<select id="modification_nouvel_abonnement_du_client" name="modification_nouvel_abonnement_du_client" placeholder="Nouvel abonnement du client" class="tooltip input-field required-field" title="Veuillez séléctionner le nouvel abonnement du client">
+
+				{% for abonnement in allAbonnements %}
+					<option value="{{ abonnement.libelle }}">{{ abonnement.libelle }}</option>
+				{% endfor %}
+
+			</select>
 		</div>
 	</fieldset>
 </div>

@@ -8,8 +8,14 @@
 			</div>
 		</div>
 		<div class="input-container">
-			<i class="fa fa-id-card fa-2x icon"></i>
-			<input type="text" id="premier_abonnement_du_client" name="premier_abonnement_du_client" placeholder="Premier abonnement du client" class="tooltip input-field required-field" title="Veuillez renseigner le premier abonnement du client">
+			<i class="fa fa-ticket-alt fa-2x icon"></i>
+			<select id="premier_abonnement_du_client" name="premier_abonnement_du_client" placeholder="Premier abonnement du client" class="tooltip input-field required-field" title="Veuillez séléctionner le premier abonnement du client">
+
+				{% for abonnement in allAbonnements %}
+					<option value="{{ abonnement.libelle }}">{{ abonnement.libelle }}</option>
+				{% endfor %}
+
+			</select>
 		</div>
 	</fieldset>
 </div>
