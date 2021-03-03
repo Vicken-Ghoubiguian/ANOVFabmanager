@@ -698,7 +698,10 @@ $(document).ready(function(){
 				effect: "size",
 				duration: 1000
 		},
-		close: function(event, ui){},
+		close: function(event, ui){
+
+			
+		},
 		buttons: {
 
 			"Valider": function(){
@@ -727,7 +730,10 @@ $(document).ready(function(){
 				effect: "size",
 				duration: 1000
 		},
-		close: function(event, ui){},
+		close: function(event, ui){
+
+
+		},
 		buttons: {
 
 			"Valider": function(){
