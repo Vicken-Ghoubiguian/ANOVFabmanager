@@ -685,7 +685,7 @@ $(document).ready(function(){
   });
 
   $("#modifier_abonnement_client").click(function(){
-  	$("#modifier_abonnement_client").dialog({
+  	$("#modification_abonnement_client").dialog({
   		height: 800,
 		width: 650,
 		resizable: false,
@@ -694,7 +694,7 @@ $(document).ready(function(){
   });
 
   $("#configurer_abonnement_client").click(function(){
-  	$("#configurer_abonnement_client").dialog({
+  	$("#configuration_abonnement_client").dialog({
   		height: 800,
 		width: 650,
 		resizable: false,
