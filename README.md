@@ -93,14 +93,27 @@ Tout est expliqué en détail dans les parties [Installation de ANOVManager sur 
 <a name="installation_de_ANOVManager_sur_une_machine_quelconque"></a>
 ## Installation de ANOVManager sur une machine quelconque
 
+__Précision importante__: la procédure d'installation varie selon le système d'exploitation utilisé. Ici nous traiterons de l'installation d'ANOVManager que sous les environnements Linux, Windows et Mac, c'est-à-dire les environnements dominants sur le marché.
+
 Pour faire fonctionner ANOVManager, il est d'abord important d'installer les composants suivants: `Django`, `Git`, `virtualenv` et `pip`.
 
-Il est d'abord important de cloner le projet depuis le dépôt officiel. Pour cela, exécutez les commandes suivantes dans l'ordre:
+Pour commencer, il faut disposer de l'utilitaire `Git` puis cloner le projet depuis le dépôt officiel [ici](https://github.com/Vicken-Ghoubiguian/ANOVManager).
+
+Sous Linux, l'installation de `Git` ne se résume qu'à la commande suivante:
 
 ```bash
 
 sudo apt install git # Installe l'utilitaire git sur la machine
 
+```
+
+Sous Windows par contre, il vous faudra télécharger un installateur [ici](https://git-scm.com/download/win) puis l'exécuter pour installer l'utilitaire `Git` jusqu'au bout.
+
+Concernant Mac,
+
+Il est maintenant temps de cloner le projet, alors ouvrez une fenêtre de terminal (pour Linux et Mac) ou PowerShell (pour Windows) puis tapez les commandes suivantes:
+
+```bash
 git clone https://github.com/Vicken-Ghoubiguian/ANOVManager # Clone le projet ANOVManager sur la machine
 
 cd ANOVManager # Change le répertoire courant pour celui du projet cloné ANOVManager
