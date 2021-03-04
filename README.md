@@ -30,7 +30,7 @@
  
 	* [Bootstrap](https://getbootstrap.com),
 
-	* [Font Awesome](https://fontawesome.com/)
+	* [Font Awesome](https://fontawesome.com/).
 
 4. [Structure du projet ANOVManager](#structure_du_projet_ANOVManager)
 
