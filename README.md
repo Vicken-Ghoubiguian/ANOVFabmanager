@@ -32,17 +32,19 @@
 
 	* [Font Awesome](https://fontawesome.com/)
 
-4. [Installation de ANOVManager sur une machine quelconque](#installation_de_ANOVManager_sur_une_machine_quelconque)
+4. [Structure du projet ANOVManager](#structure_du_projet_ANOVManager)
 
-5. [ANOVManager déjà installé ? Comment le développer ?](#ANOVManager_deja_installe_comment_le_developper)
+5. [Installation de ANOVManager sur une machine quelconque](#installation_de_ANOVManager_sur_une_machine_quelconque)
 
-6. [Tester ANOVManager grâce à Docker et Docker compose](#tester_ANOVManager_grace_a_docker_et_docker_compose)
+6. [ANOVManager déjà installé ? Comment le développer ?](#ANOVManager_deja_installe_comment_le_developper)
 
-7. [Installation de ANOVManager grâce à Docker compose](#installation_de_ANOVManager_grace_a_docker_compose)
+7. [Tester ANOVManager grâce à Docker et Docker compose](#tester_ANOVManager_grace_a_docker_et_docker_compose)
 
-8. [Commandes de base](#commandes_de_base)
+8. [Installation de ANOVManager grâce à Docker compose](#installation_de_ANOVManager_grace_a_docker_compose)
 
-9. [Enregistrement de migrations](#enregistrement_de_migrations)
+9. [Commandes de base](#commandes_de_base)
+
+10. [Enregistrement de migrations](#enregistrement_de_migrations)
 
 <a name="presentation_du_projet"></a>
 ## Présentation du projet
@@ -91,6 +93,9 @@ Pour faire fonctionner ANOVManager sur une machine quelconque (physique ou virtu
 Pour la bonne configuration de l'environnement de déploiement, il est nécessaire d'installer `Django`, `Git`, `Docker`, `Docker compose`, `virtualenv` et `pip`.
 
 Tout est expliqué en détail dans les parties [Installation de ANOVManager sur une machine quelconque](#installation_de_ANOVManager_sur_une_machine_quelconque) et [Installation de ANOVManager grâce à Docker compose](#installation_de_ANOVManager_grace_a_docker_compose) ci-dessous.
+
+<a name="structure_du_projet_ANOVManager"></a>
+## Structure du projet ANOVManager
 
 <a name="installation_de_ANOVManager_sur_une_machine_quelconque"></a>
 ## Installation de ANOVManager sur une machine quelconque
