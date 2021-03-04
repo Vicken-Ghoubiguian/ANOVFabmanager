@@ -57,6 +57,9 @@ D'autres fonctionnalités peuvent être ajoutées à ce système logiciel à con
 
 Pour faire fonctionner ANOVManager sur une machine quelconque (physique ou virtuelle), l'application repose sur les composants suivants:
 
+<a name="python"></a>
+* Python: `Python` est un language de programmation et un écosystème logiciel compté parmi les plus utilisés au monde et les plus simples à prendre en main,
+
 <a name="django"></a>
 * Django: `Django` est un framework open source écrit en Python pour vous permettre de développer des applications web,
 
