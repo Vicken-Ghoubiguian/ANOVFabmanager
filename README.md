@@ -102,7 +102,18 @@ Tout est expliqué en détail dans les parties [Installation de ANOVManager sur 
 <a name="structure_du_projet_ANOVManager"></a>
 ## Structure du projet ANOVManager
 
+Il est maintenant temps de s'intéresser de très près à la structure du projet. À sa racine, le projet se compose des éléments suivants:
 
+* Le  fichier [requirements.txt](https://github.com/Vicken-Ghoubiguian/ANOVManager/blob/master/requirements.txt) contenant tous les packages Python nécessaires pour le bon fonctionnement de l'application web et permettant leur installation, tous disponibles sur le hub officiel de l'écosystème Python nommé [Pypi](https://pypi.org/).
+Ces packages sont:
+
+	* [Django](https://pypi.org/project/Django/),
+
+	* [mysqlclient](https://pypi.org/project/mysqlclient/),
+
+	* [fontawesome-free](https://pypi.org/project/fontawesome-free/),
+
+	* [sphinx](https://pypi.org/project/Sphinx/).
 
 <a name="installation_de_ANOVManager_sur_une_machine_quelconque"></a>
 ## Installation de ANOVManager sur une machine quelconque
