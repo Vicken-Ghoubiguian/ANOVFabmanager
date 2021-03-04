@@ -34,11 +34,13 @@
 
 5. [ANOVManager déjà installé ? Comment le développer ?](#ANOVManager_deja_installe_comment_le_developper)
 
-6. [Installation de ANOVManager grâce à Docker compose](#installation_de_ANOVManager_grace_a_docker_compose)
+6. [Tester ANOVManager grâce à Docker](#tester_ANOVManager_grace_a_Docker)
 
-7. [Commandes de base](#commandes_de_base)
+7. [Installation de ANOVManager grâce à Docker compose](#installation_de_ANOVManager_grace_a_docker_compose)
 
-8. [Enregistrement de migrations](#enregistrement_de_migrations)
+8. [Commandes de base](#commandes_de_base)
+
+9. [Enregistrement de migrations](#enregistrement_de_migrations)
 
 <a name="presentation_du_projet"></a>
 ## Présentation du projet
@@ -171,6 +173,9 @@ python3 manage.py runserver
 ```
 
 Toutes mes félicitations, c'est maintenant à vous de jouer.
+
+<a name="tester_ANOVManager_grace_a_Docker"></a>
+## Tester ANOVManager grâce à Docker
 
 <a name="installation_de_ANOVManager_grace_a_docker_compose"></a>
 ## Installation de ANOVManager grâce à Docker compose
