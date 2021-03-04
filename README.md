@@ -107,7 +107,7 @@ sudo apt install git # Installe l'utilitaire git sur la machine
 
 ```
 
-Sous Windows par contre, il vous faudra télécharger un installateur [ici](https://git-scm.com/download/win) puis l'exécuter pour installer l'utilitaire `Git` jusqu'au bout.
+Sous Windows par contre, il vous faudra télécharger un installateur [ici](https://git-scm.com/download/win) puis l'exécuter jusqu'au bout tout en passant scrupuleusement chacune des étapes pour installer l'utilitaire `Git`.
 
 Concernant Mac,
 
