@@ -119,7 +119,9 @@ git clone https://github.com/Vicken-Ghoubiguian/ANOVManager # Clone le projet AN
 cd ANOVManager # Change le répertoire courant pour celui du projet cloné ANOVManager
 
 ```
-Il est ensuite nécessaire d'installer le serveur MySQL et son client respectif ainsi que de créer , grâce aux commandes suivantes à exécuter dans l'ordre:
+Il faut ensuite installer le serveur MySQL et son client respectif, créer la base de données `ovfablab_database` pour gérer les données de l'application, créer l'utilisateur `ovfablab_admin` sur le domaine `localhost` qui permettra à l'application d'accéder à sa base de données puis de lui donner tous les privilèges sur cette même base.
+
+Sous Linux, tout cela est possible grâce aux commandes suivantes à exécuter dans l'ordre:
 
 ```bash
 
@@ -139,7 +141,10 @@ quit; # Fermeture de l'interface de commandes MySQL
 ```
 __Petite note__: vous pouvez très bien modifier le nom de l'administateur de la base et son mot de passe si vous le souhaitez. Pour cela, il vous faut modifier les champs `USER` et `PASSWORD` de `DATABASES` dans le fichier [settings.py](https://github.com/Vicken-Ghoubiguian/ANOVManager/blob/master/ANOVManager/settings.py), à partir de la ligne 80.
 
-Il faut ensuite également créer puis configurer l'environnement virtuel Python et y installer `Django` grâce aux commandes suivantes à exécuter dans l'ordre:
+Il est temps maintenant d'installer et de configurer l'écosystème Python sur votre machine. Cela commence par l'installation de la derniére version du language Python.
+
+Sous Linux et Mac, Python y est nativement installé et il n'y a donc rien à faire.
+Ce n'est pas le cas sous Windows sur lequel vous devrez utiliser l'installateur disponible sur le site officiel de Python [ici](https://www.python.org/downloads/) pour l'installer proprement sur votre machine.
 
 ```bash
 
