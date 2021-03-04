@@ -104,7 +104,9 @@ Tout est expliqué en détail dans les parties [Installation de ANOVManager sur 
 
 Il est maintenant temps de s'intéresser de très près à la structure du projet. À sa racine, le projet se compose des éléments suivants:
 
-* Le  fichier [requirements.txt](https://github.com/Vicken-Ghoubiguian/ANOVManager/blob/master/requirements.txt) contenant tous les packages Python nécessaires pour le bon fonctionnement de l'application web et permettant leur installation, tous disponibles sur le hub officiel de l'écosystème Python nommé [Pypi](https://pypi.org/).
+* Le fichier [manage.py](https://github.com/Vicken-Ghoubiguian/ANOVManager/blob/master/manage.py) permettant l'exécution de tâches administratives pour n'importe quelle application web basée sur le framework Django,
+
+* Le  fichier [requirements.txt](https://github.com/Vicken-Ghoubiguian/ANOVManager/blob/master/requirements.txt) contenant tous les packages Python nécessaires pour le bon fonctionnement de l'application web et permettant leur installation, tous disponibles sur le hub officiel de l'écosystème Python nommé [PyPI](https://pypi.org/).
 Ces packages sont:
 
 	* [Django](https://pypi.org/project/Django/),
@@ -114,6 +116,8 @@ Ces packages sont:
 	* [fontawesome-free](https://pypi.org/project/fontawesome-free/),
 
 	* [sphinx](https://pypi.org/project/Sphinx/).
+
+__Précision importante__: pour plus de clartés et de précisions sur la structure générale d'un projet de développement d'une application web basée sur Django, veuillez vous référer au tutoriel sur le site officiel de Django [ici](https://docs.djangoproject.com/en/3.1/intro/tutorial01/) s'il vous plaît (l'élément '3.1' correspond au numéro de version du framework Django, veuillez donc le remplacer par votre propre numéro de version s'il vous plaît).
 
 <a name="installation_de_ANOVManager_sur_une_machine_quelconque"></a>
 ## Installation de ANOVManager sur une machine quelconque
