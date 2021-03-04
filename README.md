@@ -162,10 +162,10 @@ pip3 install -r requirements.txt # Installation de tous les packages python cont
 
 python3 manage.py migrate # Création de toutes les tables de base de données nécessaires pour le bon fonctionnement de l'application web
 ```
-Maintenant que tout est en place, il est maintenant temps de démarrer l'application web. Pour cela, exécutez la commande suivante:
+Maintenant que tout est en place, il est maintenant temps de démarrer l'application web. Pour cela, ouvrez de terminal (pour Linux et Mac) ou PowerShell (pour Windows) puis exécutez la commande suivante:
 
 ```bash
-python3 manage.py runserver
+python manage.py runserver
 ```
 Toutes mes félicitations: une fois cette commande exécutée, l'application fonctionne et est accessible [ici](http://127.0.0.1:8000).
 
