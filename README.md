@@ -88,10 +88,10 @@ Pour faire fonctionner ANOVManager sur une machine quelconque (physique ou virtu
 * git: `git` est l'utilitaire de gestion de versions utilisé par le projet de développement de l'application `ANOVManager`,
 
 <a name="bootstrap"></a>
-* Bootstrap: `Bootstrap` est une collection d'outils pour la mise en place du design des pages web composant l'application `ANOVManager`.
+* Bootstrap: `Bootstrap` est une collection d'outils pour la mise en place du design des pages web composant l'application `ANOVManager`,
 
 <a name="fontawesome"></a>
-* Font Awesome: `Font Awesome` est une police d'écriture et (surtout) une boîte à icônes basées sur CSS, LESS et SASS 
+* Font Awesome: `Font Awesome` est une police d'écriture et (surtout) une boîte à icônes basées sur CSS, LESS et SASS.
 
 Pour la bonne configuration de l'environnement de déploiement, il est nécessaire d'installer `Django`, `Git`, `Docker`, `Docker compose`, `virtualenv` et `pip`.
 
