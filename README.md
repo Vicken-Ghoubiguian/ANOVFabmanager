@@ -8,6 +8,8 @@
 
 3. [Prérequis](#prerequis)
 
+	* [Python](https://www.python.org/),
+
 	* [Django](https://www.djangoproject.com),
 
 	* [Docker](https://www.docker.com),
