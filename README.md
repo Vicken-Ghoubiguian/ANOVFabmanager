@@ -109,13 +109,13 @@ Il est maintenant temps de s'intéresser de très près à la structure du proje
 * Le  fichier [requirements.txt](https://github.com/Vicken-Ghoubiguian/ANOVManager/blob/master/requirements.txt) contenant tous les packages Python nécessaires pour le bon fonctionnement de l'application web et permettant leur installation, tous disponibles sur le hub officiel de l'écosystème Python nommé [PyPI](https://pypi.org/).
 Ces packages sont:
 
-	* [Django](https://pypi.org/project/Django/),
+	* [Django](https://pypi.org/project/Django/) correspond au framework sur lequel se base la totalité de la structure de l'application web courante,
 
-	* [mysqlclient](https://pypi.org/project/mysqlclient/),
+	* [mysqlclient](https://pypi.org/project/mysqlclient/) correspond au client MySQL indispensable pour une connexion de l'application web courante à la base de données,
 
-	* [fontawesome-free](https://pypi.org/project/fontawesome-free/),
+	* [fontawesome-free](https://pypi.org/project/fontawesome-free/) permet d'utiliser Font Awesome librement et de l'intégrer dans n'importe quel projet Python,
 
-	* [sphinx](https://pypi.org/project/Sphinx/).
+	* [sphinx](https://pypi.org/project/Sphinx/) permet de générer simplement et proprement la documentation du projet courant.
 
 __Précision importante__: pour plus de clartés et de précisions sur la structure générale d'un projet de développement d'une application web basée sur Django, veuillez vous référer au tutoriel sur le site officiel de Django [ici](https://docs.djangoproject.com/en/3.1/intro/tutorial01/) s'il vous plaît (l'élément '3.1' correspond au numéro de version du framework Django, veuillez donc le remplacer par votre propre numéro de version s'il vous plaît).
 
