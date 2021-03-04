@@ -46,6 +46,8 @@
 
 10. [Enregistrement de migrations](#enregistrement_de_migrations)
 
+11. [Génération de la documentation](#generation_de_la_documentation)
+
 <a name="presentation_du_projet"></a>
 ## Présentation du projet
 
@@ -99,6 +101,8 @@ Tout est expliqué en détail dans les parties [Installation de ANOVManager sur 
 
 <a name="structure_du_projet_ANOVManager"></a>
 ## Structure du projet ANOVManager
+
+
 
 <a name="installation_de_ANOVManager_sur_une_machine_quelconque"></a>
 ## Installation de ANOVManager sur une machine quelconque
@@ -267,3 +271,6 @@ python3 manage.py migrate # Applique les modifications dans la base de données
 Pour enregistrer vos modifications dans le dépôt GitLab du projet, comitez puis pushez le fichier nouvellement créé (situé dans le répertoire `migrations` dans le répertoire `ovfabmanager`) sur le dêpot GitLab du projet.
 
 Et voilà le travail !
+
+<a name="generation_de_la_documentation"></a>
+## Génération de la documentation
