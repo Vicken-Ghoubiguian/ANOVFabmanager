@@ -48,6 +48,8 @@
 
 11. [Problémes rencontrés](#problemes_rencontres)
 
+	* [Déploiement des migrations](#probleme_deploiement_des_migrations),
+
 12. [Génération de la documentation](#generation_de_la_documentation)
 
 <a name="presentation_du_projet"></a>
@@ -294,7 +296,10 @@ Et voilà le travail !
 
 Au cours du développement d'ANOVManager, de nombreux problèmes ont été soulevés puis réglés et de nombreux bugs ont été détéctés puis résolus.
 Il est très probable que vous rencontrerez des problèmes et des bugs similaires si vous décidez de déployer ANOVManager ou d'en développer votre propre version à partir d'un fork de ce projet. 
-Voici donc la liste des problèmes et des bugs rencontrés décrits chacun avec détails et avec la procédure de résolution pas-à-pas: 
+Voici donc la liste des problèmes et des bugs rencontrés décrits chacun avec détails et avec la procédure de résolution pas-à-pas:
+
+<a name="probleme_deploiement_des_migrations"></a>
+### Déploiement des migrations
 
 <a name="generation_de_la_documentation"></a>
 ## Génération de la documentation
