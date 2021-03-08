@@ -1,16 +1,16 @@
-CREATE TABLE ovfabmanager_etat IF NOT EXISTS (
+CREATE TABLE IF NOT EXISTS ovfabmanager_etat (
 	
 	id INT PRIMARY KEY NOT NULL,
 	libelle VARCHAR(50) NOT NULL
 );
 
-CREATE TABLE ovfabmanager_carte IF NOT EXISTS (
+CREATE TABLE IF NOT EXISTS ovfabmanager_carte (
 
 	id INT PRIMARY KEY NOT NULL,
 	numero_de_carte VARCHAR(50) NOT NULL
 );
 
-CREATE TABLE ovfabmanager_prestation IF NOT EXISTS (
+CREATE TABLE IF NOT EXISTS ovfabmanager_prestation (
 
 	id INT PRIMARY KEY NOT NULL,
 	libelle VARCHAR(100) NOT NULL,
@@ -20,14 +20,14 @@ CREATE TABLE ovfabmanager_prestation IF NOT EXISTS (
 	fichier VARCHAR(100) NOT NULL
 );
 
-CREATE TABLE ovfabmanager_type_de_client IF NOT EXISTS (
+CREATE TABLE IF NOT EXISTS ovfabmanager_type_de_client (
 
 	id INT PRIMARY KEY NOT NULL,
 	libelle VARCHAR(100) NOT NULL,
 	descriptif VARCHAR(500) NOT NULL
 );
 
-CREATE TABLE ovfabmanager_abonnement IF NOT EXISTS (
+CREATE TABLE IF NOT EXISTS ovfabmanager_abonnement (
 
 	id INT PRIMARY KEY NOT NULL,
 	libelle VARCHAR(100) NOT NULL,
@@ -39,21 +39,21 @@ CREATE TABLE ovfabmanager_abonnement IF NOT EXISTS (
 	FOREIGN KEY (type_de_client_id) REFERENCES ovfabmanager_type_de_client(id)
 );
 
-CREATE TABLE ovfabmanager_type_d_evenement IF NOT EXISTS (
+CREATE TABLE IF NOT EXISTS ovfabmanager_type_d_evenement (
 
 	id INT PRIMARY KEY NOT NULL,
 	libelle VARCHAR(100) NOT NULL,
 	descriptif VARCHAR(500) NOT NULL
 );
 
-CREATE TABLE ovfabmanager_type_machine IF NOT EXISTS (
+CREATE TABLE IF NOT EXISTS ovfabmanager_type_machine (
 
 	id INT PRIMARY KEY NOT NULL,
 	libelle VARCHAR(100) NOT NULL,
 	descriptif VARCHAR(500) NOT NULL
 );
 
-CREATE TABLE ovfabmanager_entreprise IF NOT EXISTS (
+CREATE TABLE IF NOT EXISTS ovfabmanager_entreprise (
 
 	id INT PRIMARY KEY NOT NULL,
 	nom VARCHAR(50) NOT NULL,
@@ -63,7 +63,7 @@ CREATE TABLE ovfabmanager_entreprise IF NOT EXISTS (
 	site_web VARCHAR(100) NOT NULL
 );
 
-CREATE TABLE ovfabmanager_espace IF NOT EXISTS (
+CREATE TABLE IF NOT EXISTS ovfabmanager_espace (
 
 	id INT PRIMARY KEY NOT NULL,
 	libelle VARCHAR(100) NOT NULL,
@@ -72,7 +72,7 @@ CREATE TABLE ovfabmanager_espace IF NOT EXISTS (
 	FOREIGN KEY (abonnement_requis_id) REFERENCES ovfabmanager_abonnement(id)
 );
 
-CREATE TABLE ovfabmanager_evenement IF NOT EXISTS (
+CREATE TABLE IF NOT EXISTS ovfabmanager_evenement (
 
 	id INT PRIMARY KEY NOT NULL,
 	libelle VARCHAR(100) NOT NULL,
@@ -83,7 +83,7 @@ CREATE TABLE ovfabmanager_evenement IF NOT EXISTS (
 	FOREIGN KEY (espace_id) REFERENCES ovfabmanager_espace(id)
 );
 
-CREATE TABLE ovfabmanager_qualification IF NOT EXISTS (
+CREATE TABLE IF NOT EXISTS ovfabmanager_qualification (
 
 	id INT PRIMARY KEY NOT NULL,
 	intitule VARCHAR(100) NOT NULL,
@@ -94,7 +94,7 @@ CREATE TABLE ovfabmanager_qualification IF NOT EXISTS (
 	FOREIGN KEY (evenement_id) REFERENCES ovfabmanager_evenement(id)
 );
 
-CREATE TABLE ovfabmanager_machine IF NOT EXISTS (
+CREATE TABLE IF NOT EXISTS ovfabmanager_machine (
 
 	id INT PRIMARY KEY NOT NULL,
 	libelle VARCHAR(100) NOT NULL,
@@ -113,7 +113,7 @@ CREATE TABLE ovfabmanager_machine IF NOT EXISTS (
 	FOREIGN KEY (qualification_requise_id) REFERENCES ovfabmanager_qualification(id)
 );
 
-CREATE TABLE ovfabmanager_outil IF NOT EXISTS (
+CREATE TABLE IF NOT EXISTS ovfabmanager_outil (
 
 	id INT PRIMARY KEY NOT NULL,
 	libelle VARCHAR(100) NOT NULL,
@@ -126,7 +126,7 @@ CREATE TABLE ovfabmanager_outil IF NOT EXISTS (
 	FOREIGN KEY (machine_id) REFERENCES ovfabmanager_machine(id)
 );
 
-CREATE TABLE ovfabmanager_client IF NOT EXISTS (
+CREATE TABLE IF NOT EXISTS ovfabmanager_client (
 
 	id INT PRIMARY KEY NOT NULL,
 	nom_de_famille VARCHAR(100) NOT NULL,
@@ -146,7 +146,7 @@ CREATE TABLE ovfabmanager_client IF NOT EXISTS (
 	FOREIGN KEY (type_de_client_id) REFERENCES ovfabmanager_type_de_client(id)
 );
 
-CREATE TABLE ovfabmanager_possede IF NOT EXISTS (
+CREATE TABLE IF NOT EXISTS ovfabmanager_possede (
 
 	id INT PRIMARY KEY NOT NULL,
 	date_de_delivrance DATE NOT NULL,
@@ -156,7 +156,7 @@ CREATE TABLE ovfabmanager_possede IF NOT EXISTS (
 	FOREIGN KEY (qualification_id) REFERENCES ovfabmanager_qualification(id)
 );
 
-CREATE TABLE ovfabmanager_panier IF NOT EXISTS (
+CREATE TABLE IF NOT EXISTS ovfabmanager_panier (
 
 	id INT PRIMARY KEY NOT NULL,
 	heure_de_pret TIME NOT NULL,
@@ -165,7 +165,7 @@ CREATE TABLE ovfabmanager_panier IF NOT EXISTS (
 	FOREIGN KEY (client_id) REFERENCES ovfabmanager_client(id)
 );
 
-CREATE TABLE ovfabmanager_article IF NOT EXISTS (
+CREATE TABLE IF NOT EXISTS ovfabmanager_article (
 
 	id INT PRIMARY KEY NOT NULL,
 	code_barre VARCHAR(100) NOT NULL,
