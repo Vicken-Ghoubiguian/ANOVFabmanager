@@ -46,7 +46,9 @@
 
 10. [Enregistrement de migrations](#enregistrement_de_migrations)
 
-11. [Génération de la documentation](#generation_de_la_documentation)
+11. [Problémes rencontrés](#problemes_rencontres)
+
+12. [Génération de la documentation](#generation_de_la_documentation)
 
 <a name="presentation_du_projet"></a>
 ## Présentation du projet
@@ -286,6 +288,13 @@ python3 manage.py migrate # Applique les modifications dans la base de données
 Pour enregistrer vos modifications dans le dépôt GitLab du projet, comitez puis pushez le fichier nouvellement créé (situé dans le répertoire `migrations` dans le répertoire `ovfabmanager`) sur le dêpot GitLab du projet.
 
 Et voilà le travail !
+
+<a name="problemes_rencontres"></a>
+## Problémes rencontrés
+
+Au cours du développement d'ANOVManager, de nombreux problèmes ont été soulevés puis réglés et de nombreux bugs ont été détéctés puis résolus.
+Il est très probable que vous rencontrerez des problèmes et des bugs similaires si vous décidez de déployer ANOVManager ou d'en développer votre propre version à partir d'un fork de ce projet. 
+Voici donc la liste des problèmes et des bugs rencontrés décrits chacun avec détails et avec la procédure de résolution pas-à-pas: 
 
 <a name="generation_de_la_documentation"></a>
 ## Génération de la documentation
