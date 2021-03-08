@@ -195,6 +195,8 @@ pip3 install -r requirements.txt # Installation de tous les packages python cont
 
 python3 manage.py migrate # Création de toutes les tables de base de données nécessaires pour le bon fonctionnement de l'application web
 ```
+| <i class="fas fa-exclamation-circle" style="color: #ff0000;"></i> Si vous avez une erreur concernant l'instruction `python3 manage.py migrate`, ne paniquez pas et référez-vous d'abord à [ici](https://github.com/Vicken-Ghoubiguian/ANOVManager#probleme_deploiement_des_migrations). |
+
 Maintenant que tout est en place, il est maintenant temps de démarrer l'application web. Pour cela, ouvrez de terminal (pour Linux et Mac) ou PowerShell (pour Windows) puis exécutez la commande suivante:
 
 ```bash
