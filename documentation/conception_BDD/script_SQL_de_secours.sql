@@ -137,7 +137,7 @@ CREATE TABLE IF NOT EXISTS ovfabmanager_client (
 	mot_de_passe VARCHAR(50) NOT NULL,
 	credit_client_en_temps INT NOT NULL,
 	abonnement_id INT NOT NULL,
-	carte_id INT NOT NULL,
+	carte_id INT,
 	prestation_id INT NOT NULL,
 	type_de_client_id INT NOT NULL,
 	FOREIGN KEY (abonnement_id) REFERENCES ovfabmanager_abonnement(id),
